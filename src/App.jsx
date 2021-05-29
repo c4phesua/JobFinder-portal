@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import './App.css';
+import './App.scss';
 import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import NavigationBar from './component/NavigationBar';
 import Login from './page/Login';
