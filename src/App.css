@@ -37,6 +37,7 @@
   }
 }
 
-.nav-bar {
-  display: flex;
+.modified-navbar {
+  position: fixed;
+  width: 100%;
 }
