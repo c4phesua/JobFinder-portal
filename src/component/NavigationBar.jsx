@@ -1,14 +1,17 @@
 import React from "react";
-import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap";
 
 export default class NavigationBar extends React.Component {
   render() {
     return (
       <>
         <div className="navbar">
-          <div className="inner-nav">
-            <div className="brand">Job Finder</div>
+          <div className="brand"><a href="/" className="brandName">Job Finder</a></div>
+          <div className="search">
+            <input type="text" className="keyword"/>
+            <input type="text" className="title"/>
+            <button title="Search" className="btnSearch">Search</button>
           </div>
+          <div className="login"><a href="/login">Login</a></div>
         </div>
       </>
     );
