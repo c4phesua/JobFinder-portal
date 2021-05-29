@@ -1,22 +1,18 @@
 import React from "react";
-import { Nav, Navbar, Form, FormControl, Button } from "react-bootstrap";
 
 export default class NavigationBar extends React.Component {
   render() {
     return (
       <>
-        <Navbar bg="primary" variant="dark">
-          <Navbar.Brand href="#home">Job Finder</Navbar.Brand>
-          <Form inline>
-            <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-            <Button variant="outline-light">Search</Button>
-          </Form>
-          <Nav className="mr-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-          </Nav>
-        </Navbar>
+        <div className="navbar">
+          <div className="brand"><a href="/" className="brandName">Job Finder</a></div>
+          <div className="search">
+            <input type="text" className="keyword"/>
+            <input type="text" className="title"/>
+            <button title="Search" className="btnSearch">Search</button>
+          </div>
+          <div className="login"><a href="/login">Login</a></div>
+        </div>
       </>
     );
   }
