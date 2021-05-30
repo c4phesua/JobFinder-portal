@@ -9,12 +9,15 @@ export default class Job extends React.Component {
   render() {
     const { name, title, company, place, index } = this.props;
     const jobCard = `jobcard ${this.renderColor(index)}`;
+    const jobCardBtn = jobCard + ' button';
 
     return (
       <div className={jobCard}>
-        <h3>{title}</h3>
-        <p>{company}</p>
-        <p>{place}</p>
+        <button className={jobCardBtn}>
+          <h3>{title}</h3>
+          <p>{company}</p>
+          <p>{place}</p>
+        </button>
       </div>
     );
   }
