@@ -9,6 +9,8 @@
     flex-wrap: wrap;
     .jobs{
       flex-basis: 40%;
+      height: 850px;
+      overflow: auto;
     }
     .jobDescription {
       flex-basis: 60%;
