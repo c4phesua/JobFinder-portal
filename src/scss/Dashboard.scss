@@ -1,0 +1,11 @@
+.dashboard {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .jobsContainer {
+    flex-basis: 70%;
+  }
+  .topCompanies {
+    flex-basis: 30%;
+  }
+}
