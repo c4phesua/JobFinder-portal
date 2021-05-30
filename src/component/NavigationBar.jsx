@@ -7,7 +7,6 @@ export default class NavigationBar extends React.Component {
 
   render() {
     const currentPath = window.location.pathname;
-    console.log(currentPath);
     return (
       <>
         <header className="navbar-custom">
