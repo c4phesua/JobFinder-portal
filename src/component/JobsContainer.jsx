@@ -1,11 +1,14 @@
 import React from 'react';
+import Jobs from "./Jobs";
+import JobDescription from "./JobDescription";
 
 export default class JobsContainer extends React.Component {
 
   render() {
     return (
       <div className="jobsContainer">
-        <h1>Jobs and Job description</h1>
+        <Jobs />
+        <JobDescription />
       </div>
     );
   }
