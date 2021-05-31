@@ -8,9 +8,6 @@ function App() {
   return (
     <div className="App">
       <NavigationBar />
-      <br />
-      <br />
-      <br />
       <BrowserRouter>
         <Switch>
           <Route exact path="/login" component={Login} />
