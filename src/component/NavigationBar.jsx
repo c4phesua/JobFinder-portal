@@ -24,9 +24,15 @@ export default function ButtonAppBar() {
       <div className={classes.root}>
         <AppBar position="static">
           <Toolbar>
-            <Typography variant="h6" className={classes.menuButton}>
-              News
+            <Typography
+                className={classes.menuButton}
+                variant="h6"
+            >
+              <a style={{color:'white'}} href="/">
+                JobFinder
+              </a>
             </Typography>
+            <Typography className={classes.title}> </Typography>
             <Button color="inherit" href="/login">Login</Button>
           </Toolbar>
         </AppBar>
