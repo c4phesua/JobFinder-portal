@@ -1,0 +1,84 @@
+@import "/src/scss/Jobs.scss";
+@import "/src/scss/Dashboard.scss";
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.navbar-custom {
+  position: fixed;
+  padding: .5rem 1rem;
+  width: 100%;
+  justify-content: space-between;
+  background-image: linear-gradient(to bottom right,#61dafb, #ffffff);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  .brand {
+    font-size: 30px;
+    font-style: inherit;
+    font-weight: 500;
+    color: #ffffff;
+    flex: 10%;
+    .brandName {
+      color: #ffffff;
+    }
+  }
+  .search {
+    flex: 70%;
+    text-align: left;
+    align-self: center;
+    .keyword {
+      width: 50%;
+      border-radius: 30px;
+    }
+    .title {
+      width: 20%;
+      border-radius: 30px;
+    }
+    .btnSearch {
+      border-radius: 30px;
+    }
+  }
+  .login {
+    flex: 3%;
+    align-self: center;
+    border-radius: 20px;
+  }
+}
