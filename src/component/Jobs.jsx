@@ -1,5 +1,7 @@
 import React from 'react';
 import Job from "./Job";
+import MockupData from "../helper/MockupData";
+const data = MockupData.data_home_page;
 
 export default class Jobs extends React.Component {
 
@@ -8,7 +10,7 @@ export default class Jobs extends React.Component {
     
     return (
       <div className="jobs">
-        <Job title="Java developer" index="0" company="FPT Software" place="HCMC"/>
+        <Job title={data.JOB_LIST[1].title} index="0" company="FPT Software" place="HCMC"/>
         <Job title="Java developer" index="1" company="Katalon Vietnam" place="HCMC"/>
         <Job title="Java developer" index="2" company="KMS Technology" place="HCMC"/>
         <Job title="Java developer" index="3" company="KMS Technology" place="HCMC"/>
