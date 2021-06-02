@@ -6,18 +6,20 @@ export default class Job extends React.Component {
     return index % 2 == 0 ? 'bluecard' : 'whitecard';
   }
 
+  onJobClick() {
+    const { index } = this.props;
+    return index;
+  }
+
   render() {
     const { name, title, company, place, index } = this.props;
     const jobCard = `jobcard ${this.renderColor(index)}`;
-    const jobCardBtn = jobCard + ' button';
 
     return (
-      <div className={jobCard}>
-        <button className={jobCardBtn}>
-          <h3>{title}</h3>
-          <p>{company}</p>
-          <p>{place}</p>
-        </button>
+      <div className={jobCard} onClick={() => this.onJobClick()}>
+        <h3>{title}</h3>
+        <p>{company}</p>
+        <p>{place}</p>
       </div>
     );
   }
