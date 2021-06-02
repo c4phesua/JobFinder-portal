@@ -1,28 +1,41 @@
-import React from "react";
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
 
-export default class NavigationBar extends React.Component {
-  handleLoginClick() {
-    window.location.href = "/login";
-  }
+const useStyles = makeStyles((theme) => ({
+  root: {
+    flexGrow: 1,
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+}));
 
-  render() {
-    const currentPath = window.location.pathname;
-    return (
-      <>
-        <header className="navbar-custom">
-          <div className="brand"><a href="/" className="brandName">Job Finder</a></div>
-          {currentPath !== "/login" &&
-            <>
-              <div className="search">
-                <input type="text" className="keyword" />
-                <input type="text" className="title" />
-                <button title="Search" className="btnSearch">Search</button>
-              </div>
-              <button className="login" onClick={this.handleLoginClick}>Login</button>
-            </>
-          }
-        </header>
-      </>
-    );
-  }
+export default function ButtonAppBar() {
+  const classes = useStyles();
+
+  return (
+      <div className={classes.root}>
+        <AppBar position="static">
+          <Toolbar>
+            <Typography
+                className={classes.menuButton}
+                variant="h6"
+            >
+              <a style={{color:'white'}} href="/">
+                JobFinder
+              </a>
+            </Typography>
+            <Typography className={classes.title}> </Typography>
+            <Button color="inherit" href="/login">Login</Button>
+          </Toolbar>
+        </AppBar>
+      </div>
+  );
 }
