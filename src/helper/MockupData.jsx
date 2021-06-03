@@ -1,7 +1,22 @@
 var data_home_page = {
     JOB_LIST: [
         {
-            company_name: "KMS",
+            company_name: "KMS Technology",
+            image_link:"",
+            title:"DevOps Engineer",
+            job_type:"IT",
+            tag_list: [
+                "Nodejs",
+                "Docker",
+                "CI",
+            ],
+            id_job: 0,
+            salary:2000,
+            company_address:"Ho chi minh",
+            description:"",
+
+        },{
+            company_name: "KMS Technology",
             image_link:"",
             title:"BE Developer",
             job_type:"IT",
@@ -15,15 +30,80 @@ var data_home_page = {
             description:"",
 
         },{
-            company_name: "VNG",
+            company_name: "Katalon",
             image_link:"",
-            title:"Game Developer",
+            title:"Fullstack Engineer",
             job_type:"IT",
             tag_list: [
                 "Java",
                 "Javascript"
             ],
             id_job: 2,
+            salary:1000,
+            company_address:"Ho chi minh",
+            description:"",
+
+        },{
+            company_name: "Vinagame",
+            image_link:"",
+            title:"2D Graphic Desgin",
+            job_type:"Design",
+            tag_list: [
+                "Photoshop"
+            ],
+            id_job: 3,
+            salary:1000,
+            company_address:"Ho chi minh",
+            description:"",
+
+        },{
+            company_name: "FPT Software",
+            image_link:"",
+            title:"2D Graphic Desgin",
+            job_type:"Design",
+            tag_list: [
+                "Photoshop"
+            ],
+            id_job: 4,
+            salary:1000,
+            company_address:"Ho chi minh",
+            description:"",
+
+        },{
+            company_name: "Gameloft",
+            image_link:"",
+            title:"2D Graphic Desgin",
+            job_type:"Design",
+            tag_list: [
+                "Photoshop"
+            ],
+            id_job: 5,
+            salary:1000,
+            company_address:"Ho chi minh",
+            description:"",
+
+        },{
+            company_name: "Vietcombank",
+            image_link:"",
+            title:"Accounting excutive",
+            job_type:"Design",
+            tag_list: [
+                "Accounting"
+            ],
+            id_job: 6,
+            salary:1000,
+            company_address:"Ho chi minh",
+            description:"",
+
+        },{
+            company_name: "Vietcombank",
+            image_link:"",
+            title:"Financal excutive",
+            job_type:"Accounting",
+            tag_list: [
+                "Photoshop"
+            ],
+            id_job: 7,
             salary:1000,
             company_address:"Ho chi minh",
             description:"",
@@ -36,7 +116,7 @@ var data_home_page = {
             tag_list: [
                 "Photoshop"
             ],
-            id_job: 3,
+            id_job: 8,
             salary:1000,
             company_address:"Ho chi minh",
             description:"",
