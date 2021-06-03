@@ -19,6 +19,15 @@
       border-radius: 20px;
       border-color: #000000;
       border-style: solid;
+      .jobDetail {
+        .btnApply {
+          border-radius: 22px;
+          background-color: red;
+          color: white;
+          padding: 5px 300px;
+          font-weight: bold;
+        }
+      }
     }
   }
   .topCompanies {

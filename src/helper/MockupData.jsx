@@ -145,6 +145,13 @@ var data_home_page = {
             company_address: "Ho chi Minh",
             website: "",
             top: 3
+        },
+        {
+            id_company: 4,
+            company_name: "Katalon",
+            company_address: "Ho chi Minh",
+            website: "",
+            top: 4
         }
     ],
 
