@@ -4,6 +4,8 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
+import { currentPath, Routes } from '../utils/Routes';
+import RouteConstants from '../utils/RouteConstants';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -19,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function ButtonAppBar() {
   const classes = useStyles();
-
   return (
       <div className={classes.root}>
         <AppBar position="fixed">
@@ -33,8 +34,9 @@ export default function ButtonAppBar() {
               </a>
             </Typography>
             <Typography className={classes.title}> </Typography>
-            <Button color="inherit" href="/signup">Signup</Button>
-            <Button color="inherit" href="/login">Login</Button>
+            {currentPath() !== RouteConstants.SIGNUP && <Button color="inherit" href="/signup">Signup</Button>}
+            {currentPath() !== RouteConstants.LOGIN && <Button color="inherit" href="/login">Login</Button>}
+            
           </Toolbar>
         </AppBar>
       </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import MockupData from '../helper/MockupData';
+import { goTo } from '../utils/Routes';
 
 export default class JobDescription extends React.Component {
 
@@ -19,7 +20,7 @@ export default class JobDescription extends React.Component {
           <h3>{job.tag_list}</h3>
         </div>
         <div>
-          <button>Apply</button>
+          <button onClick={() => goTo('/login')}>Apply</button>
         </div>
       </div>
     );
