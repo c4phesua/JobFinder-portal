@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import { currentPath, Routes } from '../utils/Routes';
+import {currentPath} from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
 import {InputBase} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
