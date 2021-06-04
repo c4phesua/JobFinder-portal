@@ -15,14 +15,14 @@ function App() {
       <NavigationBar />
       <BrowserRouter>
         <Switch>
-          <Route exact path={RouteConstants.LOGIN}component={Login} />
+          <Route exact path={RouteConstants.LOGIN} component={Login} />
           <Route exact path={RouteConstants.SIGNUP} component={SignUp} />
           <Route exact path={RouteConstants.ROOT} component={Dashboard} />
           <Route exact path={RouteConstants.INDEX} component={Dashboard} />
           <Route exact path={RouteConstants.INDEX_HTML} component={Dashboard} />
           <Route exact path={RouteConstants.INDEX_PHP} component={Dashboard} />
-          <Route exact path={RouteConstants.HR_APPLICANTS} component={Applicants} />
-          <Route exact path="/apply" component={Apply} />
+          <Route exact path={RouteConstants.HR_APPLICANTS} component={Manager} />
+          <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
         </Switch>
       </BrowserRouter>
     </div>
