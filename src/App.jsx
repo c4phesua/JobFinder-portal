@@ -4,6 +4,7 @@ import NavigationBar from './component/NavigationBar';
 import Login from './page/Login';
 import Dashboard from './page/Dashboard';
 import SignUp from "./page/Signup";
+import Apply from "./page/Apply";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/index" component={Dashboard} />
           <Route exact path="/index.html" component={Dashboard} />
+          <Route exact path="/apply" component={Apply} />
         </Switch>
       </BrowserRouter>
     </div>
