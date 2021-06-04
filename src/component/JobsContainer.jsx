@@ -20,9 +20,13 @@ export default class JobsContainer extends React.Component {
 
   render() {
     const { jobIndex } = this.state;
+    const { jobs } = this.props;
     return (
       <div className="jobsContainer">
-        <Jobs handleJobClick={(index) => this.handleJobClick(index)}/>
+        <Jobs
+          handleJobClick={(index) => this.handleJobClick(index)}
+          jobs={jobs}
+        />
         <JobDescription jobIndex={jobIndex} />
       </div>
     );

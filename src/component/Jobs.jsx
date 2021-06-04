@@ -1,7 +1,5 @@
 import React from 'react';
 import Job from './Job';
-import MockupData from '../helper/MockupData';
-const data = MockupData.data_home_page;
 
 export default class Jobs extends React.Component {
 
@@ -23,7 +21,7 @@ export default class Jobs extends React.Component {
   }
 
   render() {
-    const jobs = data.JOB_LIST;
+    const { jobs } = this.props;
 
     return (
       <div className="jobs">
