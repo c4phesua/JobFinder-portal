@@ -6,6 +6,7 @@ import Dashboard from './page/Dashboard';
 import SignUp from "./page/Signup";
 import Applicants from './page/Applicant';
 import RouteConstants from './utils/RouteConstants';
+import Apply from "./page/Apply";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route exact path={RouteConstants.INDEX_HTML} component={Dashboard} />
           <Route exact path={RouteConstants.INDEX_PHP} component={Dashboard} />
           <Route exact path={RouteConstants.HR_APPLICANTS} component={Applicants} />
+          <Route exact path="/apply" component={Apply} />
         </Switch>
       </BrowserRouter>
     </div>
