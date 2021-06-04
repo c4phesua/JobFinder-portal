@@ -1,10 +1,9 @@
 import './App.scss';
-import { Route, Switch, BrowserRouter } from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import NavigationBar from './component/NavigationBar';
 import Login from './page/Login';
 import Dashboard from './page/Dashboard';
 import SignUp from "./page/Signup";
-import Applicants from './page/Applicant';
 import RouteConstants from './utils/RouteConstants';
 import Apply from "./page/Apply";
 import Manager from "./page/Manager";
