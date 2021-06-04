@@ -1,4 +1,5 @@
 import React from "react";
+import defaulticon from '../images/defaulticon.jpeg';
 
 export default class TopCompanies extends React.Component {
 
@@ -9,17 +10,20 @@ export default class TopCompanies extends React.Component {
 
   renderTopCompany(company) {
     return (
-      <>
-        <div className="company" onClick={() => this.onTopCompanyClickHandler(company)}>
+      <div className="company" onClick={() => this.onTopCompanyClickHandler(company)}>
+        <div className="company_logo">
+          <img className="icon" src={defaulticon} alt="" />
+        </div>
+        <div className="company_text">
           <p>{company.company_name}</p>
           <p className="company_address">{company.company_address}</p>
         </div>
-      </>
+      </div>
     )
   }
 
   render() {
-    const {companies} = this.props;
+    const { companies } = this.props;
     return (
       <div className="topCompanies">
         <h1>Top companies</h1>

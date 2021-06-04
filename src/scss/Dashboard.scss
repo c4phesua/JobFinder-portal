@@ -37,11 +37,29 @@
     border-style: solid;
   }
   .company {
+    display: flex;
     border-style: solid;
     border-color: #000000;
     border-radius: 20px;
-    .company_address{
-      font-size: 60%;
+    display: flex;
+    .company_text {
+      flex-basis: 80%;
+      
+      .company_address{
+        font-size: 60%;
+      }
+
     }
+    .company_logo {
+      border-style: solid;
+      border-radius: 15px;
+      flex-basis: 20%;
+      .icon {
+        width: 100%;
+        height: 100%;
+        border-radius: 13px;
+      }
+    }
+    
   }
 }
