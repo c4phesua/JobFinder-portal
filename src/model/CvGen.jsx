@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from "../component/Title";
+import {Select} from "@material-ui/core";
 
 // Generate Order Data
 function createData(id, date, name, email, cv, status) {
@@ -53,7 +54,21 @@ export default function Cvs() {
                             <TableCell>{row.name}</TableCell>
                             <TableCell>{row.email}</TableCell>
                             <TableCell>{row.cv}</TableCell>
-                            <TableCell>{row.status}</TableCell>
+                            <TableCell>
+                                <Select
+                                    native
+                                    defaultValue={row.status}
+                                    label="Age"
+                                    inputProps={{
+                                        name: 'Status',
+                                        id: 'outlined-age-native-simple',
+                                    }}
+                                >
+                                    <option value={'PENDING'}>PENDING</option>
+                                    <option value={'REJECT'}>REJECT</option>
+                                    <option value={'APPROVE'}>APPROVE</option>
+                                </Select>
+                            </TableCell>
                         </TableRow>
                     ))}
                 </TableBody>
