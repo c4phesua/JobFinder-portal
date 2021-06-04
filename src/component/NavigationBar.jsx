@@ -34,8 +34,8 @@ export default function ButtonAppBar() {
               </a>
             </Typography>
             <Typography className={classes.title}> </Typography>
-            {currentPath() !== RouteConstants.SIGNUP && <Button color="inherit" href="/signup">Signup</Button>}
-            {currentPath() !== RouteConstants.LOGIN && <Button color="inherit" href="/login">Login</Button>}
+            {currentPath() !== RouteConstants.SIGNUP && <Button color="inherit" href={RouteConstants.SIGNUP}>Signup</Button>}
+            {currentPath() !== RouteConstants.LOGIN && <Button color="inherit" href={RouteConstants.LOGIN}>Login</Button>}
             
           </Toolbar>
         </AppBar>

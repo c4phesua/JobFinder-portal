@@ -3,8 +3,8 @@ import MockupData from '../helper/MockupData';
 import { goTo } from '../utils/Routes';
 
 const renderJobDescription = (value) => {
-  return value.length > 0 
-    ? value 
+  return value.length > 0
+    ? value
     : MockupData.loremipsum;
 }
 export default class JobDescription extends React.Component {
@@ -20,14 +20,18 @@ export default class JobDescription extends React.Component {
     const job = jobs[jobIndex];
     return (
       <div className="jobDescription">
-        <div className="jobDetail">
+        <div className="jobHeader">
           <h1>{job.title}</h1>
-          <button className="btnApply" onClick={() => goTo('/login')}>Apply now</button>
+          <button className="btnApply" onClick={() => goTo('/apply')}>Apply</button>
+        </div>
+        <div className="jobDetail">
           <h2>{job.company_name}</h2>
           <h3>{job.company_address}</h3>
-          <h3>Salary: {job.salary}$</h3>
-          <p>{renderJobDescription(job.description)}</p>
           <h4>{this.renderTagList(job.tag_list)}</h4>
+          <h3>Salary: {job.salary}$</h3>
+        </div>
+        <div className="jobFooter">
+          <p>{renderJobDescription(job.description)}</p>
         </div>
       </div>
     );
