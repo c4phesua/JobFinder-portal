@@ -1,18 +1,25 @@
 import React from "react";
-import MockupData from '../helper/MockupData';
 
 export default class TopCompanies extends React.Component {
+
+  onTopCompanyClickHandler(company) {
+    const { handleCompany } = this.props;
+    handleCompany(company);
+  }
 
   renderTopCompany(company) {
     return (
       <>
-        <div>{company.company_name}</div>
+        <div className="company" onClick={() => this.onTopCompanyClickHandler(company)}>
+          <p>{company.company_name}</p>
+          <p className="company_address">{company.company_address}</p>
+        </div>
       </>
     )
   }
 
   render() {
-    const companies = MockupData.data_home_page.TOP_COMPANY;
+    const {companies} = this.props;
     return (
       <div className="topCompanies">
         <h1>Top companies</h1>

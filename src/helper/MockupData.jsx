@@ -127,29 +127,29 @@ var data_home_page = {
     TOP_COMPANY: [
         {
             id_company: 1,
-            company_name: "VNG",
-            company_address: "Ho chi Minh",
+            company_name: "Vinagame",
+            company_address: "Z06, 13 Street, District 7 ,Ho Chi Minh City",
             website: "",
             top: 1
         },
         {
             id_company: 2,
-            company_name: "KMS",
-            company_address: "Ho chi Minh",
+            company_name: "KMS Technology",
+            company_address: "Ho chi Minh, Cong Hoa Street, Tan Binh District, Ho Chi Minh City",
             website: "",
             top: 2
         },
         {
             id_company: 3,
-            company_name: "FSoft",
-            company_address: "Ho chi Minh",
+            company_name: "FPT Software",
+            company_address: "HCM Hightech Park, Thu Duc City, Ho Chi Minh City",
             website: "",
             top: 3
         },
         {
             id_company: 4,
             company_name: "Katalon",
-            company_address: "Ho chi Minh",
+            company_address: "Etown Central, District 4, Ho Chi Minh City",
             website: "",
             top: 4
         }
@@ -161,7 +161,7 @@ var data_home_page = {
 var data_manage_hr_page = {
     JOB_LIST: [
         {
-            company_name: "KMS",
+            company_name: "KMS Technology",
             image_link: "",
             title: "BE Developer",
             job_type: "IT",
@@ -175,7 +175,7 @@ var data_manage_hr_page = {
             description: "",
 
         }, {
-            company_name: "VNG",
+            company_name: "Vinagame",
             image_link: "",
             title: "Game Developer",
             job_type: "IT",
@@ -189,7 +189,7 @@ var data_manage_hr_page = {
             description: "",
 
         }, {
-            company_name: "VNG",
+            company_name: "Vinagame",
             image_link: "",
             title: "2D Graphic Desgin",
             job_type: "Design",

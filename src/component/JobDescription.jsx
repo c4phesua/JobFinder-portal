@@ -9,6 +9,10 @@ const renderJobDescription = (value) => {
 }
 export default class JobDescription extends React.Component {
 
+  renderTagList(tagList) {
+    return tagList.join(', ');
+  }
+
 
   render() {
     const { jobIndex } = this.props;
@@ -21,9 +25,9 @@ export default class JobDescription extends React.Component {
           <button className="btnApply" onClick={() => goTo('/login')}>Apply now</button>
           <h2>{job.company_name}</h2>
           <h3>{job.company_address}</h3>
-          <h3>{job.salary}$</h3>
-          <h3>{job.tag_list}</h3>
+          <h3>Salary: {job.salary}$</h3>
           <p>{renderJobDescription(job.description)}</p>
+          <h4>{this.renderTagList(job.tag_list)}</h4>
         </div>
       </div>
     );

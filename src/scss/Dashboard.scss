@@ -36,4 +36,12 @@
     border-color: #000000;
     border-style: solid;
   }
+  .company {
+    border-style: solid;
+    border-color: #000000;
+    border-radius: 20px;
+    .company_address{
+      font-size: 60%;
+    }
+  }
 }
