@@ -1,17 +1,13 @@
 import React from 'react';
-import { makeStyles,withStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import { red } from '@material-ui/core/colors';
 import Fab from '@material-ui/core/Fab';
 import AddIcon from '@material-ui/icons/Add';
 import SendIcon from '@material-ui/icons/Send';
-import {useStylesApply,ColorButton} from '../utils/UtilsFunc';
-
+import {ColorButton, useStylesApply} from '../utils/UtilsFunc';
 
 
 export default function Checkout() {
@@ -110,7 +106,7 @@ export default function Checkout() {
                         rows={4}
                     />
                 </Grid>
-                <Grid item xs={12} sm={4}></Grid>
+                <Grid item xs={12} sm={4}/>
                 <Grid item xs={12} sm={4}>
                 <ColorButton
                     type="submit"
