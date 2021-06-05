@@ -59,6 +59,14 @@ const useStyles = makeStyles((theme) => ({
       width: 'auto',
     },
   },
+  button: {
+    backgroundColor: '#3c52b2',
+    color: '#fff',
+    '&:hover': {
+      backgroundColor: fade('#fff', 0.2),
+      color: '#FFC300',
+    },
+  }
 }));
 
 export default function ButtonAppBar() {
@@ -91,8 +99,8 @@ export default function ButtonAppBar() {
               </div>
             }
             <Typography className={classes.title}> </Typography>
-            {currentPath() !== RouteConstants.SIGNUP && <Button color="inherit" href={RouteConstants.SIGNUP}>Signup</Button>}
-            {currentPath() !== RouteConstants.LOGIN && <Button color="inherit" href={RouteConstants.LOGIN}>Login</Button>}
+            {currentPath() !== RouteConstants.SIGNUP && <Button className={classes.button} href={RouteConstants.SIGNUP}>Signup</Button>}
+            {currentPath() !== RouteConstants.LOGIN && <Button className={classes.button} href={RouteConstants.LOGIN}>Login</Button>}
             
           </Toolbar>
         </AppBar>
