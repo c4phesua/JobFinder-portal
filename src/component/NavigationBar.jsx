@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
     color: '#fff',
     '&:hover': {
       backgroundColor: fade('#fff', 0.2),
-      color: '#FFC300',
+      color: '#00FFFF',
     },
   },
   dropbox:{
