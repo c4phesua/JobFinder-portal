@@ -1,5 +1,6 @@
 import React from "react";
 import defaulticon from '../images/defaulticon.jpeg';
+import Title from './Title';
 
 export default class TopCompanies extends React.Component {
 
@@ -26,7 +27,7 @@ export default class TopCompanies extends React.Component {
     const { companies } = this.props;
     return (
       <div className="topCompanies">
-        <h1>Top companies</h1>
+        <Title>Các công ty nổi bật</Title>
         <div>
           {companies.map((company, i) => this.renderTopCompany(company))}
         </div>

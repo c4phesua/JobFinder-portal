@@ -11,7 +11,7 @@ var data_home_page = {
                 "CI",
             ],
             id_job: 0,
-            type:"Full-time",
+            type:"Toàn thời gian",
             salary: "15,000,000",
             company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
@@ -26,7 +26,7 @@ var data_home_page = {
                 "Docker"
             ],
             id_job: 1,
-            type:"Full-time",
+            type:"Toàn thời gian",
             salary: "15,000,000",
             company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
@@ -41,7 +41,7 @@ var data_home_page = {
                 "Javascript"
             ],
             id_job: 2,
-            type:"Part-time",
+            type:"Bán thời gian",
             salary: "15,000,000",
             company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
@@ -68,7 +68,7 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 4,
-            type:"Part-time",
+            type:"Bán thời gian",
             salary: "6,000,000",
             company_address: "khu công nghệ cao, quận 9, thành phố Hồ Chí Minh",
             description: "",
@@ -82,7 +82,7 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 5,
-            type:"Part-time",
+            type:"Bán thời gian",
             salary: "6,000,000",
             company_address: "quận Bình Thạnh, thành phố Hồ Chí Minh",
             description: "",
@@ -96,7 +96,7 @@ var data_home_page = {
                 "Accounting"
             ],
             id_job: 6,
-            type:"Part-time",
+            type:"Bán thời gian",
             salary: "6,000,000",
             company_address: "Quận 1, thành phố Hồ Chí Minh",
             description: "",
@@ -110,7 +110,7 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 7,
-            type:"Part-time",
+            type:"Bán thời gian",
             salary: "6,000,000",
             company_address: "Quận 1, thành phố Hồ Chí Minh",
             description: "",
@@ -124,7 +124,7 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 8,
-            type:"Part-time",
+            type:"Bán thời gian",
             salary: "6,000,000",
             company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
             description: "",

@@ -1,6 +1,7 @@
 import React from "react";
 import MockupData from '../helper/MockupData';
 import { goTo } from '../utils/Routes';
+import Title from './Title';
 
 const renderJobDescription = (value) => {
   return value.length > 0
@@ -22,12 +23,13 @@ export default class JobDescription extends React.Component {
       <div className="jobDescription">
         <div className="jobHeader">
           <h1>{job.title}</h1>
-          <button className="btnApply" onClick={() => goTo('/apply-cv/'+jobIndex)}>Apply</button>
+          <h3>{job.type}</h3>
+          <button className="btnApply" onClick={() => goTo('/apply-cv/'+jobIndex)}>Ứng tuyển</button>
         </div>
         <div className="jobDetail">
           <h2>{job.company_name}</h2>
-          <h3>{job.company_address}</h3>
-          <h4>{this.renderTagList(job.tag_list)}</h4>
+          <h5>{job.company_address}</h5>
+          <h3>{this.renderTagList(job.tag_list)}</h3>
           <h3>Salary: {job.salary} VND</h3>
         </div>
         <div className="jobFooter">
