@@ -14,6 +14,7 @@ import MockupData from '../helper/MockupData';
 
 export default function Apply() {
   const classes = useStylesApply();
+  document.title = "Ứng tuyển";
   let {id} = useParams();
   const jobs = MockupData.data_home_page.JOB_LIST;
   const job = jobs[id];

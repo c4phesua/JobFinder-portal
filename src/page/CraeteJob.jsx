@@ -14,6 +14,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 
 export default function CreateJob() {
   const classes = useStylesApply();
+  document.title = "Việc làm";
   const [employmentType, setEmploymentType] = React.useState('');
   const handleChange = (event) => {
     setEmploymentType(event.target.value);
