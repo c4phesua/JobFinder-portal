@@ -4,7 +4,13 @@ import { red } from '@material-ui/core/colors';
 
 
 export const useStylesApply = makeStyles((theme) => ({
-  
+    formControl: {
+      margin: theme.spacing(1),
+      minWidth: 200
+    },
+    selectEmpty: {
+      marginTop: theme.spacing(2)
+    },
     layout: {
       width: 'auto',
       marginLeft: theme.spacing(2),

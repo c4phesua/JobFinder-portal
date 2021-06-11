@@ -22,13 +22,13 @@ export default class JobDescription extends React.Component {
       <div className="jobDescription">
         <div className="jobHeader">
           <h1>{job.title}</h1>
-          <button className="btnApply" onClick={() => goTo('/apply-cv')}>Apply</button>
+          <button className="btnApply" onClick={() => goTo('/apply-cv/'+jobIndex)}>Apply</button>
         </div>
         <div className="jobDetail">
           <h2>{job.company_name}</h2>
           <h3>{job.company_address}</h3>
           <h4>{this.renderTagList(job.tag_list)}</h4>
-          <h3>Salary: {job.salary}$</h3>
+          <h3>Salary: {job.salary} VND</h3>
         </div>
         <div className="jobFooter">
           <p>{renderJobDescription(job.description)}</p>

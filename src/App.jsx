@@ -7,6 +7,7 @@ import SignUp from "./page/Signup";
 import RouteConstants from './utils/RouteConstants';
 import Apply from "./page/Apply";
 import Manager from "./page/Manager";
+import CreateJob from "./page/CraeteJob";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route exact path={RouteConstants.INDEX_PHP} component={Dashboard} />
           <Route exact path={RouteConstants.HR_APPLICANTS} component={Manager} />
           <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
+          <Route exact path={RouteConstants.HR_CREATEJOB} component={CreateJob} />
         </Switch>
       </BrowserRouter>
     </div>
