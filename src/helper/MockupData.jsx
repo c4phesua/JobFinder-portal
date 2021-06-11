@@ -11,7 +11,8 @@ var data_home_page = {
                 "CI",
             ],
             id_job: 0,
-            salary: 2000,
+            type:"Full-time",
+            salary: 15000000,
             company_address: "Ho chi minh",
             description: "",
 
@@ -25,7 +26,8 @@ var data_home_page = {
                 "Docker"
             ],
             id_job: 1,
-            salary: 1000,
+            type:"Full-time",
+            salary: 16000000,
             company_address: "Ho chi minh",
             description: "",
 
@@ -39,7 +41,8 @@ var data_home_page = {
                 "Javascript"
             ],
             id_job: 2,
-            salary: 1000,
+            type:"Part-time",
+            salary: 5000000,
             company_address: "Ho chi minh",
             description: "",
 
@@ -65,7 +68,8 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 4,
-            salary: 1000,
+            type:"Part-time",
+            salary: 6000000,
             company_address: "Ho chi minh",
             description: "",
 
@@ -78,7 +82,8 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 5,
-            salary: 1000,
+            type:"Part-time",
+            salary: 6000000,
             company_address: "Ho chi minh",
             description: "",
 
@@ -91,7 +96,8 @@ var data_home_page = {
                 "Accounting"
             ],
             id_job: 6,
-            salary: 1000,
+            type:"Part-time",
+            salary: 6000000,
             company_address: "Ho chi minh",
             description: "",
 
@@ -104,7 +110,8 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 7,
-            salary: 1000,
+            type:"Part-time",
+            salary: 6000000,
             company_address: "Ho chi minh",
             description: "",
 
@@ -117,7 +124,8 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 8,
-            salary: 1000,
+            type:"Part-time",
+            salary: 6000000,
             company_address: "Ho chi minh",
             description: "",
 
