@@ -12,8 +12,8 @@ var data_home_page = {
             ],
             id_job: 0,
             type:"Full-time",
-            salary: 15000000,
-            company_address: "Ho chi minh",
+            salary: "15,000,000",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -27,8 +27,8 @@ var data_home_page = {
             ],
             id_job: 1,
             type:"Full-time",
-            salary: 16000000,
-            company_address: "Ho chi minh",
+            salary: "15,000,000",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -42,8 +42,8 @@ var data_home_page = {
             ],
             id_job: 2,
             type:"Part-time",
-            salary: 5000000,
-            company_address: "Ho chi minh",
+            salary: "15,000,000",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -55,8 +55,8 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 3,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            salary: "15,000,000",
+            company_address: "khu chế xuất Tân Thuận, quận 7, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -69,8 +69,8 @@ var data_home_page = {
             ],
             id_job: 4,
             type:"Part-time",
-            salary: 6000000,
-            company_address: "Ho chi minh",
+            salary: "6,000,000",
+            company_address: "khu công nghệ cao, quận 9, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -83,8 +83,8 @@ var data_home_page = {
             ],
             id_job: 5,
             type:"Part-time",
-            salary: 6000000,
-            company_address: "Ho chi minh",
+            salary: "6,000,000",
+            company_address: "quận Bình Thạnh, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -97,8 +97,8 @@ var data_home_page = {
             ],
             id_job: 6,
             type:"Part-time",
-            salary: 6000000,
-            company_address: "Ho chi minh",
+            salary: "6,000,000",
+            company_address: "Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -111,8 +111,8 @@ var data_home_page = {
             ],
             id_job: 7,
             type:"Part-time",
-            salary: 6000000,
-            company_address: "Ho chi minh",
+            salary: "6,000,000",
+            company_address: "Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -125,8 +125,8 @@ var data_home_page = {
             ],
             id_job: 8,
             type:"Part-time",
-            salary: 6000000,
-            company_address: "Ho chi minh",
+            salary: "6,000,000",
+            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
             description: "",
 
         },
@@ -136,28 +136,28 @@ var data_home_page = {
         {
             id_company: 1,
             company_name: "Vinagame",
-            company_address: "Z06, 13 Street, District 7 ,Ho Chi Minh City",
+            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
             website: "",
             top: 1
         },
         {
             id_company: 2,
             company_name: "KMS Technology",
-            company_address: "Ho chi Minh, Cong Hoa Street, Tan Binh District, Ho Chi Minh City",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             website: "",
             top: 2
         },
         {
             id_company: 3,
             company_name: "FPT Software",
-            company_address: "HCM Hightech Park, Thu Duc City, Ho Chi Minh City",
+            company_address: "khu công nghệ cao, quận 9, thành phố Hồ Chí Minh",
             website: "",
             top: 3
         },
         {
             id_company: 4,
             company_name: "Katalon",
-            company_address: "Etown Central, District 4, Ho Chi Minh City",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             website: "",
             top: 4
         }

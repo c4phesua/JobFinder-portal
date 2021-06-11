@@ -103,10 +103,9 @@ export default function Apply() {
                     <TextField
                         variant="outlined"
                         margin="normal"
-                        required
                         id="about"
                         name="about"
-                        label="Những kỹ năng, thành tựu nào chứng tỏ bạn là một ứng viên tiềm năng cho vị trí này ?"
+                        label="Giới thiệu thêm về bản thân ?"
                         fullWidth
                         multiline
                         rows={4}
