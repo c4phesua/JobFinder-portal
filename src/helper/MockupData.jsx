@@ -11,36 +11,39 @@ var data_home_page = {
                 "CI",
             ],
             id_job: 0,
-            salary: 2000,
-            company_address: "Ho chi minh",
+            type: "Toàn thời gian",
+            salary: "15,000,000",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
             company_name: "KMS Technology",
             image_link: "",
-            title: "BE Developer",
+            title: "BE Developer Intern",
             job_type: "IT",
             tag_list: [
                 "Nodejs",
                 "Docker"
             ],
             id_job: 1,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            type: "Bán thời gian",
+            salary: "6,000,000",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
             company_name: "Katalon",
             image_link: "",
-            title: "Fullstack Engineer",
+            title: "Software Engineer Intern",
             job_type: "IT",
             tag_list: [
                 "Java",
                 "Javascript"
             ],
             id_job: 2,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            type: "Bán thời gian",
+            salary: "5,000,000",
+            company_address: "Etown Central, Đoàn Văn Bơ, Quận 4, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -52,8 +55,8 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 3,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            salary: "15,000,000",
+            company_address: "khu chế xuất Tân Thuận, quận 7, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -65,8 +68,9 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 4,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            type: "Bán thời gian",
+            salary: "6,000,000",
+            company_address: "khu công nghệ cao, quận 9, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -78,8 +82,9 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 5,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            type: "Bán thời gian",
+            salary: "6,000,000",
+            company_address: "quận Bình Thạnh, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -91,8 +96,9 @@ var data_home_page = {
                 "Accounting"
             ],
             id_job: 6,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            type: "Bán thời gian",
+            salary: "6,000,000",
+            company_address: "Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -104,12 +110,13 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 7,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            type: "Bán thời gian",
+            salary: "6,000,000",
+            company_address: "Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
-            company_name: "VNG",
+            company_name: "Vinagame",
             image_link: "",
             title: "2D Graphic Desgin",
             job_type: "Design",
@@ -117,8 +124,37 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 8,
-            salary: 1000,
-            company_address: "Ho chi minh",
+            type: "Bán thời gian",
+            salary: "6,000,000",
+            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
+            description: "",
+
+        }, {
+            company_name: "Vietcombank",
+            image_link: "",
+            title: "Nhân viên chăm sóc khách hàng",
+            job_type: "Service",
+            tag_list: [
+                "CSKH"
+            ],
+            id_job: 8,
+            type: "Bán thời gian",
+            salary: "6,000,000",
+            company_address: "Quận 1, thành phố Hồ Chí Minh",
+            description: "",
+
+        }, {
+            company_name: "Katalon",
+            image_link: "",
+            title: "Graphic Designer Intern",
+            job_type: "Design",
+            tag_list: [
+                "Design"
+            ],
+            id_job: 8,
+            type: "Bán thời gian",
+            salary: "4,000,000",
+            company_address: "Etown Central, Đoàn Văn Bơ, Quận 4, thành phố Hồ Chí Minh",
             description: "",
 
         },
@@ -128,28 +164,28 @@ var data_home_page = {
         {
             id_company: 1,
             company_name: "Vinagame",
-            company_address: "Z06, 13 Street, District 7 ,Ho Chi Minh City",
+            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
             website: "",
             top: 1
         },
         {
             id_company: 2,
             company_name: "KMS Technology",
-            company_address: "Ho chi Minh, Cong Hoa Street, Tan Binh District, Ho Chi Minh City",
+            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
             website: "",
             top: 2
         },
         {
             id_company: 3,
             company_name: "FPT Software",
-            company_address: "HCM Hightech Park, Thu Duc City, Ho Chi Minh City",
+            company_address: "khu công nghệ cao, quận 9, thành phố Hồ Chí Minh",
             website: "",
             top: 3
         },
         {
             id_company: 4,
             company_name: "Katalon",
-            company_address: "Etown Central, District 4, Ho Chi Minh City",
+            company_address: "Etown Central, Đoàn Văn Bơ, Quận 4, thành phố Hồ Chí Minh",
             website: "",
             top: 4
         }
@@ -171,7 +207,7 @@ var data_manage_hr_page = {
             ],
             id_job: 1,
             salary: 1000,
-            company_address: "Ho chi minh",
+            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -185,7 +221,7 @@ var data_manage_hr_page = {
             ],
             id_job: 2,
             salary: 1000,
-            company_address: "Ho chi minh",
+            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -198,7 +234,7 @@ var data_manage_hr_page = {
             ],
             id_job: 3,
             salary: 1000,
-            company_address: "Ho chi minh",
+            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
             description: "",
 
         },

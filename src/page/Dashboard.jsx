@@ -6,7 +6,7 @@ import MockupData from '../helper/MockupData';
 class Dashboard extends React.Component {
 
     componentDidMount() {
-        document.title = "Job Finder"
+        document.title = "Job Finder - Trang chủ"
     }
 
     handleCompany(company) {
