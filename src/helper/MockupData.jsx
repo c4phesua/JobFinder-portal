@@ -55,6 +55,7 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 3,
+            type: "Bán thời gian",
             salary: "15,000,000",
             company_address: "khu chế xuất Tân Thuận, quận 7, thành phố Hồ Chí Minh",
             description: "",
@@ -137,7 +138,7 @@ var data_home_page = {
             tag_list: [
                 "CSKH"
             ],
-            id_job: 8,
+            id_job: 9,
             type: "Bán thời gian",
             salary: "6,000,000",
             company_address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh",
@@ -151,7 +152,7 @@ var data_home_page = {
             tag_list: [
                 "Design"
             ],
-            id_job: 8,
+            id_job: 10,
             type: "Bán thời gian",
             salary: "4,000,000",
             company_address: "Etown Central, Đoàn Văn Bơ, Quận 4, thành phố Hồ Chí Minh",
