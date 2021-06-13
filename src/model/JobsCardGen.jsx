@@ -78,7 +78,7 @@ export default function MediaControlCard() {
                         </CardContent>
                     </div>
                 </Card>
-            ))};
+            ))}
         </div>
     )
 }
