@@ -6,6 +6,13 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Cvs from "../model/CvGen";
+import JobsGen from "../model/JobGen";
+
+const body = document.body,
+    html = document.documentElement;
+
+const height = Math.max(body.scrollHeight, body.offsetHeight,
+    html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -26,6 +33,8 @@ const useStyles = makeStyles((theme) => ({
         display: 'flex',
         overflow: 'auto',
         flexDirection: 'column',
+        minHeight: height * 85/100,
+        maxHeight: height * 85/100,
     },
     fixedHeight: {
         height: 240,
@@ -43,14 +52,15 @@ export default function Manager() {
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
                         {/* List CV */}
-                        <Grid item xs={12} md={8} lg={9}>
+                        <Grid item xs={12} md={6} lg={6}>
                             <Paper className={classes.paper}>
                                 <Cvs/>
                             </Paper>
                         </Grid>
                         {/* CV */}
-                        <Grid item xs={12} md={4} lg={3}>
+                        <Grid item xs={12} md={6} lg={6}>
                             <Paper className={fixedHeightPaper}>
+                                <JobsGen/>
                             </Paper>
                         </Grid>
                     </Grid>

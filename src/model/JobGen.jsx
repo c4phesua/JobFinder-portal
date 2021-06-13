@@ -10,16 +10,16 @@ import Title from "../component/Title";
 import {Select} from "@material-ui/core";
 
 // Generate Order Data
-function createData(id, date, name, email, cv, status) {
-    return { id, date, name, email, cv, status };
+function createData(id, position, companyName, location, jobType, salary, status) {
+    return { id, position, companyName, location, jobType, salary, status };
 }
 
 const rows = [
-    createData(0, '16 Mar, 2019', 'Elvis Presley', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(1, '16 Mar, 2019', 'Paul McCartney', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(2, '16 Mar, 2019', 'Tom Scholz', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(3, '16 Mar, 2019', 'Michael Jackson', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'test@test.com', 'facebook.com', 'PENDING'),
+    createData(0, 'Java Backend', 'KMS', 'district 1, HCM', 'Full-time', '100$', 'PUBLIC'),
+    createData(0, 'Java Backend', 'KMS', 'district 1, HCM', 'Full-time', '100$', 'PUBLIC'),
+    createData(0, 'Java Backend', 'KMS', 'district 1, HCM', 'Full-time', '100$', 'PUBLIC'),
+    createData(0, 'Java Backend', 'KMS', 'district 1, HCM', 'Full-time', '100$', 'PUBLIC'),
+    createData(0, 'Java Backend', 'KMS', 'district 1, HCM', 'Full-time', '100$', 'PUBLIC'),
 ];
 
 function preventDefault(event) {
@@ -32,28 +32,30 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function Cvs() {
+export default function JobsGen() {
     const classes = useStyles();
     return (
         <React.Fragment>
-            <Title>CV Management</Title>
+            <Title>Job Management</Title>
             <Table size="small">
                 <TableHead>
                     <TableRow>
-                        <TableCell>Date</TableCell>
-                        <TableCell>Name</TableCell>
-                        <TableCell>Email</TableCell>
-                        <TableCell>CV</TableCell>
+                        <TableCell>position</TableCell>
+                        <TableCell>Company Name</TableCell>
+                        <TableCell>Location</TableCell>
+                        <TableCell>Type</TableCell>
+                        <TableCell>Salary</TableCell>
                         <TableCell>Status</TableCell>
                     </TableRow>
                 </TableHead>
                 <TableBody>
                     {rows.map((row) => (
                         <TableRow key={row.id}>
-                            <TableCell>{row.date}</TableCell>
-                            <TableCell>{row.name}</TableCell>
-                            <TableCell>{row.email}</TableCell>
-                            <TableCell><Link>{row.cv}</Link></TableCell>
+                            <TableCell>{row.position}</TableCell>
+                            <TableCell>{row.companyName}</TableCell>
+                            <TableCell>{row.location}</TableCell>
+                            <TableCell>{row.jobType}</TableCell>
+                            <TableCell>{row.salary}</TableCell>
                             <TableCell>
                                 <Select
                                     native
@@ -64,9 +66,8 @@ export default function Cvs() {
                                         id: 'outlined-age-native-simple',
                                     }}
                                 >
-                                    <option value={'PENDING'}>PENDING</option>
-                                    <option value={'REJECT'}>REJECT</option>
-                                    <option value={'APPROVE'}>APPROVE</option>
+                                    <option value={'PENDING'}>Public</option>
+                                    <option value={'HIDDEN'}>Hidden</option>
                                 </Select>
                             </TableCell>
                         </TableRow>
