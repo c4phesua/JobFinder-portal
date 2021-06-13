@@ -8,6 +8,7 @@ import RouteConstants from './utils/RouteConstants';
 import Apply from "./page/Apply";
 import Manager from "./page/Manager";
 import CreateJob from "./page/CraeteJob";
+import Error from "./component/Error";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route exact path={RouteConstants.HR_APPLICANTS} component={Manager} />
           <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
           <Route exact path={RouteConstants.HR_CREATEJOB} component={CreateJob} />
+          <Route component={Error} />
         </Switch>
       </BrowserRouter>
     </div>
