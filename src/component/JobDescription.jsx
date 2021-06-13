@@ -28,9 +28,9 @@ export default class JobDescription extends React.Component {
         </div>
         <div className="jobDetail">
           <h2>{job.company_name}</h2>
-          <h5>{job.company_address}</h5>
+          <h5>Địa chỉ: {job.company_address}</h5>
           <h4>{this.renderTagList(job.tag_list)}</h4>
-          <h3>Salary: {job.salary} VND</h3>
+          <h3>Lương: {job.salary} VND</h3>
         </div>
         <div className="jobFooter">
           <p>{renderJobDescription(job.description)}</p>
