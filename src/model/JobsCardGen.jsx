@@ -51,7 +51,6 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MediaControlCard() {
     const classes = useStyles();
-    const theme = useTheme();
 
     return (
         <div>
@@ -80,5 +79,5 @@ export default function MediaControlCard() {
                 </Card>
             ))}
         </div>
-    )
+    );
 }
