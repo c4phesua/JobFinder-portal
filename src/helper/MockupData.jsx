@@ -167,6 +167,7 @@ var data_home_page = {
             company_name: "Vinagame",
             company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image:"https://e7.pngegg.com/pngimages/233/813/png-clipart-vng-corporation-zalo-logo-company-video-games-ho-chi-minh-city-game-angle.png",
             top: 1
         },
         {
@@ -174,6 +175,7 @@ var data_home_page = {
             company_name: "KMS Technology",
             company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image: "https://d2h1nbmw1jjnl.cloudfront.net/company_directory_entries/company_logos/000/000/094/original/logo-kms-no_slogan%28square%29.png?1544537954",
             top: 2
         },
         {
@@ -181,6 +183,7 @@ var data_home_page = {
             company_name: "FPT Software",
             company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image:"https://upload.wikimedia.org/wikipedia/commons/8/8b/FPT_Software_H%404x.png",
             top: 3
         },
         {
@@ -188,6 +191,7 @@ var data_home_page = {
             company_name: "Katalon",
             company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Katalon-logo-vector.svg/1200px-Katalon-logo-vector.svg.png",
             top: 4
         }
     ],

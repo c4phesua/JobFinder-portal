@@ -16,7 +16,7 @@ export default function TopCompanies(props) {
         <Card className={classes.root} >
           <CardMedia
             className={classes.cover}
-            image="https://logoeps.com/wp-content/uploads/2011/05/amazon-logo-vector.png"
+            image={company.image}
           />
           <div className={classes.details}>
             <CardContent className={classes.content}>
