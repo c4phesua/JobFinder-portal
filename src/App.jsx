@@ -7,7 +7,7 @@ import SignUp from "./page/Signup";
 import RouteConstants from './utils/RouteConstants';
 import Apply from "./page/Apply";
 import Manager from "./page/Manager";
-import CreateJob from "./page/CraeteJob";
+import CreateJob from "./page/CreateJob";
 import Error from "./component/Error";
 
 function App() {

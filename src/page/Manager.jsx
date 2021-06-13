@@ -6,13 +6,11 @@ import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Cvs from "../model/CvGen";
-import JobsGen from "../model/JobGen";
+import JobsTableGen from "../model/JobGen";
 
 const body = document.body,
     html = document.documentElement;
-
-const height = Math.max(body.scrollHeight, body.offsetHeight,
-    html.clientHeight, html.scrollHeight, html.offsetHeight);
+const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -60,7 +58,7 @@ export default function Manager() {
                         {/* CV */}
                         <Grid item xs={12} md={6} lg={6}>
                             <Paper className={fixedHeightPaper}>
-                                <JobsGen/>
+                                <JobsTableGen/>
                             </Paper>
                         </Grid>
                     </Grid>

@@ -1,28 +1,77 @@
 import React from 'react';
-import JobsContainer from '../component/JobsContainer';
-import TopCompanies from "../component/TopCompanies";
-import MockupData from '../helper/MockupData';
+import clsx from 'clsx';
+import {makeStyles} from '@material-ui/core/styles';
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import Paper from '@material-ui/core/Paper';
+import JobsCardGen from "../model/JobsCardGen";
+import Title from "../component/Title";
 
-class Dashboard extends React.Component {
+const body = document.body,
+    html = document.documentElement;
+const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-    componentDidMount() {
-        document.title = "Job Finder - Trang chủ"
-    }
+const useStyles = makeStyles((theme) => ({
+    root: {
+        display: 'flex',
+    },
+    appBarSpacer: theme.mixins.toolbar,
+    content: {
+        flexGrow: 1,
+        height: '100vh',
+        overflow: 'auto',
+    },
+    container: {
+        paddingTop: theme.spacing(4),
+        paddingBottom: theme.spacing(4),
+    },
+    paper: {
+        padding: theme.spacing(2),
+        display: 'flex',
+        overflow: 'auto',
+        flexDirection: 'column',
+        minHeight: height * 85/100,
+        maxHeight: height * 85/100,
+    },
+    fixedHeight: {
+        height: 240,
+    },
+}));
 
-    handleCompany(company) {
-        console.log('handle', company);
-    }
+export default function Manager() {
+    const classes = useStyles();
+    const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
-    render() {
-        const companies = MockupData.data_home_page.TOP_COMPANY;
-        const jobs = MockupData.data_home_page.JOB_LIST;
-        return (
-            <div className="dashboard">
-                <JobsContainer jobs={jobs} />
-                <TopCompanies handleCompany={this.handleCompany} companies={companies} />
-            </div>
-        );
-    }
+    return (
+        <div className={classes.root}>
+            <main className={classes.content}>
+                <div className={classes.appBarSpacer} />
+                <Container maxWidth="lg" className={classes.container}>
+                    <Grid container spacing={3}>
+                        {/* List jobs */}
+                        <Grid item xs={12} md={6} lg={4}>
+                            <Paper className={classes.paper}>
+                                <JobsCardGen/>
+                            </Paper>
+                        </Grid>
+                        {/* job detail */}
+                        <Grid item xs={12} md={6} lg={5}>
+                            <Paper className={fixedHeightPaper}>
+                                <Title>Job detail</Title>
+                            </Paper>
+                        </Grid>
+                        {/* top company */}
+                        <Grid item xs={12} md={6} lg={3}>
+                            <Paper className={fixedHeightPaper}>
+                                <Title>Top company</Title>
+                            </Paper>
+                        </Grid>
+                    </Grid>
+                    <Box pt={4}>
+                    </Box>
+                </Container>
+            </main>
+        </div>
+    );
 }
-
-export default Dashboard;
