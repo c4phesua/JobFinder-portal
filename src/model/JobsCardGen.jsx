@@ -39,24 +39,24 @@ const useStyles = makeStyles((theme) => ({
 
 export default function MediaControlCard(props) {
     const classes = useStyles();
-    const { jobs } = props;
+    const { jobs, onJobClick } = props;
+    const handleJobClick = (job) => {
+        onJobClick(job.id_job);
+    }
     return (
         <div>
             {jobs.map((job) => (
-                <Card className={classes.root} onClick={() => {
-                    {
-                        alert("hello world")
-                    }
-                }}>
+                <Card className={classes.root} onClick={() => { handleJobClick(job) }}>
                     <CardMedia
                         className={classes.cover}
                         image="https://logoeps.com/wp-content/uploads/2011/05/amazon-logo-vector.png"
-                        title="Live from space album cover"
                     />
                     <div className={classes.details}>
                         <CardContent className={classes.content}>
                             <Typography component="h5" variant="h5" className={classes.cardText}>
-                                {job.title}
+                                <Title>
+                                    {job.title}
+                                </Title>
                             </Typography>
                             <Typography variant="subtitle1" color="textSecondary">
                                 {job.company_address}
