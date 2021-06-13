@@ -17,7 +17,7 @@ export const companiesStyle = makeStyles((theme) => ({
       flex: '1 0 auto',
   },
   cover: {
-      width: '50%',
+      width: '30%',
   },
   controls: {
       display: 'flex',

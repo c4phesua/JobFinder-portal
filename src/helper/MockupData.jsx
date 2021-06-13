@@ -164,28 +164,28 @@ var data_home_page = {
         {
             id_company: 1,
             company_name: "Vinagame",
-            company_address: "Hồ Chí Minh city",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
             top: 1
         },
         {
             id_company: 2,
             company_name: "KMS Technology",
-            company_address: "Hồ Chí Minh city",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
             top: 2
         },
         {
             id_company: 3,
             company_name: "FPT Software",
-            company_address: "Hồ Chí Minh city",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
             top: 3
         },
         {
             id_company: 4,
             company_name: "Katalon",
-            company_address: "Hồ Chí Minh city",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
             top: 4
         }
