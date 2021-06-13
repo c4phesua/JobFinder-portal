@@ -7,6 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import JobsCardGen from "../model/JobsCardGen";
 import Title from "../component/Title";
+import MockupData from '../helper/MockupData';
 
 const body = document.body,
     html = document.documentElement;
@@ -21,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
         height: '100vh',
         overflow: 'auto',
+        maxHeight: '100%',
     },
     container: {
         paddingTop: theme.spacing(4),
@@ -40,6 +42,8 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
+const jobs = MockupData.data_home_page.JOB_LIST;
+
 export default function Manager() {
     const classes = useStyles();
     const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
@@ -53,7 +57,7 @@ export default function Manager() {
                         {/* List jobs */}
                         <Grid item xs={12} md={6} lg={4}>
                             <Paper className={classes.paper}>
-                                <JobsCardGen/>
+                                <JobsCardGen jobs={jobs}/>
                             </Paper>
                         </Grid>
                         {/* job detail */}

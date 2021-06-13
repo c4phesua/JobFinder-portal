@@ -1,22 +1,10 @@
 import React from 'react';
-import {makeStyles, useTheme} from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Title from "../component/Title";
-
-function createData(id, date, name, email, cv, status) {
-    return {id, date, name, email, cv, status};
-}
-
-const rows = [
-    createData(0, '16 Mar, 2019', 'Elvis Presley', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(1, '16 Mar, 2019', 'Paul McCartney', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(2, '16 Mar, 2019', 'Tom Scholz', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(3, '16 Mar, 2019', 'Michael Jackson', 'test@test.com', 'facebook.com', 'PENDING'),
-    createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'test@test.com', 'facebook.com', 'PENDING'),
-];
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,13 +37,12 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function MediaControlCard() {
+export default function MediaControlCard(props) {
     const classes = useStyles();
-
+    const { jobs } = props;
     return (
         <div>
-            <Title>Jobs List</Title>
-            {rows.map((row) => (
+            {jobs.map((job) => (
                 <Card className={classes.root} onClick={() => {
                     {
                         alert("hello world")
@@ -68,11 +55,11 @@ export default function MediaControlCard() {
                     />
                     <div className={classes.details}>
                         <CardContent className={classes.content}>
-                            <Typography component="h5" variant="h5">
-                                Live From Space
+                            <Typography component="h5" variant="h5" className={classes.cardText}>
+                                {job.title}
                             </Typography>
                             <Typography variant="subtitle1" color="textSecondary">
-                                Mac Miller
+                                {job.company_address}
                             </Typography>
                         </CardContent>
                     </div>

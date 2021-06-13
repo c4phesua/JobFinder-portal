@@ -98,7 +98,7 @@ var data_home_page = {
             id_job: 6,
             type: "Bán thời gian",
             salary: "6,000,000",
-            company_address: "Quận 1, thành phố Hồ Chí Minh",
+            company_address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -112,7 +112,7 @@ var data_home_page = {
             id_job: 7,
             type: "Bán thời gian",
             salary: "6,000,000",
-            company_address: "Quận 1, thành phố Hồ Chí Minh",
+            company_address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -132,7 +132,7 @@ var data_home_page = {
         }, {
             company_name: "Vietcombank",
             image_link: "",
-            title: "Nhân viên chăm sóc khách hàng",
+            title: "Nhân viên CSKH",
             job_type: "Service",
             tag_list: [
                 "CSKH"
@@ -140,7 +140,7 @@ var data_home_page = {
             id_job: 8,
             type: "Bán thời gian",
             salary: "6,000,000",
-            company_address: "Quận 1, thành phố Hồ Chí Minh",
+            company_address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
