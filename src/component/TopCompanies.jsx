@@ -1,37 +1,37 @@
-import React from "react";
-import defaulticon from '../images/defaulticon.jpeg';
-import Title from './Title';
+import React from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import Title from "../component/Title";
+import { companiesStyle } from '../styleutil/TopCompaniesStyle';
 
-export default class TopCompanies extends React.Component {
 
-  onTopCompanyClickHandler(company) {
-    const { handleCompany } = this.props;
-    handleCompany(company);
-  }
-
-  renderTopCompany(company) {
-    return (
-      <div className="company" onClick={() => this.onTopCompanyClickHandler(company)}>
-        <div className="company_logo">
-          <img className="icon" src={defaulticon} alt="" />
-        </div>
-        <div className="company_text">
-          <p>{company.company_name}</p>
-          <p className="company_address">{company.company_address}</p>
-        </div>
-      </div>
-    )
-  }
-
-  render() {
-    const { companies } = this.props;
-    return (
-      <div className="topCompanies">
-        <Title>Các công ty nổi bật</Title>
-        <div>
-          {companies.map((company, i) => this.renderTopCompany(company))}
-        </div>
-      </div>
-    );
-  }
+export default function TopCompanies(props) {
+  const classes = companiesStyle();
+  const { companies } = props;
+  return (
+    <div>
+      {companies.map((company) => (
+        <Card className={classes.root} >
+          <CardMedia
+            className={classes.cover}
+            image={company.image}
+          />
+          <div className={classes.details}>
+            <CardContent className={classes.content}>
+              <Typography component="h5" variant="h5" className={classes.cardText}>
+                <Title>
+                  {company.company_name}
+                </Title>
+              </Typography>
+              <Typography variant="subtitle1" color="textSecondary">
+                {company.company_address}
+              </Typography>
+            </CardContent>
+          </div>
+        </Card>
+      ))}
+    </div>
+  );
 }

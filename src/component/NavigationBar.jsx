@@ -6,8 +6,10 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {currentPath} from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
-import {InputBase} from "@material-ui/core";
+import {InputBase, Select} from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
+import {ColorButton} from "../utils/UtilsFunc";
+import LocationOnIcon from '@material-ui/icons/LocationOn';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -20,9 +22,9 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   inputInput: {
-    padding: theme.spacing(1, 1, 1, 0),
+    padding: theme.spacing(1, 20, 1, 0),
     // vertical padding + font size from searchIcon
-    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    paddingLeft: `calc(1em + ${theme.spacing(5)}px)`,
     transition: theme.transitions.create('width'),
     width: '100%',
     [theme.breakpoints.up('sm')]: {
@@ -33,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   searchIcon: {
-    padding: theme.spacing(0, 2),
+    padding: theme.spacing(0, 1),
     height: '100%',
     position: 'absolute',
     pointerEvents: 'none',
@@ -55,17 +57,22 @@ const useStyles = makeStyles((theme) => ({
     marginLeft: 0,
     width: '100%',
     [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(3),
+      marginLeft: theme.spacing(0),
       width: 'auto',
     },
   },
-  button: {
+  titleButton: {
     backgroundColor: '#3c52b2',
     color: '#fff',
     '&:hover': {
       backgroundColor: fade('#fff', 0.2),
-      color: '#FFC300',
+      color: '#00FFFF',
     },
+  },
+  dropbox:{
+    padding: theme.spacing(0, 1, 0, 0),
+    paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+    color: '#000',
   }
 }));
 
@@ -84,23 +91,50 @@ export default function ButtonAppBar() {
               </a>
             </Typography>
             {currentPath() !== RouteConstants.SIGNUP && currentPath() !== RouteConstants.LOGIN &&
-              <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon/>
+              <div style={{ display: 'inline-flex' }}>
+                <div className={classes.search}>
+                  {/*search textbox*/}
+                  <div className={classes.searchIcon}>
+                    <SearchIcon/>
+                  </div>
+                  <InputBase
+                      placeholder="Search…"
+                      classes={{
+                        root: classes.inputRoot,
+                        input: classes.inputInput,
+                      }}
+                      inputProps={{'aria-label': 'search'}}
+                  />
                 </div>
-                <InputBase
-                    placeholder="Search…"
-                    classes={{
-                      root: classes.inputRoot,
-                      input: classes.inputInput,
-                    }}
-                    inputProps={{'aria-label': 'search'}}
-                />
+                {/*city selector*/}
+                <div className={classes.search}>
+                  <div className={classes.searchIcon}>
+                    <LocationOnIcon/>
+                  </div>
+                  <Select
+                      className={classes.dropbox}
+                      native
+                      defaultValue="ALL"
+                      label="Age"
+                      inputProps={{
+                        name: 'Status',
+                        id: 'outlined-age-native-simple',
+                      }}
+                  >
+                    <option value={'ALL'}>All cities</option>
+                    <option value={'HCM'}>Ho Chi Minh</option>
+                    <option value={'HN'}>Ha Noi</option>
+                    <option value={'DN'}>Da Nang</option>
+                  </Select>
+                </div>
+                <ColorButton variant="contained" color="primary" className={classes.margin}>
+                  Search
+                </ColorButton>
               </div>
             }
             <Typography className={classes.title}> </Typography>
-            {currentPath() !== RouteConstants.SIGNUP && <Button className={classes.button} href={RouteConstants.SIGNUP}>Signup</Button>}
-            {currentPath() !== RouteConstants.LOGIN && <Button className={classes.button} href={RouteConstants.LOGIN}>Login</Button>}
+            {currentPath() !== RouteConstants.SIGNUP && <Button className={classes.titleButton} href={RouteConstants.SIGNUP}>Signup</Button>}
+            {currentPath() !== RouteConstants.LOGIN && <Button className={classes.titleButton} href={RouteConstants.LOGIN}>Login</Button>}
             
           </Toolbar>
         </AppBar>

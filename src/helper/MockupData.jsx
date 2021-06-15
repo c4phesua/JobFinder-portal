@@ -55,6 +55,7 @@ var data_home_page = {
                 "Photoshop"
             ],
             id_job: 3,
+            type: "Bán thời gian",
             salary: "15,000,000",
             company_address: "khu chế xuất Tân Thuận, quận 7, thành phố Hồ Chí Minh",
             description: "",
@@ -98,7 +99,7 @@ var data_home_page = {
             id_job: 6,
             type: "Bán thời gian",
             salary: "6,000,000",
-            company_address: "Quận 1, thành phố Hồ Chí Minh",
+            company_address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -112,7 +113,7 @@ var data_home_page = {
             id_job: 7,
             type: "Bán thời gian",
             salary: "6,000,000",
-            company_address: "Quận 1, thành phố Hồ Chí Minh",
+            company_address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -132,15 +133,15 @@ var data_home_page = {
         }, {
             company_name: "Vietcombank",
             image_link: "",
-            title: "Nhân viên chăm sóc khách hàng",
+            title: "Nhân viên CSKH",
             job_type: "Service",
             tag_list: [
                 "CSKH"
             ],
-            id_job: 8,
+            id_job: 9,
             type: "Bán thời gian",
             salary: "6,000,000",
-            company_address: "Quận 1, thành phố Hồ Chí Minh",
+            company_address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh",
             description: "",
 
         }, {
@@ -151,7 +152,7 @@ var data_home_page = {
             tag_list: [
                 "Design"
             ],
-            id_job: 8,
+            id_job: 10,
             type: "Bán thời gian",
             salary: "4,000,000",
             company_address: "Etown Central, Đoàn Văn Bơ, Quận 4, thành phố Hồ Chí Minh",
@@ -164,29 +165,33 @@ var data_home_page = {
         {
             id_company: 1,
             company_name: "Vinagame",
-            company_address: "khu chế xuất Tân Thuận, Quận 7, thành phố Hồ Chí Minh",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image:"https://e7.pngegg.com/pngimages/233/813/png-clipart-vng-corporation-zalo-logo-company-video-games-ho-chi-minh-city-game-angle.png",
             top: 1
         },
         {
             id_company: 2,
             company_name: "KMS Technology",
-            company_address: "124 Cộng Hòa, quận Tân Bình, thành phố Hồ Chí Minh",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image: "https://d2h1nbmw1jjnl.cloudfront.net/company_directory_entries/company_logos/000/000/094/original/logo-kms-no_slogan%28square%29.png?1544537954",
             top: 2
         },
         {
             id_company: 3,
             company_name: "FPT Software",
-            company_address: "khu công nghệ cao, quận 9, thành phố Hồ Chí Minh",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image:"https://upload.wikimedia.org/wikipedia/commons/8/8b/FPT_Software_H%404x.png",
             top: 3
         },
         {
             id_company: 4,
             company_name: "Katalon",
-            company_address: "Etown Central, Đoàn Văn Bơ, Quận 4, thành phố Hồ Chí Minh",
+            company_address: "Thành phố Hồ Chí Minh",
             website: "",
+            image: "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Katalon-logo-vector.svg/1200px-Katalon-logo-vector.svg.png",
             top: 4
         }
     ],

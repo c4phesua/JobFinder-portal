@@ -127,7 +127,7 @@ export default function CreateJob() {
                     size="small" 
                     endIcon={<SendIcon/>}
                 >
-                Gửi CV
+                Đăng tuyển
                 </ColorButton>
                 </Grid>
                 
