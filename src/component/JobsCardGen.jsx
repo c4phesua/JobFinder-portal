@@ -27,7 +27,8 @@ const useStyles = makeStyles((theme) => ({
         flex: '1 0 auto',
     },
     cover: {
-        margin: 'auto',
+        marginTop: 'auto',
+        marginBottom: 'auto',
         minWidth: 90 * height/720,
         minHeight: 90 * height/720,
         maxWidth: 90 * height/720,
