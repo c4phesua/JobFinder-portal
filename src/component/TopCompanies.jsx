@@ -4,11 +4,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Title from "../component/Title";
-import { companiesStyle } from '../styleutil/TopCompaniesStyle';
+import { cardStyle } from '../styleutil/CardStyle';
 
 
 export default function TopCompanies(props) {
-  const classes = companiesStyle();
+  const classes = cardStyle();
   const { companies } = props;
   return (
     <div>

@@ -25,6 +25,7 @@ function App() {
           <Route exact path={RouteConstants.HR_APPLICANTS} component={Manager} />
           <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
           <Route exact path={RouteConstants.HR_CREATEJOB} component={CreateJob} />
+          <Route exact path={RouteConstants.DASHBOARD} component={Dashboard} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>

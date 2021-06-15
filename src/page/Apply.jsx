@@ -10,6 +10,7 @@ import SendIcon from '@material-ui/icons/Send';
 import {ColorButton, useStylesApply} from '../utils/UtilsFunc';
 import {useParams} from "react-router-dom";
 import MockupData from '../helper/MockupData';
+import { student_user } from '../helper/MockupData';
 
 
 export default function Apply() {
@@ -51,6 +52,7 @@ export default function Apply() {
                         id="fullname"
                         name="fullname"
                         label="Họ tên đầy đủ"
+                        defaultValue={student_user.fullname}
                         fullWidth
                     />
                 </Grid>
@@ -62,6 +64,7 @@ export default function Apply() {
                         id="email"
                         name="email"
                         label="Email của bạn"
+                        defaultValue={student_user.username}
                         fullWidth
                     />
                 </Grid>

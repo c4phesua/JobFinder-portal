@@ -4,7 +4,7 @@ const body = document.body,
   html = document.documentElement;
 const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
-export const companiesStyle = makeStyles((theme) => ({
+export const cardStyle = makeStyles((theme) => ({
   root: {
     display: 'flex',
     marginBottom: '15px',
