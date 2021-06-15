@@ -4,7 +4,11 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Title from "../component/Title";
+import Title from "./Title";
+
+const body = document.body,
+    html = document.documentElement;
+const height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -23,7 +27,11 @@ const useStyles = makeStyles((theme) => ({
         flex: '1 0 auto',
     },
     cover: {
-        width: '30%',
+        margin: 'auto',
+        minWidth: 90 * height/720,
+        minHeight: 90 * height/720,
+        maxWidth: 90 * height/720,
+        maxHeight: 90 * height/720,
     },
     controls: {
         display: 'flex',

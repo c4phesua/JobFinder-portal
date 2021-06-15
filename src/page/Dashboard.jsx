@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import JobsCardGen from "../model/JobsCardGen";
+import JobsCardGen from "../component/JobsCardGen";
 import MockupData from '../helper/MockupData';
 import JobDescription from '../component/JobDescription';
 import TopCompanies from '../component/TopCompanies';
