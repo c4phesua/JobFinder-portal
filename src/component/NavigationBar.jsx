@@ -1,11 +1,7 @@
 import React from 'react';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
 import { currentPath } from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
-import { InputBase, Select } from "@material-ui/core";
+import { InputBase, Select, AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import { ColorButton } from "../utils/UtilsFunc";
 import { navBarStyle } from '../styleutil/NavigationStyle';
