@@ -10,30 +10,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import { ColorButton } from "../utils/UtilsFunc";
 import { navBarStyle } from '../styleutil/NavigationStyle';
 import { hr_user, student_user } from '../helper/MockupData';
-
-const isDashboard = () => {
-  return currentPath() === RouteConstants.ROOT
-    || currentPath() === RouteConstants.INDEX_HTML
-    || currentPath() === RouteConstants.INDEX_PHP
-    || currentPath() === RouteConstants.INDEX;
-}
-
-const isLoggedIn = () => {
-  return currentPath() === RouteConstants.HR_APPLICANTS
-    || currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1]
-    || currentPath() === RouteConstants.DASHBOARD
-    || currentPath() === RouteConstants.HR_CREATEJOB;
-}
-
-const isHRRole = () => {
-  return currentPath() === RouteConstants.HR_APPLICANTS
-  || currentPath() === RouteConstants.HR_CREATEJOB;
-}
-
-const isStudentRole = () => {
-  return currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1]
-    || currentPath() === RouteConstants.DASHBOARD;
-}
+import { isLoggedIn, isDashboard, isHRRole, isStudentRole } from '../helper/RoutesHelper';
 
 export default function ButtonAppBar() {
   const classes = navBarStyle();
