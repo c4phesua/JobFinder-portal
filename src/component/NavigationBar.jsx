@@ -9,6 +9,7 @@ import { InputBase, Select } from "@material-ui/core";
 import SearchIcon from '@material-ui/icons/Search';
 import { ColorButton } from "../utils/UtilsFunc";
 import { navBarStyle } from '../styleutil/NavigationStyle';
+import { hr_user, student_user } from '../helper/MockupData';
 
 const isDashboard = () => {
   return currentPath() === RouteConstants.ROOT
@@ -19,8 +20,17 @@ const isDashboard = () => {
 
 const isLoggedIn = () => {
   return currentPath() === RouteConstants.HR_APPLICANTS
-    || currentPath() === RouteConstants.APPLY_CV
+    || currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1]
     || currentPath() === RouteConstants.HR_CREATEJOB;
+}
+
+const isHRRole = () => {
+  return currentPath() === RouteConstants.HR_APPLICANTS
+  || currentPath() === RouteConstants.HR_CREATEJOB;
+}
+
+const isStudentRole = () => {
+  return currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1];
 }
 
 export default function ButtonAppBar() {
@@ -81,7 +91,8 @@ export default function ButtonAppBar() {
           <Typography className={classes.title}> </Typography>
           {!isLoggedIn() && currentPath() !== RouteConstants.SIGNUP && <Button className={classes.titleButton} href={RouteConstants.SIGNUP}>Signup</Button>}
           {!isLoggedIn() && currentPath() !== RouteConstants.LOGIN && <Button className={classes.titleButton} href={RouteConstants.LOGIN}>Login</Button>}
-
+          {isLoggedIn() && isHRRole() && <Button className={classes.titleButton} href={'#'}>{hr_user.fullname}</Button>}
+          {isLoggedIn() && isStudentRole() && <Button className={classes.titleButton} href={'#'}>{student_user.fullname}</Button>}
         </Toolbar>
       </AppBar>
     </div>

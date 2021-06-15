@@ -288,6 +288,16 @@ var loremipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
     + ' Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur,'
     + ' vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?';
 
+var hr_user = {
+    username: "hr@kms.com",
+    fullname: "Nguyễn Văn A",
+}
+
+var student_user = {
+    username: "nhanntse140284@fpt.edu.vn",
+    fullname: "Nguyễn Trí Nhân",
+}
+
 // import vào, đặt const rồi gọi thôi
 
-module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum };
+module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, };
