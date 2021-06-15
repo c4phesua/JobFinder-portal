@@ -8,7 +8,7 @@ import RouteConstants from './utils/RouteConstants';
 import Apply from "./page/Apply";
 import Manager from "./page/Manager";
 import CreateJob from "./page/CreateJob";
-import Error from "./component/Error";
+import Error from "./page/Error";
 
 function App() {
   return (
