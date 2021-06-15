@@ -71,7 +71,8 @@ export default function SignIn() {
                 label="Remember me"
             />
             <Button
-                type="submit"
+                // type="submit"
+                href="/dashboard"
                 fullWidth
                 variant="contained"
                 color="primary"

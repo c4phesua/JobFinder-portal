@@ -8,6 +8,7 @@ const APPLY_CV = '/apply-cv/:id';
 const HR_APPLICANTS = '/hr/applicants';
 const CV_CHECKING = '/hr/checkcv';
 const HR_CREATEJOB = '/hr/create';
+const DASHBOARD = '/dashboard';
 
 const RouteConstants = {
   LOGIN,
@@ -19,7 +20,8 @@ const RouteConstants = {
   APPLY_CV,
   CV_CHECKING,
   HR_APPLICANTS,
-  HR_CREATEJOB
+  HR_CREATEJOB,
+  DASHBOARD
 };
 
 export default RouteConstants;

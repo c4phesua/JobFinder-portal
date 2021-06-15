@@ -21,6 +21,7 @@ const isDashboard = () => {
 const isLoggedIn = () => {
   return currentPath() === RouteConstants.HR_APPLICANTS
     || currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1]
+    || currentPath() === RouteConstants.DASHBOARD
     || currentPath() === RouteConstants.HR_CREATEJOB;
 }
 
@@ -30,7 +31,8 @@ const isHRRole = () => {
 }
 
 const isStudentRole = () => {
-  return currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1];
+  return currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1]
+    || currentPath() === RouteConstants.DASHBOARD;
 }
 
 export default function ButtonAppBar() {
@@ -91,7 +93,7 @@ export default function ButtonAppBar() {
           <Typography className={classes.title}> </Typography>
           {!isLoggedIn() && currentPath() !== RouteConstants.SIGNUP && <Button className={classes.titleButton} href={RouteConstants.SIGNUP}>Signup</Button>}
           {!isLoggedIn() && currentPath() !== RouteConstants.LOGIN && <Button className={classes.titleButton} href={RouteConstants.LOGIN}>Login</Button>}
-          {isLoggedIn() && isHRRole() && <Button className={classes.titleButton} href={'#'}>{hr_user.fullname}</Button>}
+          {isLoggedIn() && isHRRole() && !isStudentRole() && <Button className={classes.titleButton} href={'#'}>{hr_user.fullname}</Button>}
           {isLoggedIn() && isStudentRole() && <Button className={classes.titleButton} href={'#'}>{student_user.fullname}</Button>}
         </Toolbar>
       </AppBar>
