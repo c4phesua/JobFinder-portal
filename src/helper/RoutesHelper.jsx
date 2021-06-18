@@ -25,3 +25,7 @@ export const isStudentRole = () => {
   return currentPath().split('/')[1] === RouteConstants.APPLY_CV.split('/')[1]
     || currentPath() === RouteConstants.DASHBOARD;
 }
+
+export const isCurrentSite = () => {
+  return currentPath();
+}
