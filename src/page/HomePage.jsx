@@ -9,7 +9,7 @@ const Homepage = () => {
 
   return (
     <Container maxWidth="lg">
-      <JobsSwiper />
+      <JobsSwiper jobs={jobs} title="Công việc mới nhất"/>
     </Container>
   )
 }
