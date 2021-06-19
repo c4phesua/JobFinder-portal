@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-import { Card, CardContent, CardMedia, Typography, Container, Grid, Paper } from '@material-ui/core';
+import { Container, Grid, Paper } from '@material-ui/core';
 import Title from './Title'
 
 SwiperCore.use([Pagination]);
