@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
-import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import { Card, CardContent, CardMedia, Typography, Container, Grid, Paper } from '@material-ui/core';
 import Title from './Title'
 
 SwiperCore.use([Pagination]);
@@ -13,15 +13,41 @@ const renderJobSlide = (jobs) => {
   const totalSlide = jobs.length % 10 + 1;
   let slides = [];
   for (let i = 0; i < totalSlide; i++) {
-    const jobsSlide = paginate(jobs, 10, 1);
+    const jobsSlide = paginate(jobs, 10, i + 1);
+    const half = Math.ceil(jobsSlide.length / 2);
+    const halfOne = jobsSlide.slice(0, half);
+    const halfTwo = jobsSlide.slice(-half);
     slides.push(
       <SwiperSlide>
         {
-          jobsSlide.map( (job) => {
-            return (
-              <h1>{job.company_name}</h1>
-            )
-          })
+          <>
+            <Container maxWidth="lg">
+              <Grid container spacing={3}>
+                <Grid item xs={12} md={6} lg={6}>
+                  {
+                    halfOne.map((job) => {
+                      return (
+                        <Paper>
+                          <h1>{job.title}</h1>
+                        </Paper>
+                      )
+                    })
+                  }
+                </Grid>
+                <Grid item xs={12} md={6} lg={6}>
+                  {
+                    halfTwo.map((job) => {
+                      return (
+                        <Paper>
+                          <h1>{job.title}</h1>
+                        </Paper>
+                      )
+                    })
+                  }
+                </Grid>
+              </Grid>
+            </Container>
+          </>
         }
       </SwiperSlide>
     );
