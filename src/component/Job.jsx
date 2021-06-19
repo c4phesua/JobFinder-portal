@@ -5,7 +5,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { cardStyle } from '../styleutil/CardStyle';
 import { newTab } from '../utils/Routes';
-import Title from "./Title";
 
 const handleJobClick = (job) => {
   console.log(job);
@@ -23,10 +22,8 @@ const Job = (props) => {
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
-          <Typography component="h5" variant="h5" className={classes.cardText}>
-            <Title>
-              {job.title}
-            </Title>
+          <Typography component="h5" variant="h5" className={classes.cardText} color="primary">
+            {job.title}
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
             {job.company_name}

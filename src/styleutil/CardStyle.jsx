@@ -8,7 +8,7 @@ export const cardStyle = makeStyles((theme) => ({
   root: {
     display: 'flex',
     marginBottom: '15px',
-    backgroundColor: '#f0f2f5',
+    backgroundColor: '#ffffff',
     '&:hover': {
       backgroundColor: '#FFFFCC',
     }
@@ -16,6 +16,7 @@ export const cardStyle = makeStyles((theme) => ({
   details: {
     display: 'flex',
     flexDirection: 'column',
+    margin: 'auto',
   },
   content: {
     flex: '1 0 auto',

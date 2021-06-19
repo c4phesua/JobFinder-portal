@@ -2,15 +2,15 @@ import React from 'react';
 import { Button, Box, Typography } from '@material-ui/core';
 import {
   FiCard,
-  FiCardActionArea,
   FiCardActions,
   FiCardContent,
   FiCardMedia
 } from "../utils/FullImageCard";
 import { fiCardStyle } from '../styleutil/FiCardStyle';
+import { newTab } from '../utils/Routes';
 
 const onEditProfileClick = () => {
-
+  newTab("/profile");
 }
 
 const EditProfileSuggest = (props) => {
@@ -26,11 +26,11 @@ const EditProfileSuggest = (props) => {
             title="Bạn có biết?"
           />
           <FiCardContent className={classes.fiCardContent}>
-            <Typography gutterBottom variant="h5" component="h2">
+            <Typography gutterBottom variant="h3" component="h2">
               Bạn có biết?
             </Typography>
             <Typography
-              variant="body2"
+              variant="h5"
               className={classes.fiCardContentTextSecondary}
               component="p"
             >
@@ -39,7 +39,7 @@ const EditProfileSuggest = (props) => {
             </Typography>
           </FiCardContent>
           <FiCardActions className={classes.fiCardContent}>
-            <Button size="small" color="inherit" variant="outlined">
+            <Button size="small" color="inherit" variant="outlined" onClick={onEditProfileClick}>
               Chỉnh sửa hồ sơ
             </Button>
           </FiCardActions>

@@ -11,10 +11,10 @@ function paginate(array, page_size, page_number) {
 }
 
 const renderJobSlide = (jobs) => {
-  const totalSlide = jobs.length % 10 + 1;
+  const totalSlide = Math.ceil(jobs.length / 6);
   let slides = [];
   for (let i = 0; i < totalSlide; i++) {
-    const jobsSlide = paginate(jobs, 10, i + 1);
+    const jobsSlide = paginate(jobs, 6, i + 1);
     const half = Math.ceil(jobsSlide.length / 2);
     const halfOne = jobsSlide.slice(0, half);
     const halfTwo = jobsSlide.slice(-half);
@@ -26,18 +26,16 @@ const renderJobSlide = (jobs) => {
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6} lg={6}>
                   {
-                    halfOne.map((job) => {
+                    halfOne.map((job, i) => {
                       return (
-                        <Paper>
-                          <Job job={job} />
-                        </Paper>
+                          <Job job={job} colorIndex={i}/>
                       )
                     })
                   }
                 </Grid>
                 <Grid item xs={12} md={6} lg={6}>
                   {
-                    halfTwo.map((job) => {
+                    halfTwo.map((job, i) => {
                       return (
                         <Paper>
                           <Job job={job} />

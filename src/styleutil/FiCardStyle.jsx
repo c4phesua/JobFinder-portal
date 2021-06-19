@@ -12,7 +12,7 @@ export const fiCardStyle = makeStyles({
    * same values used in Material-Ui Card Demos
    */
   card: {
-    maxWidth: 1200,
+    maxWidth: 1800,
   },
 
   /**
@@ -29,9 +29,10 @@ export const fiCardStyle = makeStyles({
    */
   fiCardContent: {
     color: "#ffffff",
-    backgroundColor: "rgba(0,0,0,.60)"
+    backgroundColor: "rgba(0,0,0,.60)",
   },
   fiCardContentTextSecondary: {
-    color: "rgba(255,255,255,0.78)"
+    color: "rgba(255,255,255,0.78)",
+    justifyContent: 'center',
   }
 });
