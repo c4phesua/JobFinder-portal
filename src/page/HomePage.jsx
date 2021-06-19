@@ -1,5 +1,4 @@
 import React from 'react';
-import { dashBoardStyle } from '../styleutil/DashboardStyle';
 import MockupData from '../helper/MockupData';
 import { Container } from '@material-ui/core';
 import JobsSwiper from '../component/JobsSwiper';

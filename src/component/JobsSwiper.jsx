@@ -1,6 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination } from 'swiper/core';
 import { Container, Grid, Paper } from '@material-ui/core';
+import Job from './Job';
 import Title from './Title'
 
 SwiperCore.use([Pagination]);
@@ -28,7 +29,7 @@ const renderJobSlide = (jobs) => {
                     halfOne.map((job) => {
                       return (
                         <Paper>
-                          <h1>{job.title}</h1>
+                          <Job job={job} />
                         </Paper>
                       )
                     })
@@ -39,7 +40,7 @@ const renderJobSlide = (jobs) => {
                     halfTwo.map((job) => {
                       return (
                         <Paper>
-                          <h1>{job.title}</h1>
+                          <Job job={job} />
                         </Paper>
                       )
                     })
