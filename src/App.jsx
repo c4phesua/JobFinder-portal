@@ -9,6 +9,7 @@ import Apply from "./page/Apply";
 import Manager from "./page/Manager";
 import CreateJob from "./page/CreateJob";
 import Error from "./page/Error";
+import HomePage from "./page/HomePage"
 
 function App() {
   return (
@@ -18,10 +19,10 @@ function App() {
         <Switch>
           <Route exact path={RouteConstants.LOGIN} component={Login} />
           <Route exact path={RouteConstants.SIGNUP} component={SignUp} />
-          <Route exact path={RouteConstants.ROOT} component={Dashboard} />
-          <Route exact path={RouteConstants.INDEX} component={Dashboard} />
-          <Route exact path={RouteConstants.INDEX_HTML} component={Dashboard} />
-          <Route exact path={RouteConstants.INDEX_PHP} component={Dashboard} />
+          <Route exact path={RouteConstants.ROOT} component={HomePage} />
+          <Route exact path={RouteConstants.INDEX} component={HomePage} />
+          <Route exact path={RouteConstants.INDEX_HTML} component={HomePage} />
+          <Route exact path={RouteConstants.INDEX_PHP} component={HomePage} />
           <Route exact path={RouteConstants.HR_APPLICANTS} component={Manager} />
           <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
           <Route exact path={RouteConstants.HR_CREATEJOB} component={CreateJob} />
