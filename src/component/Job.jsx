@@ -4,10 +4,12 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { cardStyle } from '../styleutil/CardStyle';
+import { newTab } from '../utils/Routes';
 import Title from "./Title";
 
 const handleJobClick = (job) => {
   console.log(job);
+  newTab("/index.html");
 }
 
 const Job = (props) => {

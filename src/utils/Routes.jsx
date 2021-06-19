@@ -10,6 +10,15 @@ export const goTo = (link, urlObject) => {
   }
 };
 
+export const newTab = (link, urlObject) => {
+  if (urlObject) {
+    const queryString = `?${jquery.param(urlObject, true)}`;
+    window.open(link + queryString, "_blank");
+  } else {
+    window.open(link, "_blank");
+  }
+}
+
 export const currentPath = () => {
   return window.location.pathname;
 }
