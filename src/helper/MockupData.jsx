@@ -2,7 +2,7 @@ var data_home_page = {
     JOB_LIST: [
         {
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],
@@ -23,7 +23,7 @@ var data_home_page = {
 
         },{
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],
@@ -890,7 +890,7 @@ var data_home_page = {
     HOT_JOB: [
         {
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],
@@ -911,7 +911,7 @@ var data_home_page = {
 
         },{
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],

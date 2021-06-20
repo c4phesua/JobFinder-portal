@@ -3,16 +3,17 @@ import MockupData from '../helper/MockupData';
 import { Container } from '@material-ui/core';
 import JobsSwiper from '../component/JobsSwiper';
 import EditProfileSuggest from '../component/EditProfileSuggest';
-const jobs = MockupData.data_home_page.JOB_LIST;
+const newJobs = MockupData.data_home_page.NEW_JOB;
+const hotJobs = MockupData.data_home_page.HOT_JOB;
 
 const Homepage = () => {
   document.title = "JobFinder - Trang chủ";
 
   return (
     <Container maxWidth="lg">
-      <JobsSwiper jobs={jobs} title="Công việc mới nhất"/>
+      <JobsSwiper jobs={newJobs} title="Công việc mới nhất"/>
       <EditProfileSuggest />
-      <JobsSwiper jobs={jobs} title="Công việc gợi ý"/>
+      <JobsSwiper jobs={hotJobs} title="Công việc gợi ý"/>
     </Container>
   )
 }
