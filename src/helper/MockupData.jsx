@@ -379,7 +379,7 @@ var data_home_page = {
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
             image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtmE5u0HTHkD8cmS9ilCnQ8YgkZDHG7gfLItW_I7LcJ2ImtwMZoAKnyMwTkp4oA16-hE&usqp=CAU",
-            title: "Circle K tuyển nhân viênbảo vệ tại Tp.HCM",
+            title: "Circle K tuyển nhân viên bảo vệ tại Tp.HCM",
             job_type: "Nhân viên bảo vệ",
             tag_list: [],
             id_job: 17,
@@ -398,7 +398,7 @@ var data_home_page = {
         },{
             company_name: "Công ty cổ phần Beemart",
             image_link: "https://tea-3.lozi.vn/v1/images/resized/beemart-1531826021-1-6102678-1531891148?w=640&type=s",
-            title: "Thực Tập Sinh Ngành Hàng - Chương Trình TTS Tài Năng 2021 Tại Beemart (HCM)",
+            title: "Chương Trình TTS Tài Năng 2021",
             job_type: "Nhân viên",
             tag_list: [],
             id_job: 18,
@@ -760,7 +760,7 @@ var data_home_page = {
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
             image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtmE5u0HTHkD8cmS9ilCnQ8YgkZDHG7gfLItW_I7LcJ2ImtwMZoAKnyMwTkp4oA16-hE&usqp=CAU",
-            title: "Circle K tuyển nhân viênbảo vệ tại Tp.HCM",
+            title: "Circle K tuyển nhân viên bảo vệ tại Tp.HCM",
             job_type: "Nhân viên bảo vệ",
             tag_list: [],
             id_job: 17,
@@ -779,7 +779,7 @@ var data_home_page = {
         },{
             company_name: "Công ty cổ phần Beemart",
             image_link: "https://tea-3.lozi.vn/v1/images/resized/beemart-1531826021-1-6102678-1531891148?w=640&type=s",
-            title: "Thực Tập Sinh Ngành Hàng - Chương Trình TTS Tài Năng 2021 Tại Beemart (HCM)",
+            title: "Chương Trình TTS Tài Năng 2021",
             job_type: "Nhân viên",
             tag_list: [],
             id_job: 18,
@@ -1219,7 +1219,7 @@ var data_manage_hr_page = {
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
             image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtmE5u0HTHkD8cmS9ilCnQ8YgkZDHG7gfLItW_I7LcJ2ImtwMZoAKnyMwTkp4oA16-hE&usqp=CAU",
-            title: "Circle K tuyển nhân viênbảo vệ tại Tp.HCM",
+            title: "Circle K tuyển nhân viên bảo vệ tại Tp.HCM",
             job_type: "Nhân viên bảo vệ",
             tag_list: [],
             id_job: 17,
