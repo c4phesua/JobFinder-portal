@@ -3,7 +3,7 @@ import MockupData from '../helper/MockupData';
 import { Container } from '@material-ui/core';
 import Job from '../component/Job';
 import ScrollToTop from '../component/ScrollToTop';
-// import JobFilter from '../component/JobFilter';
+import JobFilter from '../component/JobFilter';
 const jobs = MockupData.data_home_page.JOB_LIST;
 
 const renderJob = (job) => {
@@ -12,20 +12,20 @@ const renderJob = (job) => {
   );
 }
 
-// const renderFilter = () => {
-//   return (
-//     <JobFilter />
-//   );
-// }
+const renderFilter = () => {
+  return (
+    <JobFilter />
+  );
+}
 
 const JobsPage = () => {
   document.title = "JobFinder - Việc làm";
 
   return (
     <Container maxWidth="lg">
-      {/* {
+      {
         renderFilter()
-      } */}
+      }
       {
         jobs.map((job) => {
           return renderJob(job);
