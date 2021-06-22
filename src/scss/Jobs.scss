@@ -20,3 +20,16 @@
   display: flex;
   padding-top: 10px;
 }
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  .scroll-div {
+    .scroll-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+    }
+  }
+}

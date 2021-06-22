@@ -1,6 +1,4 @@
 import React from 'react';
-import { Autocomplete } from '@material-ui/lab';
-import { TextField } from '@material-ui/core';
 import MockupData from '../helper/MockupData';
 import SelectFilter from './SelectFilter';
 
