@@ -1123,10 +1123,31 @@ var data_home_page = {
             duration: "20/07/2021"
 
         }
+    ],
+
+    WORK_TYPE: [
+        { title: 'Tất cả', },
+        { title: 'Bán hàng', },
+        { title: 'Thời vụ',  },
+        { title: 'Công nghệ cao', },
+        { title: 'Khác', },
+    ],
+
+    WORK_LEVEL: [
+        { title: 'Tất cả', },
+        { title: 'Sinh viên/thực tập', },
+        { title: 'Mới tốt nghiệp',  },
+        { title: 'Nhân viên', },
+        { title: 'Khác', },
+    ],
+
+    SALARY_LEVEL: [
+        { title: 'Tất cả', },
+        { title: '< 3,000,000 VND', },
+        { title: '3,000,000 - 5,000,000 VND',  },
+        { title: '5,000,000 - 8,000,000 VND', },
+        { title: '> 8,000,000 VND', },
     ]
-
-
-
 
 };
 

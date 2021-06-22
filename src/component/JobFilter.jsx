@@ -1,27 +1,22 @@
 import React from 'react';
 import { Autocomplete } from '@material-ui/lab';
 import { TextField } from '@material-ui/core';
+import MockupData from '../helper/MockupData';
+import SelectFilter from './SelectFilter';
+
+const { WORK_TYPE, WORK_LEVEL, SALARY_LEVEL } = MockupData.data_home_page;
+
 
 const JobFilter = (props) => {
 
   return (
-    <div>
-      <Autocomplete
-        id="work filter"
-        options={topWork}
-        getOptionLabel={(option) => option.title}
-        style={{ width: 300 }}
-        renderInput={(params) => <TextField {...params} label="Work" variant="outlined" />}
-      />
+    <div className="select-filter">
+      <SelectFilter id="work-type" label="Ngành nghề" options={WORK_TYPE} />
+      <SelectFilter id="work-level" label="Cấp bậc" options={WORK_LEVEL} />
+      <SelectFilter id="work-type" label="Mức lương" options={SALARY_LEVEL} />
     </div>
   );
 }
 
-const topWork = [
-  { title: 'The Shawshank Redemption', year: 1994 },
-  { title: 'The Godfather', year: 1972 },
-  { title: 'The Godfather: Part II', year: 1974 },
-  { title: 'The Dark Knight', year: 2008 },
-];
 
 export default JobFilter;
