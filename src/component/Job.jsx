@@ -6,9 +6,15 @@ import Typography from '@material-ui/core/Typography';
 import { cardStyle } from '../styleutil/CardStyle';
 import { newTab } from '../utils/Routes';
 
+const DEFAULT_LOGO = 'https://s3.amazonaws.com/hoorayapp/emp-company/default-company.jpg';
+
 const handleJobClick = (job) => {
   console.log(job);
   newTab("/index.html");
+}
+
+const renderImageLogo = (image) => {
+  return image !== "" ? image : DEFAULT_LOGO;
 }
 
 const Job = (props) => {
@@ -18,7 +24,7 @@ const Job = (props) => {
     <Card className={classes.root} onClick={() => { handleJobClick(job) }}>
       <CardMedia
         className={classes.cover}
-        image="https://logoeps.com/wp-content/uploads/2011/05/amazon-logo-vector.png"
+        image={renderImageLogo(job.image_link)}
       />
       <div className={classes.details}>
         <CardContent className={classes.content}>
