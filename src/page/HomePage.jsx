@@ -3,6 +3,7 @@ import MockupData from '../helper/MockupData';
 import { Container } from '@material-ui/core';
 import JobsSwiper from '../component/JobsSwiper';
 import EditProfileSuggest from '../component/EditProfileSuggest';
+import ScrollToTop from '../component/ScrollToTop';
 const jobs = MockupData.data_home_page.JOB_LIST;
 
 const Homepage = () => {
@@ -13,6 +14,7 @@ const Homepage = () => {
       <JobsSwiper jobs={jobs} title="Công việc mới nhất"/>
       <EditProfileSuggest />
       <JobsSwiper jobs={jobs} title="Công việc gợi ý"/>
+      <ScrollToTop />
     </Container>
   )
 }
