@@ -16,7 +16,6 @@ const Homepage = () => {
       <JobsSwiper jobs={newJobs} title="Công việc mới nhất"/>
       <EditProfileSuggest />
       <JobsSwiper jobs={hotJobs} title="Công việc gợi ý"/>
-      <JobsSwiper jobs={jobs} title="Công việc gợi ý"/>
       <ScrollToTop />
     </Container>
   )
