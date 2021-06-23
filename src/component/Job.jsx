@@ -1,28 +1,43 @@
 import React from 'react';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import { cardStyle } from '../styleutil/CardStyle';
+import { newTab } from '../utils/Routes';
 
-export default class Job extends React.Component {
+const DEFAULT_LOGO = 'https://s3.amazonaws.com/hoorayapp/emp-company/default-company.jpg';
 
-  renderColor(index) {
-    return index % 2 === 0 ? 'bluecard' : 'whitecard';
-  }
-
-  onClick() {
-    const { index, onJobClick } = this.props;
-    onJobClick(index)
-    return index;
-  }
-
-  render() {
-    const { job, index } = this.props;
-    const { company_name, title, company_address } = job;
-    const jobCard = `jobcard ${this.renderColor(index)}`;
-
-    return (
-      <div className={jobCard} onClick={() => this.onClick()}>
-        <h3>{title}</h3>
-        <p>{company_name}</p>
-        <p>{company_address}</p>
-      </div>
-    );
-  }
+const handleJobClick = (job) => {
+  console.log(job);
+  newTab("/index.html");
 }
+
+const renderImageLogo = (image) => {
+  return image !== "" ? image : DEFAULT_LOGO;
+}
+
+const Job = (props) => {
+  const classes = cardStyle();
+  const { job } = props;
+  return (
+    <Card className={classes.root} onClick={() => { handleJobClick(job) }}>
+      <CardMedia
+        className={classes.cover}
+        image={renderImageLogo(job.image_link)}
+      />
+      <div className={classes.details}>
+        <CardContent className={classes.content}>
+          <Typography component="h5" variant="h5" className={classes.cardText} color="primary">
+            {job.title}
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
+            {job.company_name}
+          </Typography>
+        </CardContent>
+      </div>
+    </Card>
+  )
+}
+
+export default Job;
