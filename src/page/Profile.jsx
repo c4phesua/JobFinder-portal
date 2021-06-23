@@ -11,7 +11,6 @@ export default function Profile () {
     const onClickEdit = () => setShowEdit(true);
     function onClickSave(){    
         setShowEdit(false);
-        document.getElementsByClassName("form-control");
     }
     
     const Show = () => (
@@ -22,7 +21,7 @@ export default function Profile () {
                             <h6 className="mb-0">Họ tên</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue="Đặng Hùng"/>
+                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.fullname}/>
                         
                         </div>
                     </div>
@@ -32,7 +31,7 @@ export default function Profile () {
                             <h6 className="mb-0">Email</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue="hungdvse141063@fpt.edu.vn"/>
+                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.email}/>
                         </div>
                     </div>
                     <hr/>
@@ -41,7 +40,7 @@ export default function Profile () {
                             <h6 className="mb-0">Số điện thoại</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue="0123456789"/>
+                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.phone}/>
                         </div>
                     </div>
                     <hr/>
@@ -50,7 +49,7 @@ export default function Profile () {
                             <h6 className="mb-0">Địa chỉ</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue="Quận 9, Thành Phố Hồ Chí Minh"/>
+                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.address}/>
                             
                         </div>
                     </div>
@@ -60,7 +59,7 @@ export default function Profile () {
                             <h6 className="mb-0">Ngoại Ngữ</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue="Tiếng Anh"/>
+                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.languages}/>
                             
                         </div>
                     </div>
@@ -70,7 +69,7 @@ export default function Profile () {
                             <h6 className="mb-0">Thông tin chung</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <textarea type="text" class="form-control input_profile" disabled defaultValue="" rows="7"/>
+                        <textarea type="text" class="form-control input_profile" disabled defaultValue={profile.about} rows="7"/>
                             
                         </div>
                     </div>
@@ -93,7 +92,7 @@ export default function Profile () {
                             <h6 className="mb-0">Họ tên</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control"  defaultValue="Đặng Hùng"/>
+                        <input type="text" class="form-control"  required defaultValue={profile.fullname}/>
                         
                         </div>
                     </div>
@@ -103,7 +102,7 @@ export default function Profile () {
                             <h6 className="mb-0">Email</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" defaultValue="hungdvse141063@fpt.edu.vn"/>
+                        <input type="text" class="form-control" required defaultValue={profile.email}/>
                         </div>
                     </div>
                     <hr/>
@@ -112,7 +111,7 @@ export default function Profile () {
                             <h6 className="mb-0">Số điện thoại</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" defaultValue="0123456789"/>
+                        <input type="text" class="form-control" required defaultValue={profile.phone}/>
                         </div>
                     </div>
                     <hr/>
@@ -121,7 +120,7 @@ export default function Profile () {
                             <h6 className="mb-0">Địa chỉ</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" defaultValue="Quận 9, Thành Phố Hồ Chí Minh"/>
+                        <input type="text" class="form-control" required defaultValue={profile.address}/>
                             
                         </div>
                     </div>
@@ -130,7 +129,7 @@ export default function Profile () {
                             <h6 className="mb-0">Ngoại Ngữ</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control"  defaultValue="Tiếng Anh"/>
+                        <input type="text" class="form-control"  defaultValue={profile.languages}/>
                             
                         </div>
                     </div>
@@ -140,7 +139,7 @@ export default function Profile () {
                             <h6 className="mb-0">Thông tin chung</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <textarea type="text" class="form-control" rows="7"/>
+                        <textarea type="text" class="form-control" defaultValue={profile.about} rows="7"/>
                             
                         </div>
                     </div>
