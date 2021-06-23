@@ -9,11 +9,15 @@ import Apply from "./page/Apply";
 import Manager from "./page/Manager";
 import CreateJob from "./page/CreateJob";
 import Error from "./page/Error";
+import Footer from "./component/Footer";
+import SearchBar from "./component/SearchBar";
+
 
 function App() {
   return (
     <div className="App">
       <NavigationBar />
+      {/*<SearchBar/>*/}
       <BrowserRouter>
         <Switch>
           <Route exact path={RouteConstants.LOGIN} component={Login} />
@@ -29,6 +33,7 @@ function App() {
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
+      <Footer/>
     </div>
   );
 }
