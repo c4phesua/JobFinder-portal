@@ -6,6 +6,7 @@ import MockupData from '../helper/MockupData';
 export default function Profile () {
     let profile = MockupData.student_user;
    
+    document.title = "Hồ sơ";
 
     const [showEdit,setShowEdit] = React.useState(false);
     const onClickEdit = () => setShowEdit(true);
