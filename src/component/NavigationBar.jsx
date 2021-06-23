@@ -12,7 +12,7 @@ export default function ButtonAppBar() {
   const classes = navBarStyle();
   return (
     <div className={classes.root}>
-      <AppBar position="fixed">
+      <AppBar position="relative">
         <Toolbar>
           <Typography
             className={classes.menuButton}

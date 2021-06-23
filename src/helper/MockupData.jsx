@@ -2,7 +2,7 @@ var data_home_page = {
     JOB_LIST: [
         {
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],
@@ -23,7 +23,7 @@ var data_home_page = {
 
         },{
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],
@@ -379,7 +379,7 @@ var data_home_page = {
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
             image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtmE5u0HTHkD8cmS9ilCnQ8YgkZDHG7gfLItW_I7LcJ2ImtwMZoAKnyMwTkp4oA16-hE&usqp=CAU",
-            title: "Circle K tuyển nhân viênbảo vệ tại Tp.HCM",
+            title: "Circle K tuyển nhân viên bảo vệ tại Tp.HCM",
             job_type: "Nhân viên bảo vệ",
             tag_list: [],
             id_job: 17,
@@ -398,7 +398,7 @@ var data_home_page = {
         },{
             company_name: "Công ty cổ phần Beemart",
             image_link: "https://tea-3.lozi.vn/v1/images/resized/beemart-1531826021-1-6102678-1531891148?w=640&type=s",
-            title: "Thực Tập Sinh Ngành Hàng - Chương Trình TTS Tài Năng 2021 Tại Beemart (HCM)",
+            title: "Chương Trình TTS Tài Năng 2021",
             job_type: "Nhân viên",
             tag_list: [],
             id_job: 18,
@@ -760,7 +760,7 @@ var data_home_page = {
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
             image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtmE5u0HTHkD8cmS9ilCnQ8YgkZDHG7gfLItW_I7LcJ2ImtwMZoAKnyMwTkp4oA16-hE&usqp=CAU",
-            title: "Circle K tuyển nhân viênbảo vệ tại Tp.HCM",
+            title: "Circle K tuyển nhân viên bảo vệ tại Tp.HCM",
             job_type: "Nhân viên bảo vệ",
             tag_list: [],
             id_job: 17,
@@ -779,7 +779,7 @@ var data_home_page = {
         },{
             company_name: "Công ty cổ phần Beemart",
             image_link: "https://tea-3.lozi.vn/v1/images/resized/beemart-1531826021-1-6102678-1531891148?w=640&type=s",
-            title: "Thực Tập Sinh Ngành Hàng - Chương Trình TTS Tài Năng 2021 Tại Beemart (HCM)",
+            title: "Chương Trình TTS Tài Năng 2021",
             job_type: "Nhân viên",
             tag_list: [],
             id_job: 18,
@@ -890,7 +890,7 @@ var data_home_page = {
     HOT_JOB: [
         {
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],
@@ -911,7 +911,7 @@ var data_home_page = {
 
         },{
             company_name: "The coffee house",
-            image_link: "https://lh3.googleusercontent.com/proxy/TyIF8t7r3LW3KsVT1x32SaisbIUvzP3wK-XtzRLlvAKxd_OmbPHGctmOCAJDXIaHDRz7NmtAOjG0DdkteEX5IaVHnLek_1qlyn_OsicLZ78-iAMXvMrAe8GpR0-B11kdJLlazVGQ",
+            image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
             title: "Nhân viên cửa hàng",
             job_type: "Phục vụ",
             tag_list: [],
@@ -1123,10 +1123,31 @@ var data_home_page = {
             duration: "20/07/2021"
 
         }
+    ],
+
+    WORK_TYPE: [
+        { title: 'Tất cả', },
+        { title: 'Bán hàng', },
+        { title: 'Thời vụ',  },
+        { title: 'Công nghệ cao', },
+        { title: 'Khác', },
+    ],
+
+    WORK_LEVEL: [
+        { title: 'Tất cả', },
+        { title: 'Sinh viên/thực tập', },
+        { title: 'Mới tốt nghiệp',  },
+        { title: 'Nhân viên', },
+        { title: 'Khác', },
+    ],
+
+    SALARY_LEVEL: [
+        { title: 'Tất cả', },
+        { title: '< 3,000,000 VND', },
+        { title: '3,000,000 - 5,000,000 VND',  },
+        { title: '5,000,000 - 8,000,000 VND', },
+        { title: '> 8,000,000 VND', },
     ]
-
-
-
 
 };
 
@@ -1219,7 +1240,7 @@ var data_manage_hr_page = {
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
             image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtmE5u0HTHkD8cmS9ilCnQ8YgkZDHG7gfLItW_I7LcJ2ImtwMZoAKnyMwTkp4oA16-hE&usqp=CAU",
-            title: "Circle K tuyển nhân viênbảo vệ tại Tp.HCM",
+            title: "Circle K tuyển nhân viên bảo vệ tại Tp.HCM",
             job_type: "Nhân viên bảo vệ",
             tag_list: [],
             id_job: 17,
