@@ -65,11 +65,11 @@ const useStyles = makeStyles((theme) => ({
         width: '3%',
     },
     rightMargin: {
-        width: '0%'
+        width: '4%'
     },
     button: {
-        marginRight: theme.spacing(2),
-        marginLeft: theme.spacing(2),
+        marginRight: theme.spacing(1),
+        marginLeft: theme.spacing(0),
         backgroundColor: '#0277BD',
         color: "white",
         "&:hover": {
@@ -146,7 +146,7 @@ export default function NavigationBar() {
                 </div>
                 <div className={classes.rightMargin}/>
                 <Button variant="outlined" size="medium" className={classes.button}>
-                    Sign up
+                    Sign-up
                 </Button>
                 <Button variant="outlined" size="medium" className={classes.button}>
                     Login
