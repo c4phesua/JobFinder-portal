@@ -1310,7 +1310,14 @@ var hr_user = {
 var student_user = {
     username: "nhanntse140284@fpt.edu.vn",
     fullname: "Nguyễn Trí Nhân",
+    address:"Quận 9, Thành Phố Hồ Chí Minh",
+    phone:"0123456789",
+    email:"nhanntse140284@fpt.edu.vn",
+    languages:"",
+    about:""
 }
+
+
 
 // import vào, đặt const rồi gọi thôi
 
