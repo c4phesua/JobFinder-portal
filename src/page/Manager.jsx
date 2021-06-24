@@ -17,13 +17,13 @@ export default function Manager() {
                 <Container maxWidth="lg" className={classes.container}>
                     <Grid container spacing={3}>
                         {/* List CV */}
-                        <Grid item xs={12} md={6} lg={6}>
+                        <Grid item xs={"auto"} md={"auto"} lg={"auto"}>
                             <Paper className={classes.paper}>
                                 <Cvs />
                             </Paper>
                         </Grid>
                         {/* CV */}
-                        <Grid item xs={12} md={6} lg={6}>
+                        <Grid item xs={"auto"} md={"auto"} lg={"auto"}>
                             <Paper className={fixedHeightPaper}>
                                 <JobsTableGen />
                             </Paper>

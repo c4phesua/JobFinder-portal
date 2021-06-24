@@ -1,75 +1,84 @@
 import React from 'react';
-import { currentPath } from '../utils/Routes';
-import RouteConstants from '../utils/RouteConstants';
-import { InputBase, Select, AppBar, Toolbar, Typography, Button } from "@material-ui/core";
+import Toolbar from '@material-ui/core/Toolbar';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
-import { ColorButton } from "../utils/UtilsFunc";
-import { navBarStyle } from '../styleutil/NavigationStyle';
-import { hr_user, student_user } from '../helper/MockupData';
-import { isLoggedIn, isDashboard, isHRRole, isStudentRole } from '../helper/RoutesHelper';
+import Link from '@material-ui/core/Link';
+import LocationComboBox from "./LocationSearch";
+import {Divider, InputBase} from "@material-ui/core";
+import JobTypeComboBox from "./JobTypeSearch";
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import LanguageIcon from '@material-ui/icons/Language';
+import {navigationStyles} from '../styleutil/NavigationStyle'
 
-export default function ButtonAppBar() {
-  const classes = navBarStyle();
-  return (
-    <div className={classes.root}>
-      <AppBar position="relative">
-        <Toolbar>
-          <Typography
-            className={classes.menuButton}
-            variant="h6"
-          >
-            <a style={{ color: 'white' }} href="/">
-              JobFinder
-            </a>
-          </Typography>
-          {isDashboard() &&
-            <div style={{ display: 'inline-flex' }}>
-              <div className={classes.search}>
-                {/*search textbox*/}
-                <div className={classes.searchIcon}>
-                  <SearchIcon />
+
+export default function NavigationBar() {
+    const classes = navigationStyles();
+    const sections = [
+        {title: 'Nhà tuyển dụng', url: '#'},
+        {title: 'Việc làm', url: '#'},
+        {title: 'Phỏng vấn', url: '#'},
+        {title: 'Ngành hot', url: '#'},
+        {title: 'Văn hóa', url: '#'},
+        {title: 'Mức lương', url: '#'},
+        {title: 'Tip tạo CV', url: '#'},
+    ];
+    const title = 'JobFinder';
+
+    return (
+        <React.Fragment>
+            <Toolbar component="nav" variant={"dense"} className={classes.toolbarSecondary}>
+                {sections.map((section) => (
+                    <Link
+                        color="inherit"
+                        noWrap
+                        key={section.title}
+                        variant="caption"
+                        href={section.url}
+                        className={classes.toolbarLink}
+                    >
+                        {section.title}
+                    </Link>
+                ))}
+                <div style={{width: '70%'}}/>
+                <IconButton color={"inherit"} size={"small"}>
+                    <NotificationsIcon/>
+                </IconButton>
+                <IconButton color={"inherit"} size={"small"}>
+                    <LanguageIcon/>
+                </IconButton>
+            </Toolbar>
+            <Toolbar className={classes.toolbar}>
+                <Button size="small">JobFinder</Button>
+                <div className={classes.leftMargin}/>
+                <div className={classes.searchBar}>
+                    <InputBase
+                        placeholder="Search…"
+                        classes={{
+                            input: classes.inputInput,
+                        }}
+                        style={{width: '70%'}}
+                        inputProps={{'aria-label': 'search'}}
+                    />
+                    <div className={classes.jobTypes}>
+                        <JobTypeComboBox/>
+                    </div>
+                    <div style={{width: 3}}/>
+                    <div className={classes.location}>
+                        <LocationComboBox/>
+                    </div>
+                    <IconButton>
+                        <SearchIcon/>
+                    </IconButton>
                 </div>
-                <InputBase
-                  placeholder="Search…"
-                  classes={{
-                    root: classes.inputRoot,
-                    input: classes.inputInput,
-                  }}
-                  inputProps={{ 'aria-label': 'search' }}
-                />
-              </div>
-              {/*type selector*/}
-              <div className={classes.search}>
-                <div className={classes.searchIcon}>
-                  <SearchIcon />
-                </div>
-                <Select
-                  className={classes.dropbox}
-                  native
-                  defaultValue="ALL"
-                  label="Age"
-                  inputProps={{
-                    name: 'Status',
-                    id: 'outlined-age-native-simple',
-                  }}
-                >
-                  <option value={'ALL'}>Tất cả</option>
-                  <option value={'part-time'}>Bán thời gian</option>
-                  <option value={'full-time'}>Toàn thời gian</option>
-                </Select>
-              </div>
-              <ColorButton variant="contained" color="primary" className={classes.margin}>
-                Tìm kiếm
-              </ColorButton>
-            </div>
-          }
-          <Typography className={classes.title}> </Typography>
-          {!isLoggedIn() && currentPath() !== RouteConstants.SIGNUP && <Button className={classes.titleButton} href={RouteConstants.SIGNUP}>Signup</Button>}
-          {!isLoggedIn() && currentPath() !== RouteConstants.LOGIN && <Button className={classes.titleButton} href={RouteConstants.LOGIN}>Login</Button>}
-          {isLoggedIn() && isHRRole() && !isStudentRole() && <Button className={classes.titleButton} href={'#'}>{hr_user.fullname}</Button>}
-          {isLoggedIn() && isStudentRole() && <Button className={classes.titleButton} href={'#'}>{student_user.fullname}</Button>}
-        </Toolbar>
-      </AppBar>
-    </div>
-  );
+                <div className={classes.rightMargin}/>
+                <Button variant="outlined" size="medium" className={classes.button}>
+                    Sign-up
+                </Button>
+                <Button variant="outlined" size="medium" className={classes.button}>
+                    Login
+                </Button>
+            </Toolbar>
+        </React.Fragment>
+    );
 }
