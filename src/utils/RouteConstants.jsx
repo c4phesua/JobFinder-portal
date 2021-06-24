@@ -11,6 +11,7 @@ const HR_CREATEJOB = '/hr/create';
 const DASHBOARD = '/dashboard';
 const PROFILE = '/profile';
 const JOBS = '/jobs';
+const EMPLOYER = '/hr/signup'; 
 
 const RouteConstants = {
   LOGIN,
@@ -25,7 +26,8 @@ const RouteConstants = {
   HR_CREATEJOB,
   DASHBOARD,
   PROFILE,
-  JOBS
+  JOBS,
+  EMPLOYER,
 };
 
 export default RouteConstants;

@@ -12,6 +12,7 @@ import Error from "./page/Error";
 import Profile from "./page/Profile";
 import HomePage from "./page/HomePage"
 import JobsPage from './page/JobsPage';
+import HRSignup from './page/HrSignUp';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route exact path={RouteConstants.DASHBOARD} component={Dashboard} />
           <Route exact path={RouteConstants.PROFILE} component={Profile} />
           <Route exact path={RouteConstants.JOBS} component={JobsPage} />
+          <Route exact path={RouteConstants.HRSignup} component={HRSignup} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
