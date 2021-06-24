@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class Job extends React.Component {
+export default class Error extends React.Component {
 
   render() {
     document.title = "404 Page"
