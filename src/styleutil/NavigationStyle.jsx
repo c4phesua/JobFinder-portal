@@ -1,65 +1,74 @@
-// import {fade, makeStyles} from "@material-ui/core/styles";
-//
-// export const useStyles = makeStyles((theme) => ({
-//     grow: {
-//         flexGrow: 1,
-//     },
-//     menuButton: {
-//         marginRight: theme.spacing(2),
-//     },
-//     title: {
-//         display: 'none',
-//         [theme.breakpoints.up('sm')]: {
-//             display: 'block',
-//         },
-//     },
-//     search: {
-//         position: 'relative',
-//         borderRadius: theme.shape.borderRadius,
-//         backgroundColor: fade(theme.palette.common.white, 0.15),
-//         '&:hover': {
-//             backgroundColor: fade(theme.palette.common.white, 0.25),
-//         },
-//         marginRight: theme.spacing(2),
-//         marginLeft: 0,
-//         width: '100%',
-//         [theme.breakpoints.up('sm')]: {
-//             marginLeft: theme.spacing(3),
-//             width: 'auto',
-//         },
-//     },
-//     searchIcon: {
-//         padding: theme.spacing(0, 2),
-//         height: '100%',
-//         position: 'absolute',
-//         pointerEvents: 'none',
-//         display: 'flex',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//     },
-//     inputRoot: {
-//         color: 'inherit',
-//     },
-//     inputInput: {
-//         padding: theme.spacing(1, 1, 1, 0),
-//         // vertical padding + font size from searchIcon
-//         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
-//         transition: theme.transitions.create('width'),
-//         width: '100%',
-//         [theme.breakpoints.up('md')]: {
-//             width: '20ch',
-//         },
-//     },
-//     sectionDesktop: {
-//         display: 'none',
-//         [theme.breakpoints.up('md')]: {
-//             display: 'flex',
-//         },
-//     },
-//     sectionMobile: {
-//         display: 'flex',
-//         [theme.breakpoints.up('md')]: {
-//             display: 'none',
-//         },
-//     },
-// }));
+import {makeStyles} from "@material-ui/core/styles";
+
+export const navigationStyles = makeStyles((theme) => ({
+    toolbar: {
+        borderBottom: `0.5px solid ${theme.palette.divider}`,
+        position: 'sticky',
+    },
+    toolbarTitle: {
+        flex: 1,
+    },
+    toolbarSecondary: {
+        borderBottom: `1px solid ${theme.palette.divider}`,
+        justifyContent: 'space-between',
+        overflowX: 'auto',
+        backgroundColor: '#1E88E5',
+        color: "white",
+        minHeight: 11,
+    },
+    toolbarLink: {
+        padding: theme.spacing(1),
+        flexShrink: 0,
+        color: 'inherit',
+        "&:hover": {
+            color: "#FFFF66",
+            textDecoration: "underline #FFFF66"
+        },
+    },
+    location: {
+        width: '9%',
+        marginRight: theme.spacing(4),
+        marginLeft: theme.spacing(1),
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
+    },
+    jobTypes: {
+        width: '12%',
+        marginRight: theme.spacing(5),
+        marginTop: theme.spacing(1),
+        marginBottom: theme.spacing(1),
+    },
+    inputInput: {
+        padding: theme.spacing(1, 1, 1, 0),
+        // vertical padding + font size from searchIcon
+        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+        transition: theme.transitions.create('width'),
+        width: '100%',
+        height: "inherit",
+        [theme.breakpoints.up('md')]: {
+            width: '20ch',
+        },
+    },
+    leftMargin: {
+        width: '3%',
+    },
+    rightMargin: {
+        width: '4%'
+    },
+    button: {
+        marginRight: theme.spacing(1),
+        marginLeft: theme.spacing(0),
+        backgroundColor: '#0277BD',
+        color: "white",
+        "&:hover": {
+            backgroundColor: "#00CCFF",
+        },
+    },
+    searchBar:{
+        display: 'inline-flex',
+        width:'70%',
+        height: '10%',
+        backgroundColor: '#ECF0F1',
+        borderRadius: 20,
+    }
+}));
