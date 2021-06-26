@@ -13,7 +13,7 @@ import { navigationStyles } from '../styleutil/NavigationStyle'
 import { goTo, currentPath } from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
 
-const { ROOT, LOGIN, SIGNUP, JOBS } = RouteConstants;
+const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE } = RouteConstants;
 
 const onLogoClick = () => {
     goTo(ROOT);
@@ -27,25 +27,30 @@ const onSignUpClick = () => {
     goTo(SIGNUP);
 }
 
+const inStudentProfile = () => {
+    console.log(currentPath() === STUDENT_PROFILE);
+    return currentPath() === STUDENT_PROFILE;
+}
+
 const showSearchBar = () => {
-    return currentPath() !== LOGIN && currentPath() !== SIGNUP;
+    return currentPath() !== LOGIN && currentPath() !== SIGNUP && currentPath() !== EMPLOYER && !inStudentProfile();
 }
 
 const showLoginBtn = () => {
-    return currentPath() !== LOGIN;
+    return currentPath() !== LOGIN && !inStudentProfile();
 }
 
 const showSignUpBtn = () => {
-    return currentPath() !== SIGNUP;
+    return currentPath() !== SIGNUP && !inStudentProfile();
 }
 
 export default function NavigationBar() {
     const classes = navigationStyles();
     const sections = [
-        { title: 'Nhà tuyển dụng', url: '#' },
+        { title: 'Nhà tuyển dụng', url: EMPLOYER },
         { title: 'Việc làm', url: JOBS },
         { title: 'Phỏng vấn', url: '#' },
-        { title: 'Ngành hot', url: '#' },
+        { title: 'Ngành hot', url: ROOT },
         { title: 'Văn hóa', url: '#' },
         { title: 'Mức lương', url: '#' },
         { title: 'Tip tạo CV', url: '#' },
@@ -114,6 +119,12 @@ export default function NavigationBar() {
                     showLoginBtn() &&
                     <Button variant="outlined" size="medium" className={classes.button} onClick={onLoginClick}>
                         Đăng nhập
+                    </Button>
+                }
+                {
+                    inStudentProfile() &&
+                    <Button variant="outlined" size="medium" className={classes.button} onClick={onLoginClick}>
+                        Nguyễn Trí Nhân
                     </Button>
                 }
             </Toolbar>

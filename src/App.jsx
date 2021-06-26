@@ -32,7 +32,7 @@ function App() {
           <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
           <Route exact path={RouteConstants.HR_CREATEJOB} component={CreateJob} />
           <Route exact path={RouteConstants.DASHBOARD} component={Dashboard} />
-          <Route exact path={RouteConstants.PROFILE} component={Profile} />
+          <Route exact path={RouteConstants.STUDENT_PROFILE} component={Profile} />
           <Route exact path={RouteConstants.JOBS} component={JobsPage} />
           <Route exact path={RouteConstants.EMPLOYER} component={HRSignup} />
           <Route exact path={RouteConstants.JOB_DESCRIPTION} component={JobDescription} />
