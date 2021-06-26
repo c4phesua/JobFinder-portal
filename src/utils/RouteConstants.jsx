@@ -12,7 +12,7 @@ const DASHBOARD = '/dashboard';
 const PROFILE = '/profile';
 const JOBS = '/jobs';
 const EMPLOYER = '/hr/signup'; 
-const JOB_PAGE = '/job/:id';
+const JOB_PAGE = JOBS + '/:id';
 
 const RouteConstants = {
   LOGIN,
