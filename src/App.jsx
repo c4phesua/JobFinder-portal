@@ -2,7 +2,6 @@ import './App.scss';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavigationBar from './component/NavigationBar';
 import Login from './page/Login';
-import Dashboard from './page/Dashboard';
 import SignUp from "./page/Signup";
 import RouteConstants from './utils/RouteConstants';
 import Apply from "./page/Apply";

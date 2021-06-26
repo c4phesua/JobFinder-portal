@@ -68,7 +68,7 @@ export default function SignIn() {
             </Grid>
             <Grid item>
               <Link href="/signup" variant="body2">
-                {"Don't have an account? Sign Up"}
+                {"Chưa có tài khoản? Đăng ký ngay"}
               </Link>
             </Grid>
           </Grid>
