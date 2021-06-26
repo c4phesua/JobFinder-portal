@@ -16,6 +16,8 @@ import { loginStyle } from '../styleutil/LoginStyle';
 export default function SignUp() {
     const classes = loginStyle();
 
+    document.title = "JobFinder - Đăng ký";
+
     return (
         <Container component="main" maxWidth="xs">
             <CssBaseline />
