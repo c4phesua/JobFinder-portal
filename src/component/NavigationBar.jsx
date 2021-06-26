@@ -5,25 +5,52 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import Link from '@material-ui/core/Link';
 import LocationComboBox from "./LocationSearch";
-import {Divider, InputBase} from "@material-ui/core";
+import { InputBase } from "@material-ui/core";
 import JobTypeComboBox from "./JobTypeSearch";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import LanguageIcon from '@material-ui/icons/Language';
-import {navigationStyles} from '../styleutil/NavigationStyle'
+import { navigationStyles } from '../styleutil/NavigationStyle'
+import { goTo, currentPath } from '../utils/Routes';
+import RouteConstants from '../utils/RouteConstants';
 
+const { ROOT, LOGIN, SIGNUP, JOBS } = RouteConstants;
+
+const onLogoClick = () => {
+    goTo(ROOT);
+}
+
+const onLoginClick = () => {
+    goTo(LOGIN);
+}
+
+const onSignUpClick = () => {
+    goTo(SIGNUP);
+}
+
+const showSearchBar = () => {
+    return currentPath() !== LOGIN && currentPath() !== SIGNUP;
+}
+
+const showLoginBtn = () => {
+    return currentPath() !== LOGIN;
+}
+
+const showSignUpBtn = () => {
+    return currentPath() !== SIGNUP;
+}
 
 export default function NavigationBar() {
     const classes = navigationStyles();
     const sections = [
-        {title: 'Nhà tuyển dụng', url: '#'},
-        {title: 'Việc làm', url: '#'},
-        {title: 'Phỏng vấn', url: '#'},
-        {title: 'Ngành hot', url: '#'},
-        {title: 'Văn hóa', url: '#'},
-        {title: 'Mức lương', url: '#'},
-        {title: 'Tip tạo CV', url: '#'},
+        { title: 'Nhà tuyển dụng', url: '#' },
+        { title: 'Việc làm', url: JOBS },
+        { title: 'Phỏng vấn', url: '#' },
+        { title: 'Ngành hot', url: '#' },
+        { title: 'Văn hóa', url: '#' },
+        { title: 'Mức lương', url: '#' },
+        { title: 'Tip tạo CV', url: '#' },
     ];
-    const title = 'JobFinder';
+    const title = 'Job Finder';
 
     return (
         <React.Fragment>
@@ -40,44 +67,55 @@ export default function NavigationBar() {
                         {section.title}
                     </Link>
                 ))}
-                <div style={{width: '70%'}}/>
+                <div style={{ width: '70%' }} />
                 <IconButton color={"inherit"} size={"small"}>
-                    <NotificationsIcon/>
+                    <NotificationsIcon />
                 </IconButton>
                 <IconButton color={"inherit"} size={"small"}>
-                    <LanguageIcon/>
+                    <LanguageIcon />
                 </IconButton>
             </Toolbar>
             <Toolbar className={classes.toolbar}>
-                <Button size="small">JobFinder</Button>
-                <div className={classes.leftMargin}/>
+                <Button size="small" onClick={onLogoClick}>{title}</Button>
+                <div className={classes.leftMargin} />
                 <div className={classes.searchBar}>
-                    <InputBase
-                        placeholder="Search…"
-                        classes={{
-                            input: classes.inputInput,
-                        }}
-                        style={{width: '70%'}}
-                        inputProps={{'aria-label': 'search'}}
-                    />
-                    <div className={classes.jobTypes}>
-                        <JobTypeComboBox/>
-                    </div>
-                    <div style={{width: 3}}/>
-                    <div className={classes.location}>
-                        <LocationComboBox/>
-                    </div>
-                    <IconButton>
-                        <SearchIcon/>
-                    </IconButton>
+                    {
+                        showSearchBar() &&
+                        <>
+                            <InputBase
+                                placeholder="Search…"
+                                classes={{
+                                    input: classes.inputInput,
+                                }}
+                                style={{ width: '70%' }}
+                                inputProps={{ 'aria-label': 'search' }}
+                            />
+                            <div className={classes.jobTypes}>
+                                <JobTypeComboBox />
+                            </div>
+                            <div style={{ width: 3 }} />
+                            <div className={classes.location}>
+                                <LocationComboBox />
+                            </div>
+                            <IconButton>
+                                <SearchIcon />
+                            </IconButton>
+                        </>
+                    }
                 </div>
-                <div className={classes.rightMargin}/>
-                <Button variant="outlined" size="medium" className={classes.button}>
-                    Sign-up
-                </Button>
-                <Button variant="outlined" size="medium" className={classes.button}>
-                    Login
-                </Button>
+                <div className={classes.rightMargin} />
+                {
+                    showSignUpBtn() &&
+                    <Button variant="outlined" size="medium" className={classes.button} onClick={onSignUpClick}>
+                        Đăng ký
+                    </Button>
+                }
+                {
+                    showLoginBtn() &&
+                    <Button variant="outlined" size="medium" className={classes.button} onClick={onLoginClick}>
+                        Đăng nhập
+                    </Button>
+                }
             </Toolbar>
         </React.Fragment>
     );
