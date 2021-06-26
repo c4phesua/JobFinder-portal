@@ -12,7 +12,7 @@ const DASHBOARD = '/dashboard';
 const PROFILE = '/profile';
 const JOBS = '/jobs';
 const EMPLOYER = '/hr/signup'; 
-const JOB_PAGE = JOBS + '/:id';
+const JOB_DESCRIPTION = JOBS + '/:id';
 
 const RouteConstants = {
   LOGIN,
@@ -29,7 +29,7 @@ const RouteConstants = {
   PROFILE,
   JOBS,
   EMPLOYER,
-  JOB_PAGE
+  JOB_DESCRIPTION
 };
 
 export default RouteConstants;

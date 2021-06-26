@@ -34,7 +34,7 @@ function App() {
           <Route exact path={RouteConstants.PROFILE} component={Profile} />
           <Route exact path={RouteConstants.JOBS} component={JobsPage} />
           <Route exact path={RouteConstants.EMPLOYER} component={HRSignup} />
-          <Route exact path={RouteConstants.JOB_PAGE} component={JobDescription} />
+          <Route exact path={RouteConstants.JOB_DESCRIPTION} component={JobDescription} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
