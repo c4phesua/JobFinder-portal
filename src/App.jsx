@@ -27,8 +27,6 @@ function App() {
           <Route exact path={RouteConstants.INDEX} component={HomePage} />
           <Route exact path={RouteConstants.INDEX_HTML} component={HomePage} />
           <Route exact path={RouteConstants.INDEX_PHP} component={HomePage} />
-          <Route exact path={RouteConstants.HR_APPLICANTS} component={Manager} />
-          <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
           <Route exact path={RouteConstants.HR_CREATEJOB} component={CreateJob} />
           <Route exact path={RouteConstants.DASHBOARD} component={HomePage} />
           <Route exact path={RouteConstants.STUDENT_PROFILE} component={Profile} />
