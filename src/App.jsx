@@ -1,5 +1,5 @@
 import './App.scss';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import NavigationBar from './component/NavigationBar';
 import Login from './page/Login';
 import Dashboard from './page/Dashboard';
@@ -14,6 +14,7 @@ import HomePage from "./page/HomePage"
 import JobsPage from './page/JobsPage';
 import HRSignup from './page/HrSignUp';
 import JobDescription from './page/JobDescription';
+import Footer from './component/Footer';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }
