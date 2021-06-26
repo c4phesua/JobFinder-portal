@@ -108,9 +108,35 @@ export default function CreateJob() {
                         variant="outlined"
                         margin="normal"
                         required
-                        id="about"
-                        name="about"
-                        label="Thông tin chi tiết về công việc ?"
+                        id="description"
+                        name="description"
+                        label="Thông tin về công việc"
+                        fullWidth
+                        multiline
+                        rows={4}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        id="required"
+                        name="required"
+                        label="Yêu cầu"
+                        fullWidth
+                        multiline
+                        rows={4}
+                    />
+                </Grid>
+                <Grid item xs={12}>
+                    <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        id="benefit"
+                        name="benefit"
+                        label="Quyền lợi"
                         fullWidth
                         multiline
                         rows={4}
