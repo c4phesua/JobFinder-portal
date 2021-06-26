@@ -21,7 +21,7 @@ export default function SignIn() {
         <Avatar className={classes.avatar}>
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+          Đăng nhập
         </Typography>
         <form className={classes.form} noValidate>
           <TextField
@@ -58,12 +58,12 @@ export default function SignIn() {
             color="primary"
             className={classes.submit}
           >
-            Sign In
+            Đăng nhập
           </Button>
           <Grid container>
             <Grid item xs>
               <Link href="#" variant="body2">
-                Forgot password?
+                Quên mật khẩu?
               </Link>
             </Grid>
             <Grid item>

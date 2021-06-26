@@ -13,7 +13,7 @@ import { navigationStyles } from '../styleutil/NavigationStyle'
 import { goTo, currentPath } from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
 
-const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE } = RouteConstants;
+const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE, INDEX, DASHBOARD } = RouteConstants;
 
 const onLogoClick = () => {
     goTo(ROOT);
@@ -23,25 +23,31 @@ const onLoginClick = () => {
     goTo(LOGIN);
 }
 
+const onProfileClick = () => {
+    goTo(STUDENT_PROFILE);
+}
+
 const onSignUpClick = () => {
     goTo(SIGNUP);
 }
 
-const inStudentProfile = () => {
-    console.log(currentPath() === STUDENT_PROFILE);
-    return currentPath() === STUDENT_PROFILE;
+const isStudentLoggedIn = () => {
+    return currentPath() === STUDENT_PROFILE 
+    || currentPath().split('/')[1] === JOBS.split('/')[1] 
+    || currentPath() === INDEX 
+    || currentPath() === DASHBOARD;
 }
 
 const showSearchBar = () => {
-    return currentPath() !== LOGIN && currentPath() !== SIGNUP && currentPath() !== EMPLOYER && !inStudentProfile();
+    return currentPath() !== LOGIN && currentPath() !== SIGNUP && currentPath() !== EMPLOYER && !isStudentLoggedIn();
 }
 
 const showLoginBtn = () => {
-    return currentPath() !== LOGIN && !inStudentProfile();
+    return currentPath() !== LOGIN && !isStudentLoggedIn();
 }
 
 const showSignUpBtn = () => {
-    return currentPath() !== SIGNUP && !inStudentProfile();
+    return currentPath() !== SIGNUP && !isStudentLoggedIn();
 }
 
 export default function NavigationBar() {
@@ -122,8 +128,8 @@ export default function NavigationBar() {
                     </Button>
                 }
                 {
-                    inStudentProfile() &&
-                    <Button variant="outlined" size="medium" className={classes.button} onClick={onLoginClick}>
+                    isStudentLoggedIn() &&
+                    <Button variant="outlined" size="medium" className={classes.button} onClick={onProfileClick}>
                         Nguyễn Trí Nhân
                     </Button>
                 }

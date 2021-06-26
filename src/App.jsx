@@ -31,7 +31,7 @@ function App() {
           <Route exact path={RouteConstants.HR_APPLICANTS} component={Manager} />
           <Route exact path={RouteConstants.APPLY_CV} component={Apply} />
           <Route exact path={RouteConstants.HR_CREATEJOB} component={CreateJob} />
-          <Route exact path={RouteConstants.DASHBOARD} component={Dashboard} />
+          <Route exact path={RouteConstants.DASHBOARD} component={HomePage} />
           <Route exact path={RouteConstants.STUDENT_PROFILE} component={Profile} />
           <Route exact path={RouteConstants.JOBS} component={JobsPage} />
           <Route exact path={RouteConstants.EMPLOYER} component={HRSignup} />
