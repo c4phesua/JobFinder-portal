@@ -128,6 +128,7 @@ export default function Apply() {
                                             multiline
                                             rows={5}
                                             size="small"
+                                            inputProps = {{ style: { height: '83px'}}}
                                         />
                                     </Grid>
                                 </Grid>

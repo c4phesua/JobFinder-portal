@@ -13,6 +13,7 @@ import Profile from "./page/Profile";
 import HomePage from "./page/HomePage"
 import JobsPage from './page/JobsPage';
 import HRSignup from './page/HrSignUp';
+import JobPage from './page/JobDescription';
 
 function App() {
   return (
@@ -32,7 +33,8 @@ function App() {
           <Route exact path={RouteConstants.DASHBOARD} component={Dashboard} />
           <Route exact path={RouteConstants.PROFILE} component={Profile} />
           <Route exact path={RouteConstants.JOBS} component={JobsPage} />
-          <Route exact path={RouteConstants.HRSignup} component={HRSignup} />
+          <Route exact path={RouteConstants.EMPLOYER} component={HRSignup} />
+          <Route exact path={RouteConstants.JOB_PAGE} component={JobPage} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
