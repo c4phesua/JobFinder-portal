@@ -42,8 +42,8 @@ const Dashboard = () => (
                     <Grid
                         item
                         lg={6}
-                        md={6}
-                        xl={3}
+                        md={12}
+                        xl={6}
                         xs={12}
                     >
                         <JobList sx={{ height: '100%' }} />
@@ -52,7 +52,7 @@ const Dashboard = () => (
                         item
                         lg={6}
                         md={12}
-                        xl={9}
+                        xl={6}
                         xs={12}
                     >
                         <Applicants />
