@@ -5,7 +5,7 @@ const INDEX_HTML = '/index.html';
 const INDEX_PHP = '/index.php';
 const ROOT = '/';
 const APPLY_CV = '/apply-cv/:id';
-const HR_APPLICANTS = '/hr/applicants';
+const HR_MANAGEMENT = '/hr/management';
 const CV_CHECKING = '/hr/checkcv';
 const HR_CREATEJOB = '/hr/create';
 const DASHBOARD = '/dashboard';
@@ -23,7 +23,7 @@ const RouteConstants = {
   ROOT,
   APPLY_CV,
   CV_CHECKING,
-  HR_APPLICANTS,
+  HR_MANAGEMENT,
   HR_CREATEJOB,
   DASHBOARD,
   STUDENT_PROFILE,

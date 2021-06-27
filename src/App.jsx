@@ -1,11 +1,9 @@
 import './App.scss';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import NavigationBar from './component/NavigationBar';
 import Login from './page/Login';
 import SignUp from "./page/Signup";
 import RouteConstants from './utils/RouteConstants';
-import Apply from "./page/Apply";
-import Manager from "./page/Manager";
 import CreateJob from "./page/CreateJob";
 import Error from "./page/Error";
 import Profile from "./page/Profile";
@@ -13,7 +11,8 @@ import HomePage from "./page/HomePage"
 import JobsPage from './page/JobsPage';
 import HRSignup from './page/HrSignUp';
 import JobDescription from './page/JobDescription';
-import Footer from './component/Footer';
+import Footer from "./component/Footer";
+import Manager from "./page/Manager";
 
 function App() {
   return (
@@ -33,10 +32,11 @@ function App() {
           <Route exact path={RouteConstants.JOBS} component={JobsPage} />
           <Route exact path={RouteConstants.EMPLOYER} component={HRSignup} />
           <Route exact path={RouteConstants.JOB_DESCRIPTION} component={JobDescription} />
+          <Route exact path={RouteConstants.HR_MANAGEMENT} component={Manager} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>
-      <Footer />
+      <Footer/>
     </div>
   );
 }
