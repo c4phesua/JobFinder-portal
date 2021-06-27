@@ -9,8 +9,7 @@ import { newTab } from '../utils/Routes';
 const DEFAULT_LOGO = 'https://s3.amazonaws.com/hoorayapp/emp-company/default-company.jpg';
 
 const handleJobClick = (job) => {
-  console.log(job);
-  newTab("/index.html");
+  newTab(`/jobs/${job.id_job}`);
 }
 
 const renderImageLogo = (image) => {

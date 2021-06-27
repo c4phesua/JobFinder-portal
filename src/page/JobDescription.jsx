@@ -12,7 +12,7 @@ import Box from "@material-ui/core/Box";
 import ExploreIcon from '@material-ui/icons/ExploreOutlined';
 import { WorkOutlineOutlined } from '@material-ui/icons';
 
-export default function CreateJob() {
+export default function JobDescription() {
     
     let {id} = useParams();
     const jobs = MockupData.data_home_page.JOB_LIST;

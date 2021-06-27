@@ -9,10 +9,10 @@ const HR_APPLICANTS = '/hr/applicants';
 const CV_CHECKING = '/hr/checkcv';
 const HR_CREATEJOB = '/hr/create';
 const DASHBOARD = '/dashboard';
-const PROFILE = '/profile';
+const STUDENT_PROFILE = '/profile';
 const JOBS = '/jobs';
 const EMPLOYER = '/hr/signup'; 
-const JOB_PAGE = '/job/:id';
+const JOB_DESCRIPTION = JOBS + '/:id';
 
 const RouteConstants = {
   LOGIN,
@@ -26,10 +26,10 @@ const RouteConstants = {
   HR_APPLICANTS,
   HR_CREATEJOB,
   DASHBOARD,
-  PROFILE,
+  STUDENT_PROFILE,
   JOBS,
   EMPLOYER,
-  JOB_PAGE
+  JOB_DESCRIPTION
 };
 
 export default RouteConstants;
