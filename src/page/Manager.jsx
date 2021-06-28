@@ -1,38 +1,66 @@
-import React from 'react';
-import clsx from 'clsx';
-import { Box, Container, Grid, Paper } from '@material-ui/core';
-import Cvs from "../component/CvGen";
-import JobsTableGen from "../component/JobGen";
-import { managerStyle } from '../styleutil/ManagerStyle';
+import {Helmet} from 'react-helmet';
+import {Box, Container, Grid} from '@material-ui/core';
+import Applicants from "../component/dashboard/Applicants";
+import JobList from "../component/dashboard/JobList";
+import AccountProfile from "../component/HrProfile";
+import AccountProfileDetails from "../component/dashboard/HrProfileDetail";
 
-
-export default function Manager() {
-    const classes = managerStyle();
-    const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
-
-    return (
-        <div className={classes.root}>
-            <main className={classes.content}>
-                <div className={classes.appBarSpacer} />
-                <Container maxWidth="lg" className={classes.container}>
-                    <Grid container spacing={3}>
-                        {/* List CV */}
-                        <Grid item xs={"auto"} md={"auto"} lg={"auto"}>
-                            <Paper className={classes.paper}>
-                                <Cvs />
-                            </Paper>
-                        </Grid>
-                        {/* CV */}
-                        <Grid item xs={"auto"} md={"auto"} lg={"auto"}>
-                            <Paper className={fixedHeightPaper}>
-                                <JobsTableGen />
-                            </Paper>
-                        </Grid>
+const Dashboard = () => (
+    <>
+        <Helmet>
+            <title>Dashboard</title>
+        </Helmet>
+        <Box
+            sx={{
+                backgroundColor: 'background.default',
+                minHeight: '100%',
+                py: 3
+            }}
+        >
+            <Container maxWidth={false}>
+                <Grid
+                    container
+                    spacing={3}
+                >
+                    <Grid
+                        item
+                        lg={4}
+                        sm={6}
+                        xs={12}
+                    >
+                        <AccountProfile/>
                     </Grid>
-                    <Box pt={4}>
-                    </Box>
-                </Container>
-            </main>
-        </div>
-    );
-}
+                    <Grid
+                        item
+                        lg={8}
+                        md={6}
+                        xs={12}
+                    >
+                        <AccountProfileDetails />
+                    </Grid>
+
+                    <Grid
+                        item
+                        lg={6}
+                        md={6}
+                        xl={3}
+                        xs={12}
+                    >
+                        <JobList sx={{ height: '100%' }} />
+                    </Grid>
+                    <Grid
+                        item
+                        lg={6}
+                        md={12}
+                        xl={9}
+                        xs={12}
+                    >
+                        <Applicants />
+                    </Grid>
+                </Grid>
+            </Container>
+        </Box>
+    </>
+);
+
+export default Dashboard;
