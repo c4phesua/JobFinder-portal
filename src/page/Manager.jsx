@@ -4,19 +4,21 @@ import Applicants from "../component/dashboard/Applicants";
 import JobList from "../component/dashboard/JobList";
 import AccountProfile from "../component/HrProfile";
 import AccountProfileDetails from "../component/dashboard/HrProfileDetail";
+import {useStylesJob} from '../utils/UtilsFunc';
+import Paper from '@material-ui/core/Paper';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
-const Dashboard = () => (
+export default function Manager(){
+const classs = useStylesJob();
+return (
     <>
-        <Helmet>
+        {/* <Helmet>
             <title>Dashboard</title>
-        </Helmet>
-        <Box
-            sx={{
-                backgroundColor: 'background.default',
-                minHeight: '100%',
-                py: 3
-            }}
-        >
+        </Helmet> */}
+        
+                <CssBaseline/>
+                <main className={classs.layout}>
+                <Paper className={classs.paper} style={{marginBottom:'0.5rem'}}>
             <Container maxWidth={false}>
                 <Grid
                     container
@@ -59,8 +61,8 @@ const Dashboard = () => (
                     </Grid>
                 </Grid>
             </Container>
-        </Box>
+        </Paper>
+        </main>
     </>
 );
-
-export default Dashboard;
+    }

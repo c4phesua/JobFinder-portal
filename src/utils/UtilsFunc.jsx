@@ -69,6 +69,7 @@ export const useStylesJob = makeStyles((theme) => ({
   },
   cardInfo:{
       align:'center',
+      display:'flex',
       [theme.breakpoints.up(960)]:{
         textAlign:'left'
       }
@@ -165,6 +166,16 @@ export const ColorButton = withStyles((theme) => ({
   },
 }))(Button);
 
+export const ColorButtonSearch = withStyles((theme) => ({
+  root: {
+      color: theme.palette.getContrastText(red[500]),
+      backgroundColor: red[500],
+      '&:hover': {
+      backgroundColor: red[700],
+      },
+  },
+}))(Button);
+
 export function getDate(dateExpire) {
     var temp = dateExpire.split('/');
     dateExpire = temp[1] +'/' + temp[0] +'/' +temp[2];
@@ -185,6 +196,22 @@ export function ListString(props) {
     );
     return listItem;
 }
+
+export function shortString(string, length = 8) {
+      var temp = string.split(' ',length);
+      let result = temp.join(' ')
+      return  string.split(' ').length < length? string: result+"...";
+}
+
+export const linkStyle = makeStyles((theme) => ({
+  link:{
+    color: orange,
+    "&:hover": {
+      color: orange[500]
+    }
+  },
+})); 
+
 
 
 
