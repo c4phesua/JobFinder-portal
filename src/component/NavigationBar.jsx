@@ -39,7 +39,12 @@ const isStudentLoggedIn = () => {
 }
 
 const showSearchBar = () => {
-    return currentPath() !== LOGIN && currentPath() !== SIGNUP && currentPath() !== EMPLOYER && (!isStudentLoggedIn() || currentPath() === INDEX || currentPath() === DASHBOARD);
+    return currentPath() !== LOGIN 
+    && currentPath() !== SIGNUP 
+    && currentPath() !== EMPLOYER 
+    && (!isStudentLoggedIn() 
+        || currentPath() === INDEX 
+        || currentPath() === DASHBOARD);
 }
 
 const showLoginBtn = () => {
