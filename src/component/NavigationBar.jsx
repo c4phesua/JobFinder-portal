@@ -103,13 +103,14 @@ export default function NavigationBar() {
                                 classes={{
                                     input: classes.inputInput,
                                 }}
-                                style={{ width: '70%' }}
+                                style={{ width: '75%' }}
                                 inputProps={{ 'aria-label': 'search' }}
+                                fullWidth={true}
                             />
                             <div className={classes.jobTypes}>
                                 <JobTypeComboBox />
                             </div>
-                            <div style={{ width: 3 }} />
+                            <div style={{ width: '3%' }} />
                             <div className={classes.location}>
                                 <LocationComboBox />
                             </div>

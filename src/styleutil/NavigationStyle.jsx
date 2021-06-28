@@ -41,12 +41,12 @@ export const navigationStyles = makeStyles((theme) => ({
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
         // vertical padding + font size from searchIcon
-        paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,
+        paddingLeft: `calc(1em + ${theme.spacing(2)}px)`,
         transition: theme.transitions.create('width'),
         width: '100%',
         height: "inherit",
         [theme.breakpoints.up('md')]: {
-            width: '20ch',
+            width: '100%',
         },
     },
     leftMargin: {
@@ -67,6 +67,7 @@ export const navigationStyles = makeStyles((theme) => ({
     searchBar:{
         display: 'inline-flex',
         width:'70%',
+        maxWidth:'70%',
         height: '10%',
         backgroundColor: '#ECF0F1',
         borderRadius: 20,
