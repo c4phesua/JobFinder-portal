@@ -31,6 +31,9 @@ const Job = (props) => {
             {job.title}
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
+            Lương: {job.salary} VND
+          </Typography>
+          <Typography variant="subtitle1" color="textSecondary">
             {job.company_name}
           </Typography>
         </CardContent>
