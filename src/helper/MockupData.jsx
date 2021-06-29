@@ -19,7 +19,8 @@ var data_home_page = {
             benefit: ["• Làm việc trong môi trường dịch vụ chuyên nghiệp.","• Được học hỏi, đào tạo và phát triển kỹ năng pha chế & thu ngân (nếu muốn).",
                         "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.","• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create:"10/06/2021",
-            duration: "10/07/2021"
+            duration: "10/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "The coffee house",
@@ -40,7 +41,8 @@ var data_home_page = {
             benefit: ["• Làm việc trong môi trường dịch vụ chuyên nghiệp.","• Được học hỏi, đào tạo và phát triển kỹ năng pha chế & thu ngân (nếu muốn).",
                         "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.","• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create:"10/06/2021",
-            duration: "10/07/2021"
+            duration: "10/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
@@ -61,7 +63,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Được làm việc trong môi trường chuyên nghiệp, năng động và hiệu quả.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"01/06/2021",
-            duration: "01/07/2021"
+            duration: "01/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Công Ty Tnhh A.N Sài Gòn Group",
@@ -82,7 +85,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"18/06/2021",
-            duration: "18/07/2021"
+            duration: "18/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "CÔNG TY CP PIZZA NGON",
@@ -105,7 +109,8 @@ var data_home_page = {
             benefit: ["• Hưởng lương gấp 3 lần khi làm việc vào Lễ, Tết","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"19/06/2021",
-            duration: "19/07/2021"
+            duration: "19/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "CÔNG TY CP PIZZA NGON",
@@ -126,7 +131,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"19/06/2021",
-            duration: "19/07/2021"
+            duration: "19/07/2021",
+            status: "hoạt động"
 
         },  {
             company_name: "TT Trực Tuyến Workonline 24H",
@@ -145,7 +151,8 @@ var data_home_page = {
             benefit: ["• Làm lâu dài sẽ được ưu tiên tăng % tiền thưởng.","• Lương theo sản lượng.",
                         "• Giờ giấc tự do, chủ động được thời gian làm việc."],
             date_create:"19/06/2021",
-            duration: "19/07/2021"
+            duration: "19/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Công Ty Tnhh Ministop Việt Nam",
@@ -167,7 +174,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Siêu Thị Big C",
@@ -189,7 +197,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Digiworld Corporation",
@@ -211,7 +220,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Cafe tại Hồ Chí Minh",
@@ -232,7 +242,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Tpbank",
@@ -253,7 +264,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus ( trở thành nhân viên chính thức sẽ được hưởng tất cả quyền lợi từ ngân hàng).","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Đại lý tại quận 4",
@@ -271,7 +283,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Đại lý bán bột Yến Mạch quận Gò Vấp",
@@ -290,7 +303,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -311,7 +325,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -332,7 +347,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -353,7 +369,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -374,7 +391,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -393,7 +411,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty cổ phần Beemart",
@@ -415,7 +434,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty Cổ phần Giải pháp Thanh toán Điện lực và Viễn thông",
@@ -436,7 +456,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công Ty TNHH Giải Pháp Công Nghệ Phần Mềm SoftOne",
@@ -457,7 +478,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "GUfoods",
@@ -481,7 +503,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.","Trợ cấp thực tập (thoả thuận)","Hỗ trợ đóng dấu xác nhận thực tập",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công Ty Lofivn",
@@ -502,7 +525,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.","Trợ cấp thực tập (thoả thuận)","Hỗ trợ đóng dấu xác nhận thực tập","Cơ hội trở thành nhân viên chính thức của LOFIVN",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công Ty Lofivn",
@@ -523,7 +547,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.","Trợ cấp thực tập (thoả thuận)","Hỗ trợ đóng dấu xác nhận thực tập","Cơ hội trở thành nhân viên chính thức của LOFIVN",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Cafe An An",
@@ -544,7 +569,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Cafe Trịnh",
@@ -565,7 +591,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Cafe Rainbow",
@@ -586,7 +613,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Cafe tại Hồ Chí Minh",
@@ -607,7 +635,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Cafe Vỹ Dạ Xưa",
@@ -628,7 +657,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Cafe tại Hồ Chí Minh",
@@ -649,7 +679,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },
     ],
@@ -671,7 +702,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -692,7 +724,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -713,7 +746,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -734,7 +768,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -755,7 +790,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -774,7 +810,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty cổ phần Beemart",
@@ -796,7 +833,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty Cổ phần Giải pháp Thanh toán Điện lực và Viễn thông",
@@ -817,7 +855,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công Ty TNHH Giải Pháp Công Nghệ Phần Mềm SoftOne",
@@ -838,7 +877,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "GUfoods",
@@ -862,7 +902,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.","Trợ cấp thực tập (thoả thuận)","Hỗ trợ đóng dấu xác nhận thực tập",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công Ty Lofivn",
@@ -883,7 +924,8 @@ var data_home_page = {
             benefit: ["• Lương cứng + kèm bonus.","Trợ cấp thực tập (thoả thuận)","Hỗ trợ đóng dấu xác nhận thực tập","Cơ hội trở thành nhân viên chính thức của LOFIVN",
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }
     ],
@@ -907,7 +949,8 @@ var data_home_page = {
             benefit: ["• Làm việc trong môi trường dịch vụ chuyên nghiệp.","• Được học hỏi, đào tạo và phát triển kỹ năng pha chế & thu ngân (nếu muốn).",
                         "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.","• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create:"10/06/2021",
-            duration: "10/07/2021"
+            duration: "10/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "The coffee house",
@@ -928,7 +971,8 @@ var data_home_page = {
             benefit: ["• Làm việc trong môi trường dịch vụ chuyên nghiệp.","• Được học hỏi, đào tạo và phát triển kỹ năng pha chế & thu ngân (nếu muốn).",
                         "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.","• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create:"10/06/2021",
-            duration: "10/07/2021"
+            duration: "10/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
@@ -949,7 +993,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Được làm việc trong môi trường chuyên nghiệp, năng động và hiệu quả.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"01/06/2021",
-            duration: "01/07/2021"
+            duration: "01/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Công Ty Tnhh A.N Sài Gòn Group",
@@ -970,7 +1015,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"18/06/2021",
-            duration: "18/07/2021"
+            duration: "18/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "CÔNG TY CP PIZZA NGON",
@@ -993,7 +1039,8 @@ var data_home_page = {
             benefit: ["• Hưởng lương gấp 3 lần khi làm việc vào Lễ, Tết","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"19/06/2021",
-            duration: "19/07/2021"
+            duration: "19/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "CÔNG TY CP PIZZA NGON",
@@ -1014,7 +1061,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"19/06/2021",
-            duration: "19/07/2021"
+            duration: "19/07/2021",
+            status: "hoạt động"
 
         },  {
             company_name: "TT Trực Tuyến Workonline 24H",
@@ -1033,7 +1081,8 @@ var data_home_page = {
             benefit: ["• Làm lâu dài sẽ được ưu tiên tăng % tiền thưởng.","• Lương theo sản lượng.",
                         "• Giờ giấc tự do, chủ động được thời gian làm việc."],
             date_create:"19/06/2021",
-            duration: "19/07/2021"
+            duration: "19/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Công Ty Tnhh Ministop Việt Nam",
@@ -1055,7 +1104,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Siêu Thị Big C",
@@ -1077,7 +1127,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Digiworld Corporation",
@@ -1099,7 +1150,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }, {
             company_name: "Cafe tại Hồ Chí Minh",
@@ -1120,7 +1172,8 @@ var data_home_page = {
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }
     ],
@@ -1172,7 +1225,8 @@ var data_manage_hr_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1193,7 +1247,8 @@ var data_manage_hr_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1214,7 +1269,8 @@ var data_manage_hr_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1235,7 +1291,8 @@ var data_manage_hr_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1254,7 +1311,8 @@ var data_manage_hr_page = {
             benefit: ["• Lương cứng + kèm bonus.",
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
-            duration: "20/07/2021"
+            duration: "20/07/2021",
+            status: "hoạt động"
 
         }
     ],
@@ -1262,26 +1320,63 @@ var data_manage_hr_page = {
         {
             employee_id: 1,
             id_job: 1,
-            employee_name: "",
+            job_name: "Nhân viên bảo vệ",
+            employee_name: "Nguyễn Văn A",
             employee_email: "",
             employee_phone: "",
             cv_link: "",
+            apply_at: "10/06/2021",
+            job_link: "",
+            status: "chờ duyệt"
 
         }, {
             employee_id: 2,
             id_job: 1,
-            employee_name: "",
+            job_name: "Nhân viên bán hàng",
+            employee_name: "Nguyễn Văn B",
             employee_email: "",
             employee_phone: "",
             cv_link: "",
+            apply_at: "22/06/2021",
+            job_link: "",
+            status: "chờ duyệt"
 
         }, {
             employee_id: 3,
             id_job: 2,
-            employee_name: "",
+            job_name: "Nhân viên bán hàng",
+            employee_name: "Nguyễn Văn C",
             employee_email: "",
             employee_phone: "",
             cv_link: "",
+            apply_at: "21/06/2021",
+            job_link: "",
+            status: "chờ duyệt"
+
+        },
+        {
+            employee_id: 2,
+            id_job: 1,
+            job_name: "Nhân viên bán hàng",
+            employee_name: "Nguyễn Văn B",
+            employee_email: "",
+            employee_phone: "",
+            cv_link: "",
+            apply_at: "22/06/2021",
+            job_link: "",
+            status: "chờ duyệt"
+
+        }, {
+            employee_id: 3,
+            id_job: 2,
+            job_name: "Nhân viên bán hàng",
+            employee_name: "Nguyễn Văn C",
+            employee_email: "",
+            employee_phone: "",
+            cv_link: "",
+            apply_at: "21/06/2021",
+            job_link: "",
+            status: "chờ duyệt"
 
         },
     ]

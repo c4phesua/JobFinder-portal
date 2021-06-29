@@ -65,7 +65,7 @@ const AccountProfile = (props) => (
                 fullWidth
                 variant="text"
             >
-                Upload picture
+                Đổi ảnh
             </Button>
         </CardActions>
     </Card>
