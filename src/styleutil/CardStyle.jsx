@@ -16,10 +16,11 @@ export const cardStyle = makeStyles((theme) => ({
   details: {
     display: 'flex',
     flexDirection: 'column',
-    margin: 'auto',
+    // margin: 'auto',
   },
   content: {
     flex: '1 0 auto',
+    textAlign: 'left',
   },
   cover: {
     marginTop: 'auto',

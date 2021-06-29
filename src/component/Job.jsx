@@ -33,7 +33,7 @@ const Job = (props) => {
         <CardContent className={classes.content}>
           <Typography component="h6" variant="h6" className={classes.cardText} color="primary">
             <Link href='' className={classLink.link}  onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
-            {shortString(job.title)}
+            {job.title}
             </Link>
           </Typography>
           <Typography variant="subtitle1" color="textSecondary">
