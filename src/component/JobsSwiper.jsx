@@ -10,7 +10,7 @@ function paginate(array, page_size, page_number) {
   return array.slice((page_number - 1) * page_size, page_number * page_size);
 }
 
-const renderJobSlide = (jobs) => {
+const renderJobSlide = (jobs,New) => {
   const totalSlide = Math.ceil(jobs.length / 6);
   let slides = [];
   for (let i = 0; i < totalSlide; i++) {
@@ -28,7 +28,7 @@ const renderJobSlide = (jobs) => {
                   {
                     halfOne.map((job, i) => {
                       return (
-                          <Job job={job} colorIndex={i}/>
+                          <Job job={job} New={New} colorIndex={i}/>
                       )
                     })
                   }
@@ -37,7 +37,7 @@ const renderJobSlide = (jobs) => {
                   {
                     halfTwo.map((job, i) => {
                       return (
-                          <Job job={job} />
+                          <Job job={job} New={New} />
                       )
                     })
                   }
@@ -55,12 +55,12 @@ const renderJobSlide = (jobs) => {
 }
 
 const JobsSwiper = (props) => {
-  const { jobs, title } = props;
+  const { jobs, New, title } = props;
   return (
     <>
       <Title>{title}</Title>
       <Swiper pagination={true} className="mySwiper">
-        {renderJobSlide(jobs)}
+        {renderJobSlide(jobs,New)}
       </Swiper>
     </>
   )
