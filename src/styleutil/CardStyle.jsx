@@ -22,6 +22,7 @@ export const cardStyle = makeStyles((theme) => ({
   },
   content: {
     flex: '1 0 auto',
+    marginLeft: '1em'
   },
   cover: {
     marginTop: 'auto',

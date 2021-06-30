@@ -32,9 +32,16 @@ const Job = (props) => {
   const classes = cardStyle();
   const classInfo = useStylesJob()
   const classLink = linkStyle();
-  const { job ,New } = props;
+  const { job ,New ,colorIndex} = props;
+
+ 
+
+  let styleCard = {
+    backgroundColor:colorIndex%2?'#F5FFFF':'white',
+    
+  }
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={styleCard}>
     <Grid container>
         <Grid item xs={12} md={2} lg={2}>
       <CardMedia

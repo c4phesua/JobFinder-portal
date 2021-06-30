@@ -37,7 +37,7 @@ const renderJobSlide = (jobs,New) => {
                   {
                     halfTwo.map((job, i) => {
                       return (
-                          <Job job={job} New={New} />
+                          <Job job={job} New={New} colorIndex={i+1}/>
                       )
                     })
                   }
