@@ -11,7 +11,9 @@ export const cardStyle = makeStyles((theme) => ({
     backgroundColor: '#ffffff',
     '&:hover': {
       backgroundColor: '#FFFFCC',
-    }
+    },
+    boxShadow:'none',
+    border: '1px solid lightblue'
   },
   details: {
     display: 'flex',

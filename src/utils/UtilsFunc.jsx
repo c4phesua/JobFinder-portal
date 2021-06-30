@@ -17,7 +17,7 @@ export const useStylesApply = makeStyles((theme) => ({
       marginLeft: theme.spacing(2),
       marginRight: theme.spacing(2),
       [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
-        width: 600,
+        width: 1200,
         marginLeft: 'auto',
         marginRight: 'auto',
       },
@@ -69,11 +69,22 @@ export const useStylesJob = makeStyles((theme) => ({
   },
   cardInfo:{
       align:'center',
+      display:'flex',
       [theme.breakpoints.up(960)]:{
         textAlign:'left'
       }
   },
+  cardInfo2:{
+      align:'center',
+      [theme.breakpoints.up(960)]:{
+        textAlign:'right'
+      }
+  },
   paper: {
+    boxShadow: 'none',
+    variant:'outlined',
+    borderRadius:'20',
+    borderColor:red[200],
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
     padding: theme.spacing(2),
@@ -100,6 +111,18 @@ export const useStylesJob = makeStyles((theme) => ({
   },
 }));
 
+export const useStylesProfile = makeStyles((theme) => ({
+  layout: {
+    width: 'auto',
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up(1200)]: {
+      width: 1200,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  }
+}));
 export const useStylesHrSignUp = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
@@ -165,6 +188,16 @@ export const ColorButton = withStyles((theme) => ({
   },
 }))(Button);
 
+export const ColorButtonSearch = withStyles((theme) => ({
+  root: {
+      color: theme.palette.getContrastText(red[500]),
+      backgroundColor: red[500],
+      '&:hover': {
+      backgroundColor: red[700],
+      },
+  },
+}))(Button);
+
 export function getDate(dateExpire) {
     var temp = dateExpire.split('/');
     dateExpire = temp[1] +'/' + temp[0] +'/' +temp[2];
@@ -185,6 +218,22 @@ export function ListString(props) {
     );
     return listItem;
 }
+
+export function shortString(string, length = 8) {
+      var temp = string.split(' ',length);
+      let result = temp.join(' ')
+      return  string.split(' ').length < length? string: result+"...";
+}
+
+export const linkStyle = makeStyles((theme) => ({
+  link:{
+    color: orange,
+    "&:hover": {
+      color: orange[500]
+    }
+  },
+})); 
+
 
 
 
