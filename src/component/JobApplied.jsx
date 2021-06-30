@@ -16,6 +16,10 @@ const handleJobClick = (job) => {
   newTab(`/jobs/${job.id_job}`);
 }
 
+const handleMouseOn = (x) => {
+    console.log('aaa');
+    x.style.color="green";
+  }
 
 const renderImageLogo = (image) => {
   return image !== "" ? image : DEFAULT_LOGO;
@@ -27,37 +31,41 @@ const Job = (props) => {
   const classLink = linkStyle();
   const { job } = props;
   return (
-    <Card className={classeCard.root} >
+    <Card className={classeCard.root} 
+        style={{borderLeft:'0',borderRight:'0',width:'90%', 
+                marginLeft:'auto',marginRight:'auto',
+                paddingTop:'1rem',paddingBottom:'1rem'}}>
         <Grid container>
             <Grid item xs={12} md={3} lg={3}>
                 <CardMedia
                     className={classeCard.cover}
                     image={renderImageLogo(job.image_link)}
-                    onClick={() => { handleJobClick(job) }}
-                    style={{marginLeft:'auto',marginRight:'auto',marginTop:'18.475px'}}
+                    style={{marginLeft:'auto',marginRight:'auto'}}
                 />
             </Grid>
-            <Grid container item xs= {12} md={9} lg={9}>
+            <Grid container item xs= {12} md={6} lg={6}>
                 <CardContent className={classeCard.content}>
                     <Typography component="h6" variant="h6" className={classes.cardInfo}  style={{fontWeight:'600'}}>
-                        {/* <Box fontWeight="fontWeightBold" onMouseEnter={handleMouseOn(this)}> */}
                         <Link href='' className={classLink.link} onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
-                            {job.title}
-                            </Link>
-                        {/* </Box> */}
+                        {job.title}
+                        </Link>
                     </Typography>
                     <Typography component="div" variant="body" className={classes.cardInfo}>
                         {job.company_name}
                     </Typography>
-                    <Typography component="div" variant="body" style={{color:'orange'}} className={classes.cardInfo}>
-                        
-                        <Box fontWeight="fontWeightBold">
-                        Lương: {job.salary}
-                        </Box>
-                    </Typography>
                     
-                    <Typography component="div" variant="caption" className={classes.cardInfo2}>
-                        Hết hạn trong {getDate(job.duration)} ngày
+                </CardContent>
+
+            </Grid>
+            
+            <Grid container item xs= {12} md={3} lg={3}>
+                
+            <CardContent className={classeCard.content}>
+                    <Typography component="div" variant="body" style={{alignContent:'center'}} >
+                        Đã ứng tuyển
+                    </Typography>
+                    <Typography component="div" variant="body" >
+                        {job.applied}
                     </Typography>
                 </CardContent>
             </Grid>

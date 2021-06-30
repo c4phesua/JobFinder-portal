@@ -2,6 +2,11 @@
 import React from 'react';
 import ImgProfile from '../component/ImgProfile';
 import MockupData from '../helper/MockupData';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import {useStylesProfile} from '../utils/UtilsFunc';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import Job from '../component/JobApplied';
+import 'react-tabs/style/react-tabs.css';
 
 export default function Profile () {
     let profile = MockupData.student_user;
@@ -13,9 +18,18 @@ export default function Profile () {
     function onClickSave(){    
         setShowEdit(false);
     }
+
+    const renderJob = (job) => {
+        return (
+          <Job job = { job } />
+          
+        );
+      }
+    
+    const classes = useStylesProfile();
     
     const Show = () => (
-        <div className="card mb-3">
+        
                 <div className="card-body">
                 <div className="row">
                         <div className="col-sm-3">
@@ -82,12 +96,11 @@ export default function Profile () {
                     </div>
                 </div>
             
-            </div>
     );
 
     const Edit = () => (
-        <div className="card mb-3">
-                <div className="card-body">
+        
+        <div className="card-body">
                     <div className="row">
                         <div className="col-sm-3">
                             <h6 className="mb-0">Họ tên</h6>
@@ -150,12 +163,13 @@ export default function Profile () {
                             <a className="btn btn-primary " target="__blank" onClick={onClickSave}>Save Changes</a>
                         </div>
                     </div>
-                </div>
-            
-            </div>
+        </div>
     );
 
     return (
+        <React.Fragment>
+        <CssBaseline />
+        <main className={classes.layout}>
         <div className="container">
             <div className="main-body">
             <div className="gutters-sm row" >
@@ -166,30 +180,49 @@ export default function Profile () {
                   <div className="card h-100">
                     <div className="card-body">
                       <h6 className="d-flex align-items-center mb-3"><i className="material-icons text-info mr-2">Công việc đã ứng tuyển</i></h6>
-                      <h6>12</h6>
+                      <h6>{profile.job_applied.length}</h6>
                     </div>
                   </div>
                 </div>
                 <div className="col-sm-6 mb-3">
                   <div className="card h-100">
                     <div className="card-body">
-                    <h6 className="d-flex align-items-center mb-3"><i className="material-icons text-info mr-2">Công việc đã được chấp nhận</i></h6>
-                      <h6>2</h6>
+                    <h6 className="d-flex align-items-center mb-3"><i className="material-icons text-info mr-2">Nhà tuyển dụng đã xem</i></h6>
+                      <h6>1</h6>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-8">
-              
-                  {showEdit ? <Edit/> : <Show/>}
-                  
+                <div className="col-md-8">
+                    
+         <div className="card mb-3" style={{ minHeight: '300px'}}>
+            <Tabs>
+                <TabList style={{display:'flex'}}>
+                    <Tab>Việc làm của tôi</Tab>
+                    <Tab>Hồ sơ</Tab>
+                </TabList>
+                <TabPanel>
+                {
+                    profile.job_applied.map((job) => {
+                        return renderJob(job);
+                    })
+                }
+                </TabPanel>
+                <TabPanel>
+                    {showEdit ? <Edit/> : <Show/>}
+                </TabPanel>
+                </Tabs>
+                </div>
+                </div>
+            
             </div>
+            
           </div>
 
-        </div>
     </div>
-
+    </main>
+    </React.Fragment>
     );
     
 }

@@ -17,7 +17,7 @@ export const useStylesApply = makeStyles((theme) => ({
       marginLeft: theme.spacing(2),
       marginRight: theme.spacing(2),
       [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
-        width: 600,
+        width: 1200,
         marginLeft: 'auto',
         marginRight: 'auto',
       },
@@ -74,7 +74,17 @@ export const useStylesJob = makeStyles((theme) => ({
         textAlign:'left'
       }
   },
+  cardInfo2:{
+      align:'center',
+      [theme.breakpoints.up(960)]:{
+        textAlign:'right'
+      }
+  },
   paper: {
+    boxShadow: 'none',
+    variant:'outlined',
+    borderRadius:'20',
+    borderColor:red[200],
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
     padding: theme.spacing(2),
@@ -101,6 +111,18 @@ export const useStylesJob = makeStyles((theme) => ({
   },
 }));
 
+export const useStylesProfile = makeStyles((theme) => ({
+  layout: {
+    width: 'auto',
+    marginLeft: theme.spacing(2),
+    marginRight: theme.spacing(2),
+    [theme.breakpoints.up(1200)]: {
+      width: 1200,
+      marginLeft: 'auto',
+      marginRight: 'auto',
+    },
+  }
+}));
 export const useStylesHrSignUp = makeStyles((theme) => ({
   formControl: {
     margin: theme.spacing(1),
