@@ -201,7 +201,7 @@ export default function Profile () {
                 <TabList style={{display:'flex'}}>
                     <Tab>Việc làm của tôi</Tab>
                     <Tab>Hồ sơ</Tab>
-                </TabList>
+                </TabList> 
                 <TabPanel>
                 {
                     profile.job_applied.map((job) => {

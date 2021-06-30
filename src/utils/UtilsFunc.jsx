@@ -68,14 +68,16 @@ export const useStylesJob = makeStyles((theme) => ({
     },
   },
   cardInfo:{
-      align:'center',
       display:'flex',
       [theme.breakpoints.up(960)]:{
         textAlign:'left'
+      },
+      [theme.breakpoints.down(960)]:{
+        textAlign:'center',
       }
   },
   cardInfo2:{
-      align:'center',
+      textAlign:'center',
       [theme.breakpoints.up(960)]:{
         textAlign:'right'
       }

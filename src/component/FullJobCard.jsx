@@ -5,7 +5,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { cardStyle } from '../styleutil/CardStyle';
 import { newTab } from '../utils/Routes';
-import {shortString,getDate,useStylesJob,linkStyle} from '../utils/UtilsFunc';
+import {getDate,useStylesJob,linkStyle} from '../utils/UtilsFunc';
 import Grid from '@material-ui/core/Grid';
 import Box from "@material-ui/core/Box";
 import Link from '@material-ui/core/Link'
@@ -39,7 +39,7 @@ const Job = (props) => {
             </Grid>
             <Grid container item xs= {12} md={9} lg={9}>
                 <CardContent className={classeCard.content}>
-                    <Typography component="h6" variant="h6" className={classes.cardInfo}  style={{fontWeight:'600'}}>
+                    <Typography component="h6" variant="h6" className={classes.cardInfo} style={{fontWeight:'600'}}>
                         {/* <Box fontWeight="fontWeightBold" onMouseEnter={handleMouseOn(this)}> */}
                         <Link href='' className={classLink.link} onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
                             {job.title}
