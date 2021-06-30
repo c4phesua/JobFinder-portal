@@ -37,9 +37,7 @@ const renderJobSlide = (jobs) => {
                   {
                     halfTwo.map((job, i) => {
                       return (
-                        <Paper>
                           <Job job={job} />
-                        </Paper>
                       )
                     })
                   }

@@ -10,6 +10,8 @@ import SendIcon from '@material-ui/icons/Send';
 import {ColorButton, useStylesApply} from '../utils/UtilsFunc';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
+import { KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
 
 
 export default function CreateJob() {
@@ -18,6 +20,13 @@ export default function CreateJob() {
   const [employmentType, setEmploymentType] = React.useState('');
   const handleChange = (event) => {
     setEmploymentType(event.target.value);
+  };
+  const date = new Date();
+  date.setTime(date.getTime() + 24 * 3600 * 1000);
+  const [selectedDate, setSelectedDate] = React.useState(date);
+
+  const handleDateChange = (date) => {
+    setSelectedDate(date);
   };
   return (
     <React.Fragment>
@@ -43,6 +52,7 @@ export default function CreateJob() {
           <React.Fragment>
         <form className={classes.form} noValidate>
             <Grid container spacing={1}>
+                <Grid container item xs={12} md={6} lg={6}>
                 <Grid item xs={12}>
                     <TextField
                         variant="outlined"
@@ -104,6 +114,26 @@ export default function CreateJob() {
                     </FormControl>
                 </Grid>
                 <Grid item xs={12}>
+                    
+                <MuiPickersUtilsProvider utils={DateFnsUtils}>
+                <KeyboardDatePicker
+                    disablePast
+                    format="MM/dd/yyyy"
+                    margin="normal"
+                    id="date-picker-dialog"
+                    label="Ngày hết hạn"
+                    value={selectedDate}
+                    onChange={handleDateChange}
+                    KeyboardButtonProps={{
+                        'aria-label': 'change date',
+                    }}
+                    />
+                </MuiPickersUtilsProvider>
+                </Grid>
+                </Grid>
+                
+                <Grid container item xs={12} md={6} lg={6}>
+                <Grid item xs={12}>
                     <TextField
                         variant="outlined"
                         margin="normal"
@@ -141,6 +171,7 @@ export default function CreateJob() {
                         multiline
                         rows={4}
                     />
+                </Grid>
                 </Grid>
                 <Grid item xs={12} sm={4}/>
                 <Grid item xs={12} sm={4}>

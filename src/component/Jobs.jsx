@@ -24,11 +24,9 @@ export default class Jobs extends React.Component {
     const { jobs } = this.props;
 
     return (
-      <div className="jobs">
         {
           jobs.map((job, index) => this.renderJob(job, index))
         }
-      </div>
     );
   }
 }
