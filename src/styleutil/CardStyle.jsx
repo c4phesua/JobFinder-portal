@@ -10,7 +10,7 @@ export const cardStyle = makeStyles((theme) => ({
     marginBottom: '15px',
     backgroundColor: '#ffffff',
     '&:hover': {
-      backgroundColor: '#FFFFCC',
+      backgroundColor: '#F5FFFF',
     },
     boxShadow:'none',
     border: '1px solid lightblue'

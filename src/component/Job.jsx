@@ -37,7 +37,6 @@ const Job = (props) => {
  
 
   let styleCard = {
-    backgroundColor:colorIndex%2?'#F5FFFF':'white',
     
   }
   return (
