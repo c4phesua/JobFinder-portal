@@ -4,8 +4,6 @@ import ImgProfile from '../component/ImgProfile';
 import MockupData from '../helper/MockupData';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import {useStylesProfile} from '../utils/UtilsFunc';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import Job from '../component/JobApplied';
 import 'react-tabs/style/react-tabs.css';
 
 export default function Profile () {
