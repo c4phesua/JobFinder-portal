@@ -3,7 +3,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { ColorButtonSignUp, useStylesJob, getDate, ListString } from '../utils/UtilsFunc';
+import { ColorButtonSignUp, useStylesJob, getDate, ListString,getRelatedJobs } from '../utils/UtilsFunc';
 import MockupData from '../helper/MockupData';
 import { useParams } from "react-router-dom";
 import CardMedia from '@material-ui/core/CardMedia';
@@ -14,6 +14,7 @@ import { WorkOutlineOutlined } from '@material-ui/icons';
 import { Dialog, DialogActions, DialogContent, DialogTitle, Button } from "@material-ui/core";
 import { closeTab } from "../utils/Routes";
 import CheckIcon from '@material-ui/icons/Check';
+import RelatedJobs from '../component/RelatedJobs';
 
 
 export default function JobDescription() {
@@ -33,6 +34,8 @@ export default function JobDescription() {
     const onApplyJobClick = () => {
         setOpen(true);
     }
+
+    const jobRelated = getRelatedJobs();
 
     return (
         <React.Fragment>
@@ -130,6 +133,8 @@ export default function JobDescription() {
                         </Grid>
                     </Grid>
                 </Paper>
+
+                <RelatedJobs jobs={jobRelated}/>
                 <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                     <DialogTitle id="customized-dialog-title" onClose={handleClose}>
                         Thông báo
