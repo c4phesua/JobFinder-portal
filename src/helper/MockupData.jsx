@@ -274,7 +274,7 @@ var data_home_page = {
             duration: "20/08/2021"
 
         },{
-            company_name: "Đại lý bán bột Yến Mạch quận Gò Vấp",
+            company_name: "Đại lý bán bột Yến Mạch quận",
             image_link: "",
             title: "Nhân viên bán hàng",
             job_type: "Nhân viên bán hàng",
@@ -418,7 +418,7 @@ var data_home_page = {
             duration: "20/08/2021"
 
         },{
-            company_name: "Công ty Cổ phần Giải pháp Thanh toán Điện lực và Viễn thông",
+            company_name: "Công ty ECPay",
             image_link: "https://haymora.com/upload/images/cong_nghe_thong_tin/phan_mem/ecpay/ecpay.jpg",
             title: "Thực tập sinh Tuyển dụng",
             job_type: "Nhân viên",
@@ -439,7 +439,7 @@ var data_home_page = {
             duration: "20/08/2021"
 
         },{
-            company_name: "Công Ty TNHH Giải Pháp Công Nghệ Phần Mềm SoftOne",
+            company_name: "Công Ty SoftOne",
             image_link: "https://cdn.mywork.com.vn/company-logo-medium/052020/bhj0AZryRLs4jKCU4QsQjGsfPJR6u9cluNGKlFA8.jpeg",
             title: "Thực tập sinh Content marketing",
             job_type: "Nhân viên",
@@ -655,7 +655,7 @@ var data_home_page = {
     ],
     NEW_JOB: [
         {
-            company_name: "Đại lý bán bột Yến Mạch quận Gò Vấp",
+            company_name: "Đại lý bán bột Yến Mạch quận",
             image_link: "",
             title: "Nhân viên bán hàng",
             job_type: "Nhân viên bán hàng",
@@ -799,7 +799,7 @@ var data_home_page = {
             duration: "20/08/2021"
 
         },{
-            company_name: "Công ty Cổ phần Giải pháp Thanh toán Điện lực và Viễn thông",
+            company_name: "Công ty ECPay",
             image_link: "https://haymora.com/upload/images/cong_nghe_thong_tin/phan_mem/ecpay/ecpay.jpg",
             title: "Thực tập sinh Tuyển dụng",
             job_type: "Nhân viên",
@@ -820,7 +820,7 @@ var data_home_page = {
             duration: "20/08/2021"
 
         },{
-            company_name: "Công Ty TNHH Giải Pháp Công Nghệ Phần Mềm SoftOne",
+            company_name: "Công Ty SoftOne",
             image_link: "https://cdn.mywork.com.vn/company-logo-medium/052020/bhj0AZryRLs4jKCU4QsQjGsfPJR6u9cluNGKlFA8.jpeg",
             title: "Thực tập sinh Content marketing",
             job_type: "Nhân viên",
@@ -1260,30 +1260,8 @@ var data_manage_hr_page = {
     ],
     CV_LIST: [
         {
-            employee_id: 1,
-            id_job: 1,
-            employee_name: "",
-            employee_email: "",
-            employee_phone: "",
-            cv_link: "",
-
-        }, {
-            employee_id: 2,
-            id_job: 1,
-            employee_name: "",
-            employee_email: "",
-            employee_phone: "",
-            cv_link: "",
-
-        }, {
-            employee_id: 3,
-            id_job: 2,
-            employee_name: "",
-            employee_email: "",
-            employee_phone: "",
-            cv_link: "",
-
-        },
+            employee_id: 1
+        }
     ]
 }
 

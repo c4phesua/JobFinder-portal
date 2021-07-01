@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import JobsSwiper from '../component/JobsSwiper';
 import EditProfileSuggest from '../component/EditProfileSuggest';
 import ScrollToTop from '../component/ScrollToTop';
+import { Grid } from '@material-ui/core';
 const newJobs = MockupData.data_home_page.NEW_JOB;
 const hotJobs = MockupData.data_home_page.HOT_JOB;
 
@@ -12,11 +13,13 @@ const Homepage = () => {
 
   return (
     <Container maxWidth="lg">
-      <JobsSwiper jobs={newJobs} title="Công việc mới nhất"/>
-      <EditProfileSuggest />
-      <JobsSwiper jobs={hotJobs} title="Công việc gợi ý"/>
+          <JobsSwiper jobs={newJobs} New={true} title="Công việc mới nhất"/>
+
+        <EditProfileSuggest />
+
+      <JobsSwiper jobs={hotJobs} New={false} title="Công việc gợi ý"/>
       <ScrollToTop />
-    </Container>
+      </Container>
   )
 }
 
