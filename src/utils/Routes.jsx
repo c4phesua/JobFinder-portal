@@ -10,6 +10,10 @@ export const goTo = (link, urlObject) => {
   }
 };
 
+export const closeTab = () => {
+  return window.close();
+}
+
 export const newTab = (link, urlObject) => {
   if (urlObject) {
     const queryString = `?${jquery.param(urlObject, true)}`;
