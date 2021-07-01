@@ -33,8 +33,8 @@ const AccountProfileDetails = (props) => {
         >
             <Card>
                 <CardHeader
-                    subheader="The information can be edited"
-                    title="Profile"
+                    subheader="Thông tin dưới đây có thể được thay đổi"
+                    title="Hồ sơ công ty"
                 />
                 <Divider />
                 <CardContent>
@@ -49,8 +49,8 @@ const AccountProfileDetails = (props) => {
                         >
                             <TextField
                                 fullWidth
-                                helperText="Please specify the first name"
-                                label="Company name"
+                                helperText="Vui lòng điền đầy đủ tên công ty"
+                                label="Tên công ty"
                                 onChange={handleChange}
                                 required
                                 value={values.name}
@@ -113,7 +113,7 @@ const AccountProfileDetails = (props) => {
                         variant="contained"
                         size={"small"}
                     >
-                        Save details
+                        Lưu thông tin
                     </Button>
                 </Box>
             </Card>
