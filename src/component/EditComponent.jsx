@@ -17,7 +17,6 @@ import DateFnsUtils from '@date-io/date-fns';
 export default function EditJob(props) {
     let {job} = props;
   const classes = useStylesApply();
-  document.title = "Job Finder - Chỉnh sửa công việc";
   const [employmentType, setEmploymentType] = React.useState('');
   const handleChange = (event) => {
     setEmploymentType(event.target.value);

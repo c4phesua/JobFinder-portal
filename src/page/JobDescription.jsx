@@ -35,13 +35,13 @@ export default function JobDescription() {
         setOpen(true);
     }
 
-    const jobRelated = getRelatedJobs();
+    const jobRelated = getRelatedJobs(jobs, job.company_name);
 
     return (
         <React.Fragment>
             <CssBaseline />
             <main className={classes.layout}>
-                <Paper className={classes.paper}>
+                <Paper className={classes.paper} style={{border: '1px solid lightgray'}}>
 
                     <Grid container>
                         <Grid item xs={12} md={2} lg={2}>
@@ -93,7 +93,7 @@ export default function JobDescription() {
                     </Grid>
                 </Paper>
 
-                <Paper className={classes.paper} style={{ width: '80%', margin: 'auto' }}>
+                <Paper className={classes.paper} style={{ width: '80%', margin: 'auto', border: '1px solid lightgray' }}>
                     <Grid container>
                         <Grid container item xs={12}>
                             <Grid item xs={12} style={{ paddingBottom: '2rem' }}>

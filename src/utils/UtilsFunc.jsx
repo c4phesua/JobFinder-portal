@@ -233,10 +233,10 @@ export const getRelatedJobs = (jobs, companyName) => {
     if (job.company_name === companyName) return job;
   });
   var result = _.without(sameJobs, undefined);
-  if (result.length < 6) {
-    result = result.concat(jobs.slice(0, 6));
+  if (result.length < 4) {
+    result = result.concat(jobs.slice(0, 4));
   }
-  return result.slice(0, 6);
+  return result.slice(0, 4);
 }
 
 export const linkStyle = makeStyles((theme) => ({

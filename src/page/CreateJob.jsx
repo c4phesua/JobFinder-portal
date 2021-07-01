@@ -32,7 +32,7 @@ export default function CreateJob() {
     <React.Fragment>
       <CssBaseline />
       <main className={classes.layout}>
-        <Paper className={classes.paper}>
+        <Paper className={classes.paper} style={{border: '1px solid lightgray',boxShadow:'none'}}>
           <Typography component="h1" variant="h4" align="center">
             Đăng công việc mới
           </Typography>

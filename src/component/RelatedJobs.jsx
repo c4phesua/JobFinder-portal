@@ -7,7 +7,7 @@ import ScrollToTop from '../component/ScrollToTop';
 import JobFilter from '../component/JobFilter';
 import Grid from '@material-ui/core/Grid';
 import {useStylesJob} from '../utils/UtilsFunc';
-import { Box } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 const normalJobs = MockupData.data_home_page.JOB_LIST;
 const newJobs = MockupData.data_home_page.NEW_JOB;
 const hotJobs = MockupData.data_home_page.HOT_JOB;
@@ -22,12 +22,6 @@ const renderJob = (job) => {
   );
 }
 
-const renderFilter = () => {
-  return (
-    <JobFilter 
-     />
-  );
-}
 
 const RelatedJobs = (props) => {
   const classes = useStylesJob();
@@ -39,8 +33,13 @@ const RelatedJobs = (props) => {
   return (
     // <Container maxWidth="lg">
       
-      <Paper className={classes.paper} style={{marginBottom:'0.5rem', border: '1px solid lightblue'}}>
+      <Paper className={classes.paper} style={{marginBottom:'0.5rem', width:"80%",marginLeft:'auto',marginRight:'auto', border: '1px solid lightgray'}}>
       <Grid container spacing={3}>
+          <Grid item xs={12} md={12} lg={12}>
+            <Typography variant="h6" align="center">
+                CÔNG VIỆC LIÊN QUAN
+            </Typography>
+          </Grid>
             <Grid item xs={12} md={6} lg={6}>   
             {
             halfOne.map((job) => {
