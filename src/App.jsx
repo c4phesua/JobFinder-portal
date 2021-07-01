@@ -13,6 +13,7 @@ import HRSignup from './page/HrSignUp';
 import JobDescription from './page/JobDescription';
 import Footer from "./component/Footer";
 import Manager from "./page/Manager";
+import ProfileView from './page/ProfileView';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route exact path={RouteConstants.EMPLOYER} component={HRSignup} />
           <Route exact path={RouteConstants.JOB_DESCRIPTION} component={JobDescription} />
           <Route exact path={RouteConstants.HR_MANAGEMENT} component={Manager} />
+          <Route exact path={RouteConstants.PROFILE} component={ProfileView} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>

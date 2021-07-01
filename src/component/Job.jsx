@@ -5,8 +5,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { cardStyle } from '../styleutil/CardStyle';
 import { newTab } from '../utils/Routes';
-import {shortString,linkStyle} from '../utils/UtilsFunc';
-import Link from '@material-ui/core/Link'
+import {useStylesJob,linkStyle,} from '../utils/UtilsFunc';
+import Link from '@material-ui/core/Link';
+import Grid from '@material-ui/core/Grid';
+import { Box } from '@material-ui/core';
 
 const DEFAULT_LOGO = 'https://s3.amazonaws.com/hoorayapp/emp-company/default-company.jpg';
 
@@ -18,29 +20,53 @@ const renderImageLogo = (image) => {
   return image !== "" ? image : DEFAULT_LOGO;
 }
 
+const NewLable = () => (
+    <Box 
+      component='span' color='white' 
+      borderRadius='3px' fontSize='12px' 
+      fontWeight='bold' textAlign='center'
+      lineHeight='15px' style={{backgroundColor:'#FF5661',paddingLeft:'0.6em', paddingRight:'0.6em'}}> MỚI</Box>
+);
+
 const Job = (props) => {
   const classes = cardStyle();
+  const classInfo = useStylesJob()
   const classLink = linkStyle();
-  const { job } = props;
+  const { job ,New ,colorIndex} = props;
+
+ 
+
+  let styleCard = {
+    
+  }
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} style={styleCard}>
+    <Grid container>
+        <Grid item xs={12} md={2} lg={2}>
       <CardMedia
         className={classes.cover}
         image={renderImageLogo(job.image_link)}
         onClick={() => { handleJobClick(job) }}
       />
-      <div className={classes.details}>
+      </Grid>
+      
+      <Grid container item xs= {12} md={8} lg={8}>
         <CardContent className={classes.content}>
-          <Typography component="h6" variant="h6" className={classes.cardText} color="primary">
+          <Typography component="h6" variant="h6" className={classInfo.cardInfo} color="primary">
             <Link href='' className={classLink.link}  onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
-            {shortString(job.title)}
+            {job.title}
             </Link>
           </Typography>
-          <Typography variant="subtitle1" color="textSecondary">
-            {job.company_name}
+          <Typography component="div" variant="body" className={classInfo.cardInfo}>
+              {job.company_name}
           </Typography>
         </CardContent>
-      </div>
+      </Grid>
+      <Grid item xs={12} md={2} lg={2}>
+        {New ? <NewLable/> : null}
+      </Grid>
+                
+     </Grid> 
     </Card>
   )
 }
