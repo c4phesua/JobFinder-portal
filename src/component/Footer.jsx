@@ -43,7 +43,7 @@ const useStyles = makeStyles((theme) => ({
 const footers = [
     {
         title: 'Về chúng tôi',
-        description: ['Team', 'History', 'Contact us', 'Locations'],
+        description: ['thông tin', 'Lịch sử', 'Liên hệ'],
     },
     {
         title: 'Các mẫu CV',
