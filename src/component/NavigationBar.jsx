@@ -13,7 +13,7 @@ import { navigationStyles } from '../styleutil/NavigationStyle'
 import { goTo, currentPath } from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
 
-const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE, INDEX, DASHBOARD } = RouteConstants;
+const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE, INDEX, DASHBOARD, HR_PROFILE, HR_CREATEJOB, HR_MANAGEMENT } = RouteConstants;
 
 const onLogoClick = () => {
     goTo(ROOT);
@@ -27,6 +27,10 @@ const onProfileClick = () => {
     goTo(STUDENT_PROFILE);
 }
 
+const onHrProfileClick = () => {
+    goTo(HR_PROFILE);
+}
+
 const onSignUpClick = () => {
     goTo(SIGNUP);
 }
@@ -38,21 +42,28 @@ const isStudentLoggedIn = () => {
     || currentPath() === DASHBOARD;
 }
 
+const isHRLoggedin = () => {
+    return currentPath() === HR_PROFILE
+    || currentPath() === HR_CREATEJOB
+    || currentPath() === HR_MANAGEMENT;
+}
+
 const showSearchBar = () => {
     return currentPath() !== LOGIN 
     && currentPath() !== SIGNUP 
     && currentPath() !== EMPLOYER 
+    && currentPath() !== HR_PROFILE
     && (!isStudentLoggedIn() 
         || currentPath() === INDEX 
         || currentPath() === DASHBOARD);
 }
 
 const showLoginBtn = () => {
-    return currentPath() !== LOGIN && !isStudentLoggedIn();
+    return currentPath() !== LOGIN && !isStudentLoggedIn() && !isHRLoggedin();
 }
 
 const showSignUpBtn = () => {
-    return currentPath() !== SIGNUP && !isStudentLoggedIn();
+    return currentPath() !== SIGNUP && currentPath() !== EMPLOYER && !isStudentLoggedIn() && !isHRLoggedin();
 }
 
 export default function NavigationBar() {
@@ -137,6 +148,12 @@ export default function NavigationBar() {
                     isStudentLoggedIn() &&
                     <Button variant="outlined" size="medium" className={classes.button} onClick={onProfileClick}>
                         Nguyễn Trí Nhân
+                    </Button>
+                }
+                {
+                    isHRLoggedin() &&
+                    <Button variant="outlined" size="medium" className={classes.button} onClick={onHrProfileClick}>
+                        Đặng Văn Hùng
                     </Button>
                 }
             </Toolbar>
