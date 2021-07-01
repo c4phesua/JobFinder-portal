@@ -2,7 +2,7 @@ import {Helmet} from 'react-helmet';
 import {Box, Container, Grid} from '@material-ui/core';
 import Applicants from "../component/dashboard/Applicants";
 import JobList from "../component/dashboard/JobList";
-import AccountProfile from "../component/HrProfile";
+import CompanyProfile from "../component/HrProfile";
 import AccountProfileDetails from "../component/dashboard/HrProfileDetail";
 import {useStylesJob} from '../utils/UtilsFunc';
 import Paper from '@material-ui/core/Paper';
@@ -30,7 +30,7 @@ return (
                         sm={6}
                         xs={12}
                     >
-                        <AccountProfile/>
+                        <CompanyProfile/>
                     </Grid>
                     <Grid
                         item
