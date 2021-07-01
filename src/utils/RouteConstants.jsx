@@ -13,6 +13,7 @@ const STUDENT_PROFILE = '/profile';
 const JOBS = '/jobs';
 const EMPLOYER = '/hr/signup'; 
 const JOB_DESCRIPTION = JOBS + '/:id';
+const PROFILE = '/profile/:id';
 
 const RouteConstants = {
   LOGIN,
@@ -29,7 +30,8 @@ const RouteConstants = {
   STUDENT_PROFILE,
   JOBS,
   EMPLOYER,
-  JOB_DESCRIPTION
+  JOB_DESCRIPTION,
+  PROFILE
 };
 
 export default RouteConstants;

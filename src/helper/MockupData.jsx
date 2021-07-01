@@ -1260,30 +1260,8 @@ var data_manage_hr_page = {
     ],
     CV_LIST: [
         {
-            employee_id: 1,
-            id_job: 1,
-            employee_name: "",
-            employee_email: "",
-            employee_phone: "",
-            cv_link: "",
-
-        }, {
-            employee_id: 2,
-            id_job: 1,
-            employee_name: "",
-            employee_email: "",
-            employee_phone: "",
-            cv_link: "",
-
-        }, {
-            employee_id: 3,
-            id_job: 2,
-            employee_name: "",
-            employee_email: "",
-            employee_phone: "",
-            cv_link: "",
-
-        },
+            employee_id: 1
+        }
     ]
 }
 
