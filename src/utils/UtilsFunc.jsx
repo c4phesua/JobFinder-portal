@@ -2,6 +2,7 @@ import { makeStyles,withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { orange, red } from '@material-ui/core/colors';
 import Typography from '@material-ui/core/Typography';
+import _ from 'lodash';
 
 
 export const useStylesApply = makeStyles((theme) => ({
@@ -225,6 +226,17 @@ export function shortString(string, length = 8) {
       var temp = string.split(' ',length);
       let result = temp.join(' ')
       return  string.split(' ').length < length? string: result+"...";
+}
+
+export const getRelatedJobs = (jobs, companyName) => {
+  var sameJobs = _.map(jobs, (job) => {
+    if (job.company_name === companyName) return job;
+  });
+  var result = _.without(sameJobs, undefined);
+  if (result.length < 6) {
+    result = result.concat(jobs.slice(0, 6));
+  }
+  return result.slice(0, 6);
 }
 
 export const linkStyle = makeStyles((theme) => ({
