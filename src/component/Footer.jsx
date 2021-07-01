@@ -46,8 +46,8 @@ const footers = [
         description: ['Team', 'History', 'Contact us', 'Locations'],
     },
     {
-        title: 'Tính năng',
-        description: ['Cool stuff', 'Random feature', 'Team feature', 'Developer stuff', 'Another one'],
+        title: 'Các mẫu CV',
+        description: ['Mẫu cv tiếng anh', 'Mẫu cv tiếng việt', 'Tổng hợp CV tham khảo các nhóm ngành', 'cách viết CV Tiếng Trung', 'cách viết CV Tiếng Hàn'],
     },
     {
         title: 'Dành cho nhà tuyển dụng',
