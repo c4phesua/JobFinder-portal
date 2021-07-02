@@ -13,7 +13,7 @@ import CompanyProfile from "../component/HrProfile";
 import AccountProfileDetails from "../component/dashboard/HrProfileDetail";
 
 export default function HrProfile () {
-    let profile = MockupData.student_user;
+    let profile = MockupData.hr_user;
 
     document.title = `JobFinder - ${profile.fullname}`;
 

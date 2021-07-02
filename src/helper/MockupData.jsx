@@ -1399,6 +1399,15 @@ var student_user = {
     ],
     job_seen: "0"
 }
+var hr_user = {
+    username: "hungcirclek@gmail.com",
+    fullname: "Đặng Văn Hùng",
+    address: "Quận 9, Thành Phố Hồ Chí Minh",
+    phone: "0123456789",
+    email: "hungcirclek@gmail.com",
+    languages: "",
+    about: ""
+}
 
 
 
