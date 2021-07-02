@@ -1338,7 +1338,7 @@ var loremipsum = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,'
 
 var hr_user = {
     username: "hr@kms.com",
-    fullname: "Nguyễn Văn A",
+    fullname: "Đặng Văn Hùng",
 }
 
 var student_user = {

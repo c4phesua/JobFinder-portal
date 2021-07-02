@@ -30,6 +30,7 @@ export const fiCardStyle = makeStyles({
   fiCardContent: {
     color: "#ffffff",
     backgroundColor: "rgba(0,0,0,.60)",
+    justifyContent: "center",
   },
   fiCardContentTextSecondary: {
     color: "rgba(255,255,255,0.78)",
