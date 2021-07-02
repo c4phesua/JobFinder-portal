@@ -100,14 +100,6 @@ const Applicants = (props) => (
                 p: 2
             }}
         >
-            <Button
-                color="primary"
-                endIcon={<ArrowRightIcon/>}
-                size="small"
-                variant="text"
-            >
-                View all
-            </Button>
         </Box>
     </Card>
 );
