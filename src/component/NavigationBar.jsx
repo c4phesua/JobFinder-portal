@@ -53,6 +53,7 @@ const showSearchBar = () => {
     && currentPath() !== SIGNUP 
     && currentPath() !== EMPLOYER 
     && currentPath() !== HR_PROFILE
+    && currentPath() !== HR_CREATEJOB
     && (!isStudentLoggedIn() 
         || currentPath() === INDEX 
         || currentPath() === DASHBOARD);
