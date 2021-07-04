@@ -35,7 +35,7 @@ export default function JobDescription() {
         setOpen(true);
     }
 
-    const jobRelated = getRelatedJobs();
+    const jobRelated = getRelatedJobs(jobs, job.company_name);
 
     return (
         <React.Fragment>
