@@ -1409,8 +1409,30 @@ var hr_user = {
     about: ""
 }
 
-
+var employees = [
+    {
+        id: "1",
+        fullname: "Đặng Văn Hùng",
+        phone: "0354046609",
+        email: "hungcirclek@gmail.com",
+        status: true,
+    },
+    {
+        id: "2",
+        fullname: "Nguyễn Văn A",
+        phone: "0851471890",
+        email: "a.nguyen@gmail.com",
+        status: false,
+    },
+    {
+        id: "2",
+        fullname: "Nguyễn Văn B",
+        phone: "0902457867",
+        email: "b.nguyen@gmail.com",
+        status: false,
+    },
+]
 
 // import vào, đặt const rồi gọi thôi
 
-module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, };
+module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, employees };
