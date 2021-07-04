@@ -16,6 +16,10 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import MockupData from '../helper/MockupData';
 
 
+const onCreateButtonClicked = () => {
+  // open popup here
+}
+
 const CompanyManagement = (props) => {
 
   const employees = MockupData.employees;
@@ -23,7 +27,6 @@ const CompanyManagement = (props) => {
   return (
     <>
       <Card {...props}>
-        <CardHeader title="Nhân sự công ty" />
         <Divider />
         <PerfectScrollbar>
           <Box sx={{ minWidth: 800 }}>
@@ -88,12 +91,16 @@ const CompanyManagement = (props) => {
         >
         </Box>
       </Card>
-      <Button
-        color="primary"
-        variant="contained"
-      >
-        Thêm nhân viên
-      </Button>
+      <div className="add-hr-btn">
+        <Button
+          color="primary"
+          variant="contained"
+          onClick={onCreateButtonClicked}
+        >
+          Thêm nhân viên
+        </Button>
+      </div>
+
     </>
   )
 }
