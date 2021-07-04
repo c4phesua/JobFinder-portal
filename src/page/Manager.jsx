@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
 
 export default function Manager(){
-const classs = useStylesJob();
+const classes = useStylesJob();
 return (
     <>
         {/* <Helmet>
@@ -17,8 +17,8 @@ return (
         </Helmet> */}
         
                 <CssBaseline/>
-                <main className={classs.layout}>
-                <Paper className={classs.paper} style={{marginBottom:'0.5rem'}}>
+                <main className={classes.layout}>
+                <Paper className={classes.paper} style={{marginBottom:'0.5rem'}}>
             <Container maxWidth={false}>
                 <Grid
                     container
