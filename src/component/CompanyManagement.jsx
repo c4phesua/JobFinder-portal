@@ -10,12 +10,14 @@ import {
     TableBody,
     TableCell,
     TableHead,
-    TableRow, TableContainer, IconButton,
+    TableRow, TableContainer, IconButton, DialogContent, DialogActions, Dialog,
 } from '@material-ui/core';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import MockupData from '../helper/MockupData';
 import {IOSSwitch} from "./IosSwitch";
 import EditIcon from "@material-ui/icons/Edit";
+import EditJob from "./EditComponent";
+import CreateHR from "./CreateHr";
 
 
 const onCreateButtonClicked = () => {
@@ -25,8 +27,7 @@ const onCreateButtonClicked = () => {
 const CompanyManagement = (props) => {
 
     const employees = MockupData.employees;
-    const [openEdit, setOpenEdit] = React.useState(false);
-    const [editHr, setEditHr] = React.useState(false);
+    const [openCreate, setOpenCreate] = React.useState(false);
     var initState = {}
     for (const emp of employees) {
         initState[emp.id.toString()] = true
@@ -36,13 +37,12 @@ const CompanyManagement = (props) => {
         console.log(event.target.name)
         setSwitchState({...switchState, [event.target.name]: event.target.checked});
     };
-    const handleClickOpenEdit = (hr) => {
-        setOpenEdit(true);
-        setEditHr(hr);
+    const handleClickOpenCreate = (hr) => {
+        setOpenCreate(true);
     };
 
-    const handleCloseEdit = () => {
-        setOpenEdit(false);
+    const handleCloseCreate = () => {
+        setOpenCreate(false);
     };
 
     return (
@@ -97,11 +97,6 @@ const CompanyManagement = (props) => {
                                                     onChange={handleChange} name={employee.id.toString()}
                                                 />
                                             </TableCell>
-                                            <TableCell>
-                                                <IconButton onClick={() => handleClickOpenEdit(employee)}>
-                                                    <EditIcon/>
-                                                </IconButton>
-                                            </TableCell>
                                         </TableRow>
                                     ))}
                                 </TableBody>
@@ -122,11 +117,24 @@ const CompanyManagement = (props) => {
                 <Button
                     color="primary"
                     variant="contained"
-                    onClick={onCreateButtonClicked}
+                    onClick={handleClickOpenCreate}
                 >
                     Thêm nhân viên
                 </Button>
             </div>
+            <Dialog open={openCreate} onClose={handleCloseCreate} aria-labelledby="form-dialog-title">
+                <DialogContent>
+                    <CreateHR/>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseCreate} color="primary">
+                        Hủy
+                    </Button>
+                    <Button onClick={handleCloseCreate} color="primary">
+                        Tạo mới
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </>
     )
 }
