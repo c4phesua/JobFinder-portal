@@ -1254,7 +1254,7 @@ var data_manage_hr_page = {
             title: "Circle K tuyển nhân viên bán hàng tại Tp.HCM",
             job_type: "Nhân viên bán hàng",
             tag_list: [],
-            id_job: 15,
+            id_job: 20,
             type: "Toàn thời gian",
             salary: "5,000,000",
             company_address: "Quận 7, Hồ Chí Minh, Thành phố Hồ Chí Minh",
@@ -1425,7 +1425,7 @@ var employees = [
         status: false,
     },
     {
-        id: "2",
+        id: "3",
         fullname: "Nguyễn Văn B",
         phone: "0902457867",
         email: "b.nguyen@gmail.com",

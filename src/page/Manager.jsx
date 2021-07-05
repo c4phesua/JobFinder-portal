@@ -7,6 +7,7 @@ import AccountProfileDetails from "../component/dashboard/HrProfileDetail";
 import {useStylesJob} from '../utils/UtilsFunc';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import VerticalTabs from "../component/dashboard/Tab";
 
 export default function Manager(){
 const classes = useStylesJob();
@@ -41,23 +42,32 @@ return (
                         <AccountProfileDetails />
                     </Grid>
 
+                    {/*<Grid*/}
+                    {/*    item*/}
+                    {/*    lg={6}*/}
+                    {/*    md={12}*/}
+                    {/*    xl={6}*/}
+                    {/*    xs={12}*/}
+                    {/*>*/}
+                    {/*    <JobList sx={{ height: '100%' }} />*/}
+                    {/*</Grid>*/}
+                    {/*<Grid*/}
+                    {/*    item*/}
+                    {/*    lg={6}*/}
+                    {/*    md={12}*/}
+                    {/*    xl={6}*/}
+                    {/*    xs={12}*/}
+                    {/*>*/}
+                    {/*    <Applicants />*/}
+                    {/*</Grid>*/}
                     <Grid
                         item
-                        lg={6}
+                        lg={12}
                         md={12}
-                        xl={6}
+                        xl={12}
                         xs={12}
                     >
-                        <JobList sx={{ height: '100%' }} />
-                    </Grid>
-                    <Grid
-                        item
-                        lg={6}
-                        md={12}
-                        xl={6}
-                        xs={12}
-                    >
-                        <Applicants />
+                        <VerticalTabs/>
                     </Grid>
                 </Grid>
             </Container>
