@@ -68,9 +68,6 @@ const CompanyManagement = (props) => {
                                         <TableCell>
                                             Trạng thái
                                         </TableCell>
-                                        <TableCell>
-                                            Sửa
-                                        </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
