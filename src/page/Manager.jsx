@@ -1,15 +1,13 @@
-import {Helmet} from 'react-helmet';
-import {Box, Container, Grid} from '@material-ui/core';
-import Applicants from "../component/dashboard/Applicants";
-import JobList from "../component/dashboard/JobList";
+import {Container, Grid} from '@material-ui/core';
 import CompanyProfile from "../component/HrProfile";
 import AccountProfileDetails from "../component/dashboard/HrProfileDetail";
 import {useStylesJob} from '../utils/UtilsFunc';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import VerticalTabs from "../component/dashboard/Tab";
 
 export default function Manager(){
-const classs = useStylesJob();
+const classes = useStylesJob();
 return (
     <>
         {/* <Helmet>
@@ -17,8 +15,8 @@ return (
         </Helmet> */}
         
                 <CssBaseline/>
-                <main className={classs.layout}>
-                <Paper className={classs.paper} style={{marginBottom:'0.5rem'}}>
+                <main className={classes.layout}>
+                <Paper className={classes.paper} style={{marginBottom:'0.5rem'}}>
             <Container maxWidth={false}>
                 <Grid
                     container
@@ -41,23 +39,32 @@ return (
                         <AccountProfileDetails />
                     </Grid>
 
+                    {/*<Grid*/}
+                    {/*    item*/}
+                    {/*    lg={6}*/}
+                    {/*    md={12}*/}
+                    {/*    xl={6}*/}
+                    {/*    xs={12}*/}
+                    {/*>*/}
+                    {/*    <JobList sx={{ height: '100%' }} />*/}
+                    {/*</Grid>*/}
+                    {/*<Grid*/}
+                    {/*    item*/}
+                    {/*    lg={6}*/}
+                    {/*    md={12}*/}
+                    {/*    xl={6}*/}
+                    {/*    xs={12}*/}
+                    {/*>*/}
+                    {/*    <Applicants />*/}
+                    {/*</Grid>*/}
                     <Grid
                         item
-                        lg={6}
+                        lg={12}
                         md={12}
-                        xl={6}
+                        xl={12}
                         xs={12}
                     >
-                        <JobList sx={{ height: '100%' }} />
-                    </Grid>
-                    <Grid
-                        item
-                        lg={6}
-                        md={12}
-                        xl={6}
-                        xs={12}
-                    >
-                        <Applicants />
+                        <VerticalTabs/>
                     </Grid>
                 </Grid>
             </Container>

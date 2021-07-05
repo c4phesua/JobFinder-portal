@@ -1,18 +1,15 @@
 import React from 'react';
-import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
-import SendIcon from '@material-ui/icons/Send';
-import {ColorButton, useStylesApply} from '../utils/UtilsFunc';
+import {useStylesApply} from '../utils/UtilsFunc';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import {KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
-import moment from "moment";
 
 
 export default function EditJob(props) {
