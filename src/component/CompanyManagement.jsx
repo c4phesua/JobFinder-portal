@@ -10,11 +10,12 @@ import {
     TableBody,
     TableCell,
     TableHead,
-    TableRow, TableContainer,
+    TableRow, TableContainer, IconButton,
 } from '@material-ui/core';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import MockupData from '../helper/MockupData';
 import {IOSSwitch} from "./IosSwitch";
+import EditIcon from "@material-ui/icons/Edit";
 
 
 const onCreateButtonClicked = () => {
@@ -24,6 +25,8 @@ const onCreateButtonClicked = () => {
 const CompanyManagement = (props) => {
 
     const employees = MockupData.employees;
+    const [openEdit, setOpenEdit] = React.useState(false);
+    const [editHr, setEditHr] = React.useState(false);
     var initState = {}
     for (const emp of employees) {
         initState[emp.id.toString()] = true
@@ -32,6 +35,14 @@ const CompanyManagement = (props) => {
     const handleChange = (event) => {
         console.log(event.target.name)
         setSwitchState({...switchState, [event.target.name]: event.target.checked});
+    };
+    const handleClickOpenEdit = (hr) => {
+        setOpenEdit(true);
+        setEditHr(hr);
+    };
+
+    const handleCloseEdit = () => {
+        setOpenEdit(false);
     };
 
     return (
@@ -58,6 +69,9 @@ const CompanyManagement = (props) => {
                                         <TableCell>
                                             Trạng thái
                                         </TableCell>
+                                        <TableCell>
+                                            Sửa
+                                        </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -82,6 +96,11 @@ const CompanyManagement = (props) => {
                                                     checked={switchState[employee.id.toString()]}
                                                     onChange={handleChange} name={employee.id.toString()}
                                                 />
+                                            </TableCell>
+                                            <TableCell>
+                                                <IconButton onClick={() => handleClickOpenEdit(employee)}>
+                                                    <EditIcon/>
+                                                </IconButton>
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -108,7 +127,6 @@ const CompanyManagement = (props) => {
                     Thêm nhân viên
                 </Button>
             </div>
-
         </>
     )
 }
