@@ -1,164 +1,130 @@
 import moment from 'moment';
-import {v4 as uuid} from 'uuid';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import {
     Box,
     Button,
     Card,
     CardHeader,
-    Chip,
-    Divider,
+    Chip, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle,
+    Divider, IconButton,
     Table,
     TableBody,
     TableCell,
     TableHead,
     TableRow,
-    TableSortLabel,
+    TableSortLabel, TextField,
     Tooltip
 } from '@material-ui/core';
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
+import MockupData from '../../helper/MockupData';
+import EditIcon from '@material-ui/icons/Edit';
+import React from 'react';
+import EditJob from "../EditComponent";
+import {func} from "prop-types";
 
-const orders = [
-    {
-        id: uuid(),
-        ref: 'CDD1049',
-        amount: 30.5,
-        customer: {
-            name: 'Ekaterina Tankova'
-        },
-        createdAt: 1555016400000,
-        status: 'pending'
-    },
-    {
-        id: uuid(),
-        ref: 'CDD1048',
-        amount: 25.1,
-        customer: {
-            name: 'Cao Yu'
-        },
-        createdAt: 1555016400000,
-        status: 'delivered'
-    },
-    {
-        id: uuid(),
-        ref: 'CDD1047',
-        amount: 10.99,
-        customer: {
-            name: 'Alexa Richardson'
-        },
-        createdAt: 1554930000000,
-        status: 'refunded'
-    },
-    {
-        id: uuid(),
-        ref: 'CDD1046',
-        amount: 96.43,
-        customer: {
-            name: 'Anje Keizer'
-        },
-        createdAt: 1554757200000,
-        status: 'pending'
-    },
-    {
-        id: uuid(),
-        ref: 'CDD1045',
-        amount: 32.54,
-        customer: {
-            name: 'Clarke Gillebert'
-        },
-        createdAt: 1554670800000,
-        status: 'delivered'
-    },
-    {
-        id: uuid(),
-        ref: 'CDD1044',
-        amount: 16.76,
-        customer: {
-            name: 'Adam Denisov'
-        },
-        createdAt: 1554670800000,
-        status: 'delivered'
-    }
-];
+export default function Applicants()
+{
+    const [open, setOpen] = React.useState(false);
+    const [jobEdit, setJobEdit] = React.useState();
 
-const Applicants = (props) => (
-    <Card {...props}>
-        <CardHeader title="Bài đăng tuyển"/>
-        <Divider/>
-        <PerfectScrollbar>
-            <Box sx={{minWidth: 800}}>
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>
-                                Order Ref
-                            </TableCell>
-                            <TableCell>
-                                Customer
-                            </TableCell>
-                            <TableCell sortDirection="desc">
-                                <Tooltip
-                                    enterDelay={300}
-                                    title="Sort"
-                                >
-                                    <TableSortLabel
-                                        active
-                                        direction="desc"
+    const handleClickOpen = (job) => {
+        setOpen(true);
+        setJobEdit(job);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+    return (
+        <Card>
+            <CardHeader title="Bài đăng tuyển"/>
+            <Divider/>
+            <PerfectScrollbar>
+                <Box sx={{minWidth: 800}}>
+                    <Table>
+                        <TableHead>
+                            <TableRow>
+                                <TableCell>
+                                    Tiêu đề
+                                </TableCell>
+                                <TableCell>
+                                    Số ứng tuyển
+                                </TableCell>
+                                <TableCell sortDirection="desc">
+                                    <Tooltip
+                                        enterDelay={300}
+                                        title="Sort"
                                     >
-                                        Date
-                                    </TableSortLabel>
-                                </Tooltip>
-                            </TableCell>
-                            <TableCell>
-                                Status
-                            </TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {orders.map((order) => (
-                            <TableRow
-                                hover
-                                key={order.id}
-                            >
-                                <TableCell>
-                                    {order.ref}
+                                        <TableSortLabel
+                                            active
+                                            direction="desc"
+                                        >
+                                            Ngày đăng
+                                        </TableSortLabel>
+                                    </Tooltip>
                                 </TableCell>
                                 <TableCell>
-                                    {order.customer.name}
+                                    Trang thái
                                 </TableCell>
                                 <TableCell>
-                                    {moment(order.createdAt).format('DD/MM/YYYY')}
-                                </TableCell>
-                                <TableCell>
-                                    <Chip
-                                        color="primary"
-                                        label={order.status}
-                                        size="small"
-                                    />
+                                    sửa
                                 </TableCell>
                             </TableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </Box>
-        </PerfectScrollbar>
-        <Box
-            sx={{
-                display: 'flex',
-                justifyContent: 'flex-end',
-                p: 2
-            }}
-        >
-            <Button
-                color="primary"
-                endIcon={<ArrowRightIcon/>}
-                size="small"
-                variant="text"
+                        </TableHead>
+                        <TableBody>
+                            {MockupData.data_manage_hr_page.JOB_LIST.map((job) => (
+                                <TableRow
+                                    hover
+                                    key={job.title}
+                                >
+                                    <TableCell>
+                                        {job.title}
+                                    </TableCell>
+                                    <TableCell>
+                                        {Math.round(Math.random() * 100 % 255)}
+                                    </TableCell>
+                                    <TableCell>
+                                        {job.date_create}
+                                    </TableCell>
+                                    <TableCell>
+                                        <Chip
+                                            color="primary"
+                                            label={job.status}
+                                            size="small"
+                                        />
+                                    </TableCell>
+                                    <TableCell>
+                                        <IconButton onClick={() => handleClickOpen(job)}>
+                                            <EditIcon/>
+                                        </IconButton>
+                                    </TableCell>
+                                </TableRow>
+                            ))}
+                        </TableBody>
+                    </Table>
+                </Box>
+            </PerfectScrollbar>
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'flex-end',
+                    p: 2
+                }}
             >
-                View all
-            </Button>
-        </Box>
-    </Card>
-);
-
-export default Applicants;
+            </Box>
+            <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                <DialogContent>
+                    <EditJob job={jobEdit}/>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleClose} color="primary">
+                        Hủy
+                    </Button>
+                    <Button onClick={handleClose} color="primary">
+                        Lưu
+                    </Button>
+                </DialogActions>
+            </Dialog>
+        </Card>
+    );
+}

@@ -18,7 +18,7 @@ const user = {
     email: ' info@circlek.com.vn'
 };
 
-const AccountProfile = (props) => (
+const CompanyProfile = (props) => (
     <Card {...props}>
         <CardContent>
             <Box
@@ -65,10 +65,10 @@ const AccountProfile = (props) => (
                 fullWidth
                 variant="text"
             >
-                Upload picture
+                Đổi ảnh
             </Button>
         </CardActions>
     </Card>
 );
 
-export default AccountProfile;
+export default CompanyProfile;
