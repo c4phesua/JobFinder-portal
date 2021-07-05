@@ -14,9 +14,10 @@ import { KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers
 import DateFnsUtils from '@date-io/date-fns';
 
 
-export default function CreateJob() {
+export default function CreateJob(props) {
+    let {job} = props;
   const classes = useStylesApply();
-  document.title = "Job Finder - Tạo công việc";
+  document.title = "Job Finder - Chỉnh sửa công việc";
   const [employmentType, setEmploymentType] = React.useState('');
   const handleChange = (event) => {
     setEmploymentType(event.target.value);
@@ -36,19 +37,6 @@ export default function CreateJob() {
           <Typography component="h1" variant="h4" align="center">
             Đăng công việc mới
           </Typography>
-          {/* <Grid container spacing={4}>
-              <Grid item xs={12}>
-                  <TextField
-                    variant="outlined"
-                    margin="normal"
-                    required
-                    id="fullname"
-                    name="fullname"
-                    label="Full Name"
-                    fullWidth
-                  />
-              </Grid>
-          </Grid> */}
           <React.Fragment>
         <form className={classes.form} noValidate>
             <Grid container spacing={1}>
