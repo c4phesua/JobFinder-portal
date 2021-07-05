@@ -14,6 +14,7 @@ import {
 } from '@material-ui/core';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import MockupData from '../helper/MockupData';
+import {IOSSwitch} from "./IosSwitch";
 
 
 const onCreateButtonClicked = () => {
@@ -23,11 +24,19 @@ const onCreateButtonClicked = () => {
 const CompanyManagement = (props) => {
 
   const employees = MockupData.employees;
+  var initState = {}
+  for (const emp of employees) {
+    initState[emp.id.toString()] = true
+  }
+  const [switchState, setSwitchState] = React.useState(initState);
+  const handleChange = (event) => {
+    console.log(event.target.name)
+    setSwitchState({...switchState, [event.target.name]: event.target.checked});
+  };
 
   return (
     <>
       <Card {...props}>
-        <Divider />
         <PerfectScrollbar>
           <Box sx={{ minWidth: 800 }}>
             <Table>
@@ -68,12 +77,9 @@ const CompanyManagement = (props) => {
                       {employee.phone}
                     </TableCell>
                     <TableCell>
-                      <Switch
-                        checked={employee.status}
-                        // onChange={}
-                        color="primary"
-                        name="checkedB"
-                        inputProps={{ 'aria-label': 'primary checkbox' }}
+                      <IOSSwitch
+                          checked={switchState[employee.id.toString()]}
+                          onChange={handleChange} name={employee.id.toString()}
                       />
                     </TableCell>
                   </TableRow>
