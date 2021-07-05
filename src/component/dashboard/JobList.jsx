@@ -5,11 +5,14 @@ import {
     Card,
     Dialog,
     DialogActions,
-    DialogContent, DialogContentText, DialogTitle,
+    DialogContent,
+    DialogContentText,
+    DialogTitle,
     IconButton,
     Table,
     TableBody,
-    TableCell, TableContainer,
+    TableCell,
+    TableContainer,
     TableHead,
     TableRow,
     TableSortLabel,
@@ -17,7 +20,7 @@ import {
 } from '@material-ui/core';
 import MockupData from '../../helper/MockupData';
 import EditIcon from '@material-ui/icons/Edit';
-import React, {useEffect} from 'react';
+import React from 'react';
 import EditJob from "../EditComponent";
 import {IOSSwitch} from "../IosSwitch";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';

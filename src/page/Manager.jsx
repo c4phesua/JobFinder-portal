@@ -1,7 +1,4 @@
-import {Helmet} from 'react-helmet';
-import {Box, Container, Grid} from '@material-ui/core';
-import Applicants from "../component/dashboard/Applicants";
-import JobList from "../component/dashboard/JobList";
+import {Container, Grid} from '@material-ui/core';
 import CompanyProfile from "../component/HrProfile";
 import AccountProfileDetails from "../component/dashboard/HrProfileDetail";
 import {useStylesJob} from '../utils/UtilsFunc';

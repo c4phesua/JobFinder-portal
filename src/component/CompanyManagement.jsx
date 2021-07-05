@@ -3,20 +3,19 @@ import {
     Box,
     Button,
     Card,
-    CardHeader,
-    Switch,
-    Divider,
+    Dialog,
+    DialogActions,
+    DialogContent,
     Table,
     TableBody,
     TableCell,
+    TableContainer,
     TableHead,
-    TableRow, TableContainer, IconButton, DialogContent, DialogActions, Dialog,
+    TableRow,
 } from '@material-ui/core';
 import PerfectScrollbar from 'react-perfect-scrollbar';
 import MockupData from '../helper/MockupData';
 import {IOSSwitch} from "./IosSwitch";
-import EditIcon from "@material-ui/icons/Edit";
-import EditJob from "./EditComponent";
 import CreateHR from "./CreateHr";
 
 
@@ -37,7 +36,7 @@ const CompanyManagement = (props) => {
         console.log(event.target.name)
         setSwitchState({...switchState, [event.target.name]: event.target.checked});
     };
-    const handleClickOpenCreate = (hr) => {
+    const handleClickOpenCreate = () => {
         setOpenCreate(true);
     };
 
