@@ -2,8 +2,9 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
+import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import { ColorButtonSignUp, useStylesJob, getDate, ListString,getRelatedJobs } from '../utils/UtilsFunc';
+import { ColorButtonSignUp, useStylesJob, getDate, ListString, getRelatedJobs, linkStyle } from '../utils/UtilsFunc';
 import MockupData from '../helper/MockupData';
 import { useParams } from "react-router-dom";
 import CardMedia from '@material-ui/core/CardMedia';
@@ -15,6 +16,8 @@ import { Dialog, DialogActions, DialogContent, DialogTitle, Button } from "@mate
 import { closeTab } from "../utils/Routes";
 import CheckIcon from '@material-ui/icons/Check';
 import RelatedJobs from '../component/RelatedJobs';
+import { goTo } from '../utils/Routes';
+
 
 
 export default function JobDescription() {
@@ -23,6 +26,7 @@ export default function JobDescription() {
     const jobs = MockupData.data_home_page.JOB_LIST;
     const job = jobs[id];
     const classes = useStylesJob();
+    const classLink = linkStyle();
     document.title = "JobFinder - " + job.title;
     const classesCard = cardStyle();
     const [open, setOpen] = React.useState(false);
@@ -36,12 +40,16 @@ export default function JobDescription() {
     }
 
     const jobRelated = getRelatedJobs(jobs, job.company_name);
+    
+    const handleCompanyClick = (job) => {
+        goTo(`/company/${job.id_job}`);
+    } 
 
     return (
         <React.Fragment>
             <CssBaseline />
             <main className={classes.layout}>
-                <Paper className={classes.paper} style={{border: '1px solid lightgray'}}>
+                <Paper className={classes.paper} style={{ border: '1px solid lightgray' }}>
 
                     <Grid container>
                         <Grid item xs={12} md={2} lg={2}>
@@ -59,7 +67,9 @@ export default function JobDescription() {
                                     </Box>
                                 </Typography>
                                 <Typography component="div" variant="body" className={classes.cardInfo}>
-                                    {job.company_name}
+                                    <Link className={classLink.link} onClick={() => { handleCompanyClick(job) }} style={{ textDecoration: 'none' }}>
+                                        {job.company_name}
+                                    </Link>
                                 </Typography>
                                 <Typography component="div" variant="body" className={classes.cardInfo}>
                                     Địa điểm làm việc: {job.company_address}
@@ -134,7 +144,7 @@ export default function JobDescription() {
                     </Grid>
                 </Paper>
 
-                <RelatedJobs jobs={jobRelated} titles={"CÔNG VIỆC LIÊN QUAN"}/>
+                <RelatedJobs jobs={jobRelated} titles={"CÔNG VIỆC LIÊN QUAN"} />
                 <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                     <DialogTitle id="customized-dialog-title" onClose={handleClose}>
                         Thông báo
