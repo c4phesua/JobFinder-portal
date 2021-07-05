@@ -1316,7 +1316,13 @@ var data_manage_hr_page = {
     ],
     CV_LIST: [
         {
-            employee_id: 1
+            employee_id: 1,
+            employee_name: 'Trần Văn Đức',
+            apply_date: '05/07/2021',
+            job_name: 'Nhân viên bán hàng',
+            job_link: '/jobs/17',
+            status: 1
+
         }
     ]
 }
