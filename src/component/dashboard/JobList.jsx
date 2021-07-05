@@ -5,7 +5,7 @@ import {
     Card,
     Dialog,
     DialogActions,
-    DialogContent,
+    DialogContent, DialogContentText, DialogTitle,
     IconButton,
     Table,
     TableBody,
@@ -25,7 +25,8 @@ import {newTab} from "../../utils/Routes";
 
 
 export default function Applicants() {
-    const [open, setOpen] = React.useState(false);
+    const [openEdit, setOpenEdit] = React.useState(false);
+    const [openDelete, setOpenDelete] = React.useState(false);
     const [jobEdit, setJobEdit] = React.useState();
     const jobs = MockupData.data_manage_hr_page.JOB_LIST;
     var initState = {}
@@ -34,16 +35,24 @@ export default function Applicants() {
     }
 
     const onClickOpenCreate = () => {
-        newTab('http://localhost:3000/hr/create')
+        newTab('/hr/create')
     }
 
-    const handleClickOpen = (job) => {
-        setOpen(true);
+    const handleClickOpenEdit = (job) => {
+        setOpenEdit(true);
         setJobEdit(job);
     };
 
-    const handleClose = () => {
-        setOpen(false);
+    const handleCloseEdit = () => {
+        setOpenEdit(false);
+    };
+
+    const handleClickOpenDelete = (job) => {
+        setOpenDelete(true);
+    };
+
+    const handleCloseDelete = () => {
+        setOpenDelete(false);
     };
     const [switchState, setSwitchState] = React.useState(initState);
 
@@ -117,12 +126,12 @@ export default function Applicants() {
                                                            onChange={handleChange} name={job.id_job.toString()}/>
                                             </TableCell>
                                             <TableCell>
-                                                <IconButton onClick={() => handleClickOpen(job)}>
+                                                <IconButton onClick={() => handleClickOpenEdit(job)}>
                                                     <EditIcon/>
                                                 </IconButton>
                                             </TableCell>
                                             <TableCell>
-                                                <IconButton>
+                                                <IconButton onClick={handleClickOpenDelete}>
                                                     <DeleteForeverIcon style={{color: 'red'}}/>
                                                 </IconButton>
                                             </TableCell>
@@ -141,16 +150,40 @@ export default function Applicants() {
                     }}
                 >
                 </Box>
-                <Dialog open={open} onClose={handleClose} aria-labelledby="form-dialog-title">
+                <Dialog open={openEdit} onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
                     <DialogContent>
                         <EditJob job={jobEdit}/>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleClose} color="primary">
+                        <Button onClick={handleCloseEdit} color="primary">
                             Hủy
                         </Button>
-                        <Button onClick={handleClose} color="primary">
+                        <Button onClick={handleCloseEdit} color="primary">
                             Lưu
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+                <Dialog
+                    open={openDelete}
+                    onClose={handleCloseDelete}
+                    aria-labelledby="alert-dialog-slide-title"
+                    aria-describedby="alert-dialog-slide-description"
+                >
+                    <DialogTitle id="alert-dialog-slide-title">
+                        Bạn có muốn xóa bài đăng tuyển dụng này?
+                    </DialogTitle>
+                    <DialogContent>
+                        <DialogContentText id="alert-dialog-slide-description">
+                            Nội dụng đã xóa sẽ không thể khôi phục lại.
+                            Chọn "Xóa" để tiếp tục, "Hủy" để dừng yêu cầu.
+                        </DialogContentText>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button onClick={handleCloseDelete} color="primary">
+                            Hủy
+                        </Button>
+                        <Button onClick={handleCloseDelete} color="primary">
+                            Xóa
                         </Button>
                     </DialogActions>
                 </Dialog>
