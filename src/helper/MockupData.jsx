@@ -19,7 +19,11 @@ var data_home_page = {
             benefit: ["• Làm việc trong môi trường dịch vụ chuyên nghiệp.","• Được học hỏi, đào tạo và phát triển kỹ năng pha chế & thu ngân (nếu muốn).",
                         "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.","• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create:"10/06/2021",
-            duration: "10/08/2021"
+            duration: "10/08/2021",
+            status:"hoạt động",
+            email: "hi@thecoffeehouse.vn",
+            phone: "02871078079",
+            address: "88 Cao Thắng, Phường 4, Quận 3, Tp.HCM"
 
         },{
             company_name: "The coffee house",
@@ -40,7 +44,11 @@ var data_home_page = {
             benefit: ["• Làm việc trong môi trường dịch vụ chuyên nghiệp.","• Được học hỏi, đào tạo và phát triển kỹ năng pha chế & thu ngân (nếu muốn).",
                         "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.","• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create:"10/06/2021",
-            duration: "10/08/2021"
+            duration: "10/08/2021",
+            status:"hoạt động",
+            email: "hi@thecoffeehouse.vn",
+            phone: "02871078079",
+            address: "88 Cao Thắng, Phường 4, Quận 3, Tp.HCM"
 
         }, {
             company_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
@@ -62,7 +70,10 @@ var data_home_page = {
                         "• Được làm việc trong môi trường chuyên nghiệp, năng động và hiệu quả.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"01/06/2021",
             duration: "01/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@masan.com.vn",
+            phone: "19007911",
+            address: "MPlaza, 39 Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh"
 
         }, {
             company_name: "Công Ty Tnhh A.N Sài Gòn Group",
@@ -84,7 +95,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"18/06/2021",
             duration: "18/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "about@saigoncoop.com.vn",
+            phone: "19006564",
+            address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh"
 
         }, {
             company_name: "CÔNG TY CP PIZZA NGON",
@@ -108,7 +122,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"19/06/2021",
             duration: "19/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "pizza.ngon@gmail.com",
+            phone: "19007272",
+            address: "Tòa nhà Lottery Tower - Lầu 10, 77 Trần Nhân Tôn, Phường 9, Quận 5, HCM"
 
         }, {
             company_name: "CÔNG TY CP PIZZA NGON",
@@ -130,7 +147,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"19/06/2021",
             duration: "19/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "pizza.ngon@gmail.com",
+            phone: "19007272",
+            address: "Tòa nhà Lottery Tower - Lầu 10, 77 Trần Nhân Tôn, Phường 9, Quận 5, HCM"
 
         },  {
             company_name: "TT Trực Tuyến Workonline 24H",
@@ -150,7 +170,10 @@ var data_home_page = {
                         "• Giờ giấc tự do, chủ động được thời gian làm việc."],
             date_create:"19/06/2021",
             duration: "19/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "trinhtran.manager@gmail.com",
+            phone: "0127898264",
+            address: "Quận 3, thành phố Hồ Chí Minh"
 
         }, {
             company_name: "Công Ty Tnhh Ministop Việt Nam",
@@ -173,7 +196,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "hi@ministop.com",
+            phone: "19004546",
+            address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh"
 
         }, {
             company_name: "Siêu Thị Big C",
@@ -196,7 +222,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@bigc.com",
+            phone: "19001864",
+            address: "Hồ Chí Minh, Thành phố Hồ Chí Minh"
 
         }, {
             company_name: "Digiworld Corporation",
@@ -219,7 +248,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "digiworld.corp@digiworld.com.vn",
+            phone: "19003110",
+            address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh"
 
         }, {
             company_name: "Cafe tại Hồ Chí Minh",
@@ -241,7 +273,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "antran1212@gmail.com",
+            phone: "0962888475",
+            address: "Quận 4, thành phố Hồ Chí Minh"
 
         },{
             company_name: "Tpbank",
@@ -263,7 +298,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "tpbank.info@tpbank.com",
+            phone: "1900585885",
+            address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
 
         },{
             company_name: "Đại lý tại quận 4",
@@ -282,7 +320,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "antran1212@gmail.com",
+            phone: "0962888475",
+            address: "Quận 4, thành phố Hồ Chí Minh"
 
         },{
             company_name: "Đại lý bán bột Yến Mạch quận",
@@ -302,7 +343,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "antran1212@gmail.com",
+            phone: "0962888475",
+            address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -324,7 +368,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@circlek.com.vn",
+            phone: "19003110",
+            address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -346,7 +393,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@circlek.com.vn",
+            phone: "19003110",
+            address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -368,7 +418,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@circlek.com.vn",
+            phone: "19003110",
+            address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -390,7 +443,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@circlek.com.vn",
+            phone: "19003110",
+            address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -410,7 +466,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@circlek.com.vn",
+            phone: "19003110",
+            address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
 
         },{
             company_name: "Công ty cổ phần Beemart",
@@ -433,7 +492,10 @@ var data_home_page = {
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "beemart@gmail.com",
+            phone: "19001115",
+            address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
 
         },{
             company_name: "Công ty ECPay",
@@ -455,7 +517,10 @@ var data_home_page = {
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "ecpay.contact@gmail.com",
+            phone: "19007911",
+            address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
 
         },{
             company_name: "Công Ty SoftOne",
@@ -477,7 +542,10 @@ var data_home_page = {
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "softone.company@gmail.com",
+            phone: "19007780",
+            address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
 
         },{
             company_name: "GUfoods",
@@ -502,7 +570,10 @@ var data_home_page = {
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "contact@gufoods.com.vn",
+            phone: "19001260",
+            address: "Quận 12, Hồ Chí Minh, Thành phố Hồ Chí Minh"
 
         },{
             company_name: "Công Ty Lofivn",
@@ -524,7 +595,10 @@ var data_home_page = {
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@lofi.com.vn",
+            phone: "19001654",
+            address: "Lầu 6 toà nhà GT Building, 403 Nguyễn Thái Bình, Phường 12, Quận Tân Bình, TP. HCM"
 
         },{
             company_name: "Công Ty Lofivn",
@@ -546,7 +620,10 @@ var data_home_page = {
                         "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "info@lofi.com.vn",
+            phone: "19001654",
+            address: "Lầu 6 toà nhà GT Building, 403 Nguyễn Thái Bình, Phường 12, Quận Tân Bình, TP. HCM"
 
         },{
             company_name: "Cafe An An",
@@ -568,7 +645,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "annguyen@gmail.com",
+            phone: "0715648797",
+            address: "Quận 5, thành phố Hồ Chí Minh"
 
         },{
             company_name: "Cafe Trịnh",
@@ -579,7 +659,7 @@ var data_home_page = {
             id_job: 25,
             type: "Bán thời gian",
             salary: "2,500,000",
-            company_address: "Quận 9, thành phố Hồ Chí Minh",
+            company_address: "c",
             description: ["• Quán cafe mình quán nhỏ nên cần 1 bạn nữ chịu khó muốn làm thêm.",
                         "• Nhiệm vụ chỉ phục vụ với rửa ly.",
                         "• Làm từ 17h30 tới 22h30(5 tiếng)"],
@@ -590,7 +670,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "trinhtranle@gmail.com",
+            phone: "0965264897",
+            address: "Quận 9, thành phố Hồ Chí Minh"
 
         },{
             company_name: "Cafe Rainbow",
@@ -612,7 +695,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "rainbow.cf@gmail.com",
+            phone: "0121654789",
+            address: "Quận 8, thành phố Hồ Chí Minh"
 
         },{
             company_name: "Cafe tại Hồ Chí Minh",
@@ -634,7 +720,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "namtran011@gmail.com",
+            phone: "013254989",
+            address: "Quận 1, thành phố Hồ Chí Minh"
 
         },{
             company_name: "Cafe Vỹ Dạ Xưa",
@@ -656,7 +745,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "lien.phan@gmail.com",
+            phone: "0121486789",
+            address: "Quận 2, thành phố Hồ Chí Minh"
 
         },{
             company_name: "Cafe tại Hồ Chí Minh",
@@ -678,7 +770,10 @@ var data_home_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            email: "nguyenvi.911@gmail.com",
+            phone: "0123456789",
+            address: "Quận 12, thành phố Hồ Chí Minh"
 
         },
     ],
@@ -1433,6 +1528,18 @@ var employees = [
     },
 ]
 
+
+var company = [
+    {
+        name: "Công ty TNHH Vòng Tròn Đỏ",
+        image_link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBtmE5u0HTHkD8cmS9ilCnQ8YgkZDHG7gfLItW_I7LcJ2ImtwMZoAKnyMwTkp4oA16-hE&usqp=CAU",
+        email: "info@circlek.com.vn",
+        phone: "19003110",
+        address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
+    }
+]
+
+
 // import vào, đặt const rồi gọi thôi
 
-module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, employees };
+module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, employees,company:company };

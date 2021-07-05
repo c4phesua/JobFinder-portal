@@ -134,7 +134,7 @@ export default function JobDescription() {
                     </Grid>
                 </Paper>
 
-                <RelatedJobs jobs={jobRelated}/>
+                <RelatedJobs jobs={jobRelated} titles={"CÔNG VIỆC LIÊN QUAN"}/>
                 <Dialog onClose={handleClose} aria-labelledby="customized-dialog-title" open={open}>
                     <DialogTitle id="customized-dialog-title" onClose={handleClose}>
                         Thông báo

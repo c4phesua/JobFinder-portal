@@ -25,7 +25,7 @@ const renderJob = (job) => {
 
 const RelatedJobs = (props) => {
   const classes = useStylesJob();
-  let {jobs} = props
+  let {jobs, titles} = props
 
      const half = Math.ceil(jobs.length / 2);
     const halfOne = jobs.slice(0, half);
@@ -37,7 +37,7 @@ const RelatedJobs = (props) => {
       <Grid container spacing={3}>
           <Grid item xs={12} md={12} lg={12}>
             <Typography variant="h6" align="center">
-                CÔNG VIỆC LIÊN QUAN
+                {titles}
             </Typography>
           </Grid>
             <Grid item xs={12} md={6} lg={6}>   

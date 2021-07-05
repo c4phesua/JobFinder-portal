@@ -239,6 +239,14 @@ export const getRelatedJobs = (jobs, companyName) => {
   return result.slice(0, 4);
 }
 
+export const getAllRelatedJobs = (jobs, companyName) => {
+  var sameJobs = _.map(jobs, (job) => {
+    if (job.company_name === companyName) return job;
+  });
+  var result = _.without(sameJobs, undefined);
+  return result;
+}
+
 export const linkStyle = makeStyles((theme) => ({
   link:{
     color: orange,
