@@ -47,7 +47,7 @@ export default function CreateHR() {
                                     required
                                     id="companyAddress"
                                     name="companyAddress"
-                                    label="Số điện thoi"
+                                    label="Số điện thoại"
                                     fullWidth
                                 />
                             </Grid>
