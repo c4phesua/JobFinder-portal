@@ -190,7 +190,6 @@ export default function HrProfile () {
                                             <Tab>Hồ sơ</Tab>
                                             <Tab>Bài đăng</Tab>
                                             <Tab>Duyệt hồ sơ</Tab>
-                                            <Tab>Thông tin công ty</Tab>
                                         </TabList>
                                         <TabPanel>
                                             {showEdit ? <Edit/> : <Show/>}
@@ -200,10 +199,6 @@ export default function HrProfile () {
                                         </TabPanel>
                                         <TabPanel>
                                             <Applicants />
-                                        </TabPanel>
-                                        <TabPanel>
-                                            <CompanyProfile/>
-                                            <AccountProfileDetails />
                                         </TabPanel>
                                     </Tabs>
                                 </div>
