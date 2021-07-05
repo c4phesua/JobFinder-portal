@@ -15,6 +15,7 @@ import Footer from "./component/Footer";
 import Manager from "./page/Manager";
 import ProfileView from './page/ProfileView';
 import HrProfile from "./page/HrManager";
+import CompanyView from "./page/CompanyView";
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
           <Route exact path={RouteConstants.HR_MANAGEMENT} component={Manager} />
           <Route exact path={RouteConstants.PROFILE} component={ProfileView} />
           <Route exact path={RouteConstants.HR_PROFILE} component={HrProfile} />
+          <Route exact path={RouteConstants.COMPANY_VIEW} component={CompanyView} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>

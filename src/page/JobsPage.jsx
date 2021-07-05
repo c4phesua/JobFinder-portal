@@ -44,7 +44,7 @@ const JobsPage = () => {
     <CssBaseline />
     
     <main className={classes.layout}>
-      <Paper className={classes.paper} style={{marginBottom:'0.5rem', border: '1px solid lightblue'}}>
+      <Paper className={classes.paper} style={{marginBottom:'0.5rem', border: '1px solid lightgray'}}>
         <div style={{marginLeft:'auto',marginRight:'auto',display:'inline-block'}}>
         {
           renderFilter()
