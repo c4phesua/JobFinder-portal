@@ -71,6 +71,7 @@ export default function NavigationBar() {
     const classes = navigationStyles();
     const sections = [
         { title: 'Nhà tuyển dụng', url: EMPLOYER },
+        { title: 'Quản lý công ty', url: HR_MANAGEMENT },
         { title: 'Việc làm', url: JOBS },
         { title: 'Phỏng vấn', url: '#' },
         { title: 'Ngành hot', url: ROOT },
