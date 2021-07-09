@@ -47,7 +47,7 @@ const CompanyManagement = (props) => {
     return (
         <>
             <Card {...props}>
-                <PerfectScrollbar>
+                <PerfectScrollbar>''
                     <Box>
                         <TableContainer style={{maxHeight: 450, minHeight: 450}}>
                             <Table stickyHeader>

@@ -45,7 +45,8 @@ const isStudentLoggedIn = () => {
 const isHRLoggedin = () => {
     return currentPath() === HR_PROFILE
     || currentPath() === HR_CREATEJOB
-    || currentPath() === HR_MANAGEMENT;
+    || currentPath() === HR_MANAGEMENT
+    ;
 }
 
 const showSearchBar = () => {
@@ -54,6 +55,7 @@ const showSearchBar = () => {
     && currentPath() !== EMPLOYER 
     && currentPath() !== HR_PROFILE
     && currentPath() !== HR_CREATEJOB
+    && currentPath() !== HR_MANAGEMENT
     && (!isStudentLoggedIn() 
         || currentPath() === INDEX 
         || currentPath() === DASHBOARD);
