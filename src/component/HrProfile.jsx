@@ -9,13 +9,16 @@ import {
     Divider,
     Typography
 } from '@material-ui/core';
+import MockupData from '../helper/MockupData';
+
+const { name, image_link, email, phone, address } = MockupData.company[0];
 
 const user = {
-    avatar: 'https://cdn.worldvectorlogo.com/logos/circle-k.svg',
-    name: 'Cicle-K',
-    address: '62 Đường Man Thiện, Hiệp Phú, Quận 9, Thành phố Hồ Chí Minh',
-    phone: '028 3730 5852',
-    email: ' info@circlek.com.vn'
+    avatar: image_link,
+    name: name,
+    address: address,
+    phone: phone,
+    email: email
 };
 
 const CompanyProfile = (props) => (
@@ -33,7 +36,7 @@ const CompanyProfile = (props) => (
                     style={{
                         width: 100,
                         height: 100,
-                        display:"inline-flex",
+                        display: "inline-flex",
                     }}
                 />
                 <Typography
@@ -59,7 +62,7 @@ const CompanyProfile = (props) => (
             </Box>
         </CardContent>
         <Divider />
-        <CardActions>
+        {/* <CardActions>
             <Button
                 color="primary"
                 fullWidth
@@ -67,7 +70,7 @@ const CompanyProfile = (props) => (
             >
                 Đổi ảnh
             </Button>
-        </CardActions>
+        </CardActions> */}
     </Card>
 );
 
