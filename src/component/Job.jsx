@@ -53,7 +53,7 @@ const Job = (props) => {
       <Grid container item xs= {12} md={8} lg={8}>
         <CardContent className={classes.content}>
           <Typography component="h6" variant="h6" className={classInfo.cardInfo} color="primary">
-            <Link href='' className={classLink.link}  onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
+            <Link className={classLink.link}  onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
             {job.title}
             </Link>
           </Typography>

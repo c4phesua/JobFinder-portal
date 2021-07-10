@@ -25,7 +25,7 @@ const onCreateButtonClicked = () => {
 
 const CompanyManagement = (props) => {
 
-    const employees = MockupData.employees;
+    const employees = MockupData.employees.slice(1);
     const [openCreate, setOpenCreate] = React.useState(false);
     var initState = {}
     for (const emp of employees) {
@@ -47,7 +47,7 @@ const CompanyManagement = (props) => {
     return (
         <>
             <Card {...props}>
-                <PerfectScrollbar>
+                <PerfectScrollbar>''
                     <Box>
                         <TableContainer style={{maxHeight: 450, minHeight: 450}}>
                             <Table stickyHeader>

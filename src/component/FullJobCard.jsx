@@ -41,7 +41,7 @@ const Job = (props) => {
                 <CardContent className={classeCard.content}>
                     <Typography component="h6" variant="h6" className={classes.cardInfo} style={{fontWeight:'600'}}>
                         {/* <Box fontWeight="fontWeightBold" onMouseEnter={handleMouseOn(this)}> */}
-                        <Link href='' className={classLink.link} onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
+                        <Link className={classLink.link} onClick={() => { handleJobClick(job) }} style={{textDecoration:'none'}}>
                             {job.title}
                             </Link>
                         {/* </Box> */}
