@@ -75,11 +75,7 @@ export default function NavigationBar() {
         { title: 'Nhà tuyển dụng', url: EMPLOYER },
         { title: 'Quản lý công ty', url: HR_MANAGEMENT },
         { title: 'Việc làm', url: JOBS },
-        { title: 'Phỏng vấn', url: '#' },
         { title: 'Ngành hot', url: ROOT },
-        { title: 'Văn hóa', url: '#' },
-        { title: 'Mức lương', url: '#' },
-        { title: 'Tip tạo CV', url: '#' },
     ];
     const title = 'Job Finder';
 
