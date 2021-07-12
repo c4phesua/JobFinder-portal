@@ -81,7 +81,7 @@ export default function VerticalTabs() {
                 >
                     <Tab label="Bài đăng" {...a11yProps(0)} />
                     <Tab label="Hồ sơ ứng tuyển" {...a11yProps(1)} />
-                    <Tab label="Quản lý nhân viên" {...a11yProps(2)} />
+                    {/* <Tab label="Quản lý nhân viên" {...a11yProps(2)} /> */}
                 </Tabs>
             </Grid>
             <Grid
@@ -97,9 +97,9 @@ export default function VerticalTabs() {
                 <TabPanel value={value} index={1}>
                     <Applicants/>
                 </TabPanel>
-                <TabPanel value={value} index={2}>
+                {/* <TabPanel value={value} index={2}>
                     <CompanyManagement/>
-                </TabPanel>
+                </TabPanel> */}
             </Grid>
         </div>
     );

@@ -43,11 +43,7 @@ const useStyles = makeStyles((theme) => ({
 const footers = [
     {
         title: 'Về chúng tôi',
-        description: ['thông tin', 'Lịch sử', 'Liên hệ'],
-    },
-    {
-        title: 'Các mẫu CV',
-        description: ['Mẫu cv tiếng anh', 'Mẫu cv tiếng việt', 'Tổng hợp CV tham khảo các nhóm ngành', 'cách viết CV Tiếng Trung', 'cách viết CV Tiếng Hàn'],
+        description: ['Thông tin', 'Lịch sử', 'Liên hệ'],
     },
     {
         title: 'Dành cho nhà tuyển dụng',

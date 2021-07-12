@@ -26,13 +26,14 @@ export default function JobDescription() {
     const jobs = MockupData.data_home_page.JOB_LIST;
     const job = jobs[id];
     const classes = useStylesJob();
+    const [disable, setDisable] = React.useState(false);
     const classLink = linkStyle();
     document.title = "JobFinder - " + job.title;
     const classesCard = cardStyle();
     const [open, setOpen] = React.useState(false);
     const handleClose = () => {
         setOpen(false);
-        closeTab();
+        setDisable(true);
     };
 
     const onApplyJobClick = () => {
@@ -95,6 +96,7 @@ export default function JobDescription() {
                                     size="large"
                                     style={{ color: "white" }}
                                     onClick={onApplyJobClick}
+                                    disabled={disable}
                                 >
                                     Nộp đơn
                                 </ColorButtonSignUp>
