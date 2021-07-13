@@ -22,10 +22,10 @@ import MockupData from '../helper/MockupData';
 import EditIcon from '@material-ui/icons/Edit';
 import React from 'react';
 import EditJob from "./EditComponent";
-import {IOSSwitch} from "./IosSwitch";
+import { IOSSwitch } from "./IosSwitch";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import {newTab} from "../utils/Routes";
-import {TextFields} from "@material-ui/icons";
+import { newTab } from "../utils/Routes";
+import { TextFields } from "@material-ui/icons";
 import TextField from "@material-ui/core/TextField";
 
 
@@ -65,17 +65,20 @@ export default function AdminManageJobs() {
 
     const handleChange = (event) => {
         console.log(event.target.name)
-        setSwitchState({...switchState, [event.target.name]: event.target.checked});
+        setSwitchState({ ...switchState, [event.target.name]: event.target.checked });
     };
     return (
         <>
             <Card>
                 <PerfectScrollbar>
                     <Box>
-                        <TableContainer style={{maxHeight: 450, minHeight: 450}}>
+                        <TableContainer style={{ maxHeight: 450, minHeight: 450 }}>
                             <Table stickyHeader>
                                 <TableHead>
                                     <TableRow>
+                                        <TableCell>
+                                            STT
+                                        </TableCell>
                                         <TableCell>
                                             Tiêu đề
                                         </TableCell>
@@ -107,11 +110,14 @@ export default function AdminManageJobs() {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {jobs.map((job) => (
+                                    {jobs.map((job, index) => (
                                         <TableRow
                                             hover
                                             key={job.title}
                                         >
+                                            <TableCell>
+                                                {index}
+                                            </TableCell>
                                             <TableCell>
                                                 {job.title}
                                             </TableCell>
@@ -128,16 +134,16 @@ export default function AdminManageJobs() {
                                                 {/*    size="small"*/}
                                                 {/*/>*/}
                                                 <IOSSwitch checked={switchState[job.id_job.toString()]}
-                                                           onChange={handleChange} name={job.id_job.toString()}/>
+                                                    onChange={handleChange} name={job.id_job.toString()} />
                                             </TableCell>
                                             <TableCell>
                                                 <IconButton onClick={() => handleClickOpenEdit(job)}>
-                                                    <EditIcon/>
+                                                    <EditIcon />
                                                 </IconButton>
                                             </TableCell>
                                             <TableCell>
                                                 <IconButton onClick={handleClickOpenDelete}>
-                                                    <DeleteForeverIcon style={{color: 'red'}}/>
+                                                    <DeleteForeverIcon style={{ color: 'red' }} />
                                                 </IconButton>
                                             </TableCell>
                                         </TableRow>
@@ -157,7 +163,7 @@ export default function AdminManageJobs() {
                 </Box>
                 <Dialog open={openEdit} onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
                     <DialogContent>
-                        <EditJob job={jobEdit}/>
+                        <EditJob job={jobEdit} />
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleCloseEdit} color="primary">
