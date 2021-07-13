@@ -21,13 +21,12 @@ import {
     TableSortLabel,
     Tooltip
 } from '@material-ui/core';
-import MockupData from '../../helper/MockupData';
-import {newTab} from "../../utils/Routes";
+import MockupData from '../helper/MockupData';
+import {newTab} from "../utils/Routes";
 import React from "react";
-import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
 
-export default function Applicants(props) {
+export default function UserManager(props) {
     const handleLinkClick = (event) => {
         newTab(event.target.name);
     }
@@ -49,10 +48,10 @@ export default function Applicants(props) {
                             <TableHead>
                                 <TableRow>
                                     <TableCell>
-                                        Người đăng ký
+                                        ID
                                     </TableCell>
                                     <TableCell>
-                                        Link bài đăng tuyển
+                                        Tài khoản
                                     </TableCell>
                                     <TableCell sortDirection="desc">
                                         <Tooltip
@@ -68,44 +67,39 @@ export default function Applicants(props) {
                                         </Tooltip>
                                     </TableCell>
                                     <TableCell>
-                                        Trạng thái
+                                        Phân loại
                                     </TableCell>
                                     <TableCell>
-                                        Xóa
+                                        Trạng thái
                                     </TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {MockupData.data_manage_hr_page.CV_LIST.map((applicants) => (
+                                {MockupData.user.map((applicants,index) => (
                                     <TableRow
                                         hover
                                     >
+                                        <TableCell>
+                                            {index}
+                                        </TableCell>
                                         <TableCell>
                                             <Link component="button" onClick={handleLinkClick} name={'/profile/' + applicants.employee_id}>
                                                 {applicants.employee_name}
                                             </Link>
                                         </TableCell>
                                         <TableCell>
-                                            <Link component="button" onClick={handleLinkClick} name={applicants.job_link}>
-                                                {applicants.job_name}
-                                            </Link>
+                                            {applicants.apply_date}
                                         </TableCell>
                                         <TableCell>
-                                            {applicants.apply_date}
+                                            {applicants.role}
                                         </TableCell>
                                         <TableCell>
                                             <Select
                                                 value={applicants.status}
                                             >
-                                                <MenuItem value={1}>Chờ Duyệt</MenuItem>
-                                                <MenuItem value={2}>Chấp Thuận</MenuItem>
-                                                <MenuItem value={3}>Từ Chối</MenuItem>
+                                                <MenuItem value={1}>Hoạt động</MenuItem>
+                                                <MenuItem value={2}>Cấm</MenuItem>
                                             </Select>
-                                        </TableCell>
-                                        <TableCell>
-                                            <IconButton onClick={handleClickOpenDelete}>
-                                                <DeleteForeverIcon style={{color: 'red'}}/>
-                                            </IconButton>
                                         </TableCell>
                                     </TableRow>
                                 ))}
