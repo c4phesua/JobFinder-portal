@@ -13,7 +13,7 @@ import { navigationStyles } from '../styleutil/NavigationStyle'
 import { goTo, currentPath } from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
 
-const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE, INDEX, DASHBOARD, HR_PROFILE, HR_CREATEJOB, HR_MANAGEMENT } = RouteConstants;
+const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE, INDEX, DASHBOARD, HR_PROFILE, HR_CREATEJOB, HR_MANAGEMENT, ADMIN } = RouteConstants;
 
 const onLogoClick = () => {
     goTo(ROOT);
@@ -56,17 +56,18 @@ const showSearchBar = () => {
     && currentPath() !== HR_PROFILE
     && currentPath() !== HR_CREATEJOB
     && currentPath() !== HR_MANAGEMENT
+    && currentPath() !== ADMIN
     && (!isStudentLoggedIn() 
         || currentPath() === INDEX 
         || currentPath() === DASHBOARD);
 }
 
 const showLoginBtn = () => {
-    return currentPath() !== LOGIN && !isStudentLoggedIn() && !isHRLoggedin();
+    return currentPath() !== LOGIN && currentPath() !== ADMIN && !isStudentLoggedIn() && !isHRLoggedin();
 }
 
 const showSignUpBtn = () => {
-    return currentPath() !== SIGNUP && currentPath() !== EMPLOYER && !isStudentLoggedIn() && !isHRLoggedin();
+    return currentPath() !== SIGNUP && currentPath() !== ADMIN && currentPath() !== EMPLOYER && !isStudentLoggedIn() && !isHRLoggedin();
 }
 
 export default function NavigationBar() {

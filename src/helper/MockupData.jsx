@@ -1538,35 +1538,35 @@ var user_manager = [
     {
         employee_id: 1,
         employee_name: "Nguyễn văn A",
-        apply_date: "10/10/2021",
+        apply_date: "21/03/2021",
         role: "Sinh viên",
         status: 1
     },
     {
         employee_id: 1,
         employee_name: "Nguyễn văn A",
-        apply_date: "10/10/2021",
+        apply_date: "22/03/2021",
         role: "Sinh viên",
         status: 1
     },
     {
         employee_id: 1,
         employee_name: "The coffee house",
-        apply_date: "10/10/2021",
+        apply_date: "01/01/2021",
         role: "Nhà tuyển dụng",
         status: 1
     },
     {
         employee_id: 1,
         employee_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
-        apply_date: "10/10/2021",
+        apply_date: "02/03/2021",
         role: "Nhà tuyển dụng",
         status: 1
     },
     {
         employee_id: 1,
         employee_name: "Cty TNHH vòng tròn đỏ",
-        apply_date: "10/10/2021",
+        apply_date: "02/04/2021",
         role: "Nhà tuyển dụng",
         status: 1
     }
@@ -1583,7 +1583,61 @@ var company = [
     }
 ]
 
+var activities = [
+    {
+        name: "Công ty TNHH Vòng Tròn Đỏ",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "10/05/2021",
+    },
+    {
+        name: "Công ty TNHH Vòng Tròn Đỏ",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "11/05/2021",
+    },
+    {
+        name: "Công ty TNHH Vòng Tròn Đỏ",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "12/05/2021",
+    },
+    {
+        name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "13/05/2021",
+    },
+    {
+        name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "13/05/2021",
+    },
+    {
+        name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "14/05/2021",
+    },
+    {
+        name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "14/05/2021",
+    },
+    {
+        name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "20/05/2021",
+    },
+    {
+        name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        activity: "Đã đăng bài tuyển dụng",
+        date: "20/05/2021",
+    },
+    {
+        name: "Nguyễn Trí Nhân",
+        activity: "Đã ứng tuyển vị trí Nhân viên bán hàng tại Công ty TNHH Vòng Tròn Đỏ",
+        date: "13/05/2021",
+    },
+    
+]
+
 
 // import vào, đặt const rồi gọi thôi
 
-module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, employees,company:company, user : user_manager };
+module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, employees,company:company, user : user_manager, activities };
