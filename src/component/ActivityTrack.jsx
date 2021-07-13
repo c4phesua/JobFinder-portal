@@ -31,6 +31,8 @@ export default function Activity(props) {
         newTab(event.target.name);
     }
 
+    const { activities } = MockupData;
+
     const [openDelete, setOpenDelete] = React.useState(false);
     const handleClickOpenDelete = (job) => {
         setOpenDelete(true);
@@ -72,7 +74,7 @@ export default function Activity(props) {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {MockupData.user.map((applicants,index) => (
+                                {activities.map((activity, index) => (
                                     <TableRow
                                         hover
                                     >
@@ -80,15 +82,15 @@ export default function Activity(props) {
                                             {index}
                                         </TableCell>
                                         <TableCell>
-                                            <Link component="button" onClick={handleLinkClick} name={'/profile/' + applicants.employee_id}>
-                                                {/*{applicants.employee_name}*/}
+                                            <Link component="button" onClick={handleLinkClick} name={'/profile/1'}>
+                                                {activity.name}
                                             </Link>
                                         </TableCell>
                                         <TableCell>
-                                            {/*{applicants.apply_date}*/}
+                                            {activity.activity}
                                         </TableCell>
                                         <TableCell>
-                                            {/*{applicants.role}*/}
+                                            {activity.date}
                                         </TableCell>
                                     </TableRow>
                                 ))}
