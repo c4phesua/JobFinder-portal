@@ -9,6 +9,7 @@ import Applicants from "./dashboard/Applicants";
 import {Grid} from "@material-ui/core";
 import AdminManageJobs from "./AdminManageJobs";
 import Activity from "./ActivityTrack";
+import UserManager from "./UserManager";
 
 function TabPanel(props) {
     const {children, value, index, ...other} = props;
@@ -96,7 +97,7 @@ export default function VerticalAdminTabs() {
                     <AdminManageJobs/>
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <Applicants/>
+                    <UserManager/>
                 </TabPanel>
                 <TabPanel value={value} index={2}>
                     <Activity/>
