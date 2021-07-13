@@ -16,6 +16,7 @@ import Manager from "./page/Manager";
 import ProfileView from './page/ProfileView';
 import HrProfile from "./page/HrManager";
 import CompanyView from "./page/CompanyView";
+import AdminManager from "./page/Admin";
 
 function App() {
   return (
@@ -39,6 +40,7 @@ function App() {
           <Route exact path={RouteConstants.PROFILE} component={ProfileView} />
           <Route exact path={RouteConstants.HR_PROFILE} component={HrProfile} />
           <Route exact path={RouteConstants.COMPANY_VIEW} component={CompanyView} />
+          <Route exact path={RouteConstants.ADMIN} component={AdminManager} />
           <Route component={Error} />
         </Switch>
       </BrowserRouter>

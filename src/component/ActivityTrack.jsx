@@ -21,12 +21,12 @@ import {
     TableSortLabel,
     Tooltip
 } from '@material-ui/core';
-import MockupData from '../../helper/MockupData';
-import {newTab} from "../../utils/Routes";
+import MockupData from '../helper/MockupData';
+import {newTab} from "../utils/Routes";
 import React from "react";
 
 
-export default function Applicants(props) {
+export default function Activity(props) {
     const handleLinkClick = (event) => {
         newTab(event.target.name);
     }
@@ -48,10 +48,13 @@ export default function Applicants(props) {
                             <TableHead>
                                 <TableRow>
                                     <TableCell>
-                                        ID
+                                        STT
                                     </TableCell>
                                     <TableCell>
                                         Tài khoản
+                                    </TableCell>
+                                    <TableCell>
+                                        Hoạt động
                                     </TableCell>
                                     <TableCell sortDirection="desc">
                                         <Tooltip
@@ -62,15 +65,9 @@ export default function Applicants(props) {
                                                 active
                                                 direction="desc"
                                             >
-                                                Ngày đăng ký
+                                                Thời gian thực hiện
                                             </TableSortLabel>
                                         </Tooltip>
-                                    </TableCell>
-                                    <TableCell>
-                                        Phân loại
-                                    </TableCell>
-                                    <TableCell>
-                                        Trạng thái
                                     </TableCell>
                                 </TableRow>
                             </TableHead>
@@ -84,22 +81,14 @@ export default function Applicants(props) {
                                         </TableCell>
                                         <TableCell>
                                             <Link component="button" onClick={handleLinkClick} name={'/profile/' + applicants.employee_id}>
-                                                {applicants.employee_name}
+                                                {/*{applicants.employee_name}*/}
                                             </Link>
                                         </TableCell>
                                         <TableCell>
-                                            {applicants.apply_date}
+                                            {/*{applicants.apply_date}*/}
                                         </TableCell>
                                         <TableCell>
-                                            {applicants.role}
-                                        </TableCell>
-                                        <TableCell>
-                                            <Select
-                                                value={applicants.status}
-                                            >
-                                                <MenuItem value={1}>Hoạt động</MenuItem>
-                                                <MenuItem value={2}>Cấm</MenuItem>
-                                            </Select>
+                                            {/*{applicants.role}*/}
                                         </TableCell>
                                     </TableRow>
                                 ))}
