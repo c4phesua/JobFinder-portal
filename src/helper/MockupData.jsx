@@ -1534,6 +1534,44 @@ var employees = [
     },
 ]
 
+var user_manager = [
+    {
+        employee_id: 1,
+        employee_name: "Nguyễn văn A",
+        apply_date: "10/10/2021",
+        role: "Sinh viên",
+        status: 1
+    },
+    {
+        employee_id: 1,
+        employee_name: "Nguyễn văn A",
+        apply_date: "10/10/2021",
+        role: "Sinh viên",
+        status: 1
+    },
+    {
+        employee_id: 1,
+        employee_name: "The coffee house",
+        apply_date: "10/10/2021",
+        role: "Nhà tuyển dụng",
+        status: 1
+    },
+    {
+        employee_id: 1,
+        employee_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        apply_date: "10/10/2021",
+        role: "Nhà tuyển dụng",
+        status: 1
+    },
+    {
+        employee_id: 1,
+        employee_name: "Cty TNHH vòng tròn đỏ",
+        apply_date: "10/10/2021",
+        role: "Nhà tuyển dụng",
+        status: 1
+    }
+]
+
 
 var company = [
     {
@@ -1548,4 +1586,4 @@ var company = [
 
 // import vào, đặt const rồi gọi thôi
 
-module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, employees,company:company };
+module.exports = { data_manage_hr_page: data_manage_hr_page, data_home_page: data_home_page, loremipsum: loremipsum, hr_user: hr_user, student_user: student_user, employees,company:company, user : user_manager };
