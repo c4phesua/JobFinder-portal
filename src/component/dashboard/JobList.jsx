@@ -22,9 +22,9 @@ import MockupData from '../../helper/MockupData';
 import EditIcon from '@material-ui/icons/Edit';
 import React from 'react';
 import EditJob from "../EditComponent";
-import {IOSSwitch} from "../IosSwitch";
+import { IOSSwitch } from "../IosSwitch";
 import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import {newTab} from "../../utils/Routes";
+import { newTab } from "../../utils/Routes";
 
 
 export default function Applicants() {
@@ -63,17 +63,20 @@ export default function Applicants() {
 
     const handleChange = (event) => {
         console.log(event.target.name)
-        setSwitchState({...switchState, [event.target.name]: event.target.checked});
+        setSwitchState({ ...switchState, [event.target.name]: event.target.checked });
     };
     return (
         <>
             <Card>
                 <PerfectScrollbar>
                     <Box>
-                        <TableContainer style={{maxHeight: 450, minHeight: 450}}>
+                        <TableContainer style={{ maxHeight: 450, minHeight: 450 }}>
                             <Table stickyHeader>
                                 <TableHead>
                                     <TableRow>
+                                        <TableCell>
+                                            ID
+                                        </TableCell>
                                         <TableCell>
                                             Tiêu đề
                                         </TableCell>
@@ -111,6 +114,9 @@ export default function Applicants() {
                                             key={job.title}
                                         >
                                             <TableCell>
+                                                {job.id_job}
+                                            </TableCell>
+                                            <TableCell>
                                                 {job.title}
                                             </TableCell>
                                             <TableCell>
@@ -126,16 +132,16 @@ export default function Applicants() {
                                                 {/*    size="small"*/}
                                                 {/*/>*/}
                                                 <IOSSwitch checked={switchState[job.id_job.toString()]}
-                                                           onChange={handleChange} name={job.id_job.toString()}/>
+                                                    onChange={handleChange} name={job.id_job.toString()} />
                                             </TableCell>
                                             <TableCell>
                                                 <IconButton onClick={() => handleClickOpenEdit(job)}>
-                                                    <EditIcon/>
+                                                    <EditIcon />
                                                 </IconButton>
                                             </TableCell>
                                             <TableCell>
                                                 <IconButton onClick={handleClickOpenDelete}>
-                                                    <DeleteForeverIcon style={{color: 'red'}}/>
+                                                    <DeleteForeverIcon style={{ color: 'red' }} />
                                                 </IconButton>
                                             </TableCell>
                                         </TableRow>
@@ -155,7 +161,7 @@ export default function Applicants() {
                 </Box>
                 <Dialog open={openEdit} onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
                     <DialogContent>
-                        <EditJob job={jobEdit}/>
+                        <EditJob job={jobEdit} />
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleCloseEdit} color="primary">

@@ -22,7 +22,7 @@ import {
     Tooltip
 } from '@material-ui/core';
 import MockupData from '../../helper/MockupData';
-import {newTab} from "../../utils/Routes";
+import { newTab } from "../../utils/Routes";
 import React from "react";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
@@ -44,10 +44,13 @@ export default function Applicants(props) {
         <Card {...props}>
             <PerfectScrollbar>
                 <Box>
-                    <TableContainer style={{maxHeight: 450, minHeight: 450}}>
+                    <TableContainer style={{ maxHeight: 450, minHeight: 450 }}>
                         <Table stickyHeader>
                             <TableHead>
                                 <TableRow>
+                                    <TableCell>
+                                        STT
+                                    </TableCell>
                                     <TableCell>
                                         Người đăng ký
                                     </TableCell>
@@ -76,10 +79,13 @@ export default function Applicants(props) {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {MockupData.data_manage_hr_page.CV_LIST.map((applicants) => (
+                                {MockupData.data_manage_hr_page.CV_LIST.map((applicants, index) => (
                                     <TableRow
                                         hover
                                     >
+                                        <TableCell>
+                                            {index}
+                                        </TableCell>
                                         <TableCell>
                                             <Link component="button" onClick={handleLinkClick} name={'/profile/' + applicants.employee_id}>
                                                 {applicants.employee_name}
@@ -104,7 +110,7 @@ export default function Applicants(props) {
                                         </TableCell>
                                         <TableCell>
                                             <IconButton onClick={handleClickOpenDelete}>
-                                                <DeleteForeverIcon style={{color: 'red'}}/>
+                                                <DeleteForeverIcon style={{ color: 'red' }} />
                                             </IconButton>
                                         </TableCell>
                                     </TableRow>
