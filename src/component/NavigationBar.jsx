@@ -25,19 +25,26 @@ const {
     HR_PROFILE,
     HR_CREATEJOB,
     HR_MANAGEMENT,
-    ADMIN
+    ADMIN,
+    HR_LOGIN
 } = RouteConstants;
 
 const onLogoClick = () => {
     if (isHRLoggedin()) {
         goTo(HR_MANAGEMENT)
-    } else {
+    }
+    else {
         goTo(ROOT);
     }
 }
 
 const onLoginClick = () => {
-    goTo(LOGIN);
+    if (currentPath() === EMPLOYER){
+        goTo(HR_LOGIN)
+    }
+    else {
+        goTo(LOGIN);
+    }
 }
 
 const onProfileClick = () => {
@@ -49,7 +56,12 @@ const onHrProfileClick = () => {
 }
 
 const onSignUpClick = () => {
-    goTo(SIGNUP);
+    if (currentPath() === HR_LOGIN){
+        goTo(EMPLOYER)
+    }
+    else {
+        goTo(SIGNUP);
+    }
 }
 
 const isStudentLoggedIn = () => {
@@ -74,13 +86,15 @@ const showSearchBar = () => {
         && currentPath() !== HR_CREATEJOB
         && currentPath() !== HR_MANAGEMENT
         && currentPath() !== ADMIN
+        && currentPath() !== HR_LOGIN
         && (!isStudentLoggedIn()
             || currentPath() === INDEX
             || currentPath() === DASHBOARD);
 }
 
 const showLoginBtn = () => {
-    return currentPath() !== LOGIN && currentPath() !== ADMIN && !isStudentLoggedIn() && !isHRLoggedin();
+    return currentPath() !== LOGIN && currentPath() !== ADMIN && !isStudentLoggedIn() && !isHRLoggedin() &&
+        currentPath() !== HR_LOGIN;
 }
 
 const showSignUpBtn = () => {

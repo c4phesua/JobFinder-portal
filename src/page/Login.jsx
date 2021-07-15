@@ -12,13 +12,14 @@ import {
     Typography
 } from '@material-ui/core';
 import {loginStyle} from '../styleutil/LoginStyle';
-import {goTo} from "../utils/Routes";
+import {currentPath, goTo} from "../utils/Routes";
 import RouteConstants from "../utils/RouteConstants";
 
 const {
     DASHBOARD,
     HR_MANAGEMENT,
-    HR_LOGIN
+    HR_LOGIN,
+    EMPLOYER
 } = RouteConstants;
 
 const onLoginClick = () => {
@@ -87,7 +88,7 @@ export default function SignIn() {
                             </Link>
                         </Grid>
                         <Grid item>
-                            <Link href="/signup" variant="body2">
+                            <Link href= {currentPath() === HR_LOGIN ? EMPLOYER :  "/signup"} variant="body2">
                                 {"Chưa có tài khoản? Đăng ký ngay"}
                             </Link>
                         </Grid>

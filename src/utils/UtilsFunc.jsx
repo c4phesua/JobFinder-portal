@@ -173,14 +173,6 @@ export const useStylesHrSignUp = makeStyles((theme) => ({
   },
 }));
 
-const {
-    HR_MANAGEMENT
-} = RouteConstants;
-
-const onSignupClick = () => {
-    goTo(HR_MANAGEMENT)
-}
-
 export const ColorButtonSignUp = withStyles((theme) => ({
     root: {
         color: theme.palette.getContrastText(orange[500]),
@@ -189,7 +181,7 @@ export const ColorButtonSignUp = withStyles((theme) => ({
         backgroundColor: orange[700],
         },
     },
-}))(Button(onclick(onSignupClick)));
+}))(Button);
 
 export const ColorButton = withStyles((theme) => ({
   root: {
