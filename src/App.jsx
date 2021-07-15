@@ -40,6 +40,8 @@ function App() {
           <Route exact path={RouteConstants.PROFILE} component={ProfileView} />
           <Route exact path={RouteConstants.HR_PROFILE} component={HrProfile} />
           <Route exact path={RouteConstants.COMPANY_VIEW} component={CompanyView} />
+          <Route exact path={RouteConstants.REPORT_COMPANY} component={CompanyView} />
+          <Route exact path={RouteConstants.REPORT_JOB} component={JobDescription} />
           <Route exact path={RouteConstants.ADMIN} component={AdminManager} />
           <Route exact path={RouteConstants.HR_LOGIN} component={Login} />
           <Route component={Error} />
