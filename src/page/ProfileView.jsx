@@ -69,6 +69,24 @@ export default function Profile () {
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
+                            <h6 className="mb-0">Trường Đại Học</h6>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <h6 className="mb-0">Chuyên ngành</h6>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
                             <h6 className="mb-0">Ngoại Ngữ</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
@@ -82,11 +100,11 @@ export default function Profile () {
                             <h6 className="mb-0">Thông tin chung</h6>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        {profile.about}
                             
                         </div>
                     </div>
                 </div>
+                
                 </div>
                 </div>
             

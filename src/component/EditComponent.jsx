@@ -59,6 +59,7 @@ export default function EditJob(props) {
                                     label="Tên công ty"
                                     fullWidth
                                     value={job.company_name}
+                                    disabled
                                 />
                             </Grid>
 
@@ -72,6 +73,7 @@ export default function EditJob(props) {
                                     label="Nơi làm việc"
                                     fullWidth
                                     value={job.company_address}
+                                    disabled
                                 />
                             </Grid>
 

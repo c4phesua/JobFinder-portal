@@ -8,6 +8,7 @@ import LocationComboBox from "./LocationSearch";
 import {InputBase} from "@material-ui/core";
 import JobTypeComboBox from "./JobTypeSearch";
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LanguageIcon from '@material-ui/icons/Language';
 import {navigationStyles} from '../styleutil/NavigationStyle'
 import {currentPath, goTo} from '../utils/Routes';
@@ -137,6 +138,10 @@ export default function NavigationBar() {
                     </Link>
                 ))}
                 <div style={{width: '70%'}}/>
+                { (isStudentLoggedIn() || isHRLoggedin()) && <IconButton color={"inherit"} size={"small"}>
+                    <ExitToAppIcon/>
+                </IconButton>}
+                
                 <IconButton color={"inherit"} size={"small"}>
                     <NotificationsIcon/>
                 </IconButton>
