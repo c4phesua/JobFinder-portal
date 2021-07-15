@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import {useStylesProfile} from '../utils/UtilsFunc';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Job from '../component/JobApplied';
+import JobApprove from '../component/JobApproved';
 import 'react-tabs/style/react-tabs.css';
 
 export default function Profile () {
@@ -22,6 +23,12 @@ export default function Profile () {
     const renderJob = (job) => {
         return (
           <Job job = { job } />
+          
+        );
+      }
+      const renderJobApprove = (job) => {
+        return (
+          <JobApprove job = { job } />
           
         );
       }
@@ -65,6 +72,26 @@ export default function Profile () {
                         </div>
                         <div className="col-sm-9 text-secondary">
                         <input type="text" class="form-control input_profile" disabled defaultValue={profile.address}/>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <h6 className="mb-0">Trường Đại Học</h6>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control input_profile" disabled defaultValue=""/>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <h6 className="mb-0">Chuyên ngành</h6>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control input_profile" disabled defaultValue=""/>
                             
                         </div>
                     </div>
@@ -138,7 +165,28 @@ export default function Profile () {
                             
                         </div>
                     </div>
-                    <hr/> <div className="row">
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <h6 className="mb-0">Trường Đại Học</h6>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control" required defaultValue=""/>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                            <h6 className="mb-0">Chuyên ngành</h6>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control" required defaultValue=""/>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                     <div className="row">
                         <div className="col-sm-3">
                             <h6 className="mb-0">Ngoại Ngữ</h6>
                         </div>
@@ -170,7 +218,7 @@ export default function Profile () {
         <React.Fragment>
         <CssBaseline />
         <main className={classes.layout}>
-        <div className="container">
+        <div className="container" style={{padding:"0px"}}>
             <div className="main-body">
             <div className="gutters-sm row" >
             <div className="col-md-4 mb-3">
@@ -179,33 +227,57 @@ export default function Profile () {
                 <div className="col-sm-6 mb-3">
                   <div className="card h-100">
                     <div className="card-body">
-                      <h6 className="d-flex align-items-center mb-3"><i className="material-icons text-info mr-2">Công việc đã ứng tuyển</i></h6>
+                      <h6 className="d-flex align-items-center mb-3" style={{color: "green"}}>Công việc đã ứng tuyển</h6>
                       <h6>{profile.job_applied.length}</h6>
                     </div>
                   </div>
                 </div>
+
                 <div className="col-sm-6 mb-3">
                   <div className="card h-100">
                     <div className="card-body">
-                    <h6 className="d-flex align-items-center mb-3"><i className="material-icons text-info mr-2">Nhà tuyển dụng đã xem</i></h6>
+                    <h6 className="d-flex align-items-center mb-3" style={{color: "orange"}}>Nhà tuyển dụng đã xem</h6>
                       <h6>1</h6>
                     </div>
                   </div>
                 </div>
               </div>
+              <div className="gutters-sm row" style={{marginLeft: "-8px",marginRight: "-8px"}}>
+                  
+                <div className="col-sm-3 mb-3">
+                </div>
+                <div className="col-sm-6 mb-3">
+                  <div className="card h-100">
+                    <div className="card-body">
+                      <h6 className="d-flex align-items-center mb-3" style={{color: "blue"}}>Công việc đã được nhận</h6>
+                      <h6>{profile.job_approve.length}</h6>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-sm-3 mb-3">
+                </div>
+              </div>
             </div>
                 <div className="col-md-8">
                     
-         <div className="card mb-3" style={{ minHeight: '300px'}}>
+         <div className="card mb-3" style={{ minHeight: '35rem'}}>
             <Tabs>
                 <TabList style={{display:'flex'}}>
-                    <Tab>Việc làm của tôi</Tab>
+                    <Tab>Đã ứng tuyển</Tab>
+                    <Tab>Đã được nhận</Tab>
                     <Tab>Hồ sơ</Tab>
                 </TabList> 
                 <TabPanel>
                 {
                     profile.job_applied.map((job) => {
                         return renderJob(job);
+                    }) 
+                }
+                </TabPanel>
+                <TabPanel>
+                {
+                    profile.job_approve.map((job) => {
+                        return renderJobApprove(job);
                     })
                 }
                 </TabPanel>
