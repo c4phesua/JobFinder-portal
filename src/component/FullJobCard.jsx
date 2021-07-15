@@ -49,6 +49,12 @@ const Job = (props) => {
                     <Typography component="div" variant="body" className={classes.cardInfo}>
                         {job.company_name}
                     </Typography>
+                    <Typography component="div" variant="body" className={classes.cardInfo}>
+                        
+                        <Box>
+                        Thời gian: {job.type}
+                        </Box>
+                    </Typography>
                     <Typography component="div" variant="body" style={{color:'orange'}} className={classes.cardInfo}>
                         
                         <Box fontWeight="fontWeightBold">
