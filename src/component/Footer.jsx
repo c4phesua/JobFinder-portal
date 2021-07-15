@@ -5,6 +5,8 @@ import Link from '@material-ui/core/Link';
 import {makeStyles} from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
+import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@material-ui/core";
+import Report from "./Report";
 
 function Copyright() {
     return (
@@ -40,24 +42,41 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 
-const footers = [
-    {
-        title: 'Về chúng tôi',
-        description: ['Thông tin', 'Lịch sử', 'Liên hệ'],
-    },
-    {
-        title: 'Dành cho nhà tuyển dụng',
-        description: ['Đăng tuyển dụng', 'Quản lý hồ sơ', 'Sản phẩm dịch vụ khác', 'Liên hệ'],
-    },
-    {
-        title: 'Giấy phép',
-        description: ['Điều khoản bảo mật', 'Điều khoản sử dụng'],
-    },
-];
-
 export default function Footer() {
     const classes = useStyles();
+    const [openEdit, setOpenEdit] = React.useState(false);
+    const handleClickOpenEdit = () => {
+        setOpenEdit(true);
+    };
 
+    const handleCloseEdit = () => {
+        setOpenEdit(false);
+    };
+
+    const mockFunction = () => {
+
+    }
+
+    const footers = [
+        {
+            title: 'Về chúng tôi',
+            description: [{content: 'Thông tin', url: mockFunction},
+                {content: 'lịch sử', url: mockFunction},
+                {content: 'liên hệ', url: mockFunction},
+                {content: 'Báo cáo sai phạm', url: handleClickOpenEdit}
+            ],
+        },
+        {
+            title: 'Dành cho nhà tuyển dụng',
+            description: [{content: 'Đăng tuyển dụng', url: mockFunction},
+                {content: 'Quản lý hồ sơ', url: mockFunction},
+                {content: 'Sản phẩm dịch vụ khác', url: mockFunction}, {content: 'Liên hệ', url: mockFunction}],
+        },
+        {
+            title: 'Giấy phép',
+            description: [{content: 'Điều khoản bảo mật', url: mockFunction}, {content: 'Điều khoản sử dụng', url: mockFunction}],
+        },
+    ];
     return (
         <React.Fragment>
             {/* Footer */}
@@ -70,9 +89,9 @@ export default function Footer() {
                             </Typography>
                             <ul>
                                 {footer.description.map((item) => (
-                                    <li key={item}>
-                                        <Link href="#" variant="subtitle1" color="textSecondary">
-                                            {item}
+                                    <li key={item.content}>
+                                        <Link onClick={item.url} variant="subtitle1" color="textSecondary">
+                                            {item.content}
                                         </Link>
                                     </li>
                                 ))}
@@ -85,6 +104,27 @@ export default function Footer() {
                 </Box>
             </Container>
             {/* End footer */}
+            <Dialog
+                open={openEdit}
+                onClose={handleCloseEdit}
+                aria-labelledby="alert-dialog-slide-title"
+                aria-describedby="alert-dialog-slide-description"
+            >
+                <DialogTitle id="alert-dialog-slide-title">
+                    Báo cáo sai phạm
+                </DialogTitle>
+                <DialogContent>
+                    <Report/>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseEdit} color="primary">
+                        Hủy
+                    </Button>
+                    <Button onClick={handleCloseEdit} color="primary">
+                        Báo cáo
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </React.Fragment>
     );
 }
