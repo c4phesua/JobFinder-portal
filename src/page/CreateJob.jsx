@@ -183,6 +183,7 @@ export default function CreateJob() {
                     className={classes.submit}
                     size="small" 
                     endIcon={<SendIcon/>}
+                    href="/hr/management"
                 >
                 Đăng tuyển
                 </ColorButton>
