@@ -23,7 +23,7 @@ const {
 } = RouteConstants;
 
 const onLoginClick = () => {
-    if (HR_LOGIN) {
+    if (currentPath() === HR_LOGIN) {
         goTo(HR_MANAGEMENT)
     } else {
         goTo(DASHBOARD);
