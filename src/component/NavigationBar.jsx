@@ -101,6 +101,10 @@ const showSignUpBtn = () => {
     return currentPath() !== SIGNUP && currentPath() !== ADMIN && currentPath() !== EMPLOYER && !isStudentLoggedIn() && !isHRLoggedin();
 }
 
+const isHrRegistration = () => {
+    return currentPath() === HR_LOGIN || currentPath() === EMPLOYER;
+}
+
 export default function NavigationBar() {
     const classes = navigationStyles();
     const sections = isHRLoggedin() ? [
@@ -111,8 +115,8 @@ export default function NavigationBar() {
         ] :
         [
             {title: 'Nhà tuyển dụng', url: EMPLOYER},
-            {title: 'Việc làm', url: JOBS},
-            {title: 'Ngành hot', url: ROOT},
+            {title: !isHrRegistration() ? 'Việc làm' : '', url: JOBS},
+            {title: !isHrRegistration() ? 'Ngành hot' : '', url: ROOT},
             {title: '', url: '#'}
         ];
     const title = 'Job Finder';
