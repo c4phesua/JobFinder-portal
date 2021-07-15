@@ -1673,5 +1673,6 @@ module.exports = {
     employees,
     company: company,
     user: user_manager,
-    activities
+    activities,
+    admin_report: report_data
 };
