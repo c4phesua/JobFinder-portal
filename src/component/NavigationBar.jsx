@@ -5,22 +5,46 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import Link from '@material-ui/core/Link';
 import LocationComboBox from "./LocationSearch";
-import { InputBase } from "@material-ui/core";
+import {InputBase} from "@material-ui/core";
 import JobTypeComboBox from "./JobTypeSearch";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import LanguageIcon from '@material-ui/icons/Language';
-import { navigationStyles } from '../styleutil/NavigationStyle'
-import { goTo, currentPath } from '../utils/Routes';
+import {navigationStyles} from '../styleutil/NavigationStyle'
+import {currentPath, goTo} from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
 
-const { ROOT, LOGIN, SIGNUP, JOBS, EMPLOYER, STUDENT_PROFILE, INDEX, DASHBOARD, HR_PROFILE, HR_CREATEJOB, HR_MANAGEMENT, ADMIN } = RouteConstants;
+const {
+    ROOT,
+    LOGIN,
+    SIGNUP,
+    JOBS,
+    EMPLOYER,
+    STUDENT_PROFILE,
+    INDEX,
+    DASHBOARD,
+    HR_PROFILE,
+    HR_CREATEJOB,
+    HR_MANAGEMENT,
+    ADMIN,
+    HR_LOGIN
+} = RouteConstants;
 
 const onLogoClick = () => {
-    goTo(ROOT);
+    if (isHRLoggedin()) {
+        goTo(HR_MANAGEMENT)
+    }
+    else {
+        goTo(ROOT);
+    }
 }
 
 const onLoginClick = () => {
-    goTo(LOGIN);
+    if (currentPath() === EMPLOYER){
+        goTo(HR_LOGIN)
+    }
+    else {
+        goTo(LOGIN);
+    }
 }
 
 const onProfileClick = () => {
@@ -32,38 +56,45 @@ const onHrProfileClick = () => {
 }
 
 const onSignUpClick = () => {
-    goTo(SIGNUP);
+    if (currentPath() === HR_LOGIN){
+        goTo(EMPLOYER)
+    }
+    else {
+        goTo(SIGNUP);
+    }
 }
 
 const isStudentLoggedIn = () => {
-    return currentPath() === STUDENT_PROFILE 
-    || currentPath().split('/')[1] === JOBS.split('/')[1] 
-    || currentPath() === INDEX 
-    || currentPath() === DASHBOARD;
+    return currentPath() === STUDENT_PROFILE
+        || currentPath().split('/')[1] === JOBS.split('/')[1]
+        || currentPath() === INDEX
+        || currentPath() === DASHBOARD;
 }
 
 const isHRLoggedin = () => {
     return currentPath() === HR_PROFILE
-    || currentPath() === HR_CREATEJOB
-    || currentPath() === HR_MANAGEMENT
-    ;
+        || currentPath() === HR_CREATEJOB
+        || currentPath() === HR_MANAGEMENT
+        ;
 }
 
 const showSearchBar = () => {
-    return currentPath() !== LOGIN 
-    && currentPath() !== SIGNUP 
-    && currentPath() !== EMPLOYER 
-    && currentPath() !== HR_PROFILE
-    && currentPath() !== HR_CREATEJOB
-    && currentPath() !== HR_MANAGEMENT
-    && currentPath() !== ADMIN
-    && (!isStudentLoggedIn() 
-        || currentPath() === INDEX 
-        || currentPath() === DASHBOARD);
+    return currentPath() !== LOGIN
+        && currentPath() !== SIGNUP
+        && currentPath() !== EMPLOYER
+        && currentPath() !== HR_PROFILE
+        && currentPath() !== HR_CREATEJOB
+        && currentPath() !== HR_MANAGEMENT
+        && currentPath() !== ADMIN
+        && currentPath() !== HR_LOGIN
+        && (!isStudentLoggedIn()
+            || currentPath() === INDEX
+            || currentPath() === DASHBOARD);
 }
 
 const showLoginBtn = () => {
-    return currentPath() !== LOGIN && currentPath() !== ADMIN && !isStudentLoggedIn() && !isHRLoggedin();
+    return currentPath() !== LOGIN && currentPath() !== ADMIN && !isStudentLoggedIn() && !isHRLoggedin() &&
+        currentPath() !== HR_LOGIN;
 }
 
 const showSignUpBtn = () => {
@@ -72,12 +103,18 @@ const showSignUpBtn = () => {
 
 export default function NavigationBar() {
     const classes = navigationStyles();
-    const sections = [
-        { title: 'Nhà tuyển dụng', url: EMPLOYER },
-        { title: 'Quản lý công ty', url: HR_MANAGEMENT },
-        { title: 'Việc làm', url: JOBS },
-        { title: 'Ngành hot', url: ROOT },
-    ];
+    const sections = isHRLoggedin() ? [
+            {title: 'Quản lý công ty', url: HR_MANAGEMENT},
+            {title: 'Tạo bài đăng tuyển', url: HR_CREATEJOB},
+            {title: '', url: '#'},
+            {title: '', url: '#'}
+        ] :
+        [
+            {title: 'Nhà tuyển dụng', url: EMPLOYER},
+            {title: 'Việc làm', url: JOBS},
+            {title: 'Ngành hot', url: ROOT},
+            {title: '', url: '#'}
+        ];
     const title = 'Job Finder';
 
     return (
@@ -95,17 +132,17 @@ export default function NavigationBar() {
                         {section.title}
                     </Link>
                 ))}
-                <div style={{ width: '70%' }} />
+                <div style={{width: '70%'}}/>
                 <IconButton color={"inherit"} size={"small"}>
-                    <NotificationsIcon />
+                    <NotificationsIcon/>
                 </IconButton>
                 <IconButton color={"inherit"} size={"small"}>
-                    <LanguageIcon />
+                    <LanguageIcon/>
                 </IconButton>
             </Toolbar>
             <Toolbar className={classes.toolbar}>
                 <Button size="small" onClick={onLogoClick}>{title}</Button>
-                <div className={classes.leftMargin} />
+                <div className={classes.leftMargin}/>
                 <div className={classes.searchBar}>
                     {
                         showSearchBar() &&
@@ -115,24 +152,24 @@ export default function NavigationBar() {
                                 classes={{
                                     input: classes.inputInput,
                                 }}
-                                style={{ width: '75%' }}
-                                inputProps={{ 'aria-label': 'search' }}
+                                style={{width: '75%'}}
+                                inputProps={{'aria-label': 'search'}}
                                 fullWidth={true}
                             />
                             <div className={classes.jobTypes}>
-                                <JobTypeComboBox />
+                                <JobTypeComboBox/>
                             </div>
-                            <div style={{ width: '3%' }} />
+                            <div style={{width: '3%'}}/>
                             <div className={classes.location}>
-                                <LocationComboBox />
+                                <LocationComboBox/>
                             </div>
                             <IconButton>
-                                <SearchIcon />
+                                <SearchIcon/>
                             </IconButton>
                         </>
                     }
                 </div>
-                <div className={classes.rightMargin} />
+                <div className={classes.rightMargin}/>
                 {
                     showSignUpBtn() &&
                     <Button variant="outlined" size="medium" className={classes.button} onClick={onSignUpClick}>
@@ -154,7 +191,7 @@ export default function NavigationBar() {
                 {
                     isHRLoggedin() &&
                     <Button variant="outlined" size="medium" className={classes.button} onClick={onHrProfileClick}>
-                        Đặng Văn Hùng
+                        Trần Văn B
                     </Button>
                 }
             </Toolbar>

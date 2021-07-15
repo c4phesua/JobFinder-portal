@@ -8,6 +8,16 @@ import {ColorButtonSignUp, useStylesHrSignUp} from '../utils/UtilsFunc';
 import BusinessIcon from '@material-ui/icons/Business';
 import PersonSharp from '@material-ui/icons/PersonSharp';
 import Box from "@material-ui/core/Box";
+import RouteConstants from "../utils/RouteConstants";
+import {goTo} from "../utils/Routes";
+
+const {
+    HR_LOGIN
+} = RouteConstants;
+
+const onSignupClick = () => {
+    goTo(HR_LOGIN)
+}
 
 export default function Apply() {
     const classes = useStylesHrSignUp();
@@ -140,6 +150,7 @@ export default function Apply() {
                                         color="secondary"
                                         className={classes.submit}
                                         size="small"
+                                        onClick={onSignupClick}
                                     >
                                         Đăng ký
                                     </ColorButtonSignUp>
