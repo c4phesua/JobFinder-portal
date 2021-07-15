@@ -4,7 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
-import { ColorButtonSignUp, useStylesJob, getDate, ListString, getRelatedJobs, linkStyle } from '../utils/UtilsFunc';
+import { ColorButtonSignUp, ColorButton, useStylesJob, getDate, ListString, getRelatedJobs, linkStyle } from '../utils/UtilsFunc';
 import MockupData from '../helper/MockupData';
 import { useParams } from "react-router-dom";
 import CardMedia from '@material-ui/core/CardMedia';
@@ -20,31 +20,45 @@ import { goTo } from '../utils/Routes';
 
 
 
-export default function JobDescription() {
+export default function JobDescription({ apply }) {
 
     let { id } = useParams();
     const jobs = MockupData.data_home_page.JOB_LIST;
     const job = jobs[id];
     const classes = useStylesJob();
-    const [disable, setDisable] = React.useState(false);
+    const [submitted, setSubmitted] = React.useState(false);
     const classLink = linkStyle();
     document.title = "JobFinder - " + job.title;
     const classesCard = cardStyle();
     const [open, setOpen] = React.useState(false);
+    const [openCancel, setOpenCancel] = React.useState(false);
     const handleClose = () => {
         setOpen(false);
-        setDisable(true);
+        setSubmitted(true);
     };
+
+    const onCancelJobClick = () => {
+        setOpenCancel(true);
+    }
+
+    const handleConfirm = () =>{  
+        setOpenCancel(false);
+        setSubmitted(false);
+    }
+
+    const handleCancel = () => {
+        setOpenCancel(false);
+    }
 
     const onApplyJobClick = () => {
         setOpen(true);
     }
 
     const jobRelated = getRelatedJobs(jobs, job.company_name);
-    
+
     const handleCompanyClick = (job) => {
         goTo(`/company/${job.id_job}`);
-    } 
+    }
 
     return (
         <React.Fragment>
@@ -87,7 +101,7 @@ export default function JobDescription() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={12} md={3} lg={3}>
-                                <ColorButtonSignUp
+                                {!submitted && <ColorButtonSignUp
                                     type="submit"
                                     fullWidth
                                     variant="contained"
@@ -96,10 +110,21 @@ export default function JobDescription() {
                                     size="large"
                                     style={{ color: "white" }}
                                     onClick={onApplyJobClick}
-                                    disabled={disable}
                                 >
                                     Nộp đơn
-                                </ColorButtonSignUp>
+                                </ColorButtonSignUp>}
+                                {submitted && <ColorButton
+                                    type="submit"
+                                    fullWidth
+                                    variant="contained"
+                                    color="secondary"
+                                    className={classes.submit}
+                                    size="large"
+                                    style={{ color: "white" }}
+                                    onClick={onCancelJobClick}
+                                >
+                                    Huỷ
+                                </ColorButton>}
                             </Grid>
                         </Grid>
                     </Grid>
@@ -160,6 +185,25 @@ export default function JobDescription() {
                     <DialogActions>
                         <Button autoFocus onClick={handleClose} color="primary">
                             OK
+                        </Button>
+                    </DialogActions>
+                </Dialog>
+                <Dialog onClose={handleCancel} aria-labelledby="customized-dialog-title" open={openCancel}>
+                    <DialogTitle id="customized-dialog-title" onClose={handleCancel}>
+                        Thông báo
+                    </DialogTitle>
+                    <DialogContent dividers>
+                        <Typography gutterBottom>
+                            <CheckIcon />
+                            Bạn có chắc muốn huỷ công việc đã ứng tuyển?
+                        </Typography>
+                    </DialogContent>
+                    <DialogActions>
+                        <Button autoFocus onClick={handleConfirm} color="primary">
+                            OK
+                        </Button>
+                        <Button autoFocus onClick={handleCancel} color="primary">
+                            Cancel
                         </Button>
                     </DialogActions>
                 </Dialog>
