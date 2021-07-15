@@ -105,12 +105,15 @@ export default function NavigationBar() {
     const classes = navigationStyles();
     const sections = isHRLoggedin() ? [
             {title: 'Quản lý công ty', url: HR_MANAGEMENT},
-            {title: 'Tạo bài đăng tuyển', url: HR_CREATEJOB}
+            {title: 'Tạo bài đăng tuyển', url: HR_CREATEJOB},
+            {title: '', url: '#'},
+            {title: '', url: '#'}
         ] :
         [
             {title: 'Nhà tuyển dụng', url: EMPLOYER},
             {title: 'Việc làm', url: JOBS},
             {title: 'Ngành hot', url: ROOT},
+            {title: '', url: '#'}
         ];
     const title = 'Job Finder';
 
