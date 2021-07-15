@@ -191,7 +191,7 @@ export default function NavigationBar() {
                 {
                     isHRLoggedin() &&
                     <Button variant="outlined" size="medium" className={classes.button} onClick={onHrProfileClick}>
-                        Đặng Văn Hùng
+                        Trần Văn B
                     </Button>
                 }
             </Toolbar>
