@@ -26,7 +26,7 @@ export default function JobDescription({ apply }) {
     const jobs = MockupData.data_home_page.JOB_LIST;
     const job = jobs[id];
     const classes = useStylesJob();
-    const [submitted, setSubmitted] = React.useState((id == '14' || id == '0'));
+    const [submitted, setSubmitted] = React.useState((id === '14' || id === '0' || id === '10'));
     const classLink = linkStyle();
     document.title = "JobFinder - " + job.title;
     const classesCard = cardStyle();

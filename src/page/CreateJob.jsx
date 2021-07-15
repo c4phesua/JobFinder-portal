@@ -64,7 +64,7 @@ export default function CreateJob() {
                     />
                 </Grid>
                 
-                <Grid item xs={6}>
+                <Grid item xs={12}>
                 <TextField
                         variant="outlined"
                         margin="normal"
@@ -89,7 +89,7 @@ export default function CreateJob() {
                         </Select>
                     </FormControl>
                 </Grid>
-                <Grid item xs={12}>
+                <Grid item xs={6}>
                     
                 <MuiPickersUtilsProvider utils={DateFnsUtils}>
                 <KeyboardDatePicker
