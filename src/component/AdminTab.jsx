@@ -1,18 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
-import JobList from "./dashboard/JobList";
-import Applicants from "./dashboard/Applicants";
-import {Grid} from "@material-ui/core";
+import { Grid } from "@material-ui/core";
 import AdminManageJobs from "./AdminManageJobs";
 import Activity from "./ActivityTrack";
 import UserManager from "./UserManager";
+import AdminReportMng from './AdminReportMng';
 
 function TabPanel(props) {
-    const {children, value, index, ...other} = props;
+    const { children, value, index, ...other } = props;
 
     return (
         <div
@@ -81,9 +80,11 @@ export default function VerticalAdminTabs() {
                     aria-label="Vertical tabs example"
                     className={classes.tabs}
                 >
-                    <Tab label="Quản Lý Bài đăng" {...a11yProps(0)} />
-                    <Tab label="Quản Lý Tài Khoản" {...a11yProps(1)} />
-                     <Tab label="Quản Lý Hoạt Động" {...a11yProps(2)} />
+                    <Tab label="Xem báo cáo" {...a11yProps(0)} />
+                    <Tab label="Quản Lý Bài đăng" {...a11yProps(1)} />
+                    <Tab label="Quản Lý Tài Khoản" {...a11yProps(2)} />
+                    <Tab label="Quản Lý Hoạt Động" {...a11yProps(3)} />
+
                 </Tabs>
             </Grid>
             <Grid
@@ -94,13 +95,16 @@ export default function VerticalAdminTabs() {
                 xs={10}
             >
                 <TabPanel value={value} index={0}>
-                    <AdminManageJobs/>
+                    <AdminReportMng />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    <UserManager/>
+                    <AdminManageJobs />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    <Activity/>
+                    <UserManager />
+                </TabPanel>
+                <TabPanel value={value} index={3}>
+                    <Activity />
                 </TabPanel>
             </Grid>
         </div>
