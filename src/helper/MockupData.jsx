@@ -1510,9 +1510,7 @@ var hr_user = {
     about: ""
 }
 
-var report_data = {
-
-}
+var report_data = {}
 
 var employees = [
     {
@@ -1639,6 +1637,28 @@ var activities = [
         date: "13/05/2021",
     },
 
+]
+
+var report_data = [
+    {
+        username: "Nguyên Văn A",
+        description: "Bài đăng tuyển không rõ ràng",
+        link: "/jobs/19",
+        reason: "Công ty không ghi đầy đủ địa chỉ văn phòng, gây khó khăn cho việc tìm kiếm"
+    },
+    {
+        username: "Trần Thị H",
+        description: "Công ty đăng tuyển không đúng với nội dung thực tế",
+        link: "/jobs/21",
+        reason: "Công ty đăng tuyển ở gò vấp nhưng lúc hẹn chỗ phỏng vấn lại ở Tân Bình," +
+            "có vẻ như công ty đã chuyển văn phòng nhưng chưa cập nhật lại thông tin"
+    },
+    {
+        username: "Nguyễn Văn C",
+        description: "Công ty duyệt hồ sơ chậm",
+        link: "/company/21",
+        reason: "Nộp hồ sơ từ tháng trước nhưng tới nay bên quý công ty vẫn chưa duyệt hồ sơ."
+    }
 ]
 
 
