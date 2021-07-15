@@ -5,13 +5,13 @@ import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import Link from '@material-ui/core/Link';
 import LocationComboBox from "./LocationSearch";
-import {InputBase} from "@material-ui/core";
+import { InputBase } from "@material-ui/core";
 import JobTypeComboBox from "./JobTypeSearch";
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import LanguageIcon from '@material-ui/icons/Language';
-import {navigationStyles} from '../styleutil/NavigationStyle'
-import {currentPath, goTo} from '../utils/Routes';
+import { navigationStyles } from '../styleutil/NavigationStyle'
+import { currentPath, goTo } from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
 
 const {
@@ -40,7 +40,7 @@ const onLogoClick = () => {
 }
 
 const onLoginClick = () => {
-    if (currentPath() === EMPLOYER){
+    if (currentPath() === EMPLOYER) {
         goTo(HR_LOGIN)
     }
     else {
@@ -57,7 +57,7 @@ const onHrProfileClick = () => {
 }
 
 const onSignUpClick = () => {
-    if (currentPath() === HR_LOGIN){
+    if (currentPath() === HR_LOGIN) {
         goTo(EMPLOYER)
     }
     else {
@@ -106,19 +106,23 @@ const isHrRegistration = () => {
     return currentPath() === HR_LOGIN || currentPath() === EMPLOYER;
 }
 
+const isAdminLoggedIn = () => {
+    return currentPath() === ADMIN;
+}
+
 export default function NavigationBar() {
     const classes = navigationStyles();
     const sections = isHRLoggedin() ? [
-            {title: 'Quản lý công ty', url: HR_MANAGEMENT},
-            {title: 'Tạo bài đăng tuyển', url: HR_CREATEJOB},
-            {title: '', url: '#'},
-            {title: '', url: '#'}
-        ] :
+        { title: 'Quản lý công ty', url: HR_MANAGEMENT },
+        { title: 'Tạo bài đăng tuyển', url: HR_CREATEJOB },
+        { title: '', url: '#' },
+        { title: '', url: '#' }
+    ] : isAdminLoggedIn() ? [] :
         [
-            {title: 'Nhà tuyển dụng', url: EMPLOYER},
-            {title: !isHrRegistration() ? 'Việc làm' : '', url: JOBS},
-            {title: !isHrRegistration() ? 'Ngành hot' : '', url: ROOT},
-            {title: '', url: '#'}
+            { title: 'Nhà tuyển dụng', url: EMPLOYER },
+            { title: !isHrRegistration() ? 'Việc làm' : '', url: JOBS },
+            { title: !isHrRegistration() ? 'Ngành hot' : '', url: ROOT },
+            { title: '', url: '#' }
         ];
     const title = 'Job Finder';
 
@@ -137,21 +141,24 @@ export default function NavigationBar() {
                         {section.title}
                     </Link>
                 ))}
-                <div style={{width: '70%'}}/>
-                { (isStudentLoggedIn() || isHRLoggedin()) && <IconButton color={"inherit"} size={"small"}>
-                    <ExitToAppIcon/>
+                <div style={{ width: '70%' }} />
+                {(isStudentLoggedIn() || isHRLoggedin()) && <IconButton color={"inherit"} size={"small"}>
+                    <ExitToAppIcon />
                 </IconButton>}
-                
-                <IconButton color={"inherit"} size={"small"}>
-                    <NotificationsIcon/>
-                </IconButton>
-                <IconButton color={"inherit"} size={"small"}>
-                    <LanguageIcon/>
-                </IconButton>
+                {!isAdminLoggedIn() &&
+                    <IconButton color={"inherit"} size={"small"}>
+                        <NotificationsIcon />
+                    </IconButton>
+                }
+                {!isAdminLoggedIn() &&
+                    <IconButton color={"inherit"} size={"small"}>
+                        <LanguageIcon />
+                    </IconButton>
+                }
             </Toolbar>
             <Toolbar className={classes.toolbar}>
                 <Button size="small" onClick={onLogoClick}>{title}</Button>
-                <div className={classes.leftMargin}/>
+                <div className={classes.leftMargin} />
                 <div className={classes.searchBar}>
                     {
                         showSearchBar() &&
@@ -161,24 +168,24 @@ export default function NavigationBar() {
                                 classes={{
                                     input: classes.inputInput,
                                 }}
-                                style={{width: '75%'}}
-                                inputProps={{'aria-label': 'search'}}
+                                style={{ width: '75%' }}
+                                inputProps={{ 'aria-label': 'search' }}
                                 fullWidth={true}
                             />
                             <div className={classes.jobTypes}>
-                                <JobTypeComboBox/>
+                                <JobTypeComboBox />
                             </div>
-                            <div style={{width: '3%'}}/>
+                            <div style={{ width: '3%' }} />
                             <div className={classes.location}>
-                                <LocationComboBox/>
+                                <LocationComboBox />
                             </div>
                             <IconButton>
-                                <SearchIcon/>
+                                <SearchIcon />
                             </IconButton>
                         </>
                     }
                 </div>
-                <div className={classes.rightMargin}/>
+                <div className={classes.rightMargin} />
                 {
                     showSignUpBtn() &&
                     <Button variant="outlined" size="medium" className={classes.button} onClick={onSignUpClick}>
