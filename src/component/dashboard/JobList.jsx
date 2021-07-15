@@ -120,7 +120,7 @@ export default function Applicants() {
                                                 {job.title}
                                             </TableCell>
                                             <TableCell>
-                                                {Math.round(Math.random() * 100 % 255)}
+                                                {job.num}
                                             </TableCell>
                                             <TableCell>
                                                 {job.date_create}
@@ -161,7 +161,7 @@ export default function Applicants() {
                 </Box>
                 <Dialog open={openEdit} onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
                     <DialogContent>
-                        <EditJob job={jobEdit} />
+                        <EditJob job={jobEdit} status={false} />
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleCloseEdit} color="primary">

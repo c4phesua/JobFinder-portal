@@ -52,7 +52,6 @@ export default function CreateJob() {
           <React.Fragment>
         <form className={classes.form} noValidate>
             <Grid container spacing={1}>
-                <Grid container item xs={12} md={6} lg={6}>
                 <Grid item xs={12}>
                     <TextField
                         variant="outlined"
@@ -61,29 +60,6 @@ export default function CreateJob() {
                         id="title"
                         name="title"
                         label="Tên vị trí"
-                        fullWidth
-                    />
-                </Grid>
-                <Grid item xs={12}>
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        id="companyName"
-                        name="companyName"
-                        label="Tên công ty"
-                        fullWidth
-                    />
-                </Grid>
-                
-                <Grid item xs={12}>
-                    <TextField
-                        variant="outlined"
-                        margin="normal"
-                        required
-                        id="companyAddress"
-                        name="companyAddress"
-                        label="Nơi làm việc"
                         fullWidth
                     />
                 </Grid>
@@ -130,9 +106,7 @@ export default function CreateJob() {
                     />
                 </MuiPickersUtilsProvider>
                 </Grid>
-                </Grid>
-                
-                <Grid container item xs={12} md={6} lg={6}>
+
                 <Grid item xs={12}>
                     <TextField
                         variant="outlined"
@@ -171,7 +145,6 @@ export default function CreateJob() {
                         multiline
                         rows={4}
                     />
-                </Grid>
                 </Grid>
                 <Grid item xs={12} sm={4}/>
                 <Grid item xs={12} sm={4}>

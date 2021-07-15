@@ -1319,7 +1319,8 @@ var data_manage_hr_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            num: 1
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1341,7 +1342,8 @@ var data_manage_hr_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            num: 0
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1363,7 +1365,8 @@ var data_manage_hr_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            num: 0
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1385,7 +1388,8 @@ var data_manage_hr_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            num: 0
 
         },{
             company_name: "Công ty TNHH Vòng Tròn Đỏ",
@@ -1405,7 +1409,8 @@ var data_manage_hr_page = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động"
+            status: "hoạt động",
+            num: 0
 
         }
     ],
