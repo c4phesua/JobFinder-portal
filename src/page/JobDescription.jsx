@@ -194,7 +194,6 @@ export default function JobDescription({ apply }) {
                     </DialogTitle>
                     <DialogContent dividers>
                         <Typography gutterBottom>
-                            <CheckIcon />
                             Bạn có chắc muốn huỷ công việc đã ứng tuyển?
                         </Typography>
                     </DialogContent>
