@@ -3,6 +3,8 @@ import Button from '@material-ui/core/Button';
 import { orange, red } from '@material-ui/core/colors';
 import Typography from '@material-ui/core/Typography';
 import _ from 'lodash';
+import RouteConstants from "./RouteConstants";
+import {goTo} from "./Routes";
 
 
 export const useStylesApply = makeStyles((theme) => ({
@@ -170,7 +172,15 @@ export const useStylesHrSignUp = makeStyles((theme) => ({
     marginLeft: theme.spacing(1),
   },
 }));
-  
+
+const {
+    HR_MANAGEMENT
+} = RouteConstants;
+
+const onSignupClick = () => {
+    goTo(HR_MANAGEMENT)
+}
+
 export const ColorButtonSignUp = withStyles((theme) => ({
     root: {
         color: theme.palette.getContrastText(orange[500]),
@@ -179,7 +189,7 @@ export const ColorButtonSignUp = withStyles((theme) => ({
         backgroundColor: orange[700],
         },
     },
-}))(Button);
+}))(Button(onclick(onSignupClick)));
 
 export const ColorButton = withStyles((theme) => ({
   root: {
