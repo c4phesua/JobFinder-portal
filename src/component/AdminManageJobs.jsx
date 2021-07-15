@@ -19,7 +19,7 @@ import {
     Tooltip
 } from '@material-ui/core';
 import MockupData from '../helper/MockupData';
-import EditIcon from '@material-ui/icons/Edit';
+import { Visibility } from '@material-ui/icons';
 import React from 'react';
 import EditJob from "./EditComponent";
 import { IOSSwitch } from "./IosSwitch";
@@ -27,6 +27,7 @@ import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
 import { newTab } from "../utils/Routes";
 import { TextFields } from "@material-ui/icons";
 import TextField from "@material-ui/core/TextField";
+import ViewJob from './ViewJob';
 
 
 export default function AdminManageJobs() {
@@ -99,6 +100,9 @@ export default function AdminManageJobs() {
                                             </Tooltip>
                                         </TableCell>
                                         <TableCell>
+                                            Nội dung
+                                        </TableCell>
+                                        <TableCell>
                                             Trạng thái
                                         </TableCell>
                                         <TableCell>
@@ -123,6 +127,11 @@ export default function AdminManageJobs() {
                                             </TableCell>
                                             <TableCell>
                                                 {job.date_create}
+                                            </TableCell>
+                                            <TableCell>
+                                                <IconButton onClick={() => handleClickOpenEdit(job)}>
+                                                    <Visibility />
+                                                </IconButton>
                                             </TableCell>
                                             <TableCell>
                                                 {/*<Chip*/}
@@ -155,14 +164,11 @@ export default function AdminManageJobs() {
                 </Box>
                 <Dialog open={openEdit} onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
                     <DialogContent>
-                        <EditJob job={jobEdit} />
+                        <ViewJob job={jobEdit} />
                     </DialogContent>
                     <DialogActions>
                         <Button onClick={handleCloseEdit} color="primary">
                             Hủy
-                        </Button>
-                        <Button onClick={handleCloseEdit} color="primary">
-                            Lưu
                         </Button>
                     </DialogActions>
                 </Dialog>

@@ -1677,21 +1677,24 @@ var report_data = [
     {
         username: "Nguyên Văn A",
         description: "Bài đăng tuyển không rõ ràng",
-        link: "/jobs/19",
-        reason: "Công ty không ghi đầy đủ địa chỉ văn phòng, gây khó khăn cho việc tìm kiếm"
+        link: "r/jobs/19",
+        reason: "Công ty không ghi đầy đủ địa chỉ văn phòng, gây khó khăn cho việc tìm kiếm",
+        date: "13/05/2021"
     },
     {
         username: "Trần Thị H",
         description: "Công ty đăng tuyển không đúng với nội dung thực tế",
-        link: "/jobs/21",
+        link: "r/jobs/21",
         reason: "Công ty đăng tuyển ở gò vấp nhưng lúc hẹn chỗ phỏng vấn lại ở Tân Bình," +
-            "có vẻ như công ty đã chuyển văn phòng nhưng chưa cập nhật lại thông tin"
+            "có vẻ như công ty đã chuyển văn phòng nhưng chưa cập nhật lại thông tin",
+        date: "20/05/2021"
     },
     {
         username: "Nguyễn Văn C",
         description: "Công ty duyệt hồ sơ chậm",
-        link: "/company/21",
-        reason: "Nộp hồ sơ từ tháng trước nhưng tới nay bên quý công ty vẫn chưa duyệt hồ sơ."
+        link: "r/company/21",
+        reason: "Nộp hồ sơ từ tháng trước nhưng tới nay bên quý công ty vẫn chưa duyệt hồ sơ.",
+        date: "30/04/2021"
     }
 ]
 
@@ -1708,5 +1711,5 @@ module.exports = {
     company: company,
     user: user_manager,
     activities,
-    admin_report: report_data
+    report_data
 };
