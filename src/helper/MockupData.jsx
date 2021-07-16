@@ -1488,7 +1488,7 @@ var student_user = {
             tag_list: [],
             id_job: 14,
             type: "Bán thời gian",
-            salary: "2,000,000",
+            salary: "2,000,000", 
             company_address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh",
             description: ["• Chào hỏi và phục vụ khách hàng thân thiện, nhanh nhẹn, nhiệt tình",
                 "• Chủ động, nhanh nhẹn trong việc học hỏi.",
@@ -1528,7 +1528,7 @@ var student_user = {
             email: "antran1212@gmail.com",
             phone: "0962888475",
             address: "Quận 4, thành phố Hồ Chí Minh",
-            applied: "01/07/2021",
+            applied: "03/07/2021",
             status:"success"
 
         },
