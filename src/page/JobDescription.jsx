@@ -4,6 +4,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
+import TextField from '@material-ui/core/TextField';
 import { ColorButtonSignUp, ColorButton, useStylesJob, getDate, ListString, getRelatedJobs, linkStyle } from '../utils/UtilsFunc';
 import MockupData from '../helper/MockupData';
 import { useParams } from "react-router-dom";
@@ -41,7 +42,7 @@ export default function JobDescription({ apply }) {
         setOpenCancel(true);
     }
 
-    const handleConfirm = () =>{  
+    const handleConfirm = () => {
         setOpenCancel(false);
         setSubmitted(false);
     }
@@ -196,6 +197,14 @@ export default function JobDescription({ apply }) {
                         <Typography gutterBottom>
                             Bạn có chắc muốn huỷ công việc đã ứng tuyển?
                         </Typography>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            id="companyName"
+                            name="companyName"
+                            label="Lý do"
+                            fullWidth
+                        />
                     </DialogContent>
                     <DialogActions>
                         <Button autoFocus onClick={handleConfirm} color="primary">
