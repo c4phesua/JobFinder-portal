@@ -76,6 +76,7 @@ const isHRLoggedin = () => {
     return currentPath() === HR_PROFILE
         || currentPath() === HR_CREATEJOB
         || currentPath() === HR_MANAGEMENT
+        || currentPath() === "/profile/1"
         ;
 }
 
@@ -88,6 +89,7 @@ const showSearchBar = () => {
         && currentPath() !== HR_MANAGEMENT
         && currentPath() !== ADMIN
         && currentPath() !== HR_LOGIN
+        && currentPath() !== "/profile/1"
         && (!isStudentLoggedIn()
             || currentPath() === INDEX
             || currentPath() === DASHBOARD);
