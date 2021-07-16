@@ -140,7 +140,7 @@ export default function AdminReportMng(props) {
       >
       </Box>
       <Dialog open={openReport} fullScreen={fullScreen} maxWidth aria-labelledby="form-dialog-title">
-      <DialogActions>
+        <DialogActions>
           <Button onClick={handleDeleteJob} color="primary">
             Huỷ bài đăng
           </Button>
@@ -161,15 +161,17 @@ export default function AdminReportMng(props) {
             Bạn có chắc muốn huỷ bài đăng này?
           </Typography>
           <TextField
-              variant="outlined"
-              margin="normal"
-              id="companyName"
-              name="companyName"
-              label="Lý do"
-              fullWidth
-              value={report ? report.reason : undefined}
-              required
-            />
+            variant="outlined"
+            margin="normal"
+            id="reason"
+            name="reson"
+            label="Lý do"
+            fullWidth
+            multiline
+            rows={4}
+            value={report ? report.reason : undefined}
+            required
+          />
         </DialogContent>
         <DialogActions>
           <Button onClick={handleDeleted} autoFocus color="primary">
