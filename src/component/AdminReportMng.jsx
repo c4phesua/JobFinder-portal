@@ -6,12 +6,9 @@ import {
   Dialog,
   DialogActions,
   DialogContent,
-  DialogContentText,
   DialogTitle,
   IconButton,
   Link,
-  MenuItem,
-  Select,
   Table,
   TableBody,
   TableCell,
@@ -19,24 +16,31 @@ import {
   TableHead,
   TableRow,
   TableSortLabel,
-  Tooltip
+  Tooltip,
+  Typography,
+  TextField,
 } from '@material-ui/core';
 import MockupData from '../helper/MockupData';
 import { newTab } from "../utils/Routes";
 import React from "react";
 import { Visibility } from '@material-ui/icons';
-import AdminViewReport from './AdminViewReport';
-
+import JobDescription from './Admin/JobDesc';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 
 export default function AdminReportMng(props) {
+
+  const theme = useTheme();
+  const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
   const handleLinkClick = (event) => {
     newTab(event.target.name);
   }
 
   const { report_data } = MockupData;
-
   const [openReport, setOpenReport] = React.useState(false);
+  const [openDelete, setOpenDelete] = React.useState(false);
   const [report, setReport] = React.useState(null);
 
   const handleOpenReport = (report) => {
@@ -47,6 +51,20 @@ export default function AdminReportMng(props) {
   const handleCloseReport = () => {
     setOpenReport(false);
   };
+
+  const handleDeleteJob = () => {
+    setOpenDelete(true);
+  };
+
+  const handleDeleted = () => {
+    setOpenDelete(false);
+    setOpenReport(false);
+  }
+
+  const cancelDelete = () => {
+    setOpenDelete(false);
+  }
+
   return (
     <Card {...props}>
       <PerfectScrollbar>
@@ -121,13 +139,44 @@ export default function AdminReportMng(props) {
         }}
       >
       </Box>
-      <Dialog open={openReport} onClose={handleOpenReport} aria-labelledby="form-dialog-title">
-        <DialogContent>
-          <AdminViewReport report={report} />
-        </DialogContent>
-        <DialogActions>
+      <Dialog open={openReport} fullScreen={fullScreen} maxWidth aria-labelledby="form-dialog-title">
+      <DialogActions>
+          <Button onClick={handleDeleteJob} color="primary">
+            Huỷ bài đăng
+          </Button>
           <Button onClick={handleCloseReport} color="primary">
             Hủy
+          </Button>
+        </DialogActions>
+        <DialogContent>
+          <JobDescription report={report} />
+        </DialogContent>
+      </Dialog>
+      <Dialog fullWidth aria-labelledby="customized-dialog-title" open={openDelete}>
+        <DialogTitle id="customized-dialog-title">
+          Thông báo
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography gutterBottom>
+            Bạn có chắc muốn huỷ bài đăng này?
+          </Typography>
+          <TextField
+              variant="outlined"
+              margin="normal"
+              id="companyName"
+              name="companyName"
+              label="Lý do"
+              fullWidth
+              value={report.reason}
+              required
+            />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleDeleted} autoFocus color="primary">
+            OK
+          </Button>
+          <Button onClick={cancelDelete} autoFocus color="primary">
+            Cancel
           </Button>
         </DialogActions>
       </Dialog>
