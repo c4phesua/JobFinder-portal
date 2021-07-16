@@ -89,7 +89,7 @@ const showSearchBar = () => {
         && currentPath() !== HR_MANAGEMENT
         && currentPath() !== ADMIN
         && currentPath() !== HR_LOGIN
-        && currentPath() !== "/profile/1"
+        // && currentPath() !== "/profile/1"
         && (!isStudentLoggedIn()
             || currentPath() === INDEX
             || currentPath() === DASHBOARD);
