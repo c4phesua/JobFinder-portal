@@ -198,15 +198,6 @@ export default function AdminManageJobs() {
                     </DialogActions>
                 </Dialog>
             </Card>
-            <div className="add-hr-btn">
-                <Button
-                    color="primary"
-                    variant="contained"
-                    onClick={onClickOpenCreate}
-                >
-                    Tạo bài tuyển dụng
-                </Button>
-            </div>
         </>
     );
 }
