@@ -167,7 +167,7 @@ export default function AdminReportMng(props) {
               name="companyName"
               label="Lý do"
               fullWidth
-              value={report.reason}
+              value={report ? report.reason : undefined}
               required
             />
         </DialogContent>

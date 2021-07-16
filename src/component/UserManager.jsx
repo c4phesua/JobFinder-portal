@@ -22,11 +22,20 @@ import {
     Tooltip
 } from '@material-ui/core';
 import MockupData from '../helper/MockupData';
-import {newTab} from "../utils/Routes";
+import { newTab } from "../utils/Routes";
 import React from "react";
+import { ColorButtonUnban, ColorButton } from '../utils/UtilsFunc';
+import { IOSSwitch } from "./IosSwitch";
+
 
 
 export default function UserManager(props) {
+    var initState = {}
+    for (const user of MockupData.user) {
+        initState[user.employee_id.toString()] = true
+    }
+    const [switchState, setSwitchState] = React.useState(initState);
+
     const handleLinkClick = (event) => {
         newTab(event.target.name);
     }
@@ -39,11 +48,16 @@ export default function UserManager(props) {
     const handleCloseDelete = () => {
         setOpenDelete(false);
     };
+    const handleChange = (event) => {
+        console.log(event.target.name)
+        setSwitchState({ ...switchState, [event.target.name]: event.target.checked });
+    };
+
     return (
         <Card {...props}>
             <PerfectScrollbar>
                 <Box>
-                    <TableContainer style={{maxHeight: 450, minHeight: 450}}>
+                    <TableContainer style={{ maxHeight: 450, minHeight: 450 }}>
                         <Table stickyHeader>
                             <TableHead>
                                 <TableRow>
@@ -75,7 +89,7 @@ export default function UserManager(props) {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {MockupData.user.map((applicants,index) => (
+                                {MockupData.user.map((applicants, index) => (
                                     <TableRow
                                         hover
                                     >
@@ -94,12 +108,8 @@ export default function UserManager(props) {
                                             {applicants.role}
                                         </TableCell>
                                         <TableCell>
-                                            <Select
-                                                value={applicants.status}
-                                            >
-                                                <MenuItem value={1}>Hoạt động</MenuItem>
-                                                <MenuItem value={2}>Cấm</MenuItem>
-                                            </Select>
+                                        <IOSSwitch checked={switchState[applicants.employee_id.toString()]}
+                                                    onChange={handleChange} name={applicants.employee_id.toString()} />
                                         </TableCell>
                                     </TableRow>
                                 ))}

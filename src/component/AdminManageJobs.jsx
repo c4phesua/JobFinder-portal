@@ -105,9 +105,6 @@ export default function AdminManageJobs() {
                                         <TableCell>
                                             Trạng thái
                                         </TableCell>
-                                        <TableCell>
-                                            Xóa
-                                        </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -141,11 +138,6 @@ export default function AdminManageJobs() {
                                                 {/*/>*/}
                                                 <IOSSwitch checked={switchState[job.id_job.toString()]}
                                                     onChange={handleChange} name={job.id_job.toString()} />
-                                            </TableCell>
-                                            <TableCell>
-                                                <IconButton onClick={handleClickOpenDelete}>
-                                                    <DeleteForeverIcon style={{ color: 'red' }} />
-                                                </IconButton>
                                             </TableCell>
                                         </TableRow>
                                     ))}

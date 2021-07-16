@@ -1579,28 +1579,28 @@ var user_manager = [
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 2,
         employee_name: "Nguyễn văn A",
         apply_date: "22/03/2021",
         role: "Sinh viên",
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 3,
         employee_name: "The coffee house",
         apply_date: "01/01/2021",
         role: "Nhà tuyển dụng",
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 4,
         employee_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
         apply_date: "02/03/2021",
         role: "Nhà tuyển dụng",
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 5,
         employee_name: "Cty TNHH vòng tròn đỏ",
         apply_date: "02/04/2021",
         role: "Nhà tuyển dụng",
