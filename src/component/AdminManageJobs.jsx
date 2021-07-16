@@ -21,16 +21,16 @@ import {
 import MockupData from '../helper/MockupData';
 import { Visibility } from '@material-ui/icons';
 import React from 'react';
-import EditJob from "./EditComponent";
 import { IOSSwitch } from "./IosSwitch";
-import DeleteForeverIcon from '@material-ui/icons/DeleteForever';
-import { newTab } from "../utils/Routes";
-import { TextFields } from "@material-ui/icons";
 import TextField from "@material-ui/core/TextField";
-import ViewJob from './ViewJob';
+import ViewJob from './Admin/JobDesc2';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 
 export default function AdminManageJobs() {
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
     const [openEdit, setOpenEdit] = React.useState(false);
     const [openDelete, setOpenDelete] = React.useState(false);
     const [jobEdit, setJobEdit] = React.useState();
@@ -38,10 +38,6 @@ export default function AdminManageJobs() {
     var initState = {}
     for (const job of jobs) {
         initState[job.id_job.toString()] = true
-    }
-
-    const onClickOpenCreate = () => {
-        newTab('/hr/create')
     }
 
     const handleClickOpenEdit = (job) => {
@@ -59,6 +55,7 @@ export default function AdminManageJobs() {
 
     const handleCloseDelete = () => {
         setOpenDelete(false);
+        setOpenEdit(false);
     };
     const [switchState, setSwitchState] = React.useState(initState);
 
@@ -105,9 +102,6 @@ export default function AdminManageJobs() {
                                         <TableCell>
                                             Trạng thái
                                         </TableCell>
-                                        <TableCell>
-                                            Xóa
-                                        </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -134,18 +128,8 @@ export default function AdminManageJobs() {
                                                 </IconButton>
                                             </TableCell>
                                             <TableCell>
-                                                {/*<Chip*/}
-                                                {/*    color="primary"*/}
-                                                {/*    label={job.status}*/}
-                                                {/*    size="small"*/}
-                                                {/*/>*/}
                                                 <IOSSwitch checked={switchState[job.id_job.toString()]}
                                                     onChange={handleChange} name={job.id_job.toString()} />
-                                            </TableCell>
-                                            <TableCell>
-                                                <IconButton onClick={handleClickOpenDelete}>
-                                                    <DeleteForeverIcon style={{ color: 'red' }} />
-                                                </IconButton>
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -162,15 +146,18 @@ export default function AdminManageJobs() {
                     }}
                 >
                 </Box>
-                <Dialog open={openEdit} onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
-                    <DialogContent>
-                        <ViewJob job={jobEdit} />
-                    </DialogContent>
+                <Dialog open={openEdit} fullScreen={fullScreen} maxWidth onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
                     <DialogActions>
+                        <Button onClick={handleClickOpenDelete} color="primary">
+                            Gỡ bài viết
+                        </Button>
                         <Button onClick={handleCloseEdit} color="primary">
                             Hủy
                         </Button>
                     </DialogActions>
+                    <DialogContent>
+                        <ViewJob job={jobEdit} />
+                    </DialogContent>
                 </Dialog>
                 <Dialog
                     open={openDelete}
@@ -179,13 +166,9 @@ export default function AdminManageJobs() {
                     aria-describedby="alert-dialog-slide-description"
                 >
                     <DialogTitle id="alert-dialog-slide-title">
-                        Bạn có muốn xóa bài đăng tuyển dụng này?
+                        Bạn có muốn gỡ bài đăng tuyển dụng này?
                     </DialogTitle>
                     <DialogContent>
-                        <DialogContentText id="alert-dialog-slide-description">
-                            Nội dụng đã xóa sẽ không thể khôi phục lại.
-                            Chọn "Xóa" để tiếp tục, "Hủy" để dừng yêu cầu.
-                        </DialogContentText>
                         <TextField
                             variant="outlined"
                             margin="normal"
@@ -206,15 +189,6 @@ export default function AdminManageJobs() {
                     </DialogActions>
                 </Dialog>
             </Card>
-            <div className="add-hr-btn">
-                <Button
-                    color="primary"
-                    variant="contained"
-                    onClick={onClickOpenCreate}
-                >
-                    Tạo bài tuyển dụng
-                </Button>
-            </div>
         </>
     );
 }

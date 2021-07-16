@@ -1,6 +1,6 @@
 import { makeStyles,withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-import { orange, red } from '@material-ui/core/colors';
+import { blue, orange, red } from '@material-ui/core/colors';
 import Typography from '@material-ui/core/Typography';
 import _ from 'lodash';
 import RouteConstants from "./RouteConstants";
@@ -181,6 +181,16 @@ export const ColorButtonSignUp = withStyles((theme) => ({
         backgroundColor: orange[700],
         },
     },
+}))(Button);
+
+export const ColorButtonUnban = withStyles((theme) => ({
+  root: {
+      color: theme.palette.getContrastText(blue[500]),
+      backgroundColor: blue[500],
+      '&:hover': {
+      backgroundColor: blue[700],
+      },
+  },
 }))(Button);
 
 export const ColorButton = withStyles((theme) => ({

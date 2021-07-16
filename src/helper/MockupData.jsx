@@ -1579,28 +1579,28 @@ var user_manager = [
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 2,
         employee_name: "Nguyễn văn A",
         apply_date: "22/03/2021",
         role: "Sinh viên",
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 3,
         employee_name: "The coffee house",
         apply_date: "01/01/2021",
         role: "Nhà tuyển dụng",
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 4,
         employee_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
         apply_date: "02/03/2021",
         role: "Nhà tuyển dụng",
         status: 1
     },
     {
-        employee_id: 1,
+        employee_id: 5,
         employee_name: "Cty TNHH vòng tròn đỏ",
         apply_date: "02/04/2021",
         role: "Nhà tuyển dụng",
@@ -1677,24 +1677,17 @@ var report_data = [
     {
         username: "Nguyên Văn A",
         description: "Bài đăng tuyển không rõ ràng",
-        link: "r/jobs/19",
+        job_id: "19",
         reason: "Công ty không ghi đầy đủ địa chỉ văn phòng, gây khó khăn cho việc tìm kiếm",
         date: "13/05/2021"
     },
     {
         username: "Trần Thị H",
         description: "Công ty đăng tuyển không đúng với nội dung thực tế",
-        link: "r/jobs/21",
+        job_id: "21",
         reason: "Công ty đăng tuyển ở gò vấp nhưng lúc hẹn chỗ phỏng vấn lại ở Tân Bình," +
             "có vẻ như công ty đã chuyển văn phòng nhưng chưa cập nhật lại thông tin",
         date: "20/05/2021"
-    },
-    {
-        username: "Nguyễn Văn C",
-        description: "Công ty duyệt hồ sơ chậm",
-        link: "r/company/21",
-        reason: "Nộp hồ sơ từ tháng trước nhưng tới nay bên quý công ty vẫn chưa duyệt hồ sơ.",
-        date: "30/04/2021"
     }
 ]
 
