@@ -62,22 +62,45 @@ const Job = (props) => {
             <Grid container item xs= {12} md={6} lg={6}>
             <Grid item xs= {12} md={6} lg={6}>
                 <CardContent className={classeCard.content}>
-                    <Typography component="div" variant="body2" style={{alignContent:'left'}} >
-                        Ngày hết hạn
-                    </Typography>
-                    <Typography component="div" variant="body2" >
-                        {job.duration}
-                    </Typography>
-                </CardContent>
-                </Grid>
-            <Grid item xs= {12} md={6} lg={6}>
-            <CardContent className={classeCard.content}>
                     <Typography component="div" variant="body2" style={{alignContent:'right'}} >
-                        Đã ứng tuyển
+                        <Box fontWeight="fontWeightBold">
+                            Ngày ứng tuyển
+                        </Box>
+
                     </Typography>
                     <Typography component="div" variant="body2" >
                         {job.applied}
                     </Typography>
+                <hr/>
+                    <Typography component="div" variant="body2" style={{alignContent:'left'}} >
+                        
+                        <Box fontWeight="fontWeightBold">
+                            Ngày hết hạn
+                        </Box>
+                    </Typography>
+                    <Typography component="div" variant="body2" >
+                        {job.duration}
+                    </Typography>
+                    
+                </CardContent>
+                </Grid>
+            <Grid item xs= {12} md={6} lg={6}>
+            <CardContent className={classeCard.content}>
+            <Typography component="div" variant="body2" style={{alignContent:'left'}} >
+                        
+                        <Box fontWeight="fontWeightBold">
+                            Trạng thái
+                        </Box>
+                    </Typography>
+                    {job.status == "seen"?<div className="badge badge-info text_dark" >Đã xem hồ sơ</div>
+                    :job.status=="waiting"?<div className="badge badge-warning text_dark" >Đang đợi duyệt</div>
+                    :job.status =="success"?<div className="badge badge-success" >Đã được chấp nhận</div>
+                    :<div className="badge badge-danger" >Đã bị từ chối</div>}
+                    
+                    
+                    
+                    
+                    
                 </CardContent>
                 </Grid>
                 

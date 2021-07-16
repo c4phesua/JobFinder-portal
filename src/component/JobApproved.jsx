@@ -59,12 +59,13 @@ const JobApprove = (props) => {
             <Grid container item xs= {12} md={3} lg={3}>
                 
             <CardContent className={classeCard.content}>
-                    <Typography component="div" variant="body" style={{alignContent:'right'}} >
+                    {/* <Typography component="div" variant="body" style={{alignContent:'right'}} >
                         Đã ứng tuyển
                     </Typography>
                     <Typography component="div" variant="body" >
                         {job.applied}
-                    </Typography>
+                    </Typography> */}
+                    <div className="badge badge-success" >Đã được chấp nhận</div>
                 </CardContent>
             </Grid>
                 
