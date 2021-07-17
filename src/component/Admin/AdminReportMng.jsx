@@ -106,7 +106,7 @@ export default function AdminReportMng(props) {
       )
     }
     return (
-      <Chip label="Đã gỡ bài viết" color="secondary" />
+      <Chip className="red-chip" label="Đã gỡ bài viết" />
     );
   }
 

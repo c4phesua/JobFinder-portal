@@ -35,10 +35,13 @@
 }
 
 .MuiChip-root.green-chip {
-  background-color: green;
+  background-color: #008000;
   color: white;
 }
-
+.MuiChip-root.red-chip {
+  background-color: #da3633;
+  color: white;
+}
 .MuiChip-root.yellow-chip {
   background-color: rgb(187, 156, 18);
   color: white;

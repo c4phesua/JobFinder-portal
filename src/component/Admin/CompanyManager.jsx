@@ -75,7 +75,7 @@ export default function CompanyManager(props) {
             )
         }
         return (
-            <Chip label="Đã bị khoá" color="secondary" />
+            <Chip className="red-chip" label="Đã bị khoá"/>
         );
     }
 

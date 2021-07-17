@@ -30,7 +30,7 @@ import { newTab } from "../../utils/Routes";
 export default function Applicants() {
     const statusName = ["Đang hoạt động", "Đã gỡ"]
 
-    const statusColor = ['#00ff00', '#ff0000']
+    const statusColor = ['#008000', '#da3633']
 
 
     const [openEdit, setOpenEdit] = React.useState(false);

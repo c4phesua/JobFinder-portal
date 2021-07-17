@@ -72,7 +72,7 @@ export default function AdminManageJobs() {
             )
         }
         return (
-            <Chip label="Đã gỡ" color="secondary" />
+            <Chip className="red-chip" label="Đã gỡ" />
         );
     }
 
