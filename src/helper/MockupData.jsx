@@ -1685,19 +1685,23 @@ var activities = [
 
 var report_data = [
     {
+        id: 0,
         username: "Nguyên Văn A",
         description: "Bài đăng tuyển không rõ ràng",
         job_id: "19",
         reason: "Công ty không ghi đầy đủ địa chỉ văn phòng, gây khó khăn cho việc tìm kiếm",
-        date: "13/05/2021"
+        date: "13/05/2021",
+        status: 0,
     },
     {
+        id: 1,
         username: "Trần Thị H",
         description: "Công ty đăng tuyển không đúng với nội dung thực tế",
         job_id: "21",
         reason: "Công ty đăng tuyển ở gò vấp nhưng lúc hẹn chỗ phỏng vấn lại ở Tân Bình," +
             "có vẻ như công ty đã chuyển văn phòng nhưng chưa cập nhật lại thông tin",
-        date: "20/05/2021"
+        date: "20/05/2021",
+        status: 0,
     }
 ]
 

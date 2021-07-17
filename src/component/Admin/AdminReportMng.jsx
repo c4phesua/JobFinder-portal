@@ -19,6 +19,7 @@ import {
   Tooltip,
   Typography,
   TextField,
+  Chip,
 } from '@material-ui/core';
 import MockupData from '../../helper/MockupData';
 import { newTab } from "../../utils/Routes";
@@ -41,10 +42,12 @@ export default function AdminReportMng(props) {
   const { report_data } = MockupData;
   const [openReport, setOpenReport] = React.useState(false);
   const [openDelete, setOpenDelete] = React.useState(false);
-  const [report, setReport] = React.useState(null);
+  const [openUndo, setOpenUndo] = React.useState(false);
+  const [reports, setReports] = React.useState(report_data);
+  const [currentReport, setCurrentReport] = React.useState(reports[0]);
 
   const handleOpenReport = (report) => {
-    setReport(report);
+    setCurrentReport(report);
     setOpenReport(true);
   };
 
@@ -52,17 +55,59 @@ export default function AdminReportMng(props) {
     setOpenReport(false);
   };
 
-  const handleDeleteJob = () => {
+  const handleOpenDeleteJob = () => {
     setOpenDelete(true);
   };
 
-  const handleDeleted = () => {
+  const handleUndo = () => {
+    setOpenUndo(true);
+  }
+
+  const handleCancelUndo = () => {
+    setOpenUndo(false);
+  }
+
+  const handleDeletedJob = (report) => {
+    report.status = 2;
+    handleStatus(report);
+  }
+
+  const handleIgnoreReport = (report) => {
+    report.status = 1;
+    handleStatus(report);
+  }
+
+  const backToPending = (report) => {
+    report.status = 0;
+    handleStatus(report);
+    setOpenUndo(false);
+  }
+
+  const handleStatus = report => {
+    const index = reports.findIndex(r => r.id === report.id);
+    reports[index] = report;
+    setReports(reports);
     setOpenDelete(false);
-    setOpenReport(false);
   }
 
   const cancelDelete = () => {
     setOpenDelete(false);
+  }
+
+  const renderStatus = (status) => {
+    if (status === 0) {
+      return (
+        <Chip className="yellow-chip" label="Chưa xử lý" />
+      )
+    }
+    if (status === 1) {
+      return (
+        <Chip className="green-chip" label="Đã bỏ qua" />
+      )
+    }
+    return (
+      <Chip label="Đã gỡ bài viết" color="secondary" />
+    );
   }
 
   return (
@@ -96,12 +141,15 @@ export default function AdminReportMng(props) {
                     </Tooltip>
                   </TableCell>
                   <TableCell>
+                    Trạng thái
+                  </TableCell>
+                  <TableCell>
                     Chi tiết
                   </TableCell>
                 </TableRow>
               </TableHead>
               <TableBody>
-                {report_data.map((report, index) => (
+                {reports.map((report, index) => (
                   <TableRow
                     hover
                   >
@@ -118,6 +166,9 @@ export default function AdminReportMng(props) {
                     </TableCell>
                     <TableCell>
                       {report.date}
+                    </TableCell>
+                    <TableCell>
+                      {renderStatus(report.status)}
                     </TableCell>
                     <TableCell>
                       <IconButton onClick={() => handleOpenReport(report)}>
@@ -141,15 +192,26 @@ export default function AdminReportMng(props) {
       </Box>
       <Dialog open={openReport} fullScreen={fullScreen} maxWidth aria-labelledby="form-dialog-title">
         <DialogActions>
-        <Button onClick={handleCloseReport} color="primary">
+          <Button onClick={handleCloseReport} color="primary">
             Hủy
           </Button>
-          <Button onClick={handleDeleteJob} color="primary">
-            Gỡ bài đăng
-          </Button>
+          {currentReport.status === 0 && <>
+            <Button onClick={() => handleIgnoreReport(currentReport)} color="primary">
+              Bỏ qua
+            </Button>
+            <Button onClick={handleOpenDeleteJob} color="primary">
+              Gỡ bài đăng
+            </Button>
+          </>}
+          {
+            currentReport.status !== 0 &&
+            <Button onClick={handleUndo} color="primary">
+              Hoàn tác
+            </Button>
+          }
         </DialogActions>
         <DialogContent>
-          <JobDescription report={report} />
+          <JobDescription report={currentReport} />
         </DialogContent>
       </Dialog>
       <Dialog fullWidth aria-labelledby="customized-dialog-title" open={openDelete}>
@@ -169,16 +231,34 @@ export default function AdminReportMng(props) {
             fullWidth
             multiline
             rows={4}
-            value={report ? report.reason : undefined}
+            value={currentReport ? currentReport.reason : undefined}
             required
           />
         </DialogContent>
         <DialogActions>
           <Button onClick={cancelDelete} autoFocus color="primary">
-            Cancel
+            Không
           </Button>
-          <Button onClick={handleDeleted} autoFocus color="primary">
-            OK
+          <Button onClick={() => handleDeletedJob(currentReport)} autoFocus color="primary">
+            Có
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <Dialog fullWidth aria-labelledby="customized-dialog-title" open={openUndo}>
+        <DialogTitle id="customized-dialog-title">
+          Thông báo
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography gutterBottom>
+            Bạn có đang muốn huỷ thao tác này?
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCancelUndo} autoFocus color="primary">
+            Không
+          </Button>
+          <Button onClick={() => backToPending(currentReport)} autoFocus color="primary">
+            Có
           </Button>
         </DialogActions>
       </Dialog>
