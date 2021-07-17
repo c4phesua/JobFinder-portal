@@ -18,12 +18,12 @@ import {
     Tooltip,
     Chip,
 } from '@material-ui/core';
-import MockupData from '../helper/MockupData';
+import MockupData from '../../helper/MockupData';
 import { Visibility } from '@material-ui/icons';
 import React from 'react';
-import { IOSSwitch } from "./IosSwitch";
+import { IOSSwitch } from "../IosSwitch";
 import TextField from "@material-ui/core/TextField";
-import ViewJob from './Admin/JobDesc2';
+import ViewJob from './JobDesc2';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 

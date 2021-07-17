@@ -20,11 +20,11 @@ import {
   Typography,
   TextField,
 } from '@material-ui/core';
-import MockupData from '../helper/MockupData';
-import { newTab } from "../utils/Routes";
+import MockupData from '../../helper/MockupData';
+import { newTab } from "../../utils/Routes";
 import React from "react";
 import { Visibility } from '@material-ui/icons';
-import JobDescription from './Admin/JobDesc';
+import JobDescription from './JobDesc';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 

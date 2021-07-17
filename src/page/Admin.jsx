@@ -3,7 +3,7 @@ import CompanyProfile from "../component/HrProfile";
 import {useStylesJob} from '../utils/UtilsFunc';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import VerticalAdminTabs from "../component/AdminTab";
+import VerticalAdminTabs from "../component/Admin/AdminTab";
 import Title from "../component/Title";
 
 export default function AdminManager(){

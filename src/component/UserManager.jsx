@@ -22,36 +22,25 @@ import {
     Tooltip
 } from '@material-ui/core';
 import MockupData from '../helper/MockupData';
-import { newTab } from "../utils/Routes";
 import React from "react";
 import { ColorButtonUnban, ColorButton } from '../utils/UtilsFunc';
-import { IOSSwitch } from "./IosSwitch";
+import { Visibility } from '@material-ui/icons';
 
 
 
 export default function UserManager(props) {
-    var initState = {}
-    for (const user of MockupData.user) {
-        initState[user.employee_id.toString()] = true
-    }
-    const [switchState, setSwitchState] = React.useState(initState);
+   
 
-    const handleLinkClick = (event) => {
-        newTab(event.target.name);
+    const handleClickViewStudent = (student) => {
+
     }
 
     const [openDelete, setOpenDelete] = React.useState(false);
-    const handleClickOpenDelete = (job) => {
-        setOpenDelete(true);
-    };
 
     const handleCloseDelete = () => {
         setOpenDelete(false);
     };
-    const handleChange = (event) => {
-        console.log(event.target.name)
-        setSwitchState({ ...switchState, [event.target.name]: event.target.checked });
-    };
+   
 
     return (
         <Card {...props}>
@@ -81,15 +70,15 @@ export default function UserManager(props) {
                                         </Tooltip>
                                     </TableCell>
                                     <TableCell>
-                                        Phân loại
+                                        Trạng thái
                                     </TableCell>
                                     <TableCell>
-                                        Trạng thái
+                                        Chi tiết
                                     </TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {MockupData.user.map((applicants, index) => (
+                                {MockupData.user.map((student, index) => (
                                     <TableRow
                                         hover
                                     >
@@ -97,19 +86,20 @@ export default function UserManager(props) {
                                             {index}
                                         </TableCell>
                                         <TableCell>
-                                            <Link component="button" onClick={handleLinkClick} name={'/profile/' + applicants.employee_id}>
-                                                {applicants.employee_name}
-                                            </Link>
+                                            {student.employee_name}
                                         </TableCell>
                                         <TableCell>
-                                            {applicants.apply_date}
+                                            {student.apply_date}
                                         </TableCell>
                                         <TableCell>
-                                            {applicants.role}
+                                            {student.status}
                                         </TableCell>
                                         <TableCell>
-                                        <IOSSwitch checked={switchState[applicants.employee_id.toString()]}
-                                                    onChange={handleChange} name={applicants.employee_id.toString()} />
+                                        <TableCell>
+                                                <IconButton onClick={() => handleClickViewStudent()}>
+                                                    <Visibility />
+                                                </IconButton>
+                                            </TableCell>
                                         </TableCell>
                                     </TableRow>
                                 ))}

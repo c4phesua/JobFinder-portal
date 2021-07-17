@@ -7,7 +7,7 @@ import Box from '@material-ui/core/Box';
 import { Grid } from "@material-ui/core";
 import AdminManageJobs from "./AdminManageJobs";
 import Activity from "./ActivityTrack";
-import UserManager from "./UserManager";
+import UserManager from "../UserManager";
 import AdminReportMng from './AdminReportMng';
 
 function TabPanel(props) {

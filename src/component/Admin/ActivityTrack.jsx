@@ -21,8 +21,8 @@ import {
     TableSortLabel,
     Tooltip
 } from '@material-ui/core';
-import MockupData from '../helper/MockupData';
-import {newTab} from "../utils/Routes";
+import MockupData from '../../helper/MockupData';
+import {newTab} from "../../utils/Routes";
 import React from "react";
 
 
