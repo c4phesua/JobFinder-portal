@@ -18,12 +18,12 @@ import {
     Tooltip,
     Chip,
 } from '@material-ui/core';
-import MockupData from '../helper/MockupData';
+import MockupData from '../../helper/MockupData';
 import { Visibility } from '@material-ui/icons';
 import React from 'react';
-import { IOSSwitch } from "./IosSwitch";
+import { IOSSwitch } from "../IosSwitch";
 import TextField from "@material-ui/core/TextField";
-import ViewJob from './Admin/JobDesc2';
+import ViewJob from './JobDesc2';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
@@ -72,7 +72,7 @@ export default function AdminManageJobs() {
             )
         }
         return (
-            <Chip label="Đã gỡ" color="secondary" />
+            <Chip className="red-chip" label="Đã gỡ" />
         );
     }
 
@@ -183,7 +183,7 @@ export default function AdminManageJobs() {
                                     variant="outlined"
                                     margin="normal"
                                     required
-                                    label="Lý do xóa"
+                                    label="Lý do gỡ"
                                     fullWidth
                                     multiline
                                     rows={4}

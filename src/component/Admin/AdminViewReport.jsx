@@ -5,7 +5,7 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Select from '@material-ui/core/Select';
 import FormControl from '@material-ui/core/FormControl';
-import { useStylesApply } from '../utils/UtilsFunc';
+import { useStylesApply } from '../../utils/UtilsFunc';
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import { KeyboardDatePicker, MuiPickersUtilsProvider } from '@material-ui/pickers';

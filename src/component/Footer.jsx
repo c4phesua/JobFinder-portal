@@ -7,6 +7,8 @@ import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@material-ui/core";
 import Report from "./Report";
+import { currentPath } from '../utils/Routes';
+import RouteConstants from '../utils/RouteConstants';
 
 function Copyright() {
     return (
@@ -77,6 +79,10 @@ export default function Footer() {
             description: [{content: 'Điều khoản bảo mật', url: mockFunction}, {content: 'Điều khoản sử dụng', url: mockFunction}],
         },
     ];
+
+    if (currentPath() === RouteConstants.ADMIN) {
+        return (null);
+    }
     return (
         <React.Fragment>
             {/* Footer */}

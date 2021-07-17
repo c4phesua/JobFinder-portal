@@ -3,11 +3,12 @@ import CompanyProfile from "../component/HrProfile";
 import {useStylesJob} from '../utils/UtilsFunc';
 import Paper from '@material-ui/core/Paper';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import VerticalAdminTabs from "../component/AdminTab";
+import VerticalAdminTabs from "../component/Admin/AdminTab";
 import Title from "../component/Title";
 
 export default function AdminManager(){
     const classes = useStylesJob();
+    document.title = "JobFinder - Administrator";
     return (
         <>
             {/* <Helmet>
@@ -17,7 +18,7 @@ export default function AdminManager(){
             <CssBaseline/>
             <main className={classes.layout}>
                 <Paper className={classes.paper} style={{marginBottom:'0.5rem'}}>
-                    <Container maxWidth={false}>
+                    <Container maxWidth={true}>
                         <Grid
                             container
                             spacing={3}

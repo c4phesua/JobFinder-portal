@@ -1272,27 +1272,27 @@ var data_home_page = {
     ],
 
     WORK_TYPE: [
-        {title: 'Tất cả',},
-        {title: 'Bán hàng',},
-        {title: 'Thời vụ',},
-        {title: 'Công nghệ cao',},
-        {title: 'Khác',},
+        { title: 'Tất cả', },
+        { title: 'Bán hàng', },
+        { title: 'Thời vụ', },
+        { title: 'Công nghệ cao', },
+        { title: 'Khác', },
     ],
 
     WORK_LEVEL: [
-        {title: 'Tất cả',},
-        {title: 'Sinh viên/thực tập',},
-        {title: 'Mới tốt nghiệp',},
-        {title: 'Nhân viên',},
-        {title: 'Khác',},
+        { title: 'Tất cả', },
+        { title: 'Sinh viên/thực tập', },
+        { title: 'Mới tốt nghiệp', },
+        { title: 'Nhân viên', },
+        { title: 'Khác', },
     ],
 
     SALARY_LEVEL: [
-        {title: 'Tất cả',},
-        {title: '< 3,000,000 VND',},
-        {title: '3,000,000 - 5,000,000 VND',},
-        {title: '5,000,000 - 8,000,000 VND',},
-        {title: '> 8,000,000 VND',},
+        { title: 'Tất cả', },
+        { title: '< 3,000,000 VND', },
+        { title: '3,000,000 - 5,000,000 VND', },
+        { title: '5,000,000 - 8,000,000 VND', },
+        { title: '> 8,000,000 VND', },
     ]
 
 };
@@ -1546,14 +1546,14 @@ var student_user = {
             salary: "2,500,000",
             company_address: "Quận 4, thành phố Hồ Chí Minh",
             description: ["• Quán cafe mình quán nhỏ nên cần 1 bạn nữ chịu khó muốn làm thêm.",
-                        "• Nhiệm vụ chỉ phục vụ với rửa ly.",
-                        "• Làm từ 17h30 tới 22h30(5 tiếng)"],
+                "• Nhiệm vụ chỉ phục vụ với rửa ly.",
+                "• Làm từ 17h30 tới 22h30(5 tiếng)"],
             require: ["• Các bạn học sinh, sinh viên đủ 18 tuổi trở lên có khả năng làm từ 24h/ tuần trở lên (tương đương 4-5 ca làm việc/ tuần, mỗi ca 5-6 tiếng).",
-                        "• Nhanh nhẹn, hoạt bát, siêng năng, tính tình trung thực, nắm bắt vấn đề nhanh",
-                        "• Sức khỏe tốt, siêng năng, chủ động trong công việc."],
-            benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
-                        "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
-            date_create:"20/06/2021",
+                "• Nhanh nhẹn, hoạt bát, siêng năng, tính tình trung thực, nắm bắt vấn đề nhanh",
+                "• Sức khỏe tốt, siêng năng, chủ động trong công việc."],
+            benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.", "• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
+                "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
+            date_create: "20/06/2021",
             duration: "20/08/2021",
             status: true,
             email: "antran1212@gmail.com",
@@ -1602,8 +1602,8 @@ var employees = [
 
 var user_manager = [
     {
-        employee_id: 1,
-        employee_name: "Nguyễn văn A",
+        id: 0,
+        employee_name: "Nguyễn Trí Nhân",
         apply_date: "21/03/2021",
         role: "Sinh viên",
         status: true,
@@ -1613,35 +1613,38 @@ var user_manager = [
         phone: "0123456789",
         email: "nhanntse140284@fpt.edu.vn",
         languages: "",
+        school: "Đại học FPT TPHCM",
         about: "",
     },
     {
-        employee_id: 2,
-        employee_name: "Nguyễn văn A",
-        apply_date: "22/03/2021",
+        id: 1,
+        employee_name: "Nguyễn Văn A",
+        apply_date: "21/03/2021",
         role: "Sinh viên",
-        status: true
+        status: true,
+        username: "a.nguyen@bku.edu.vn",
+        fullname: "Nguyễn Văn A",
+        address: "Quận 1, Thành Phố Hồ Chí Minh",
+        phone: "0123456789",
+        email: "a.nguyen@bku.edu.vn",
+        languages: "Tiếng Anh",
+        school: "Đại học Bách Khoa TPHCM",
+        about: "",
     },
     {
-        employee_id: 3,
-        employee_name: "The coffee house",
-        apply_date: "01/01/2021",
-        role: "Nhà tuyển dụng",
-        status: true
-    },
-    {
-        employee_id: 4,
-        employee_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
-        apply_date: "02/03/2021",
-        role: "Nhà tuyển dụng",
-        status: true
-    },
-    {
-        employee_id: 5,
-        employee_name: "Cty TNHH vòng tròn đỏ",
-        apply_date: "02/04/2021",
-        role: "Nhà tuyển dụng",
-        status: true
+        id: 2,
+        employee_name: "Trần Thị H",
+        apply_date: "21/03/2021",
+        role: "Sinh viên",
+        status: true,
+        username: "tranthih@hutech.edu.vn",
+        fullname: "Trần Thị H",
+        address: "Quận 12, Thành Phố Hồ Chí Minh",
+        phone: "0123456789",
+        email: "tranthih@hutech.edu.vn",
+        languages: "",
+        school: "Đại học công nghệ TPHCM",
+        about: "",
     }
 ]
 
@@ -1712,22 +1715,117 @@ var activities = [
 
 var report_data = [
     {
+        id: 0,
         username: "Nguyên Văn A",
         description: "Bài đăng tuyển không rõ ràng",
         job_id: "19",
         reason: "Công ty không ghi đầy đủ địa chỉ văn phòng, gây khó khăn cho việc tìm kiếm",
-        date: "13/05/2021"
+        date: "13/05/2021",
+        status: 0,
     },
     {
+        id: 1,
         username: "Trần Thị H",
         description: "Công ty đăng tuyển không đúng với nội dung thực tế",
         job_id: "21",
         reason: "Công ty đăng tuyển ở gò vấp nhưng lúc hẹn chỗ phỏng vấn lại ở Tân Bình," +
             "có vẻ như công ty đã chuyển văn phòng nhưng chưa cập nhật lại thông tin",
-        date: "20/05/2021"
+        date: "20/05/2021",
+        status: 0,
     }
 ]
 
+var companies_data = [
+    {
+        id: 0,
+        company_name: "The coffee house",
+        image_link: "https://rubee.com.vn/admin/webroot/upload/image/images/tin-tuc/the-coffee-house-logo-2.jpg",
+        company_address: "quận Tân Bình, thành phố Hồ Chí Minh",
+        date_create: "10/06/2021",
+        status: true,
+        email: "hi@thecoffeehouse.vn",
+        phone: "02871078079",
+        address: "88 Cao Thắng, Phường 4, Quận 3, Tp.HCM"
+    },
+    {
+        id: 1,
+        company_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
+        image_link: "https://cdn.brvn.vn/news/480px/2013/masanhuydongvon0_1373616909.jpg",
+        company_address: " MPlaza, 39 Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh",
+        date_create: "01/06/2021",
+        status: true,
+        email: "info@masan.com.vn",
+        phone: "19007911",
+        address: "MPlaza, 39 Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh"
+    },
+    {
+        id: 2,
+        company_name: "Công Ty Tnhh A.N Sài Gòn Group",
+        image_link: "https://cdn1.timviecnhanh.com/images/default/2021/06/18/images/162400169835.jpeg",
+        company_address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh",
+        date_create: "18/06/2021",
+        status: true,
+        email: "about@saigoncoop.com.vn",
+        phone: "19006564",
+        address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh"
+    },
+    {
+        id: 3,
+        company_name: "CÔNG TY CP PIZZA NGON",
+        image_link: "https://cdn1.timviecnhanh.com/asset/home/img/employer/5aa88868f0846_1520994408.png",
+        company_address: "Tòa nhà Lottery Tower - Lầu 10, 77 Trần Nhân Tôn, Phường 9, Quận 5, HCM",
+        date_create: "19/06/2021",
+        status: true,
+        email: "pizza.ngon@gmail.com",
+        phone: "19007272",
+        address: "Tòa nhà Lottery Tower - Lầu 10, 77 Trần Nhân Tôn, Phường 9, Quận 5, HCM"
+    },
+    {
+        id: 4,
+        company_name: "TT Trực Tuyến Workonline 24H",
+        image_link: "https://cdn1.timviecnhanh.com/asset/home/img/employer/5ebcabed03b02_1589423085.jpg",
+        company_address: "Quận 3, thành phố Hồ Chí Minh",
+        date_create: "19/06/2021",
+        status: true,
+        email: "trinhtran.manager@gmail.com",
+        phone: "0127898264",
+        address: "Quận 3, thành phố Hồ Chí Minh"
+    },
+    {
+        id: 5,
+        company_name: "Công Ty Tnhh Ministop Việt Nam",
+        image_link: "https://cdn1.timviecnhanh.com/images/default/2021/06/18/images/162400169835.jpeg",
+        company_address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh",
+        date_create: "20/06/2021",
+        status: true,
+        email: "hi@ministop.com",
+        phone: "19004546",
+        address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh"
+    },
+    {
+        id: 6,
+        company_name: "Siêu Thị Big C",
+        image_link: "https://images.glints.com/unsafe/glints-dashboard.s3.amazonaws.com/company-logo/18158268c55b328c797f859b5fc9add6.png",
+        company_address: "Hồ Chí Minh, Thành phố Hồ Chí Minh",
+        date_create: "20/06/2021",
+        status: true,
+        email: "info@bigc.com",
+        phone: "19001864",
+        address: "Hồ Chí Minh, Thành phố Hồ Chí Minh"
+    },
+    {
+        id: 7,
+        company_name: "Cafe tại Hồ Chí Minh",
+        image_link: "https://thumbs.dreamstime.com/b/homemade-dark-chocolate-biscotti-cookies-almonds-covered-melted-chocolate-cup-coffee-square-format-homemade-dark-101903597.jpg",
+        company_address: "Quận 4, thành phố Hồ Chí Minh",
+        date_create: "20/06/2021",
+        status: true,
+        email: "antran1212@gmail.com",
+        phone: "0962888475",
+        address: "Quận 4, thành phố Hồ Chí Minh"
+    },
+
+]
 var job_types = [
     {
         id: 0,
@@ -1773,5 +1871,6 @@ module.exports = {
     user: user_manager,
     activities,
     report_data,
+    companies_data,
     job_types:job_types,
 };

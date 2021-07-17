@@ -31,7 +31,7 @@ import EditIcon from "@material-ui/icons/Edit";
 export default function Applicants(props) {
     const statusName = ["Chờ duyệt", "Chấp thuận", "Từ chối"]
 
-    const statusColor = ['#636e74', '#00ff00', '#ff0000']
+    const statusColor = ['#636e74', '#008000', '#da3633']
 
     const [statusTmp, setStatusTmp] = React.useState(1);
 

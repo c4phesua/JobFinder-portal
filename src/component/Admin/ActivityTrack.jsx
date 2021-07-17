@@ -21,24 +21,17 @@ import {
     TableSortLabel,
     Tooltip
 } from '@material-ui/core';
-import MockupData from '../helper/MockupData';
-import { newTab } from "../utils/Routes";
+import MockupData from '../../helper/MockupData';
+import {newTab} from "../../utils/Routes";
 import React from "react";
-import { ColorButtonUnban, ColorButton } from '../utils/UtilsFunc';
-import { IOSSwitch } from "./IosSwitch";
 
 
-
-export default function UserManager(props) {
-    var initState = {}
-    for (const user of MockupData.user) {
-        initState[user.employee_id.toString()] = true
-    }
-    const [switchState, setSwitchState] = React.useState(initState);
-
+export default function Activity(props) {
     const handleLinkClick = (event) => {
         newTab(event.target.name);
     }
+
+    const { activities } = MockupData;
 
     const [openDelete, setOpenDelete] = React.useState(false);
     const handleClickOpenDelete = (job) => {
@@ -48,24 +41,22 @@ export default function UserManager(props) {
     const handleCloseDelete = () => {
         setOpenDelete(false);
     };
-    const handleChange = (event) => {
-        console.log(event.target.name)
-        setSwitchState({ ...switchState, [event.target.name]: event.target.checked });
-    };
-
     return (
         <Card {...props}>
             <PerfectScrollbar>
                 <Box>
-                    <TableContainer style={{ maxHeight: 450, minHeight: 450 }}>
+                    <TableContainer style={{maxHeight: 450, minHeight: 450}}>
                         <Table stickyHeader>
                             <TableHead>
                                 <TableRow>
                                     <TableCell>
-                                        ID
+                                        STT
                                     </TableCell>
                                     <TableCell>
                                         Tài khoản
+                                    </TableCell>
+                                    <TableCell>
+                                        Hoạt động
                                     </TableCell>
                                     <TableCell sortDirection="desc">
                                         <Tooltip
@@ -76,20 +67,14 @@ export default function UserManager(props) {
                                                 active
                                                 direction="desc"
                                             >
-                                                Ngày đăng ký
+                                                Thời gian thực hiện
                                             </TableSortLabel>
                                         </Tooltip>
-                                    </TableCell>
-                                    <TableCell>
-                                        Phân loại
-                                    </TableCell>
-                                    <TableCell>
-                                        Trạng thái
                                     </TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {MockupData.user.map((applicants, index) => (
+                                {activities.map((activity, index) => (
                                     <TableRow
                                         hover
                                     >
@@ -97,19 +82,15 @@ export default function UserManager(props) {
                                             {index}
                                         </TableCell>
                                         <TableCell>
-                                            <Link component="button" onClick={handleLinkClick} name={'/profile/' + applicants.employee_id}>
-                                                {applicants.employee_name}
+                                            <Link component="button" onClick={handleLinkClick} name={'/profile/1'}>
+                                                {activity.name}
                                             </Link>
                                         </TableCell>
                                         <TableCell>
-                                            {applicants.apply_date}
+                                            {activity.activity}
                                         </TableCell>
                                         <TableCell>
-                                            {applicants.role}
-                                        </TableCell>
-                                        <TableCell>
-                                        <IOSSwitch checked={switchState[applicants.employee_id.toString()]}
-                                                    onChange={handleChange} name={applicants.employee_id.toString()} />
+                                            {activity.date}
                                         </TableCell>
                                     </TableRow>
                                 ))}

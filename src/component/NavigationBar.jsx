@@ -34,6 +34,9 @@ const onLogoClick = () => {
     if (isHRLoggedin()) {
         goTo(HR_MANAGEMENT)
     }
+    if (isAdminLoggedIn()) {
+        goTo(ADMIN);
+    }
     else {
         goTo(ROOT);
     }
@@ -119,45 +122,47 @@ export default function NavigationBar() {
         { title: 'Tạo bài đăng tuyển', url: HR_CREATEJOB },
         { title: '', url: '#' },
         { title: '', url: '#' }
-    ] : isAdminLoggedIn() ? [] :
+    ] : isAdminLoggedIn() ? null :
         [
             { title: 'Nhà tuyển dụng', url: EMPLOYER },
             { title: !isHrRegistration() ? 'Việc làm' : '', url: JOBS },
-            { title: !isHrRegistration() ? 'Ngành hot' : '', url: ROOT },
+            { title: !isHrRegistration() ? 'Ngành hot' : '', url: DASHBOARD },
             { title: '', url: '#' }
         ];
     const title = 'Job Finder';
 
     return (
         <React.Fragment>
-            <Toolbar component="nav" variant={"dense"} className={classes.toolbarSecondary}>
-                {sections.map((section) => (
-                    <Link
-                        color="inherit"
-                        noWrap
-                        key={section.title}
-                        variant="caption"
-                        href={section.url}
-                        className={classes.toolbarLink}
-                    >
-                        {section.title}
-                    </Link>
-                ))}
-                <div style={{ width: '70%' }} />
-                {(isStudentLoggedIn() || isHRLoggedin()) && <IconButton color={"inherit"} size={"small"}>
-                    <ExitToAppIcon />
-                </IconButton>}
-                {!isAdminLoggedIn() &&
-                    <IconButton color={"inherit"} size={"small"}>
-                        <NotificationsIcon />
-                    </IconButton>
-                }
-                {!isAdminLoggedIn() &&
-                    <IconButton color={"inherit"} size={"small"}>
-                        <LanguageIcon />
-                    </IconButton>
-                }
-            </Toolbar>
+            {sections &&
+                <Toolbar component="nav" variant={"dense"} className={classes.toolbarSecondary}>
+                    {sections.map((section) => (
+                        <Link
+                            color="inherit"
+                            noWrap
+                            key={section.title}
+                            variant="caption"
+                            href={section.url}
+                            className={classes.toolbarLink}
+                        >
+                            {section.title}
+                        </Link>
+                    ))}
+                    <div style={{ width: '70%' }} />
+                    {(isStudentLoggedIn() || isHRLoggedin()) && <IconButton color={"inherit"} size={"small"}>
+                        <ExitToAppIcon onClick={() => goTo(ROOT)}/>
+                    </IconButton>}
+                    {!isAdminLoggedIn() &&
+                        <IconButton color={"inherit"} size={"small"}>
+                            <NotificationsIcon />
+                        </IconButton>
+                    }
+                    {!isAdminLoggedIn() &&
+                        <IconButton color={"inherit"} size={"small"}>
+                            <LanguageIcon />
+                        </IconButton>
+                    }
+                </Toolbar>
+            }
             <Toolbar className={classes.toolbar}>
                 <Button size="small" onClick={onLogoClick}>{title}</Button>
                 <div className={classes.leftMargin} />
