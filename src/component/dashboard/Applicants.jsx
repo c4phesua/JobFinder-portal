@@ -30,6 +30,8 @@ import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 export default function Applicants(props) {
     const statusName = ["Chờ duyệt", "Chấp thuận", "Từ chối"]
 
+    const statusColor = ['#636e74', '#00ff00', '#ff0000']
+
     const [statusTmp, setStatusTmp] = React.useState(1);
 
     const [status, setStatus] = React.useState(1);
@@ -117,7 +119,7 @@ export default function Applicants(props) {
                                                 size="small"
                                                 label={statusName[status - 1]}
                                                 clickable
-                                                color="primary"
+                                                style={{backgroundColor: statusColor[status - 1], color: 'white'}}
                                                 onClick={handleClickOpenDelete}
                                             />
                                         </TableCell>
