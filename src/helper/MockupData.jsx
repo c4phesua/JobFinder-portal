@@ -254,7 +254,7 @@ var data_home_page = {
             address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh"
 
         }, {
-            company_name: "Cafe tại Hồ Chí Minh",
+            company_name: "Quán Cafe Mi Mi",
             image_link: "",
             title: "Nhân viên phục vụ",
             job_type: "Nhân viên cửa hàng",
@@ -1476,7 +1476,8 @@ var student_user = {
                 "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.", "• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create: "10/06/2021",
             duration: "10/08/2021",
-            applied: "20/06/2021"
+            applied: "20/06/2021",
+            status:"seen"
 
         },
         {
@@ -1487,7 +1488,7 @@ var student_user = {
             tag_list: [],
             id_job: 14,
             type: "Bán thời gian",
-            salary: "2,000,000",
+            salary: "2,000,000", 
             company_address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh",
             description: ["• Chào hỏi và phục vụ khách hàng thân thiện, nhanh nhẹn, nhiệt tình",
                 "• Chủ động, nhanh nhẹn trong việc học hỏi.",
@@ -1499,14 +1500,43 @@ var student_user = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            applied: "02/07/2021"
+            applied: "02/07/2021",
+            status:"waiting",
 
-        }
+        },
+        {
+            company_name: "Quán Cafe Mi Mi",
+            image_link: "",
+            title: "Nhân viên phục vụ",
+            job_type: "Nhân viên cửa hàng",
+            tag_list: [],
+            id_job: 10,
+            type: "Bán thời gian",
+            salary: "2,500,000",
+            company_address: "Quận 4, thành phố Hồ Chí Minh",
+            description: ["• Quán cafe mình quán nhỏ nên cần 1 bạn nữ chịu khó muốn làm thêm.",
+                        "• Nhiệm vụ chỉ phục vụ với rửa ly.",
+                        "• Làm từ 17h30 tới 22h30(5 tiếng)"],
+            require: ["• Các bạn học sinh, sinh viên đủ 18 tuổi trở lên có khả năng làm từ 24h/ tuần trở lên (tương đương 4-5 ca làm việc/ tuần, mỗi ca 5-6 tiếng).",
+                        "• Nhanh nhẹn, hoạt bát, siêng năng, tính tình trung thực, nắm bắt vấn đề nhanh",
+                        "• Sức khỏe tốt, siêng năng, chủ động trong công việc."],
+            benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
+                        "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người." ],
+            date_create:"20/06/2021",
+            duration: "20/08/2021",
+            status: "hoạt động",
+            email: "antran1212@gmail.com",
+            phone: "0962888475",
+            address: "Quận 4, thành phố Hồ Chí Minh",
+            applied: "03/07/2021",
+            status:"success"
+
+        },
     ],
     job_seen: "0",
     job_approve: [
         {
-            company_name: "Cafe tại Hồ Chí Minh",
+            company_name: "Quán Cafe Mi Mi",
             image_link: "",
             title: "Nhân viên phục vụ",
             job_type: "Nhân viên cửa hàng",
@@ -1796,6 +1826,37 @@ var companies_data = [
     },
 
 ]
+var job_types = [
+    {
+        id: 0,
+        name: 'Dịch vụ khách hàng',
+    },
+    {
+        id: 1,
+        name: 'Kinh doanh và bán lẻ',
+    },
+    {
+        id: 2,
+        name: 'Kế toán và tài chính',
+    },
+    {
+        id: 3,
+        name: 'Truyền thông, thông tin và viết lách',
+    },
+    {
+        id: 4,
+        name: 'Giao thông vận tải và hậu cần',
+    },
+    {
+        id: 5,
+        name: 'Máy tính và CNTT',
+    },
+    {
+        id: 6,
+        name: 'Giáo dục',
+    }
+]
+
 
 // import vào, đặt const rồi gọi thôi
 
@@ -1811,4 +1872,5 @@ module.exports = {
     activities,
     report_data,
     companies_data,
+    job_types:job_types,
 };
