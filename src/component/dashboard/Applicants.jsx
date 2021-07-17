@@ -2,7 +2,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import {
     Box,
     Button,
-    Card,
+    Card, Chip,
     Dialog,
     DialogActions,
     DialogContent,
@@ -28,6 +28,17 @@ import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
 
 
 export default function Applicants(props) {
+    const statusName = ["Chờ duyệt", "Chấp thuận", "Từ chối"]
+
+    const [statusTmp, setStatusTmp] = React.useState(1);
+
+    const [status, setStatus] = React.useState(1);
+
+    const handleStatusTmpOnchange = (event) => {
+        setStatusTmp(event.target.value)
+        console.log(event.target.value)
+    }
+
     const handleLinkClick = (event) => {
         newTab(event.target.name);
     }
@@ -37,7 +48,12 @@ export default function Applicants(props) {
         setOpenDelete(true);
     };
 
-    const handleCloseDelete = () => {
+    const handleCloseDelete = (event) => {
+        console.log(event)
+        if (event === 1){
+            setStatus(statusTmp)
+        }
+        setStatusTmp(1);
         setOpenDelete(false);
     };
     return (
@@ -73,9 +89,6 @@ export default function Applicants(props) {
                                     <TableCell>
                                         Trạng thái
                                     </TableCell>
-                                    <TableCell>
-                                        Xóa
-                                    </TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -100,19 +113,19 @@ export default function Applicants(props) {
                                             {applicants.apply_date}
                                         </TableCell>
                                         <TableCell>
-                                            <Select
-                                                value={applicants.status}
-                                            >
-                                                <MenuItem value={1}>Chờ Duyệt</MenuItem>
-                                                <MenuItem value={2}>Chấp Thuận</MenuItem>
-                                                <MenuItem value={3}>Từ Chối</MenuItem>
-                                            </Select>
+                                            <Chip
+                                                size="small"
+                                                label={statusName[status - 1]}
+                                                clickable
+                                                color="primary"
+                                                onClick={handleClickOpenDelete}
+                                            />
                                         </TableCell>
-                                        <TableCell>
-                                            <IconButton onClick={handleClickOpenDelete}>
-                                                <DeleteForeverIcon style={{ color: 'red' }} />
-                                            </IconButton>
-                                        </TableCell>
+                                        {/*<TableCell>*/}
+                                        {/*    <IconButton onClick={handleClickOpenDelete}>*/}
+                                        {/*        <DeleteForeverIcon style={{ color: 'red' }} />*/}
+                                        {/*    </IconButton>*/}
+                                        {/*</TableCell>*/}
                                     </TableRow>
                                 ))}
                             </TableBody>
@@ -135,20 +148,25 @@ export default function Applicants(props) {
                 aria-describedby="alert-dialog-slide-description"
             >
                 <DialogTitle id="alert-dialog-slide-title">
-                    Bạn có muốn xóa bài ứng tuyển này?
+                    Thay đổi trạng thái bài ứng tuyển
                 </DialogTitle>
-                <DialogContent>
-                    <DialogContentText id="alert-dialog-slide-description">
-                        Nội dụng đã xóa sẽ không thể khôi phục lại.
-                        Chọn "Xóa" để tiếp tục, "Hủy" để dừng yêu cầu.
-                    </DialogContentText>
+                <DialogContent >
+                    <Select
+                        fullWidth={true}
+                        onChange={handleStatusTmpOnchange}
+                        value={statusTmp}
+                    >
+                        <MenuItem value={1}>Chờ Duyệt</MenuItem>
+                        <MenuItem value={2}>Chấp Thuận</MenuItem>
+                        <MenuItem value={3}>Từ Chối</MenuItem>
+                    </Select>
                 </DialogContent>
                 <DialogActions>
-                    <Button onClick={handleCloseDelete} color="primary">
+                    <Button onClick={() => handleCloseDelete(0)} color="primary">
                         Hủy
                     </Button>
-                    <Button onClick={handleCloseDelete} color="primary">
-                        Xóa
+                    <Button onClick={() => handleCloseDelete(1)} color="primary">
+                        Đồng ý
                     </Button>
                 </DialogActions>
             </Dialog>
