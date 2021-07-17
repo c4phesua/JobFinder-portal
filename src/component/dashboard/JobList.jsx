@@ -2,13 +2,13 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 import {
     Box,
     Button,
-    Card,
+    Card, Chip,
     Dialog,
     DialogActions,
     DialogContent,
     DialogContentText,
     DialogTitle,
-    IconButton,
+    IconButton, MenuItem, Select,
     Table,
     TableBody,
     TableCell,
@@ -28,38 +28,50 @@ import { newTab } from "../../utils/Routes";
 
 
 export default function Applicants() {
+    const statusName = ["Đang hoạt động", "Đã gỡ"]
+
+    const statusColor = ['#00ff00', '#ff0000']
+
+
     const [openEdit, setOpenEdit] = React.useState(false);
     const [openDelete, setOpenDelete] = React.useState(false);
     const [jobEdit, setJobEdit] = React.useState();
+    const [idTmp, setIdTmp] = React.useState();
     const jobs = MockupData.data_manage_hr_page.JOB_LIST;
     var initState = {}
     for (const job of jobs) {
-        initState[job.id_job.toString()] = true
+        initState[job.id_job] = 0
     }
+
+    const [switchState, setSwitchState] = React.useState(initState);
+
+    console.log(switchState)
 
     const onClickOpenCreate = () => {
         newTab('/hr/create')
     }
 
-    const handleClickOpenEdit = (job) => {
+    const handleClickOpenEdit = (job, index) => {
         setOpenEdit(true);
         setJobEdit(job);
+        setIdTmp(index);
+        console.log(switchState[idTmp])
     };
 
-    const handleCloseEdit = () => {
+    const handleCloseEdit = (value) => {
+        console.log("edit status debug: " + value)
         setOpenEdit(false);
+        setSwitchState({ ...switchState, [idTmp]: value });
     };
 
-    const handleClickOpenDelete = (job) => {
-        setOpenDelete(true);
-    };
-
-    const handleCloseDelete = () => {
+    const handleCloseDelete = (event) => {
         setOpenDelete(false);
     };
-    const [switchState, setSwitchState] = React.useState(initState);
 
-    console.log(switchState)
+    const handleClickOpenDelete = (index) => {
+        setIdTmp(index)
+        setOpenDelete(true);
+    };
 
     const handleChange = (event) => {
         console.log(event.target.name)
@@ -102,13 +114,10 @@ export default function Applicants() {
                                         <TableCell>
                                             Sửa
                                         </TableCell>
-                                        <TableCell>
-                                            Xóa
-                                        </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {jobs.map((job) => (
+                                    {jobs.map((job, index) => (
                                         <TableRow
                                             hover
                                             key={job.title}
@@ -126,24 +135,24 @@ export default function Applicants() {
                                                 {job.date_create}
                                             </TableCell>
                                             <TableCell>
-                                                {/*<Chip*/}
-                                                {/*    color="primary"*/}
-                                                {/*    label={job.status}*/}
-                                                {/*    size="small"*/}
-                                                {/*/>*/}
-                                                <IOSSwitch checked={switchState[job.id_job.toString()]}
-                                                    onChange={handleChange} name={job.id_job.toString()} />
+                                                <Chip
+                                                    size="small"
+                                                    label={statusName[switchState[job.id_job]]}
+                                                    style={{backgroundColor: statusColor[switchState[job.id_job]], color: 'white'}}
+                                                />
+                                                {/*<IOSSwitch checked={switchState[job.id_job.toString()]}*/}
+                                                {/*    onChange={handleChange} name={job.id_job.toString()} />*/}
                                             </TableCell>
                                             <TableCell>
-                                                <IconButton onClick={() => handleClickOpenEdit(job)}>
+                                                <IconButton onClick={() => handleClickOpenEdit(job, job.id_job)}>
                                                     <EditIcon />
                                                 </IconButton>
                                             </TableCell>
-                                            <TableCell>
-                                                <IconButton onClick={handleClickOpenDelete}>
-                                                    <DeleteForeverIcon style={{ color: 'red' }} />
-                                                </IconButton>
-                                            </TableCell>
+                                            {/*<TableCell>*/}
+                                            {/*    <IconButton onClick={handleClickOpenDelete}>*/}
+                                            {/*        <DeleteForeverIcon style={{ color: 'red' }} />*/}
+                                            {/*    </IconButton>*/}
+                                            {/*</TableCell>*/}
                                         </TableRow>
                                     ))}
                                 </TableBody>
@@ -159,16 +168,22 @@ export default function Applicants() {
                     }}
                 >
                 </Box>
-                <Dialog open={openEdit} onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
+                <Dialog open={openEdit} onClose={() => handleCloseEdit(switchState[idTmp])} aria-labelledby="form-dialog-title">
                     <DialogContent>
                         <EditJob job={jobEdit} status={false} />
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleCloseEdit} color="primary">
+                        <Button onClick={() => handleCloseEdit(switchState[idTmp])} color="primary">
                             Hủy
                         </Button>
-                        <Button onClick={handleCloseEdit} color="primary">
+                        <Button onClick={() => handleCloseEdit(switchState[idTmp])} color="primary">
                             Lưu
+                        </Button>
+                        <Button onClick={() => handleCloseEdit(1)} hidden={switchState[idTmp] === 1} color="primary">
+                            Gỡ bài đăng
+                        </Button>
+                        <Button onClick={() => handleCloseEdit(0)} hidden={switchState[idTmp] === 0} color="primary">
+                            Đăng bài
                         </Button>
                     </DialogActions>
                 </Dialog>
@@ -179,20 +194,16 @@ export default function Applicants() {
                     aria-describedby="alert-dialog-slide-description"
                 >
                     <DialogTitle id="alert-dialog-slide-title">
-                        Bạn có muốn xóa bài đăng tuyển dụng này?
+                        Thay đổi trạng thái bài tuyển dụng
                     </DialogTitle>
                     <DialogContent>
-                        <DialogContentText id="alert-dialog-slide-description">
-                            Nội dụng đã xóa sẽ không thể khôi phục lại.
-                            Chọn "Xóa" để tiếp tục, "Hủy" để dừng yêu cầu.
-                        </DialogContentText>
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={handleCloseDelete} color="primary">
+                        <Button onClick={() => handleCloseDelete(0)} color="primary">
                             Hủy
                         </Button>
-                        <Button onClick={handleCloseDelete} color="primary">
-                            Xóa
+                        <Button onClick={() => handleCloseDelete(1)} color="primary">
+                            Đồng ý
                         </Button>
                     </DialogActions>
                 </Dialog>
