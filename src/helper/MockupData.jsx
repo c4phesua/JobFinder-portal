@@ -1521,7 +1521,7 @@ var student_user = {
                         "• Nhanh nhẹn, hoạt bát, siêng năng, tính tình trung thực, nắm bắt vấn đề nhanh",
                         "• Sức khỏe tốt, siêng năng, chủ động trong công việc."],
             benefit: ["• Chế độ phúc lợi tốt, được thưởng lễ tết.","• Được đào tạo nâng cao nghiệp vụ trong quá trình làm việc.",
-                        "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
+                        "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người." ],
             date_create:"20/06/2021",
             duration: "20/08/2021",
             status: "hoạt động",

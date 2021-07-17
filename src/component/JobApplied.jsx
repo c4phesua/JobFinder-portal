@@ -3,14 +3,13 @@ import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Select from '@material-ui/core/Select';
-import MenuItem from '@material-ui/core/MenuItem';
 import { cardStyle } from '../styleutil/CardStyle';
 import { newTab } from '../utils/Routes';
 import {ColorButton,useStylesJob,linkStyle} from '../utils/UtilsFunc';
 import Grid from '@material-ui/core/Grid';
 import Box from "@material-ui/core/Box";
 import Link from '@material-ui/core/Link';
+import Chip from '@material-ui/core/Chip';
 
 const DEFAULT_LOGO = 'https://s3.amazonaws.com/hoorayapp/emp-company/default-company.jpg';
 
@@ -33,7 +32,7 @@ const Job = (props) => {
   const { job } = props;
   return (
     <Card className={classeCard.root} 
-        style={{borderLeft:'0',borderRight:'0',width:'90%', 
+        style={{borderLeft:'0',borderRight:'0',width:'95%', 
                 marginLeft:'auto',marginRight:'auto',
                 paddingTop:'1rem',paddingBottom:'1rem'}}>
         <Grid container>
@@ -92,14 +91,10 @@ const Job = (props) => {
                             Trạng thái
                         </Box>
                     </Typography>
-                    {job.status == "seen"?<div className="badge badge-info text_dark" >Đã xem hồ sơ</div>
-                    :job.status=="waiting"?<div className="badge badge-warning text_dark" >Đang đợi duyệt</div>
-                    :job.status =="success"?<div className="badge badge-success" >Đã được chấp nhận</div>
-                    :<div className="badge badge-danger" >Đã bị từ chối</div>}
-                    
-                    
-                    
-                    
+                    {job.status == "seen"?<Chip size="small" label="Đã xem hồ sơ" style={{backgroundColor:"#17a2b8",fontWeight:"bold"}} />
+                    :job.status=="waiting"?<Chip size="small" label="Đang đợi duyệt" style={{backgroundColor:"#ffc107",fontWeight:"bold"}} />
+                    :job.status =="success"?<Chip size="small" label="Đã được chấp nhận" style={{backgroundColor:"#28a745",fontWeight:"bold"}} />
+                    :<Chip label="Đã bị từ chối" color="secondary" style={{fontWeight:"bold"}} />}
                     
                 </CardContent>
                 </Grid>
