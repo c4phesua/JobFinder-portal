@@ -82,9 +82,6 @@ export default function AdminReportMng(props) {
                   <TableCell>
                     Nội dung báo cáo
                   </TableCell>
-                  <TableCell>
-                    Chi tiết
-                  </TableCell>
                   <TableCell sortDirection="desc">
                     <Tooltip
                       enterDelay={300}
@@ -97,6 +94,9 @@ export default function AdminReportMng(props) {
                         Thời gian thực hiện
                       </TableSortLabel>
                     </Tooltip>
+                  </TableCell>
+                  <TableCell>
+                    Chi tiết
                   </TableCell>
                 </TableRow>
               </TableHead>
@@ -117,12 +117,12 @@ export default function AdminReportMng(props) {
                       {report.description}
                     </TableCell>
                     <TableCell>
+                      {report.date}
+                    </TableCell>
+                    <TableCell>
                       <IconButton onClick={() => handleOpenReport(report)}>
                         <Visibility />
                       </IconButton>
-                    </TableCell>
-                    <TableCell>
-                      {report.date}
                     </TableCell>
                   </TableRow>
                 ))}

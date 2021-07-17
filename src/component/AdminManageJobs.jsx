@@ -36,9 +36,6 @@ export default function AdminManageJobs() {
     const [jobEdit, setJobEdit] = React.useState();
     const jobs = MockupData.data_home_page.JOB_LIST;
     var initState = {}
-    for (const job of jobs) {
-        initState[job.id_job.toString()] = true
-    }
 
     const handleClickOpenEdit = (job) => {
         setOpenEdit(true);
@@ -97,10 +94,10 @@ export default function AdminManageJobs() {
                                             </Tooltip>
                                         </TableCell>
                                         <TableCell>
-                                            Nội dung
+                                            Trạng thái
                                         </TableCell>
                                         <TableCell>
-                                            Trạng thái
+                                            Chi tiết
                                         </TableCell>
                                     </TableRow>
                                 </TableHead>
@@ -123,13 +120,12 @@ export default function AdminManageJobs() {
                                                 {job.date_create}
                                             </TableCell>
                                             <TableCell>
+                                                {job.status ? 'Hoạt động' : 'Không hoạt động'}
+                                            </TableCell>
+                                            <TableCell>
                                                 <IconButton onClick={() => handleClickOpenEdit(job)}>
                                                     <Visibility />
                                                 </IconButton>
-                                            </TableCell>
-                                            <TableCell>
-                                                <IOSSwitch checked={switchState[job.id_job.toString()]}
-                                                    onChange={handleChange} name={job.id_job.toString()} />
                                             </TableCell>
                                         </TableRow>
                                     ))}
