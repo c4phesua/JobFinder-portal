@@ -20,7 +20,7 @@ var data_home_page = {
                 "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.", "• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create: "10/06/2021",
             duration: "10/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "hi@thecoffeehouse.vn",
             phone: "02871078079",
             address: "88 Cao Thắng, Phường 4, Quận 3, Tp.HCM"
@@ -45,7 +45,7 @@ var data_home_page = {
                 "• Cơ hội thăng tiến nhanh lên các vị trí quản lý với các cửa hàng mới mở hằng tuần.", "• Các chương trình ưu đãi dành cho nhân viên TCH."],
             date_create: "10/06/2021",
             duration: "10/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "hi@thecoffeehouse.vn",
             phone: "02871078079",
             address: "88 Cao Thắng, Phường 4, Quận 3, Tp.HCM"
@@ -70,7 +70,7 @@ var data_home_page = {
                 "• Được làm việc trong môi trường chuyên nghiệp, năng động và hiệu quả.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "01/06/2021",
             duration: "01/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@masan.com.vn",
             phone: "19007911",
             address: "MPlaza, 39 Lê Duẩn, Bến Nghé, Quận 1, Hồ Chí Minh"
@@ -95,7 +95,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "18/06/2021",
             duration: "18/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "about@saigoncoop.com.vn",
             phone: "19006564",
             address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh"
@@ -122,7 +122,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "19/06/2021",
             duration: "19/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "pizza.ngon@gmail.com",
             phone: "19007272",
             address: "Tòa nhà Lottery Tower - Lầu 10, 77 Trần Nhân Tôn, Phường 9, Quận 5, HCM"
@@ -147,7 +147,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "19/06/2021",
             duration: "19/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "pizza.ngon@gmail.com",
             phone: "19007272",
             address: "Tòa nhà Lottery Tower - Lầu 10, 77 Trần Nhân Tôn, Phường 9, Quận 5, HCM"
@@ -170,7 +170,7 @@ var data_home_page = {
                 "• Giờ giấc tự do, chủ động được thời gian làm việc."],
             date_create: "19/06/2021",
             duration: "19/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "trinhtran.manager@gmail.com",
             phone: "0127898264",
             address: "Quận 3, thành phố Hồ Chí Minh"
@@ -196,7 +196,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "hi@ministop.com",
             phone: "19004546",
             address: "Số 85 Đường Số 6, Ấp Tiền Lân, Xã Bà Điểm, Huyện Hóc Môn, Thành phố Hồ Chí Minh"
@@ -222,7 +222,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@bigc.com",
             phone: "19001864",
             address: "Hồ Chí Minh, Thành phố Hồ Chí Minh"
@@ -248,7 +248,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "digiworld.corp@digiworld.com.vn",
             phone: "19003110",
             address: "231 - 233 Lê Thánh Tôn, Quận 1, thành phố Hồ Chí Minh"
@@ -273,7 +273,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "antran1212@gmail.com",
             phone: "0962888475",
             address: "Quận 4, thành phố Hồ Chí Minh"
@@ -298,7 +298,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "tpbank.info@tpbank.com",
             phone: "1900585885",
             address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
@@ -320,7 +320,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "antran1212@gmail.com",
             phone: "0962888475",
             address: "Quận 4, thành phố Hồ Chí Minh"
@@ -343,7 +343,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "antran1212@gmail.com",
             phone: "0962888475",
             address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
@@ -368,7 +368,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@circlek.com.vn",
             phone: "19003110",
             address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
@@ -393,7 +393,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@circlek.com.vn",
             phone: "19003110",
             address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
@@ -418,7 +418,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@circlek.com.vn",
             phone: "19003110",
             address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
@@ -443,7 +443,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@circlek.com.vn",
             phone: "19003110",
             address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
@@ -466,7 +466,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@circlek.com.vn",
             phone: "19003110",
             address: "160 Bùi Thị Xuân, Phường Phạm Ngũ Lão, Quận 1, Tp.HCM"
@@ -492,7 +492,7 @@ var data_home_page = {
                 "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "beemart@gmail.com",
             phone: "19001115",
             address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
@@ -517,7 +517,7 @@ var data_home_page = {
                 "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "ecpay.contact@gmail.com",
             phone: "19007911",
             address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
@@ -542,7 +542,7 @@ var data_home_page = {
                 "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "softone.company@gmail.com",
             phone: "19007780",
             address: "Quận Gò Vấp, Hồ Chí Minh, Thành phố Hồ Chí Minh"
@@ -570,7 +570,7 @@ var data_home_page = {
                 "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "contact@gufoods.com.vn",
             phone: "19001260",
             address: "Quận 12, Hồ Chí Minh, Thành phố Hồ Chí Minh"
@@ -595,7 +595,7 @@ var data_home_page = {
                 "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@lofi.com.vn",
             phone: "19001654",
             address: "Lầu 6 toà nhà GT Building, 403 Nguyễn Thái Bình, Phường 12, Quận Tân Bình, TP. HCM"
@@ -620,7 +620,7 @@ var data_home_page = {
                 "• Cơ hội trải nghiệm thực tế, thực chiến chuyên môn, học tập và làm việc trong môi trường nhiều nhân sự trẻ, năng động. Tham gia vào các hoạt động sinh hoạt đoàn thể...."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "info@lofi.com.vn",
             phone: "19001654",
             address: "Lầu 6 toà nhà GT Building, 403 Nguyễn Thái Bình, Phường 12, Quận Tân Bình, TP. HCM"
@@ -645,7 +645,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "annguyen@gmail.com",
             phone: "0715648797",
             address: "Quận 5, thành phố Hồ Chí Minh"
@@ -670,7 +670,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "trinhtranle@gmail.com",
             phone: "0965264897",
             address: "Quận 9, thành phố Hồ Chí Minh"
@@ -695,7 +695,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "rainbow.cf@gmail.com",
             phone: "0121654789",
             address: "Quận 8, thành phố Hồ Chí Minh"
@@ -720,7 +720,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "namtran011@gmail.com",
             phone: "013254989",
             address: "Quận 1, thành phố Hồ Chí Minh"
@@ -745,7 +745,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "lien.phan@gmail.com",
             phone: "0121486789",
             address: "Quận 2, thành phố Hồ Chí Minh"
@@ -770,7 +770,7 @@ var data_home_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.", "• Có cơ hội thăng tiến cao trong công việc."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "nguyenvi.911@gmail.com",
             phone: "0123456789",
             address: "Quận 12, thành phố Hồ Chí Minh"
@@ -1319,7 +1319,7 @@ var data_manage_hr_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             num: 1
 
         }, {
@@ -1342,7 +1342,7 @@ var data_manage_hr_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             num: 0
 
         }, {
@@ -1365,7 +1365,7 @@ var data_manage_hr_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             num: 0
 
         }, {
@@ -1388,7 +1388,7 @@ var data_manage_hr_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             num: 0
 
         }, {
@@ -1409,7 +1409,7 @@ var data_manage_hr_page = {
                 "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người."],
             date_create: "20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             num: 0
 
         }
@@ -1525,7 +1525,7 @@ var student_user = {
                         "• Ca làm việc linh hoạt Part-time & Full-time phù hợp với lịch học sinh viên/lịch cá nhân của từng người.","• Có cơ hội thăng tiến cao trong công việc."],
             date_create:"20/06/2021",
             duration: "20/08/2021",
-            status: "hoạt động",
+            status: true,
             email: "antran1212@gmail.com",
             phone: "0962888475",
             address: "Quận 4, thành phố Hồ Chí Minh",
@@ -1576,35 +1576,42 @@ var user_manager = [
         employee_name: "Nguyễn văn A",
         apply_date: "21/03/2021",
         role: "Sinh viên",
-        status: 1
+        status: true,
+        username: "nhanntse140284@fpt.edu.vn",
+        fullname: "Nguyễn Trí Nhân",
+        address: "Quận 9, Thành Phố Hồ Chí Minh",
+        phone: "0123456789",
+        email: "nhanntse140284@fpt.edu.vn",
+        languages: "",
+        about: "",
     },
     {
         employee_id: 2,
         employee_name: "Nguyễn văn A",
         apply_date: "22/03/2021",
         role: "Sinh viên",
-        status: 1
+        status: true
     },
     {
         employee_id: 3,
         employee_name: "The coffee house",
         apply_date: "01/01/2021",
         role: "Nhà tuyển dụng",
-        status: 1
+        status: true
     },
     {
         employee_id: 4,
         employee_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
         apply_date: "02/03/2021",
         role: "Nhà tuyển dụng",
-        status: 1
+        status: true
     },
     {
         employee_id: 5,
         employee_name: "Cty TNHH vòng tròn đỏ",
         apply_date: "02/04/2021",
         role: "Nhà tuyển dụng",
-        status: 1
+        status: true
     }
 ]
 
