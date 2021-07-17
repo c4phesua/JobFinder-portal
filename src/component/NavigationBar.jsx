@@ -126,7 +126,7 @@ export default function NavigationBar() {
         [
             { title: 'Nhà tuyển dụng', url: EMPLOYER },
             { title: !isHrRegistration() ? 'Việc làm' : '', url: JOBS },
-            { title: !isHrRegistration() ? 'Ngành hot' : '', url: ROOT },
+            { title: !isHrRegistration() ? 'Ngành hot' : '', url: DASHBOARD },
             { title: '', url: '#' }
         ];
     const title = 'Job Finder';
@@ -149,7 +149,7 @@ export default function NavigationBar() {
                     ))}
                     <div style={{ width: '70%' }} />
                     {(isStudentLoggedIn() || isHRLoggedin()) && <IconButton color={"inherit"} size={"small"}>
-                        <ExitToAppIcon />
+                        <ExitToAppIcon onClick={() => goTo(ROOT)}/>
                     </IconButton>}
                     {!isAdminLoggedIn() &&
                         <IconButton color={"inherit"} size={"small"}>
