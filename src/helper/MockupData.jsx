@@ -1576,35 +1576,42 @@ var user_manager = [
         employee_name: "Nguyễn văn A",
         apply_date: "21/03/2021",
         role: "Sinh viên",
-        status: 1
+        status: true,
+        username: "nhanntse140284@fpt.edu.vn",
+        fullname: "Nguyễn Trí Nhân",
+        address: "Quận 9, Thành Phố Hồ Chí Minh",
+        phone: "0123456789",
+        email: "nhanntse140284@fpt.edu.vn",
+        languages: "",
+        about: "",
     },
     {
         employee_id: 2,
         employee_name: "Nguyễn văn A",
         apply_date: "22/03/2021",
         role: "Sinh viên",
-        status: 1
+        status: true
     },
     {
         employee_id: 3,
         employee_name: "The coffee house",
         apply_date: "01/01/2021",
         role: "Nhà tuyển dụng",
-        status: 1
+        status: true
     },
     {
         employee_id: 4,
         employee_name: "CÔNG TY CP HÀNG TIÊU DÙNG MASAN",
         apply_date: "02/03/2021",
         role: "Nhà tuyển dụng",
-        status: 1
+        status: true
     },
     {
         employee_id: 5,
         employee_name: "Cty TNHH vòng tròn đỏ",
         apply_date: "02/04/2021",
         role: "Nhà tuyển dụng",
-        status: 1
+        status: true
     }
 ]
 
