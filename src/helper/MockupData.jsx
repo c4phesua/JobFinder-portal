@@ -1731,27 +1731,31 @@ var report_data = [
 var job_types = [
     {
         id: 0,
-        name: 'Dịch vụ',
+        name: 'Dịch vụ khách hàng',
     },
     {
         id: 1,
-        name: 'Bán hàng',
+        name: 'Kinh doanh và bán lẻ',
+    },
+    {
+        id: 2,
+        name: 'Kế toán và tài chính',
     },
     {
         id: 3,
-        name: 'Bán lẻ',
+        name: 'Truyền thông, thông tin và viết lách',
     },
     {
         id: 4,
-        name: 'Kế toán',
+        name: 'Giao thông vận tải và hậu cần',
     },
     {
         id: 5,
-        name: 'Kho vận',
+        name: 'Máy tính và CNTT',
     },
     {
         id: 6,
-        name: 'Sản xuất',
+        name: 'Giáo dục',
     }
 ]
 
@@ -1768,5 +1772,6 @@ module.exports = {
     company: company,
     user: user_manager,
     activities,
-    report_data
+    report_data,
+    job_types:job_types,
 };

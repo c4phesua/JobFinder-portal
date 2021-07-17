@@ -12,14 +12,25 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import { KeyboardDatePicker, MuiPickersUtilsProvider} from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
+import MockupData from '../helper/MockupData';
 
 
 export default function CreateJob() {
+  let job_types = MockupData.job_types;
   const classes = useStylesApply();
   document.title = "Job Finder - Tạo công việc";
   const [employmentType, setEmploymentType] = React.useState('');
+  const [state, setState] = React.useState({showField:false,value:0});
   const handleChange = (event) => {
     setEmploymentType(event.target.value);
+  };
+  const handleJobTypeChange = (event) => {
+      const {value} = event.target;
+    
+      setState({
+        showField: value == job_types.length,
+        value: value
+      });
   };
   const date = new Date();
   date.setTime(date.getTime() + 24 * 3600 * 1000);
@@ -28,6 +39,7 @@ export default function CreateJob() {
   const handleDateChange = (date) => {
     setSelectedDate(date);
   };
+
   return (
     <React.Fragment>
       <CssBaseline />
@@ -50,7 +62,7 @@ export default function CreateJob() {
               </Grid>
           </Grid> */}
           <React.Fragment>
-        <form className={classes.form} noValidate={false}>
+        <form className={classes.form} noValidate={true}>
             <Grid container spacing={1}>
                 <Grid item xs={12}>
                     <TextField
@@ -62,6 +74,37 @@ export default function CreateJob() {
                         label="Tên vị trí"
                         fullWidth
                     />
+                </Grid>
+                <Grid item xs={12}>
+                    <FormControl className={classes.formControl} 
+                        margin="normal" required style={{width:"98%"}}>
+                        <InputLabel id="simple-select-label">Ngành nghề:</InputLabel>
+                        <Select
+                        labelId="simple-select-label"
+                        id="jobType"
+                        value={state.value}
+                        onChange={handleJobTypeChange}
+                        fullWidth
+                        >
+                        {
+                        job_types.map((item) => {
+                            return <MenuItem value={item.id}>{item.name}</MenuItem>
+                        })
+                        }
+                        
+                        <MenuItem value={job_types.length}>Khác</MenuItem>
+                        </Select>
+                    </FormControl>
+                    {state.showField ? <TextField
+                        variant="outlined"
+                        margin="normal"
+                        required
+                        id="jobTypeMore"
+                        name="jobTypeMore"
+                        label="Ngành nghề khác"
+                        fullWidth
+                    />:null}
+                    
                 </Grid>
                 
                 <Grid item xs={12}>
@@ -77,15 +120,16 @@ export default function CreateJob() {
                 </Grid>
                 <Grid item xs={6}>
                     <FormControl className={classes.formControl}>
-                        <InputLabel id="simple-select-label">Loại việc làm:</InputLabel>
+                        <InputLabel id="simple-select-label">Loại việc làm * :</InputLabel>
                         <Select
                         labelId="simple-select-label"
                         id="employmentType"
+                        required
                         value={employmentType}
                         onChange={handleChange}
                         >
                         <MenuItem value="ft">Full-time</MenuItem>
-                        <MenuItem value="pt">Part-tme</MenuItem>
+                        <MenuItem value="pt">Part-time</MenuItem>
                         </Select>
                     </FormControl>
                 </Grid>
@@ -97,7 +141,7 @@ export default function CreateJob() {
                     format="MM/dd/yyyy"
                     margin="normal"
                     id="date-picker-dialog"
-                    label="Ngày hết hạn"
+                    label="Ngày hết hạn *"
                     value={selectedDate}
                     onChange={handleDateChange}
                     KeyboardButtonProps={{
