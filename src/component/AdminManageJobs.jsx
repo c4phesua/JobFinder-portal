@@ -6,7 +6,6 @@ import {
     Dialog,
     DialogActions,
     DialogContent,
-    DialogContentText,
     DialogTitle,
     IconButton,
     Table,
@@ -16,7 +15,8 @@ import {
     TableHead,
     TableRow,
     TableSortLabel,
-    Tooltip
+    Tooltip,
+    Chip,
 } from '@material-ui/core';
 import MockupData from '../helper/MockupData';
 import { Visibility } from '@material-ui/icons';
@@ -30,15 +30,12 @@ import { useTheme } from '@material-ui/core/styles';
 
 export default function AdminManageJobs() {
     const theme = useTheme();
+    const jobs = MockupData.data_home_page.JOB_LIST;
     const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
     const [openEdit, setOpenEdit] = React.useState(false);
     const [openDelete, setOpenDelete] = React.useState(false);
-    const [jobEdit, setJobEdit] = React.useState();
-    const jobs = MockupData.data_home_page.JOB_LIST;
-    var initState = {}
-    for (const job of jobs) {
-        initState[job.id_job.toString()] = true
-    }
+    const [jobEdit, setJobEdit] = React.useState([jobs[0]]);
+    const [fullJobs, setFullJobs] = React.useState(jobs);
 
     const handleClickOpenEdit = (job) => {
         setOpenEdit(true);
@@ -57,14 +54,28 @@ export default function AdminManageJobs() {
         setOpenDelete(false);
         setOpenEdit(false);
     };
-    const [switchState, setSwitchState] = React.useState(initState);
 
-    console.log(switchState)
+    const handleRemoveJob = (job) => {
+        job.status = !job.status;
+        const index = fullJobs.findIndex(j => j.id_job === job.id_job);
+        fullJobs[index] = job;
+        setFullJobs(fullJobs);
+        setOpenDelete(false);
+        setOpenEdit(false);
+    }
 
-    const handleChange = (event) => {
-        console.log(event.target.name)
-        setSwitchState({ ...switchState, [event.target.name]: event.target.checked });
-    };
+
+    const renderStatus = (status) => {
+        if (status) {
+            return (
+                <Chip className="green-chip" label="Đang hoạt động" />
+            )
+        }
+        return (
+            <Chip label="Đã gỡ" color="secondary" />
+        );
+    }
+
     return (
         <>
             <Card>
@@ -97,15 +108,15 @@ export default function AdminManageJobs() {
                                             </Tooltip>
                                         </TableCell>
                                         <TableCell>
-                                            Nội dung
+                                            Trạng thái
                                         </TableCell>
                                         <TableCell>
-                                            Trạng thái
+                                            Chi tiết
                                         </TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {jobs.map((job, index) => (
+                                    {fullJobs.map((job, index) => (
                                         <TableRow
                                             hover
                                             key={job.title}
@@ -123,13 +134,12 @@ export default function AdminManageJobs() {
                                                 {job.date_create}
                                             </TableCell>
                                             <TableCell>
+                                                {renderStatus(job.status)}
+                                            </TableCell>
+                                            <TableCell>
                                                 <IconButton onClick={() => handleClickOpenEdit(job)}>
                                                     <Visibility />
                                                 </IconButton>
-                                            </TableCell>
-                                            <TableCell>
-                                                <IOSSwitch checked={switchState[job.id_job.toString()]}
-                                                    onChange={handleChange} name={job.id_job.toString()} />
                                             </TableCell>
                                         </TableRow>
                                     ))}
@@ -146,13 +156,13 @@ export default function AdminManageJobs() {
                     }}
                 >
                 </Box>
-                <Dialog open={openEdit} fullScreen={fullScreen} maxWidth onClose={handleCloseEdit} aria-labelledby="form-dialog-title">
+                <Dialog open={openEdit} fullScreen={fullScreen} maxWidth aria-labelledby="form-dialog-title">
                     <DialogActions>
-                        <Button onClick={handleClickOpenDelete} color="primary">
-                            Gỡ bài viết
-                        </Button>
                         <Button onClick={handleCloseEdit} color="primary">
                             Hủy
+                        </Button>
+                        <Button onClick={handleClickOpenDelete} color="primary">
+                            {jobEdit.status ? 'Gỡ bài viết' : 'Đăng lại'}
                         </Button>
                     </DialogActions>
                     <DialogContent>
@@ -161,30 +171,31 @@ export default function AdminManageJobs() {
                 </Dialog>
                 <Dialog
                     open={openDelete}
-                    onClose={handleCloseDelete}
                     aria-labelledby="alert-dialog-slide-title"
                     aria-describedby="alert-dialog-slide-description"
                 >
                     <DialogTitle id="alert-dialog-slide-title">
-                        Bạn có muốn gỡ bài đăng tuyển dụng này?
+                        {jobEdit.status ? 'Bạn có muốn gỡ bài đăng tuyển dụng này?' : 'Bạn có muốn đăng lại bài viết này?'}
                     </DialogTitle>
-                    <DialogContent>
-                        <TextField
-                            variant="outlined"
-                            margin="normal"
-                            required
-                            label="Lý do xóa"
-                            fullWidth
-                            multiline
-                            rows={4}
-                        />
-                    </DialogContent>
+                    {jobEdit.status &&
+                            <DialogContent>
+                                <TextField
+                                    variant="outlined"
+                                    margin="normal"
+                                    required
+                                    label="Lý do xóa"
+                                    fullWidth
+                                    multiline
+                                    rows={4}
+                                />
+                            </DialogContent>
+                    }
                     <DialogActions>
                         <Button onClick={handleCloseDelete} color="primary">
                             Hủy
                         </Button>
-                        <Button onClick={handleCloseDelete} color="primary">
-                            Xóa
+                        <Button onClick={() => handleRemoveJob(jobEdit)} color="primary">
+                            {jobEdit.status ? 'Gỡ' : 'Đăng lại'}
                         </Button>
                     </DialogActions>
                 </Dialog>

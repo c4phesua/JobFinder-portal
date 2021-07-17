@@ -83,7 +83,7 @@ export default function VerticalAdminTabs() {
                     <Tab label="Xem báo cáo" {...a11yProps(0)} />
                     <Tab label="Quản Lý Bài đăng" {...a11yProps(1)} />
                     <Tab label="Quản Lý Tài Khoản" {...a11yProps(2)} />
-                    <Tab label="Quản Lý Hoạt Động" {...a11yProps(3)} />
+                    {/* <Tab label="Quản Lý Hoạt Động" {...a11yProps(3)} /> */}
 
                 </Tabs>
             </Grid>
@@ -103,9 +103,9 @@ export default function VerticalAdminTabs() {
                 <TabPanel value={value} index={2}>
                     <UserManager />
                 </TabPanel>
-                <TabPanel value={value} index={3}>
+                {/* <TabPanel value={value} index={3}>
                     <Activity />
-                </TabPanel>
+                </TabPanel> */}
             </Grid>
         </div>
     );

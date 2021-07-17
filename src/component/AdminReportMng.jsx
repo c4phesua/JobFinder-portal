@@ -82,9 +82,6 @@ export default function AdminReportMng(props) {
                   <TableCell>
                     Nội dung báo cáo
                   </TableCell>
-                  <TableCell>
-                    Chi tiết
-                  </TableCell>
                   <TableCell sortDirection="desc">
                     <Tooltip
                       enterDelay={300}
@@ -97,6 +94,9 @@ export default function AdminReportMng(props) {
                         Thời gian thực hiện
                       </TableSortLabel>
                     </Tooltip>
+                  </TableCell>
+                  <TableCell>
+                    Chi tiết
                   </TableCell>
                 </TableRow>
               </TableHead>
@@ -117,12 +117,12 @@ export default function AdminReportMng(props) {
                       {report.description}
                     </TableCell>
                     <TableCell>
+                      {report.date}
+                    </TableCell>
+                    <TableCell>
                       <IconButton onClick={() => handleOpenReport(report)}>
                         <Visibility />
                       </IconButton>
-                    </TableCell>
-                    <TableCell>
-                      {report.date}
                     </TableCell>
                   </TableRow>
                 ))}
@@ -141,11 +141,11 @@ export default function AdminReportMng(props) {
       </Box>
       <Dialog open={openReport} fullScreen={fullScreen} maxWidth aria-labelledby="form-dialog-title">
         <DialogActions>
-          <Button onClick={handleDeleteJob} color="primary">
-            Huỷ bài đăng
-          </Button>
-          <Button onClick={handleCloseReport} color="primary">
+        <Button onClick={handleCloseReport} color="primary">
             Hủy
+          </Button>
+          <Button onClick={handleDeleteJob} color="primary">
+            Gỡ bài đăng
           </Button>
         </DialogActions>
         <DialogContent>
@@ -158,7 +158,7 @@ export default function AdminReportMng(props) {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            Bạn có chắc muốn huỷ bài đăng này?
+            Bạn có chắc muốn gỡ bài đăng này?
           </Typography>
           <TextField
             variant="outlined"
@@ -174,11 +174,11 @@ export default function AdminReportMng(props) {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleDeleted} autoFocus color="primary">
-            OK
-          </Button>
           <Button onClick={cancelDelete} autoFocus color="primary">
             Cancel
+          </Button>
+          <Button onClick={handleDeleted} autoFocus color="primary">
+            OK
           </Button>
         </DialogActions>
       </Dialog>
