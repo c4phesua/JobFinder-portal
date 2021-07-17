@@ -25,6 +25,7 @@ import MockupData from '../../helper/MockupData';
 import { newTab } from "../../utils/Routes";
 import React from "react";
 import DeleteForeverIcon from "@material-ui/icons/DeleteForever";
+import EditIcon from "@material-ui/icons/Edit";
 
 
 export default function Applicants(props) {
@@ -91,6 +92,9 @@ export default function Applicants(props) {
                                     <TableCell>
                                         Trạng thái
                                     </TableCell>
+                                    <TableCell>
+                                        Sửa
+                                    </TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
@@ -118,16 +122,14 @@ export default function Applicants(props) {
                                             <Chip
                                                 size="small"
                                                 label={statusName[status - 1]}
-                                                clickable
                                                 style={{backgroundColor: statusColor[status - 1], color: 'white'}}
-                                                onClick={handleClickOpenDelete}
                                             />
                                         </TableCell>
-                                        {/*<TableCell>*/}
-                                        {/*    <IconButton onClick={handleClickOpenDelete}>*/}
-                                        {/*        <DeleteForeverIcon style={{ color: 'red' }} />*/}
-                                        {/*    </IconButton>*/}
-                                        {/*</TableCell>*/}
+                                        <TableCell>
+                                            <IconButton onClick={handleClickOpenDelete}>
+                                                <EditIcon />
+                                            </IconButton>
+                                        </TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>
