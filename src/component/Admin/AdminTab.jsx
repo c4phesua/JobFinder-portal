@@ -7,8 +7,9 @@ import Box from '@material-ui/core/Box';
 import { Grid } from "@material-ui/core";
 import AdminManageJobs from "./AdminManageJobs";
 import Activity from "./ActivityTrack";
-import UserManager from "../UserManager";
+import UserManager from "./UserManager";
 import AdminReportMng from './AdminReportMng';
+import CompanyManager from './CompanyManager';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
@@ -81,9 +82,9 @@ export default function VerticalAdminTabs() {
                     className={classes.tabs}
                 >
                     <Tab label="Xem báo cáo" {...a11yProps(0)} />
-                    <Tab label="Quản Lý Bài đăng" {...a11yProps(1)} />
-                    <Tab label="Quản Lý Tài Khoản" {...a11yProps(2)} />
-                    {/* <Tab label="Quản Lý Hoạt Động" {...a11yProps(3)} /> */}
+                    <Tab label="Quản Lý bài đăng" {...a11yProps(1)} />
+                    <Tab label="Quản Lý tài khoản" {...a11yProps(2)} />
+                    <Tab label="Quản lý công ty" {...a11yProps(3)} />
 
                 </Tabs>
             </Grid>
@@ -103,9 +104,9 @@ export default function VerticalAdminTabs() {
                 <TabPanel value={value} index={2}>
                     <UserManager />
                 </TabPanel>
-                {/* <TabPanel value={value} index={3}>
-                    <Activity />
-                </TabPanel> */}
+                <TabPanel value={value} index={3}>
+                    <CompanyManager />
+                </TabPanel>
             </Grid>
         </div>
     );

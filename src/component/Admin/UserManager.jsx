@@ -20,15 +20,15 @@ import {
     TableHead,
     TableRow,
     TableSortLabel,
+    TextField,
     Tooltip
 } from '@material-ui/core';
-import MockupData from '../helper/MockupData';
+import MockupData from '../../helper/MockupData';
 import React from "react";
-import { ColorButtonUnban, ColorButton } from '../utils/UtilsFunc';
 import { Visibility } from '@material-ui/icons';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
-import StudentDetail from './Admin/StudentDetail';
+import StudentDetail from './StudentDetail';
 
 
 
@@ -166,6 +166,19 @@ export default function UserManager(props) {
                 <DialogTitle id="alert-dialog-slide-title">
                     {currentStudent.status ? 'Bạn có muốn khóa tài khoản này?' : 'Bạn có muốn mở khoá tài khoản này?'}
                 </DialogTitle>
+                {currentStudent.status &&
+                    <DialogContent>
+                        <TextField
+                            variant="outlined"
+                            margin="normal"
+                            required
+                            label="Lý do khoá"
+                            fullWidth
+                            multiline
+                            rows={4}
+                        />
+                    </DialogContent>
+                }
                 <DialogActions>
                     <Button onClick={handleCloseDelete} color="primary">
                         Hủy

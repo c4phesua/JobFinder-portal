@@ -183,7 +183,7 @@ export default function AdminManageJobs() {
                                     variant="outlined"
                                     margin="normal"
                                     required
-                                    label="Lý do xóa"
+                                    label="Lý do gỡ"
                                     fullWidth
                                     multiline
                                     rows={4}
