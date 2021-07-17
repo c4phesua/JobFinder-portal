@@ -141,11 +141,11 @@ export default function AdminReportMng(props) {
       </Box>
       <Dialog open={openReport} fullScreen={fullScreen} maxWidth aria-labelledby="form-dialog-title">
         <DialogActions>
-          <Button onClick={handleDeleteJob} color="primary">
-            Huỷ bài đăng
-          </Button>
-          <Button onClick={handleCloseReport} color="primary">
+        <Button onClick={handleCloseReport} color="primary">
             Hủy
+          </Button>
+          <Button onClick={handleDeleteJob} color="primary">
+            Gỡ bài đăng
           </Button>
         </DialogActions>
         <DialogContent>
@@ -158,7 +158,7 @@ export default function AdminReportMng(props) {
         </DialogTitle>
         <DialogContent dividers>
           <Typography gutterBottom>
-            Bạn có chắc muốn huỷ bài đăng này?
+            Bạn có chắc muốn gỡ bài đăng này?
           </Typography>
           <TextField
             variant="outlined"
@@ -174,11 +174,11 @@ export default function AdminReportMng(props) {
           />
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleDeleted} autoFocus color="primary">
-            OK
-          </Button>
           <Button onClick={cancelDelete} autoFocus color="primary">
             Cancel
+          </Button>
+          <Button onClick={handleDeleted} autoFocus color="primary">
+            OK
           </Button>
         </DialogActions>
       </Dialog>
