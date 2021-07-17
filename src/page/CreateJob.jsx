@@ -50,7 +50,7 @@ export default function CreateJob() {
               </Grid>
           </Grid> */}
           <React.Fragment>
-        <form className={classes.form} noValidate>
+        <form className={classes.form} noValidate={false}>
             <Grid container spacing={1}>
                 <Grid item xs={12}>
                     <TextField

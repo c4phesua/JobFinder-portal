@@ -7,6 +7,13 @@ import {useStylesProfile} from '../utils/UtilsFunc';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import Job from '../component/JobApplied';
 import JobApprove from '../component/JobApproved';
+import Form from 'react-bootstrap/Form';
+import FormControl from 'react-bootstrap/FormControl';
+import Box from "@material-ui/core/Box";
+import { Dialog,
+    DialogActions,
+    DialogContent, Button} from '@material-ui/core';
+import InputGroup from 'react-bootstrap/InputGroup';
 import 'react-tabs/style/react-tabs.css';
 
 export default function Profile () {
@@ -15,10 +22,8 @@ export default function Profile () {
     document.title = `JobFinder - ${profile.fullname}`;
 
     const [showEdit,setShowEdit] = React.useState(false);
-    const onClickEdit = () => setShowEdit(true);
-    function onClickSave(){    
-        setShowEdit(false);
-    }
+    const [validated, setValidated] = React.useState(false);
+
 
     const renderJob = (job) => {
         return (
@@ -31,187 +36,134 @@ export default function Profile () {
           <JobApprove job = { job } />
           
         );
-      }
+    }
+    const handleSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        setValidated(true);
+      };
+      const handleClickOpenCreate = () => {
+        setShowEdit(true);
+    };
+
+    const handleCloseCreate = () => {
+        setShowEdit(false);
+    };
+    const handleCloseCreateSummit = () => {
+        if(validated)
+            setShowEdit(false);
+    };
     
     const classes = useStylesProfile();
     
     const Show = () => (
-        
                 <div className="card-body">
+                <div className="Row"></div>
                 <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Họ tên</h6>
+                            <Box fontWeight="fontWeightBold">
+                            Họ tên<label style={{color:"red"}}> *</label>
+                            </Box>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.fullname}/>
+                        {profile.fullname}
+
                         
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Email</h6>
+                            <Box fontWeight="fontWeightBold">
+                            Email<label style={{color:"red"}}> *</label>
+                            </Box>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.email}/>
+                        {profile.email}
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Số điện thoại</h6>
+                            <Box fontWeight="fontWeightBold">
+                            Số điện thoại<label style={{color:"red"}}> *</label>
+                            </Box>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.phone}/>
+                        {profile.phone}
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Địa chỉ</h6>
+                             <Box fontWeight="fontWeightBold">
+                            Địa chỉ<label style={{color:"red"}}> *</label>
+                            </Box>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.address}/>
+                        {profile.address} 
                             
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Trường Đại Học</h6>
+                            <Box fontWeight="fontWeightBold">
+                            Trường Đại Học
+                            </Box>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue=""/>
                             
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Chuyên ngành</h6>
+                           <Box fontWeight="fontWeightBold">
+                            Chuyên ngành
+                            </Box>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue=""/>
                             
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Ngoại Ngữ</h6>
+                             <Box fontWeight="fontWeightBold">
+                            Ngoại Ngữ
+                            </Box>
                         </div>
                         <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control input_profile" disabled defaultValue={profile.languages}/>
+                        {profile.languages}
                             
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-3">
-                            <h6 className="mb-0">Thông tin chung</h6>
+                            
+                        <Box fontWeight="fontWeightBold">
+                            Thông tin chung
+                            </Box>
                         </div>
-                        <div className="col-sm-9 text-secondary">
-                        <textarea type="text" class="form-control input_profile" disabled defaultValue={profile.about} rows="7"/>
+                        <div className="col-sm-9 text-secondary" style={{minHeight:'5rem',fontWeight:'bold'}}>
+
+                             {profile.about}
                             
                         </div>
                     </div>
                     <hr/>
                     <div className="row">
                         <div className="col-sm-12">
-                            <a className="btn btn-info " target="__blank" onClick={onClickEdit}>Edit</a>
+                            <a className="btn btn-info " target="__blank" onClick={handleClickOpenCreate}>Sửa thông tin</a>
                         </div>
                     </div>
                 </div>
             
-    );
-
-    const Edit = () => (
-        
-        <div className="card-body">
-                    <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Họ tên</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control"  required defaultValue={profile.fullname}/>
-                        
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Email</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" required defaultValue={profile.email}/>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Số điện thoại</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" required defaultValue={profile.phone}/>
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Địa chỉ</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" required defaultValue={profile.address}/>
-                            
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Trường Đại Học</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" required defaultValue=""/>
-                            
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Chuyên ngành</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control" required defaultValue=""/>
-                            
-                        </div>
-                    </div>
-                    <hr/>
-                     <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Ngoại Ngữ</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <input type="text" class="form-control"  defaultValue={profile.languages}/>
-                            
-                        </div>
-                    </div>
-                    <hr/>
-                    <div className="row">
-                        <div className="col-sm-3">
-                            <h6 className="mb-0">Thông tin chung</h6>
-                        </div>
-                        <div className="col-sm-9 text-secondary">
-                        <textarea type="text" class="form-control" defaultValue={profile.about} rows="7"/>
-                            
-                        </div>
-                    </div>
-                    <hr/>
-                    <div class="row">
-                        <div className="col-sm-12">
-                            <a className="btn btn-primary " target="__blank" onClick={onClickSave}>Save Changes</a>
-                        </div>
-                    </div>
-        </div>
     );
 
     return (
@@ -237,7 +189,7 @@ export default function Profile () {
                   <div className="card h-100">
                     <div className="card-body">
                     <h6 className="d-flex align-items-center mb-3" style={{color: "orange"}}>Nhà tuyển dụng đã xem</h6>
-                      <h6>1</h6>
+                      <h6>{profile.job_applied.filter((x) => x.status == "seen").length}</h6>
                     </div>
                   </div>
                 </div>
@@ -250,7 +202,7 @@ export default function Profile () {
                   <div className="card h-100">
                     <div className="card-body">
                       <h6 className="d-flex align-items-center mb-3" style={{color: "blue"}}>Công việc đã được nhận</h6>
-                      <h6>{profile.job_approve.length}</h6>
+                      <h6>{profile.job_applied.filter((x) => x.status == "success").length}</h6>
                     </div>
                   </div>
                 </div>
@@ -263,9 +215,12 @@ export default function Profile () {
          <div className="card mb-3" style={{ minHeight: '35rem'}}>
             <Tabs>
                 <TabList style={{display:'flex'}}>
-                    <Tab>Đã ứng tuyển</Tab>
-                    <Tab>Đã được nhận</Tab>
-                    <Tab>Hồ sơ</Tab>
+                    <Tab><Box fontWeight="fontWeightBold">
+                    Công việc đã ứng tuyển
+                        </Box></Tab>
+                    <Tab><Box fontWeight="fontWeightBold">
+                    Hồ sơ
+                        </Box></Tab>
                 </TabList> 
                 <TabPanel>
                 {
@@ -275,14 +230,8 @@ export default function Profile () {
                 }
                 </TabPanel>
                 <TabPanel>
-                {
-                    profile.job_approve.map((job) => {
-                        return renderJobApprove(job);
-                    })
-                }
-                </TabPanel>
-                <TabPanel>
-                    {showEdit ? <Edit/> : <Show/>}
+                    {/* {showEdit ? <Edit/> : <Show/>} */}
+                    <Show/>
                 </TabPanel>
                 </Tabs>
                 </div>
@@ -294,6 +243,134 @@ export default function Profile () {
 
     </div>
     </main>
+
+    <Dialog open={showEdit} onClose={handleCloseCreate} aria-labelledby="form-dialog-title" fullWidth={true}
+maxWidth = {'md'}>
+                <DialogContent>
+                    {/* <CreateHR/> */}
+                    <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <div className="card-body">
+                    <div className="row">
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Họ tên<label style={{color:"red"}}> *</label>
+                            </Box>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <Form.Control type="text"  required defaultValue={profile.fullname}/>
+                        <Form.Control.Feedback type="invalid">
+                            Thông tin không được để trống.
+                        </Form.Control.Feedback>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                    <InputGroup hasValidation>
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Email<label style={{color:"red"}}> *</label>
+                            </Box>
+                        </div>
+                        
+                        <div className="col-sm-9 text-secondary">
+                        <Form.Control type="text" required defaultValue={profile.email}/>
+                        <div class="invalid-feedback">
+                            Thông tin không được để trống.
+                        </div>
+                        </div>
+                    </InputGroup>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Số điện thoại<label style={{color:"red"}}> *</label>
+                            </Box>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control" required defaultValue={profile.phone}/>
+                        <div class="invalid-feedback">
+                            Thông tin không được để trống.
+                        </div>
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Địa chỉ<label style={{color:"red"}}> *</label>
+                            </Box>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control" required defaultValue={profile.address}/>
+                        <div class="invalid-feedback">
+                            Thông tin không được để trống.
+                        </div>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Trường Đại Học
+                            </Box>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control"  defaultValue=""/>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Chuyên ngành
+                            </Box>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control"  defaultValue=""/>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                     <div className="row">
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Ngoại Ngữ
+                            </Box>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <input type="text" class="form-control"  defaultValue={profile.languages}/>
+                            
+                        </div>
+                    </div>
+                    <hr/>
+                    <div className="row">
+                        <div className="col-sm-3">
+                        <Box fontWeight="fontWeightBold">
+                            Thông tin chung
+                            </Box>
+                        </div>
+                        <div className="col-sm-9 text-secondary">
+                        <textarea type="text" class="form-control" defaultValue={profile.about} rows="7"/>
+                            
+                        </div>
+                    </div>
+        </div>
+        
+        </Form>
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseCreate} color="primary">
+                        Hủy
+                    </Button>
+                    <Button type="summit"color="primary">
+                        Lưu thay đổi
+                    </Button>
+                </DialogActions>
+            </Dialog>
+
     </React.Fragment>
     );
     
