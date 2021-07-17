@@ -3,6 +3,7 @@ import {
     Box,
     Button,
     Card,
+    Chip,
     Dialog,
     DialogActions,
     DialogContent,
@@ -25,22 +26,50 @@ import MockupData from '../helper/MockupData';
 import React from "react";
 import { ColorButtonUnban, ColorButton } from '../utils/UtilsFunc';
 import { Visibility } from '@material-ui/icons';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
+import StudentDetail from './Admin/StudentDetail';
 
 
 
 export default function UserManager(props) {
-   
+
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('md'));
+
+    const { user } = MockupData;
+
+    const [students, setStudents] = React.useState(user);
+    const [openDelete, setOpenDelete] = React.useState(false);
+    const [currentStudent, setCurrentStudent] = React.useState(students[0]);
+    const [openView, setOpenView] = React.useState(false);
+
 
     const handleClickViewStudent = (student) => {
-
+        setCurrentStudent(student);
+        setOpenView(true);
     }
 
-    const [openDelete, setOpenDelete] = React.useState(false);
 
     const handleCloseDelete = () => {
         setOpenDelete(false);
     };
-   
+
+    const handleCloseView = () => {
+        setOpenView(false);
+    }
+
+    const renderStudentStatus = (status) => {
+        if (status) {
+            return (
+                <Chip className="green-chip" label="Đang hoạt động" />
+            )
+        }
+        return (
+            <Chip label="Đã bị khoá" color="secondary" />
+        );
+    }
+
 
     return (
         <Card {...props}>
@@ -78,7 +107,7 @@ export default function UserManager(props) {
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {MockupData.user.map((student, index) => (
+                                {students.map((student, index) => (
                                     <TableRow
                                         hover
                                     >
@@ -92,11 +121,11 @@ export default function UserManager(props) {
                                             {student.apply_date}
                                         </TableCell>
                                         <TableCell>
-                                            {student.status}
+                                            {renderStudentStatus(student.status)}
                                         </TableCell>
                                         <TableCell>
-                                        <TableCell>
-                                                <IconButton onClick={() => handleClickViewStudent()}>
+                                            <TableCell>
+                                                <IconButton onClick={() => handleClickViewStudent(student)}>
                                                     <Visibility />
                                                 </IconButton>
                                             </TableCell>
@@ -133,6 +162,28 @@ export default function UserManager(props) {
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseDelete} color="primary">
+                        Hủy
+                    </Button>
+                    <Button onClick={handleCloseDelete} color="primary">
+                        Xóa
+                    </Button>
+                </DialogActions>
+            </Dialog>
+            <Dialog
+                open={openView}
+                aria-labelledby="alert-dialog-slide-title"
+                aria-describedby="alert-dialog-slide-description"
+                fullScreen={fullScreen}
+                maxWidth
+            >
+                <DialogTitle id="alert-dialog-slide-title">
+                    Thông tin
+                </DialogTitle>
+                <DialogContent>
+                    <StudentDetail student={currentStudent} />
+                </DialogContent>
+                <DialogActions>
+                    <Button onClick={handleCloseView} color="primary">
                         Hủy
                     </Button>
                     <Button onClick={handleCloseDelete} color="primary">
