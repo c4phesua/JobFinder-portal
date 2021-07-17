@@ -2,13 +2,14 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
-import {makeStyles} from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
-import {Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle} from "@material-ui/core";
+import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from "@material-ui/core";
 import Report from "./Report";
 import { currentPath } from '../utils/Routes';
 import RouteConstants from '../utils/RouteConstants';
+import Arrays from '../utils/Arrays';
 
 function Copyright() {
     return (
@@ -59,24 +60,32 @@ export default function Footer() {
 
     }
 
+    const notHR = () => {
+        return currentPath() !== RouteConstants.HR_CREATEJOB &&
+            currentPath() !== RouteConstants.HR_MANAGEMENT &&
+            currentPath() !== RouteConstants.HR_LOGIN &&
+            currentPath() !== RouteConstants.HR_PROFILE;
+    }
+
+    console.log('notHR', notHR());
     const footers = [
         {
             title: 'Về chúng tôi',
-            description: [{content: 'Thông tin', url: mockFunction},
-                {content: 'lịch sử', url: mockFunction},
-                {content: 'liên hệ', url: mockFunction},
-                {content: 'Báo cáo sai phạm', url: handleClickOpenEdit}
+            description: [{ content: 'Thông tin', url: mockFunction },
+            { content: 'lịch sử', url: mockFunction },
+            { content: 'liên hệ', url: mockFunction },
+            ...Arrays.insertIf(notHR(), {content: 'Báo cáo sai phạm', url: handleClickOpenEdit}),
             ],
         },
         {
             title: 'Dành cho nhà tuyển dụng',
-            description: [{content: 'Đăng tuyển dụng', url: mockFunction},
-                {content: 'Quản lý hồ sơ', url: mockFunction},
-                {content: 'Sản phẩm dịch vụ khác', url: mockFunction}, {content: 'Liên hệ', url: mockFunction}],
+            description: [{ content: 'Đăng tuyển dụng', url: mockFunction },
+            { content: 'Quản lý hồ sơ', url: mockFunction },
+            { content: 'Sản phẩm dịch vụ khác', url: mockFunction }, { content: 'Liên hệ', url: mockFunction }],
         },
         {
             title: 'Giấy phép',
-            description: [{content: 'Điều khoản bảo mật', url: mockFunction}, {content: 'Điều khoản sử dụng', url: mockFunction}],
+            description: [{ content: 'Điều khoản bảo mật', url: mockFunction }, { content: 'Điều khoản sử dụng', url: mockFunction }],
         },
     ];
 
@@ -120,7 +129,7 @@ export default function Footer() {
                     Báo cáo sai phạm
                 </DialogTitle>
                 <DialogContent>
-                    <Report/>
+                    <Report />
                 </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseEdit} color="primary">

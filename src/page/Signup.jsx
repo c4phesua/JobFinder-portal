@@ -26,7 +26,7 @@ export default function SignUp() {
 
                 </Avatar>
                 <Typography component="h1" variant="h5">
-                    Sign up
+                    Đăng ký tài khoản
                 </Typography>
                 <form className={classes.form} noValidate>
                     <Grid container spacing={2}>
@@ -38,7 +38,7 @@ export default function SignUp() {
                                 required
                                 fullWidth
                                 id="firstName"
-                                label="First Name"
+                                label="Họ"
                                 autoFocus
                             />
                         </Grid>
@@ -48,7 +48,7 @@ export default function SignUp() {
                                 required
                                 fullWidth
                                 id="lastName"
-                                label="Last Name"
+                                label="Tên"
                                 name="lastName"
                                 autoComplete="lname"
                             />
@@ -59,7 +59,7 @@ export default function SignUp() {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Email Address"
+                                label="Địa chỉ email"
                                 name="email"
                                 autoComplete="email"
                             />
@@ -70,7 +70,7 @@ export default function SignUp() {
                                 required
                                 fullWidth
                                 name="password"
-                                label="Password"
+                                label="Mật khẩu"
                                 type="password"
                                 id="password"
                                 autoComplete="current-password"
@@ -82,7 +82,7 @@ export default function SignUp() {
                                 required
                                 fullWidth
                                 name="rePassword"
-                                label="re-attempt password"
+                                label="Nhập lại mật khẩu"
                                 type="password"
                                 id="rePassword"
                                 autoComplete="current-password"
@@ -96,12 +96,12 @@ export default function SignUp() {
                         color="primary"
                         className={classes.submit}
                     >
-                        Sign Up
+                        Đăng ký
                     </Button>
                     <Grid container justify="flex-end">
                         <Grid item>
                             <Link href="/login" variant="body2">
-                                Already have an account? Sign in
+                                Bạn đã có mật khẩu? Đăng nhập.
                             </Link>
                         </Grid>
                     </Grid>

@@ -12,7 +12,7 @@ import { cardStyle } from '../../styleutil/CardStyle';
 import Box from "@material-ui/core/Box";
 import ExploreIcon from '@material-ui/icons/ExploreOutlined';
 import { WorkOutlineOutlined } from '@material-ui/icons';
-import { Dialog, DialogActions, DialogContent, DialogTitle, Button } from "@material-ui/core";
+import { Dialog, DialogActions, DialogContent, DialogTitle, Button, Chip } from "@material-ui/core";
 
 
 
@@ -23,20 +23,22 @@ export default function JobDescription(props) {
   const classes = useStylesJob();
   const classLink = linkStyle();
   const classesCard = cardStyle();
-  const [openCancel, setOpenCancel] = React.useState(false);
 
-  const onCancelJobClick = () => {
-    setOpenCancel(true);
+  const renderStatus = (status) => {
+    if (status === 0) {
+      return (
+        <Chip className="yellow-chip" label="Chưa xử lý" />
+      )
+    }
+    if (status === 1) {
+      return (
+        <Chip className="green-chip" label="Đã bỏ qua" />
+      )
+    }
+    return (
+      <Chip className="red-chip" label="Đã gỡ bài viết" />
+    );
   }
-
-  const handleConfirm = () => {
-    setOpenCancel(false);
-  }
-
-  const handleCancel = () => {
-    setOpenCancel(false);
-  }
-
 
   return (
     <React.Fragment>
@@ -71,6 +73,13 @@ export default function JobDescription(props) {
                     </p>
                   </div>
                 </Grid>
+                <Grid item xs={12}>
+                <div>
+                  <p>
+                    <b>Trạng thái: </b> {renderStatus(report.status)}
+                  </p>
+                </div>
+              </Grid>
               </Grid>
               <Grid item xs={12} sm={4} />
             </Grid>

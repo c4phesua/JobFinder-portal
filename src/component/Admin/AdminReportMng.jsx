@@ -45,6 +45,7 @@ export default function AdminReportMng(props) {
   const [openUndo, setOpenUndo] = React.useState(false);
   const [reports, setReports] = React.useState(report_data);
   const [currentReport, setCurrentReport] = React.useState(reports[0]);
+  const [ignore, setIgnore] = React.useState(false);
 
   const handleOpenReport = (report) => {
     setCurrentReport(report);
@@ -75,6 +76,15 @@ export default function AdminReportMng(props) {
   const handleIgnoreReport = (report) => {
     report.status = 1;
     handleStatus(report);
+    setIgnore(false);
+  }
+
+  const ignoreReportClick = () => {
+    setIgnore(true);
+  }
+
+  const cancelIgnoreClick = () => {
+    setIgnore(false);
   }
 
   const backToPending = (report) => {
@@ -196,7 +206,7 @@ export default function AdminReportMng(props) {
             Hủy
           </Button>
           {currentReport.status === 0 && <>
-            <Button onClick={() => handleIgnoreReport(currentReport)} color="primary">
+            <Button onClick={ignoreReportClick} color="primary">
               Bỏ qua
             </Button>
             <Button onClick={handleOpenDeleteJob} color="primary">
@@ -258,6 +268,24 @@ export default function AdminReportMng(props) {
             Không
           </Button>
           <Button onClick={() => backToPending(currentReport)} autoFocus color="primary">
+            Có
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <Dialog fullWidth aria-labelledby="customized-dialog-title" open={ignore}>
+        <DialogTitle id="customized-dialog-title">
+          Thông báo
+        </DialogTitle>
+        <DialogContent dividers>
+          <Typography gutterBottom>
+            Bạn sẽ bỏ qua báo cáo này?
+          </Typography>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={cancelIgnoreClick} autoFocus color="primary">
+            Không
+          </Button>
+          <Button onClick={() => handleIgnoreReport(currentReport)} autoFocus color="primary">
             Có
           </Button>
         </DialogActions>

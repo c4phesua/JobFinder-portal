@@ -56,7 +56,7 @@ const onProfileClick = () => {
 }
 
 const onHrProfileClick = () => {
-    goTo(HR_PROFILE);
+    goTo(HR_MANAGEMENT);
 }
 
 const onSignUpClick = () => {
@@ -214,7 +214,7 @@ export default function NavigationBar() {
                 {
                     isHRLoggedin() &&
                     <Button variant="outlined" size="medium" className={classes.button} onClick={onHrProfileClick}>
-                        Trần Văn B
+                        Công ty TNHH Vòng Tròn Đỏ
                     </Button>
                 }
             </Toolbar>

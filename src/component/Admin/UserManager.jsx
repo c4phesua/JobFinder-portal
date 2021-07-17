@@ -79,7 +79,7 @@ export default function UserManager(props) {
             )
         }
         return (
-            <Chip className="red-chip" label="Đã bị khoá"/>
+            <Chip className="red-chip" label="Đã bị khoá" />
         );
     }
 
@@ -159,13 +159,17 @@ export default function UserManager(props) {
             >
             </Box>
             <Dialog
+                fullWidth
                 open={openDelete}
                 aria-labelledby="alert-dialog-slide-title"
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogTitle id="alert-dialog-slide-title">
-                    {currentStudent.status ? 'Bạn có muốn khóa tài khoản này?' : 'Bạn có muốn mở khoá tài khoản này?'}
+                <DialogTitle id="customized-dialog-title">
+                    Thông báo
                 </DialogTitle>
+                <DialogContent id="alert-dialog-slide-title">
+                    {currentStudent.status ? 'Bạn có muốn khóa tài khoản này?' : 'Bạn có muốn mở khoá tài khoản này?'}
+                </DialogContent>
                 {currentStudent.status &&
                     <DialogContent>
                         <TextField
