@@ -75,7 +75,7 @@ export default function CompanyManager(props) {
             )
         }
         return (
-            <Chip className="red-chip" label="Đã bị khoá"/>
+            <Chip className="red-chip" label="Đã bị khoá" />
         );
     }
 
@@ -155,13 +155,17 @@ export default function CompanyManager(props) {
             >
             </Box>
             <Dialog
+                fullWidth
                 open={openDelete}
                 aria-labelledby="alert-dialog-slide-title"
                 aria-describedby="alert-dialog-slide-description"
             >
-                <DialogTitle id="alert-dialog-slide-title">
-                    {currentCompany.status ? 'Bạn có muốn khóa công ty này?' : 'Bạn có muốn mở khoá công ty này?'}
+                <DialogTitle id="customized-dialog-title">
+                    Thông báo
                 </DialogTitle>
+                <DialogContent id="alert-dialog-slide-title">
+                    {currentCompany.status ? 'Bạn có muốn khóa công ty này?' : 'Bạn có muốn mở khoá công ty này?'}
+                </DialogContent>
                 {currentCompany.status &&
                     <DialogContent>
                         <TextField

@@ -170,25 +170,29 @@ export default function AdminManageJobs() {
                     </DialogContent>
                 </Dialog>
                 <Dialog
+                    fullWidth
                     open={openDelete}
                     aria-labelledby="alert-dialog-slide-title"
                     aria-describedby="alert-dialog-slide-description"
                 >
-                    <DialogTitle id="alert-dialog-slide-title">
-                        {jobEdit.status ? 'Bạn có muốn gỡ bài đăng tuyển dụng này?' : 'Bạn có muốn đăng lại bài viết này?'}
+                    <DialogTitle id="customized-dialog-title">
+                        Thông báo
                     </DialogTitle>
+                    <DialogContent >
+                        {jobEdit.status ? 'Bạn có muốn gỡ bài đăng tuyển dụng này?' : 'Bạn có muốn đăng lại bài viết này?'}
+                    </DialogContent>
                     {jobEdit.status &&
-                            <DialogContent>
-                                <TextField
-                                    variant="outlined"
-                                    margin="normal"
-                                    required
-                                    label="Lý do gỡ"
-                                    fullWidth
-                                    multiline
-                                    rows={4}
-                                />
-                            </DialogContent>
+                        <DialogContent>
+                            <TextField
+                                variant="outlined"
+                                margin="normal"
+                                required
+                                label="Lý do gỡ"
+                                fullWidth
+                                multiline
+                                rows={4}
+                            />
+                        </DialogContent>
                     }
                     <DialogActions>
                         <Button onClick={handleCloseDelete} color="primary">
