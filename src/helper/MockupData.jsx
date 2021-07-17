@@ -1698,6 +1698,33 @@ var report_data = [
     }
 ]
 
+var job_types = [
+    {
+        id: 0,
+        name: 'Dịch vụ',
+    },
+    {
+        id: 1,
+        name: 'Bán hàng',
+    },
+    {
+        id: 3,
+        name: 'Bán lẻ',
+    },
+    {
+        id: 4,
+        name: 'Kế toán',
+    },
+    {
+        id: 5,
+        name: 'Kho vận',
+    },
+    {
+        id: 6,
+        name: 'Sản xuất',
+    }
+]
+
 
 // import vào, đặt const rồi gọi thôi
 
