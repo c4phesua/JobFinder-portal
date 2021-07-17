@@ -59,6 +59,19 @@ export default function UserManager(props) {
         setOpenView(false);
     }
 
+    const handleClickOpenDelete = () => {
+        setOpenDelete(true);
+    }
+
+    const handleBanStudent = (student) => {
+        student.status = !student.status;
+        const index = students.findIndex(s => s.id === student.id);
+        students[index] = student;
+        setStudents(students);
+        setOpenView(false);
+        setOpenDelete(false);
+    }
+
     const renderStudentStatus = (status) => {
         if (status) {
             return (
@@ -147,25 +160,18 @@ export default function UserManager(props) {
             </Box>
             <Dialog
                 open={openDelete}
-                onClose={handleCloseDelete}
                 aria-labelledby="alert-dialog-slide-title"
                 aria-describedby="alert-dialog-slide-description"
             >
                 <DialogTitle id="alert-dialog-slide-title">
-                    Bạn có muốn xóa bài ứng tuyển này?
+                    {currentStudent.status ? 'Bạn có muốn khóa tài khoản này?' : 'Bạn có muốn mở khoá tài khoản này?'}
                 </DialogTitle>
-                <DialogContent>
-                    <DialogContentText id="alert-dialog-slide-description">
-                        Nội dụng đã xóa sẽ không thể khôi phục lại.
-                        Chọn "Xóa" để tiếp tục, "Hủy" để dừng yêu cầu.
-                    </DialogContentText>
-                </DialogContent>
                 <DialogActions>
                     <Button onClick={handleCloseDelete} color="primary">
                         Hủy
                     </Button>
-                    <Button onClick={handleCloseDelete} color="primary">
-                        Xóa
+                    <Button onClick={() => handleBanStudent(currentStudent)} color="primary">
+                        {currentStudent.status ? 'Khoá' : 'Mở khoá'}
                     </Button>
                 </DialogActions>
             </Dialog>
@@ -186,8 +192,8 @@ export default function UserManager(props) {
                     <Button onClick={handleCloseView} color="primary">
                         Hủy
                     </Button>
-                    <Button onClick={handleCloseDelete} color="primary">
-                        Xóa
+                    <Button onClick={handleClickOpenDelete} color="primary">
+                        {currentStudent.status ? 'Khoá' : 'Mở khoá'}
                     </Button>
                 </DialogActions>
             </Dialog>

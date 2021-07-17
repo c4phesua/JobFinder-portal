@@ -1572,7 +1572,7 @@ var employees = [
 
 var user_manager = [
     {
-        employee_id: 0,
+        id: 0,
         employee_name: "Nguyễn Trí Nhân",
         apply_date: "21/03/2021",
         role: "Sinh viên",
@@ -1587,7 +1587,7 @@ var user_manager = [
         about: "",
     },
     {
-        employee_id: 1,
+        id: 1,
         employee_name: "Nguyễn Văn A",
         apply_date: "21/03/2021",
         role: "Sinh viên",
@@ -1602,7 +1602,7 @@ var user_manager = [
         about: "",
     },
     {
-        employee_id: 2,
+        id: 2,
         employee_name: "Trần Thị H",
         apply_date: "21/03/2021",
         role: "Sinh viên",
