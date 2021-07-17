@@ -8,6 +8,7 @@ import Title from "../component/Title";
 
 export default function AdminManager(){
     const classes = useStylesJob();
+    document.title = "JobFinder - Administrator";
     return (
         <>
             {/* <Helmet>
@@ -17,7 +18,7 @@ export default function AdminManager(){
             <CssBaseline/>
             <main className={classes.layout}>
                 <Paper className={classes.paper} style={{marginBottom:'0.5rem'}}>
-                    <Container maxWidth={false}>
+                    <Container maxWidth={true}>
                         <Grid
                             container
                             spacing={3}
