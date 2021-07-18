@@ -91,10 +91,10 @@ const Job = (props) => {
                             Trạng thái
                         </Box>
                     </Typography>
-                    {job.status == "seen"?<Chip size="small" label="Đã xem hồ sơ" style={{backgroundColor:"#17a2b8",fontWeight:"bold"}} />
-                    :job.status=="waiting"?<Chip size="small" label="Đang đợi duyệt" style={{backgroundColor:"#ffc107",fontWeight:"bold"}} />
-                    :job.status =="success"?<Chip size="small" label="Đã được chấp nhận" style={{backgroundColor:"#28a745",fontWeight:"bold"}} />
-                    :<Chip label="Đã bị từ chối" color="secondary" style={{fontWeight:"bold"}} />}
+                    {job.status == "seen"?<Chip size="small" label="Đã xem hồ sơ" style={{backgroundColor:"#17a2b8",fontWeight:"bold", color:"white"}} />
+                    :job.status=="waiting"?<Chip size="small" label="Đang đợi duyệt" style={{backgroundColor:"#636e74",fontWeight:"bold", color:"white"}} />
+                    :job.status =="success"?<Chip size="small" label="Đã được chấp nhận" style={{backgroundColor:"#008000",fontWeight:"bold", color:"white"}} />
+                    :<Chip label="Đã bị từ chối" color="secondary" style={{fontWeight:"bold", color:"white"}} />}
                     
                 </CardContent>
                 </Grid>
